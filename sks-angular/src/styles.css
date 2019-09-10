@@ -41,3 +41,7 @@ body { font-family: Roboto, sans-serif;font-size:11pt;}
 .k-textbox,.k-textarea,.k-input.k-textbox {
     font-size: 12px
 }
+
+.k-grid th, .k-grid td {
+    padding: 1px 1px;
+}
