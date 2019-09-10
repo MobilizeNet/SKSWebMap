@@ -1,0 +1,14 @@
+<div *ngIf="model">
+    <wm-window [model]="model" id="frmLogin" class="SKS_frmLogin">
+        <ng-template let-model>
+            <div class="frmLogin">
+                <wm-label id="_lblLabels_0" [model]="model._lblLabels_0" class="_lblLabels_0" tabindex="1">&amp;User Name:</wm-label>
+                <wm-textbox id="txtUserName" [model]="model.txtUserName" class="txtUserName" tabindex="2"></wm-textbox>
+                <wm-label id="_lblLabels_1" [model]="model._lblLabels_1" class="_lblLabels_1" tabindex="3">&amp;Password:</wm-label>
+                <wm-textbox id="txtPassword" [model]="model.txtPassword" class="txtPassword" tabindex="4"></wm-textbox>
+                <wm-button id="cmdOK" [model]="model.cmdOK" class="cmdOK" tabindex="5"></wm-button>
+                <wm-button id="cmdCancel" [model]="model.cmdCancel" class="cmdCancel" tabindex="6"></wm-button>
+            </div>
+        </ng-template>
+    </wm-window>
+</div>

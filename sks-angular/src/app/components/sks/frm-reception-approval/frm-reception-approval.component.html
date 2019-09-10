@@ -1,0 +1,34 @@
+<div *ngIf="model">
+    <wm-window [model]="model" id="frmReceptionApproval" class="SKS_frmReceptionApproval">
+        <ng-template let-model>
+            <div class="frmReceptionApproval">
+                <wm-groupbox id="Frame1" [model]="model.Frame1" class="Frame1" tabindex="14">
+          <wm-label id="Label4" [model]="model.Label4" class="Label4" tabindex="17">Supplier</wm-label>
+          <wm-textbox id="txtProviderName" [model]="model.txtProviderName" class="txtProviderName" tabindex="1"></wm-textbox>
+          <wm-button id="cmdProviders" [model]="model.cmdProviders" class="cmdProviders" tabindex="15"></wm-button>
+          <wm-label id="Label5" [model]="model.Label5" class="Label5" tabindex="25">Status</wm-label>
+          <wm-combobox id="cmbStatus" [model]="model.cmbStatus" class="cmbStatus" tabindex="2"></wm-combobox>
+          <wm-label id="Label2" [model]="model.Label2" class="Label2" tabindex="16">First Name</wm-label>
+          <wm-textbox id="txtContactName" [model]="model.txtContactName" class="txtContactName" tabindex="3"></wm-textbox>
+          <wm-label id="Label3" [model]="model.Label3" class="Label3" tabindex="18">Last Name</wm-label>
+          <wm-textbox id="txtContactLastName" [model]="model.txtContactLastName" class="txtContactLastName" tabindex="4"></wm-textbox>
+          <wm-label id="Label6" [model]="model.Label6" class="Label6" tabindex="20">Dates</wm-label>
+          <wm-checkbox id="chkFrom" [model]="model.chkFrom" class="chkFrom" tabindex="23"></wm-checkbox>
+          <wm-datetimepicker id="dtFrom" [model]="model.dtFrom" class="dtFrom" format="dddd, MMMM dd, yyyy" tabindex="5"></wm-datetimepicker>
+          <wm-checkbox id="chkTo" [model]="model.chkTo" class="chkTo" tabindex="24"></wm-checkbox>
+          <wm-datetimepicker id="dtTo" [model]="model.dtTo" class="dtTo" format="dddd, MMMM dd, yyyy" tabindex="6"></wm-datetimepicker>
+          <wm-label id="Label1" [model]="model.Label1" class="Label1" tabindex="21">Order</wm-label>
+          <wm-textbox id="txtOrderID" [model]="model.txtOrderID" class="txtOrderID" tabindex="7"></wm-textbox>
+          <wm-label id="Label8" [model]="model.Label8" class="Label8" tabindex="22">Product</wm-label>
+          <wm-textbox id="txtProductID" [model]="model.txtProductID" class="txtProductID" tabindex="8"></wm-textbox>
+</wm-groupbox>
+                <wm-datagridviewflex id="fgOrders" [model]="model.fgOrders" class="fgOrders" tabindex="9"></wm-datagridviewflex>
+                <wm-button id="cmdInfo" [model]="model.cmdInfo" class="cmdInfo" tabindex="10"></wm-button>
+                <wm-button id="cmdApprove" [model]="model.cmdApprove" class="cmdApprove" tabindex="11"></wm-button>
+                <wm-button id="cmdCancel" [model]="model.cmdCancel" class="cmdCancel" tabindex="12"></wm-button>
+                <wm-button id="cmdClose" [model]="model.cmdClose" class="cmdClose" tabindex="13"></wm-button>
+                <wm-statusstrip id="sbStatusBar" [model]="model.sbStatusBar" class="sbStatusBar" tabindex="19"></wm-statusstrip>
+            </div>
+        </ng-template>
+    </wm-window>
+</div>

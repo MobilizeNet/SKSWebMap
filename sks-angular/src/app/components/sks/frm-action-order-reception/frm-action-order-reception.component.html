@@ -1,0 +1,44 @@
+<div *ngIf="model">
+    <wm-window [model]="model" id="frmActionOrderReception" class="SKS_frmActionOrderReception">
+        <ng-template let-model>
+            <div class="frmActionOrderReception">
+                <wm-label id="Label4" [model]="model.Label4" class="Label4" tabindex="28">Order Id:</wm-label>
+                <wm-textbox id="txtOrderID" [model]="model.txtOrderID" class="txtOrderID" tabindex="24"></wm-textbox>
+                <wm-label id="Label3" [model]="model.Label3" class="Label3" tabindex="33">Status:</wm-label>
+                <wm-textbox id="txtStatus" [model]="model.txtStatus" class="txtStatus" tabindex="32"></wm-textbox>
+                <wm-label id="Label19" [model]="model.Label19" class="Label19" tabindex="31">Received:</wm-label>
+                <wm-textbox id="txtReceived" [model]="model.txtReceived" class="txtReceived" tabindex="30"></wm-textbox>
+                <wm-label id="lblChanged" [model]="model.lblChanged" class="lblChanged" tabindex="27">Changed:</wm-label>
+                <wm-textbox id="txtChanged" [model]="model.txtChanged" class="txtChanged" tabindex="25"></wm-textbox>
+                <wm-label id="Label7" [model]="model.Label7" class="Label7" tabindex="35">By:</wm-label>
+                <wm-textbox id="txtReceivedBy" [model]="model.txtReceivedBy" class="txtReceivedBy" tabindex="34"></wm-textbox>
+                <wm-label id="lblChangedBy" [model]="model.lblChangedBy" class="lblChangedBy" tabindex="29">By:</wm-label>
+                <wm-textbox id="txtChangedBy" [model]="model.txtChangedBy" class="txtChangedBy" tabindex="26"></wm-textbox>
+                <wm-groupbox id="Frame2" [model]="model.Frame2" class="Frame2" tabindex="8">
+          <wm-label id="Label5" [model]="model.Label5" class="Label5" tabindex="10">Name:</wm-label>
+          <wm-textbox id="txtProviderCompany" [model]="model.txtProviderCompany" class="txtProviderCompany" tabindex="11"></wm-textbox>
+          <wm-label id="Label1" [model]="model.Label1" class="Label1" tabindex="9">Contact:</wm-label>
+          <wm-textbox id="txtProviderContact" [model]="model.txtProviderContact" class="txtProviderContact" tabindex="12"></wm-textbox>
+</wm-groupbox>
+                <wm-label id="Label6" [model]="model.Label6" class="Label6" tabindex="13">Notes:</wm-label>
+                <wm-textbox id="txtNotes" [model]="model.txtNotes" class="txtNotes" tabindex="4"></wm-textbox>
+                <wm-datagridviewflex id="fgDetails" [model]="model.fgDetails" class="fgDetails" tabindex="5"></wm-datagridviewflex>
+                <wm-textbox id="txtEntry" [model]="model.txtEntry" class="txtEntry" tabindex="15"></wm-textbox>
+                <wm-label id="Label8" [model]="model.Label8" class="Label8" tabindex="16">Sales Tax:</wm-label>
+                <wm-textbox id="txtSalesTax" [model]="model.txtSalesTax" class="txtSalesTax" tabindex="6"></wm-textbox>
+                <wm-label id="Label10" [model]="model.Label10" class="Label10" tabindex="19">Total Tax:</wm-label>
+                <wm-textbox id="txtTotalTax" [model]="model.txtTotalTax" class="txtTotalTax" tabindex="18"></wm-textbox>
+                <wm-label id="Label12" [model]="model.Label12" class="Label12" tabindex="23">Freight:</wm-label>
+                <wm-textbox id="txtFreightCharge" [model]="model.txtFreightCharge" class="txtFreightCharge" tabindex="7"></wm-textbox>
+                <wm-label id="Label9" [model]="model.Label9" class="Label9" tabindex="17">Sub Total:</wm-label>
+                <wm-textbox id="txtSubTotal" [model]="model.txtSubTotal" class="txtSubTotal" tabindex="22"></wm-textbox>
+                <wm-label id="Label11" [model]="model.Label11" class="Label11" tabindex="21">Total:</wm-label>
+                <wm-textbox id="txtTotal" [model]="model.txtTotal" class="txtTotal" tabindex="20"></wm-textbox>
+                <wm-button id="cmdApprove" [model]="model.cmdApprove" class="cmdApprove" tabindex="1"></wm-button>
+                <wm-button id="cmdCancel" [model]="model.cmdCancel" class="cmdCancel" tabindex="2"></wm-button>
+                <wm-button id="cmdClose" [model]="model.cmdClose" class="cmdClose" tabindex="3"></wm-button>
+                <wm-statusstrip id="sbStatusBar" [model]="model.sbStatusBar" class="sbStatusBar" tabindex="14"></wm-statusstrip>
+            </div>
+        </ng-template>
+    </wm-window>
+</div>

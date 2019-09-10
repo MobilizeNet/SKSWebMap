@@ -1,0 +1,234 @@
+.SKS_frmUsersManage {
+    left: -1px;
+    top: -1px;
+}
+.SKS_frmUsersManage .frmUsersManage {
+    
+    width: 345px;
+    height: 414px;
+    overflow: hidden;
+    left: 327px;
+    top: 144px;
+}
+.SKS_frmUsersManage .Image1 {
+    left: 8px;
+    top: 8px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+}
+.SKS_frmUsersManage .Label19 {
+    width: auto;
+    background-color: Transparent;
+    color: #404040;
+    left: 48px;
+    top: 8px;
+    height: auto;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmUsersManage .Label4 {
+    width: auto;
+    background-color: Transparent;
+    color: #404040;
+    left: 48px;
+    top: 32px;
+    height: auto;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmUsersManage .ctrlLiner1 {
+    
+    left: 0px;
+    top: 56px;
+    width: 313px;
+    height: 2px;
+    position: absolute;
+}
+.SKS_frmUsersManage .Frame1 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 64px;
+    width: 329px;
+    height: 153px;
+    position: absolute;
+}
+.SKS_frmUsersManage ._Label1_0 {
+    width: auto;
+    
+    color: #404040;
+    left: 16px;
+    top: 24px;
+    height: auto;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmUsersManage .txtUsername {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 120px;
+    top: 24px;
+    width: 193px;
+    height: 19px;
+    position: absolute;
+}
+.SKS_frmUsersManage .lblId {
+    width: auto;
+    
+    color: #404040;
+    left: 128px;
+    top: 24px;
+    height: auto;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmUsersManage ._Label1_1 {
+    width: auto;
+    
+    color: #404040;
+    left: 16px;
+    top: 56px;
+    height: auto;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmUsersManage .txtPassword {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 120px;
+    top: 56px;
+    width: 193px;
+    height: 19px;
+    position: absolute;
+}
+.SKS_frmUsersManage ._Label1_2 {
+    width: auto;
+    
+    color: #404040;
+    left: 16px;
+    top: 88px;
+    height: auto;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmUsersManage .txtFullname {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 120px;
+    top: 88px;
+    width: 193px;
+    height: 19px;
+    position: absolute;
+}
+.SKS_frmUsersManage ._Label1_3 {
+    width: auto;
+    
+    color: #404040;
+    left: 16px;
+    top: 120px;
+    height: auto;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmUsersManage .cboLevel {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 120px;
+    top: 120px;
+    width: 193px;
+    height: 21px;
+    position: absolute;
+}
+.SKS_frmUsersManage .cmdSave {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 80px;
+    top: 232px;
+    width: 81px;
+    height: 25px;
+    position: absolute;
+    padding: 0px 0px 0px 0px;
+    display: table-cell;
+    vertical-align: middle;
+    display: table-cell;
+}
+.SKS_frmUsersManage .cmdClear {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 168px;
+    top: 232px;
+    width: 81px;
+    height: 25px;
+    position: absolute;
+    padding: 0px 0px 0px 0px;
+    display: table-cell;
+    vertical-align: middle;
+    display: table-cell;
+}
+.SKS_frmUsersManage .cmdClose {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 256px;
+    top: 232px;
+    width: 81px;
+    height: 25px;
+    position: absolute;
+    padding: 0px 0px 0px 0px;
+    display: table-cell;
+    vertical-align: middle;
+    display: table-cell;
+}
+.SKS_frmUsersManage .lstAccounts {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 0px;
+    top: 264px;
+    width: 337px;
+    height: 113px;
+    position: absolute;
+}
+.SKS_frmUsersManage ._Label1_4 {
+    width: auto;
+    
+    color: #404040;
+    left: 8px;
+    top: 392px;
+    height: auto;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmUsersManage .cmdEdit {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 168px;
+    top: 384px;
+    width: 81px;
+    height: 25px;
+    position: absolute;
+    padding: 0px 0px 0px 0px;
+    display: table-cell;
+    vertical-align: middle;
+    display: table-cell;
+}
+.SKS_frmUsersManage .cmdDelete {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 256px;
+    top: 384px;
+    width: 81px;
+    height: 25px;
+    position: absolute;
+    padding: 0px 0px 0px 0px;
+    display: table-cell;
+    vertical-align: middle;
+    display: table-cell;
+}

@@ -1,0 +1,370 @@
+.SKS_frmActionOrderReception {
+    left: -1px;
+    top: -1px;
+}
+.SKS_frmActionOrderReception .frmActionOrderReception {
+    
+    width: 523px;
+    height: 519px;
+    overflow: hidden;
+    left: 3px;
+    top: 25px;
+}
+.SKS_frmActionOrderReception .sbStatusBar_Panels_Panel1 {
+    width: 523px;
+    height: 25px;
+    position: absolute;
+}
+.SKS_frmActionOrderReception .Label4 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 8px;
+    width: 49px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmActionOrderReception .txtOrderID {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 96px;
+    top: 8px;
+    width: 105px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmActionOrderReception .Label3 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 328px;
+    top: 8px;
+    width: 49px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmActionOrderReception .txtStatus {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 408px;
+    top: 8px;
+    width: 105px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmActionOrderReception .Label19 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 32px;
+    width: 57px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmActionOrderReception .txtReceived {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 96px;
+    top: 36px;
+    width: 105px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmActionOrderReception .lblChanged {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 312px;
+    top: 36px;
+    width: 65px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmActionOrderReception .txtChanged {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 408px;
+    top: 36px;
+    width: 105px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmActionOrderReception .Label7 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 64px;
+    width: 57px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmActionOrderReception .txtReceivedBy {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 96px;
+    top: 64px;
+    width: 105px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmActionOrderReception .lblChangedBy {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 320px;
+    top: 64px;
+    width: 57px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmActionOrderReception .txtChangedBy {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 408px;
+    top: 64px;
+    width: 105px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmActionOrderReception .Frame2 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 96px;
+    width: 505px;
+    height: 49px;
+    position: absolute;
+}
+.SKS_frmActionOrderReception .Label5 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 16px;
+    width: 57px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmActionOrderReception .txtProviderCompany {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 72px;
+    top: 16px;
+    width: 145px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmActionOrderReception .Label1 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 232px;
+    top: 16px;
+    width: 57px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmActionOrderReception .txtProviderContact {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 288px;
+    top: 16px;
+    width: 209px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmActionOrderReception .Label6 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 160px;
+    width: 33px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmActionOrderReception .txtNotes {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 56px;
+    top: 152px;
+    width: 457px;
+    height: 44px;
+    position: absolute;
+}
+.SKS_frmActionOrderReception .fgDetails {
+    left: 8px;
+    top: 200px;
+    width: 505px;
+    height: 177px;
+    position: absolute;
+}
+.SKS_frmActionOrderReception .txtEntry {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 416px;
+    top: 312px;
+    width: 73px;
+    height: 19px;
+    position: absolute;
+}
+.SKS_frmActionOrderReception .Label8 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 384px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmActionOrderReception .txtSalesTax {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 88px;
+    top: 384px;
+    width: 145px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmActionOrderReception .Label10 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 288px;
+    top: 384px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmActionOrderReception .txtTotalTax {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 368px;
+    top: 384px;
+    width: 145px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmActionOrderReception .Label12 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 408px;
+    width: 57px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmActionOrderReception .txtFreightCharge {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 88px;
+    top: 408px;
+    width: 145px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmActionOrderReception .Label9 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 288px;
+    top: 408px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmActionOrderReception .txtSubTotal {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 368px;
+    top: 408px;
+    width: 145px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmActionOrderReception .Label11 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 432px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmActionOrderReception .txtTotal {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 88px;
+    top: 432px;
+    width: 145px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmActionOrderReception .cmdApprove {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 232px;
+    top: 456px;
+    width: 89px;
+    height: 25px;
+    position: absolute;
+    padding: 0px 0px 0px 0px;
+    display: table-cell;
+    vertical-align: middle;
+    display: table-cell;
+}
+.SKS_frmActionOrderReception .cmdCancel {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 328px;
+    top: 456px;
+    width: 89px;
+    height: 25px;
+    position: absolute;
+    padding: 0px 0px 0px 0px;
+    display: table-cell;
+    vertical-align: middle;
+    display: table-cell;
+}
+.SKS_frmActionOrderReception .cmdClose {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 424px;
+    top: 456px;
+    width: 89px;
+    height: 25px;
+    position: absolute;
+    padding: 0px 0px 0px 0px;
+    display: table-cell;
+    vertical-align: middle;
+    display: table-cell;
+}
+.SKS_frmActionOrderReception .sbStatusBar {
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    border: inset 1px;
+}

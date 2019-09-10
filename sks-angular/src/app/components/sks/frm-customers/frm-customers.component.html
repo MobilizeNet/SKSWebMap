@@ -1,0 +1,44 @@
+<div *ngIf="model">
+    <wm-window [model]="model" id="frmCustomers" class="SKS_frmCustomers">
+        <ng-template let-model>
+            <div class="frmCustomers">
+                <wm-toolstrip id="Toolbar1" [model]="model.Toolbar1" class="Toolbar1" tabindex="16"></wm-toolstrip>
+                <wm-groupbox id="Frame1" [model]="model.Frame1" class="Frame1" tabindex="17">
+          <wm-label id="Label1" [model]="model.Label1" class="Label1" tabindex="18">Company</wm-label>
+          <wm-textbox id="_txtField_0" [model]="model._txtField_0" class="_txtField_0" tabindex="1"></wm-textbox>
+          <wm-groupbox id="Frame2" [model]="model.Frame2" class="Frame2" tabindex="29">
+          <wm-label id="Label7" [model]="model.Label7" class="Label7" tabindex="32">Title</wm-label>
+          <wm-textbox id="_txtField_11" [model]="model._txtField_11" class="_txtField_11" tabindex="4"></wm-textbox>
+          <wm-label id="Label2" [model]="model.Label2" class="Label2" tabindex="30">First name</wm-label>
+          <wm-textbox id="_txtField_12" [model]="model._txtField_12" class="_txtField_12" tabindex="5"></wm-textbox>
+          <wm-label id="Label3" [model]="model.Label3" class="Label3" tabindex="31">Last name</wm-label>
+          <wm-textbox id="_txtField_13" [model]="model._txtField_13" class="_txtField_13" tabindex="6"></wm-textbox>
+</wm-groupbox>
+          <wm-label id="Label4" [model]="model.Label4" class="Label4" tabindex="19">Department</wm-label>
+          <wm-textbox id="_txtField_1" [model]="model._txtField_1" class="_txtField_1" tabindex="2"></wm-textbox>
+          <wm-label id="Label11" [model]="model.Label11" class="Label11" tabindex="25">Email</wm-label>
+          <wm-textbox id="_txtField_2" [model]="model._txtField_2" class="_txtField_2" tabindex="3"></wm-textbox>
+          <wm-label id="Label5" [model]="model.Label5" class="Label5" tabindex="20">Address</wm-label>
+          <wm-textbox id="_txtField_3" [model]="model._txtField_3" class="_txtField_3" tabindex="7"></wm-textbox>
+          <wm-label id="Label15" [model]="model.Label15" class="Label15" tabindex="33">Zip</wm-label>
+          <wm-textbox id="_txtField_4" [model]="model._txtField_4" class="_txtField_4" tabindex="8"></wm-textbox>
+          <wm-label id="Label6" [model]="model.Label6" class="Label6" tabindex="21">City</wm-label>
+          <wm-textbox id="_txtField_5" [model]="model._txtField_5" class="_txtField_5" tabindex="9"></wm-textbox>
+          <wm-label id="Label8" [model]="model.Label8" class="Label8" tabindex="22">Phone</wm-label>
+          <wm-textbox id="_txtField_8" [model]="model._txtField_8" class="_txtField_8" tabindex="12"></wm-textbox>
+          <wm-label id="Label13" [model]="model.Label13" class="Label13" tabindex="27">State/Prov</wm-label>
+          <wm-textbox id="_txtField_6" [model]="model._txtField_6" class="_txtField_6" tabindex="10"></wm-textbox>
+          <wm-label id="Label9" [model]="model.Label9" class="Label9" tabindex="23">Ext</wm-label>
+          <wm-textbox id="_txtField_9" [model]="model._txtField_9" class="_txtField_9" tabindex="13"></wm-textbox>
+          <wm-label id="Label14" [model]="model.Label14" class="Label14" tabindex="28">Country</wm-label>
+          <wm-textbox id="_txtField_7" [model]="model._txtField_7" class="_txtField_7" tabindex="11"></wm-textbox>
+          <wm-label id="Label10" [model]="model.Label10" class="Label10" tabindex="24">Fax</wm-label>
+          <wm-textbox id="_txtField_10" [model]="model._txtField_10" class="_txtField_10" tabindex="14"></wm-textbox>
+          <wm-label id="Label12" [model]="model.Label12" class="Label12" tabindex="26">Notes:</wm-label>
+          <wm-textbox id="_txtField_14" [model]="model._txtField_14" class="_txtField_14" tabindex="15"></wm-textbox>
+</wm-groupbox>
+                <wm-adodatacontrol id="dcCustomers" [model]="model.dcCustomers" class="dcCustomers" tabindex="0"></wm-adodatacontrol>
+            </div>
+        </ng-template>
+    </wm-window>
+</div>

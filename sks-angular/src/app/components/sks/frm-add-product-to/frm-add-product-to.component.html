@@ -1,0 +1,23 @@
+<div *ngIf="model">
+    <wm-window [model]="model" id="frmAddProductTo" class="SKS_frmAddProductTo">
+        <ng-template let-model>
+            <div class="frmAddProductTo">
+                <wm-groupbox id="Frame1" [model]="model.Frame1" class="Frame1" tabindex="5">
+          <wm-label id="Label5" [model]="model.Label5" class="Label5" tabindex="9">Code</wm-label>
+          <wm-textbox id="txtCode" [model]="model.txtCode" class="txtCode" tabindex="1"></wm-textbox>
+          <wm-button id="cmdProducts" [model]="model.cmdProducts" class="cmdProducts" tabindex="6"></wm-button>
+          <wm-label id="Label4" [model]="model.Label4" class="Label4" tabindex="10">Name</wm-label>
+          <wm-textbox id="txtName" [model]="model.txtName" class="txtName" tabindex="2"></wm-textbox>
+          <wm-listview id="lvProducts" [model]="model.lvProducts" class="lvProducts" tabindex="3"></wm-listview>
+</wm-groupbox>
+                <wm-label id="lblProductsRelated" [model]="model.lblProductsRelated" class="lblProductsRelated" tabindex="11">Products</wm-label>
+                <wm-listview id="lvProductsBy" [model]="model.lvProductsBy" class="lvProductsBy" tabindex="4"></wm-listview>
+                <wm-button id="cmdRemove" [model]="model.cmdRemove" class="cmdRemove" tabindex="13"></wm-button>
+                <wm-checkbox id="chkAll" [model]="model.chkAll" class="chkAll" tabindex="14"></wm-checkbox>
+                <wm-button id="cmdSave" [model]="model.cmdSave" class="cmdSave" tabindex="7"></wm-button>
+                <wm-button id="cmdClose" [model]="model.cmdClose" class="cmdClose" tabindex="8"></wm-button>
+                <wm-statusstrip id="sbStatusBar" [model]="model.sbStatusBar" class="sbStatusBar" tabindex="12"></wm-statusstrip>
+            </div>
+        </ng-template>
+    </wm-window>
+</div>

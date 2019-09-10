@@ -1,0 +1,257 @@
+.SKS_frmProducts {
+    left: -1px;
+    top: -1px;
+}
+.SKS_frmProducts .frmProducts {
+    
+    width: 448px;
+    height: 379px;
+    overflow: hidden;
+    left: 3px;
+    top: 25px;
+}
+.SKS_frmProducts .Toolbar1 {
+    left: 0px;
+    top: 0px;
+    width: 448px;
+    height: 44px;
+    position: absolute;
+}
+.SKS_frmProducts .Toolbar1_Buttons_Button4 {
+    width: 44px;
+    height: 39px;
+    position: absolute;
+}
+.SKS_frmProducts .Toolbar1_Buttons_Button5 {
+    width: 44px;
+    height: 39px;
+    position: absolute;
+}
+.SKS_frmProducts .Toolbar1_Buttons_Button6 {
+    width: 44px;
+    height: 39px;
+    position: absolute;
+}
+.SKS_frmProducts .Toolbar1_Buttons_Button1 {
+    width: 44px;
+    height: 39px;
+    position: absolute;
+}
+.SKS_frmProducts .Toolbar1_Buttons_Button2 {
+    width: 44px;
+    height: 39px;
+    position: absolute;
+}
+.SKS_frmProducts .Toolbar1_Buttons_Button3 {
+    width: 44px;
+    height: 39px;
+    position: absolute;
+}
+.SKS_frmProducts .Frame1 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 48px;
+    width: 433px;
+    height: 281px;
+    position: absolute;
+}
+.SKS_frmProducts .Label3 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 24px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProducts ._txtField_0 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 104px;
+    top: 24px;
+    width: 113px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProducts .Label1 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 56px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProducts ._txtField_1 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 104px;
+    top: 56px;
+    width: 193px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProducts .Label4 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 87px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProducts ._txtField_2 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 104px;
+    top: 88px;
+    width: 305px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProducts .Label11 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 118px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProducts .cmbCategory {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 104px;
+    top: 117px;
+    width: 121px;
+    height: 21px;
+    position: absolute;
+}
+.SKS_frmProducts .txtCategory {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 264px;
+    top: 120px;
+    width: 113px;
+    height: 19px;
+    position: absolute;
+}
+.SKS_frmProducts .Label5 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 148px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProducts ._txtField_3 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 104px;
+    top: 148px;
+    width: 121px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProducts .Label15 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 179px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProducts .Check1 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 104px;
+    top: 181px;
+    width: 25px;
+    height: 17px;
+    position: absolute;
+}
+.SKS_frmProducts .Label6 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 210px;
+    width: 81px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProducts ._txtField_4 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 104px;
+    top: 210px;
+    width: 105px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProducts .Label2 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 244px;
+    width: 81px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProducts ._txtField_5 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 104px;
+    top: 240px;
+    width: 105px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProducts .Label7 {
+    
+    color: rgba(0, 0, 0, 1);
+    left: 216px;
+    top: 244px;
+    width: 57px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProducts ._txtField_6 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 256px;
+    top: 240px;
+    width: 105px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProducts .dcProducts {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 336px;
+    width: 300px;
+    height: 25px;
+    position: absolute;
+    overflow: hidden;
+}

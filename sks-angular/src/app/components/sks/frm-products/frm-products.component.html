@@ -1,0 +1,31 @@
+<div *ngIf="model">
+    <wm-window [model]="model" id="frmProducts" class="SKS_frmProducts">
+        <ng-template let-model>
+            <div class="frmProducts">
+                <wm-toolstrip id="Toolbar1" [model]="model.Toolbar1" class="Toolbar1" tabindex="9"></wm-toolstrip>
+                <wm-groupbox id="Frame1" [model]="model.Frame1" class="Frame1" tabindex="10">
+          <wm-label id="Label3" [model]="model.Label3" class="Label3" tabindex="19">Product </wm-label>
+          <wm-textbox id="_txtField_0" [model]="model._txtField_0" class="_txtField_0" tabindex="1"></wm-textbox>
+          <wm-label id="Label1" [model]="model.Label1" class="Label1" tabindex="16">Name</wm-label>
+          <wm-textbox id="_txtField_1" [model]="model._txtField_1" class="_txtField_1" tabindex="2"></wm-textbox>
+          <wm-label id="Label4" [model]="model.Label4" class="Label4" tabindex="15">Desc</wm-label>
+          <wm-textbox id="_txtField_2" [model]="model._txtField_2" class="_txtField_2" tabindex="3"></wm-textbox>
+          <wm-label id="Label11" [model]="model.Label11" class="Label11" tabindex="12">Category</wm-label>
+          <wm-combobox id="cmbCategory" [model]="model.cmbCategory" class="cmbCategory" tabindex="4"></wm-combobox>
+          <wm-textbox id="txtCategory" [model]="model.txtCategory" class="txtCategory" tabindex="17"></wm-textbox>
+          <wm-label id="Label5" [model]="model.Label5" class="Label5" tabindex="14">Serial number</wm-label>
+          <wm-textbox id="_txtField_3" [model]="model._txtField_3" class="_txtField_3" tabindex="5"></wm-textbox>
+          <wm-label id="Label15" [model]="model.Label15" class="Label15" tabindex="11">Discontinued</wm-label>
+          <wm-checkbox id="Check1" [model]="model.Check1" class="Check1" tabindex="6"></wm-checkbox>
+          <wm-label id="Label6" [model]="model.Label6" class="Label6" tabindex="13">Unit price</wm-label>
+          <wm-textbox id="_txtField_4" [model]="model._txtField_4" class="_txtField_4" tabindex="7"></wm-textbox>
+          <wm-label id="Label2" [model]="model.Label2" class="Label2" tabindex="18">Qty per unit</wm-label>
+          <wm-textbox id="_txtField_5" [model]="model._txtField_5" class="_txtField_5" tabindex="8"></wm-textbox>
+          <wm-label id="Label7" [model]="model.Label7" class="Label7" tabindex="20">Unit</wm-label>
+          <wm-textbox id="_txtField_6" [model]="model._txtField_6" class="_txtField_6" tabindex="21"></wm-textbox>
+</wm-groupbox>
+                <wm-adodatacontrol id="dcProducts" [model]="model.dcProducts" class="dcProducts" tabindex="0"></wm-adodatacontrol>
+            </div>
+        </ng-template>
+    </wm-window>
+</div>

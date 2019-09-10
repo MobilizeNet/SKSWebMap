@@ -1,0 +1,43 @@
+body { font-family: Roboto, sans-serif;font-size:11pt;}
+
+.k-widget {
+    font-size: 11px;
+}
+
+.k-button {
+    font-size: 11px !important;
+}
+.k-menu {
+    font-size: 11px;
+}
+
+.frmMain .k-menu {
+    font-size: 15px;
+}
+
+.material-icons {
+    font-size: 13px !important;
+}
+
+#mdiContentDiv {
+    display: none !important;
+}
+
+.k-window-titlebar {
+    background: rgb(63, 81, 181);
+    margin-bottom: 10px;
+    max-height: 14px;
+    color: white;
+}
+
+.k-grid {
+    font-size: 10px;
+}
+
+#MainMenu1 > kendo-menu > .k-menu:not(.k-context-menu)>.k-item {
+    color: white;
+}
+
+.k-textbox,.k-textarea,.k-input.k-textbox {
+    font-size: 12px
+}

@@ -1,0 +1,34 @@
+<div *ngIf="model">
+    <wm-window [model]="model" id="frmAddStockManual" class="SKS_frmAddStockManual">
+        <ng-template let-model>
+            <div class="frmAddStockManual">
+                <wm-label id="Label3" [model]="model.Label3" class="Label3" tabindex="11">Select a product first</wm-label>
+                <wm-groupbox id="Frame1" [model]="model.Frame1" class="Frame1" tabindex="7">
+          <wm-label id="Label5" [model]="model.Label5" class="Label5" tabindex="9">Code</wm-label>
+          <wm-textbox id="txtCode" [model]="model.txtCode" class="txtCode" tabindex="1"></wm-textbox>
+          <wm-button id="cmdProducts" [model]="model.cmdProducts" class="cmdProducts" tabindex="8"></wm-button>
+          <wm-label id="Label4" [model]="model.Label4" class="Label4" tabindex="10">Name </wm-label>
+          <wm-textbox id="txtName" [model]="model.txtName" class="txtName" tabindex="2"></wm-textbox>
+</wm-groupbox>
+                <wm-listview id="lvProducts" [model]="model.lvProducts" class="lvProducts" tabindex="3"></wm-listview>
+                <wm-label id="Label8" [model]="model.Label8" class="Label8" tabindex="18">Product</wm-label>
+                <wm-textbox id="txtProductName" [model]="model.txtProductName" class="txtProductName" tabindex="17"></wm-textbox>
+                <wm-label id="Label9" [model]="model.Label9" class="Label9" tabindex="20">Unit</wm-label>
+                <wm-textbox id="txtUnit" [model]="model.txtUnit" class="txtUnit" tabindex="19"></wm-textbox>
+                <wm-label id="Label2" [model]="model.Label2" class="Label2" tabindex="12">Quantity</wm-label>
+                <wm-textbox id="_txtValues_0" [model]="model._txtValues_0" class="_txtValues_0" tabindex="4"></wm-textbox>
+                <wm-label id="Label7" [model]="model.Label7" class="Label7" tabindex="15">Units</wm-label>
+                <wm-textbox id="txtQuantityPerUnit" [model]="model.txtQuantityPerUnit" class="txtQuantityPerUnit" tabindex="16"></wm-textbox>
+                <wm-label id="Label1" [model]="model.Label1" class="Label1" tabindex="13">Price</wm-label>
+                <wm-textbox id="_txtValues_1" [model]="model._txtValues_1" class="_txtValues_1" tabindex="5"></wm-textbox>
+                <wm-label id="Label6" [model]="model.Label6" class="Label6" tabindex="14">Unit Price</wm-label>
+                <wm-textbox id="_txtValues_2" [model]="model._txtValues_2" class="_txtValues_2" tabindex="6"></wm-textbox>
+                <wm-label id="Label10" [model]="model.Label10" class="Label10" tabindex="22">Stock quantity</wm-label>
+                <wm-label id="lblNewQuantity" [model]="model.lblNewQuantity" class="lblNewQuantity" tabindex="23"></wm-label>
+                <wm-button id="cmdSave" [model]="model.cmdSave" class="cmdSave" tabindex="25"></wm-button>
+                <wm-button id="cmdClose" [model]="model.cmdClose" class="cmdClose" tabindex="24"></wm-button>
+                <wm-statusstrip id="sbStatusBar" [model]="model.sbStatusBar" class="sbStatusBar" tabindex="21"></wm-statusstrip>
+            </div>
+        </ng-template>
+    </wm-window>
+</div>
