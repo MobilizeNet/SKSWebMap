@@ -15,6 +15,8 @@ The **C# Windows Forms source code** of this app can be found [here](https://git
 
 The **C# Windows Forms source code** was upgraded to an [Asp .Net Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core) App using our [WebMap product](https://www.mobilize.net/webmap)
 
+> NOTE: This app was migrated to .NET Core 2.2. If you haven't installed it just go to: https://dotnet.microsoft.com/download/dotnet-core/2.2
+
 
 # Understanding the target code
 
