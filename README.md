@@ -115,8 +115,8 @@ You should now see a screen like:
 
 If you do not want to waste a lot of time setting up an environment, you can open this application on [Gitpod](https://gitpod.io).
 
-[Gitpod](https://gitpod.io) is a great company that allows you to get your repo and hosted on a cloud IDE.
+[Gitpod](https://gitpod.io) is a great company that allows you to get your repo up and runnning hosted on a cloud IDE.
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/MobilizeNet/SKSWebMAp)
 
-This is cloud environment that show this migrated application taken all the way from VB6 to a dockerized Linux container :)
+This is cloud environment that shows how this migrated application can be taken all the way from VB6 to a dockerized Linux container :)
