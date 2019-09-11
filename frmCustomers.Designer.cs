@@ -251,7 +251,7 @@ namespace SKS
       	this.dcCustomers.AllowDrop = true;
       	this.dcCustomers.Properties().BackColor = Mobilize.Web.SystemColors.Window;
          this.dcCustomers.Properties().BOFAction = UpgradeHelpers.DB.BOFActionEnum.MoveFirst;
-         this.dcCustomers.ConnectionString = "Data Source=./Orders.db;Version=3;";
+         this.dcCustomers.ConnectionString = "Data Source=Orders.db;Version=3;";
          this.dcCustomers.CursorLocation = UpgradeHelpers.DB.ADO.CursorLocationEnum.adUseClient;
          this.dcCustomers.Enabled = true;
          this.dcCustomers.Properties().EOFAction = UpgradeHelpers.DB.EOFActionEnum.MoveLast;

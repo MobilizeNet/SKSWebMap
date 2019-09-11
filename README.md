@@ -13,7 +13,7 @@ The **VB6 source code** was upgraded to a C# Windows Forms Desktop app using the
 
 The **C# Windows Forms source code** of this app can be found [here](https://github.com/MobilizeNet/SKSWinForms)
 
-The **C# Windows Forms source code** was upgraded to an [Asp .Net Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core) App using our [WebMap product](https://www.mobilize.net/webmap)
+The **C# Windows Forms source code** was upgraded to an [Asp .Net Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core) App using our [WebMap product](https://www.mobilize.net/webmap). Now you can run this app on any .NET Core platform: Windows, MacOS or Linux.
 
 > NOTE: This app was migrated to .NET Core 2.2. If you haven't installed it just go to: https://dotnet.microsoft.com/download/dotnet-core/2.2
 
@@ -112,3 +112,11 @@ dotnet run
 You should now see a screen like:
 
 ![SKSRunning](./Media/SKSAspNetcoreRunning.jpg)
+
+If you do not want to waste a lot of time setting up an environment, you can open this application on [Gitpod](https://gitpod.io).
+
+[Gitpod](https://gitpod.io) is a great company that allows you to get your repo and hosted on a cloud IDE.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/MobilizeNet/SKSWebMAp)
+
+This is cloud environment that show this migrated application taken all the way from VB6 to a dockerized Linux container :)

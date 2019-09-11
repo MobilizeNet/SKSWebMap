@@ -62,7 +62,7 @@ namespace SKS
       {
          Stub._System.Windows.Forms.Application.EnableVisualStyles();
          Stub._System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
-         ConnectionString = @"Data Source=.\Orders.db;Version=3;";
+         ConnectionString = @"Data Source=Orders.db;Version=3;";
 
          modConnection.OpenConnection();
          CurrentUserAdmin = true;
