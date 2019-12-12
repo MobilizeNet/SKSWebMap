@@ -21,6 +21,8 @@ namespace WebSite
     using Mobilize.WebMap.Host;
     using Mobilize.WebMap.Server;
     using Mobilize.WebMap.Server.ObservableBinder;
+    using Microsoft.Extensions.Hosting;
+    using Microsoft.AspNetCore.Server.Kestrel.Core;
 
     /// <summary>
     /// Startup
@@ -46,6 +48,18 @@ namespace WebSite
                             options.ModelBinderProviders.Insert(0, new ObservableModelBinderProvider());
                             options.ModelMetadataDetailsProviders.Insert(0, new SuppressChildValidationMetadataProvider(typeof(IObservable)));
                         });
+
+            // If using IIS:
+            services.Configure<IISServerOptions>(options =>
+            {
+                options.AllowSynchronousIO = true;
+            });
+            // If using Kestrel:
+            services.Configure<KestrelServerOptions>(options =>
+                {
+                    options.AllowSynchronousIO = true;
+                });
+            services.AddHealthChecks();
         }
 
         /// <summary>
@@ -53,18 +67,19 @@ namespace WebSite
         /// </summary>
         /// <param name="app">the application builder</param>
         /// <param name="env">the hosting environment</param>
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseDefaultFiles();
             app.UseStaticFiles();
             app.UseSession();
             app.UseAntiforgeryToken();
             app.UseWebMap();
-            app.UseMvc(routes =>
+            app.UseRouting();
+            app.UseEndpoints(endpoints =>
             {
-                routes.MapRoute("DefaultApi", "api/{controller}/{id}");
+                endpoints.MapControllerRoute("DefaultApi", "api/{controller}/{id}");
+                endpoints.MapHealthChecks("/health");
             });
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

@@ -42,9 +42,6 @@ namespace WebSite
                 //    options.LogDirectory = "LogFiles";
                 //    options.FileSizeLimit = 20 * 1024 * 1024;
                 //}))
-                //// IIS Deployment
-                //.UseUrls("http://localhost:81")
-                //.UseIISIntegration()
                 .UseStartup<Startup>()
                 .Build();
         }
