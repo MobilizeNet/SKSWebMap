@@ -15,7 +15,7 @@ The **C# Windows Forms source code** of this app can be found [here](https://git
 
 The **C# Windows Forms source code** was upgraded to an [Asp .Net Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core) App using our [WebMap product](https://www.mobilize.net/webmap). Now you can run this app on any .NET Core platform: Windows, MacOS or Linux.
 
-> NOTE: This app was migrated to .NET Core 2.2. If you haven't installed it just go to: https://dotnet.microsoft.com/download/dotnet-core/2.2
+> NOTE: This app was migrated to .NET Core 3.1. If you haven't installed it just go to: https://dotnet.microsoft.com/download/dotnet-core/3.1
 
 
 # Understanding the target code
