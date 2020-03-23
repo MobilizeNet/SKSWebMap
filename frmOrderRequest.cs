@@ -204,6 +204,7 @@ namespace SKS
       	{
       		modConnection.ExecuteSql("Select * from OrderRequests");
       		modConnection.rs.AddNew();
+            modConnection.rs["OrderId"] = 0;
       		modConnection.rs["CustomerId"] = currentIdCustomer;
       		modConnection.rs["EmployeeId"] = modMain.UserId;
       		modConnection.rs["OrderDate"] = DateTimeHelper.ToString(DateTime.Today);
