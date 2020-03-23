@@ -1,9 +1,6 @@
 image:
-  file: Dockerfile
+  file: .gitpod.Dockerfile
 
 tasks:
-  - command : dotnet run
+  - echo : "hola"
   
-ports:
-  - port: 5000
-    onOpen: open-preview
