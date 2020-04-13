@@ -21,6 +21,7 @@ The **C# Windows Forms source code** was upgraded to an [Asp .Net Core](https://
 # Understanding the target code
 
 [Mobilize.Net](https://www.mobilize.net/)'s [WebMap product](https://www.mobilize.net/) upgrades WinForms desktop apps to a modern Asp.Net Core applications. 
+You can see also see nice [video walkthrough of this demo](https://www.mobilize.net/webmap-demo)
 
 Those applications will have a:
 * C# BackEnd
