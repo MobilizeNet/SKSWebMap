@@ -22,10 +22,6 @@ namespace Mobilize.Web.Extensions
       {
       }
 
-      public static void PerformLayout(this Mobilize.Web.Control control)
-      {
-      }
-
    }
 
 }

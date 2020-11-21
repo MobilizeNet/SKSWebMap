@@ -11,26 +11,21 @@ namespace SKS
       : Mobilize.Web.Form
    {
 
-      [Intercepted]
-
-      string SearchTable { get; set; } = "";
-
-
-      public frmSearch()
-      	: base()
-      {
-      	if (m_vb6FormDefInstance == null)
-         {
-         	if (m_InitializingDefInstance)
-         	{
-         		m_vb6FormDefInstance = this;
-         	}
-         	else
-         	{
-         		try
-         		{
-         			//For the start-up form, the first instance created is the default instance.
-         			if (System.Reflection.Assembly.GetExecutingAssembly().EntryPoint != null && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType())
+   	public frmSearch()
+   		: base()
+   	{
+   		if (m_vb6FormDefInstance is null)
+   		{
+   			if (m_InitializingDefInstance)
+   			{
+   				m_vb6FormDefInstance = this;
+   			}
+   			else
+   			{
+   				try
+   				{
+   					//For the start-up form, the first instance created is the default instance.
+   					if (!(System.Reflection.Assembly.GetExecutingAssembly().EntryPoint is null) && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType())
                   {
                   	m_vb6FormDefInstance = this;
                   }
@@ -45,6 +40,16 @@ namespace SKS
       }
 
 
+      private void frmSearch_Activated(System.Object eventSender, System.EventArgs eventArgs)
+      {
+         if ( Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm != eventSender)
+         {
+            Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm = (Mobilize.Web.Form) eventSender;
+         }
+      }
+
+      [Intercepted]
+      string SearchTable { get; set; } = "";
       private void cboSrchBy_SelectedIndexChanged(Object eventSender, EventArgs eventArgs)
       {
       	lblSrchBy.Text = cboSrchBy.Text;
@@ -52,7 +57,7 @@ namespace SKS
 
       private void cmdClose_Click(Object eventSender, EventArgs eventArgs)
       {
-         this.Close();
+      	this.Close();
       }
 
 
@@ -64,7 +69,7 @@ namespace SKS
       		Label20.Text = "Search for a " + itemToSearch;
       	}
       	SearchTable = Table;
-      	modConnection.ExecuteSql("Select Top 1 * from " + Table);
+      	modConnection.ExecuteSql("Select * from " + Table + " limit 1;");
       	int tempForEndVar = (modConnection.rs.FieldsMetadata.Count - 1);
       	for (modMain.i = 0; modMain.i <= tempForEndVar; modMain.i++)
       	{
@@ -105,11 +110,10 @@ namespace SKS
       }
 
       //''
-
       public void SearchCriteriaCustomers(string field, string value)
       {
-      	modConnection.ExecuteSql("Select * from Customers where " + field + " LIKE '" + value + "%'");
-      	if (modConnection.rs.RecordCount == 0)
+         modConnection.ExecuteSql("Select * from Customers where " + field + " LIKE '" + value + "%'");
+         if (modConnection.rs.RecordCount == 0)
          {
             Mobilize.Web.MessageBox.Show("There are no records with the selected criteria", "Search", Mobilize.Web.MessageBoxButtons.OK, Mobilize.Web.MessageBoxIcon.Information);
          }
@@ -122,8 +126,8 @@ namespace SKS
 
       public void SearchCriteriaProducts(string field, string value)
       {
-      	modConnection.ExecuteSql("Select * from Products where " + field + " LIKE '" + value + "%'");
-      	if (modConnection.rs.RecordCount == 0)
+         modConnection.ExecuteSql("Select * from Products where " + field + " LIKE '" + value + "%'");
+         if (modConnection.rs.RecordCount == 0)
          {
             Mobilize.Web.MessageBox.Show("There are no records with the selected criteria", "Search", Mobilize.Web.MessageBoxButtons.OK, Mobilize.Web.MessageBoxIcon.Information);
          }
@@ -135,8 +139,8 @@ namespace SKS
 
       public void SearchCriteriaProviders(string field, string value)
       {
-      	modConnection.ExecuteSql("Select * from Providers where " + field + " LIKE '" + value + "%'");
-      	if (modConnection.rs.RecordCount == 0)
+         modConnection.ExecuteSql("Select * from Providers where " + field + " LIKE '" + value + "%'");
+         if (modConnection.rs.RecordCount == 0)
          {
             Mobilize.Web.MessageBox.Show("There are no records with the selected criteria", "Search", Mobilize.Web.MessageBoxButtons.OK, Mobilize.Web.MessageBoxIcon.Information);
          }
@@ -146,7 +150,6 @@ namespace SKS
          	frmProviders.DefInstance.dcProviders.UpdateRecordSet( modConnection.rs);
          }
       }
-
       private void Form_Closed(Object eventSender, EventArgs eventArgs)
       {
       }

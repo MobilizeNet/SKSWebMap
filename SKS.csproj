@@ -1,51 +1,100 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <StartupObject>WebSite.Startup</StartupObject>
         <AssemblyName>SKS</AssemblyName>
-        <ProjectGuid>c83435e8-3b9f-4b39-b67f-c83120cafc71</ProjectGuid>
+        <ProjectGuid>00000000-0000-0000-0000-000000000000</ProjectGuid>
         <Deterministic>False</Deterministic>
+        <LangVersion>7.3</LangVersion>
     </PropertyGroup>
     <ItemGroup>
-        <ProjectReference Include="Stubs\Stubs.csproj" />
+        <ProjectReference Include="Stubs\Stubs.csproj"/>
     </ItemGroup>
     <ItemGroup>
-
-        <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
-        <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0" />
         <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
+        <PackageReference Include="Microsoft.VisualBasic" Version="10.4.0-preview.18571.3" />
         <PackageReference Include="Mobilize.Extensions.Logging.RollingFile" Version="2.1.1-rc0027" />
-        <PackageReference Include="Mobilize.WebMap.CoreServices.All" Version="6.0.0-rc.110" />
-        <PackageReference Include="Mobilize.Web.BundleBasic.All" Version="5.0.6-rc0024" />
-        <PackageReference Include="Mobilize.VBUC.Helpers.All" Version="8.1.2-rc0876" />
-        <PackageReference Include="Mobilize.Weaving.WebMapExtensions.All" Version="6.0.0-rc.101" />
-        <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
-        <PackageReference Include="System.Data.Odbc" Version="4.5.0" />
-        <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
-        <PackageReference Include="System.Data.SQLite" Version="1.0.111" />
+        <PackageReference Include="Mobilize.Web.BundleBasic.All" Version="6.1.4"/>
+        <PackageReference Include="Mobilize.Weaving.WebMapExtensions.All" Version="7.0.18"/>
+        <PackageReference Include="Mobilize.Weaving" Version="2.0.1"/>
+        <PackageReference Include="Mobilize.WebMap.CoreServices.All" Version="7.0.18"/>
+        <PackageReference Include="Mobilize.VBUC.Helpers.All" Version="9.0.1"/>
     </ItemGroup>
     <ItemGroup>
-        <Compile Remove="packages\**" />
-        <Compile Remove="Stubs\**" />
-        <Content Remove="packages\**" />
-        <Content Remove="Stubs\**" />
-        <EmbeddedResource Remove="packages\**" />
-        <EmbeddedResource Remove="Stubs\**" />
-        <None Remove="packages\**" />
-        <None Remove="Stubs\**" />
-        <Compile Remove="*-angular\**" />
-        <Content Remove="*-angular\**" />
-        <EmbeddedResource Remove="*-angular\**" />
-        <None Remove="*-angular\**" />
+        <Content Include="Views\**\*.cshtml" />
+        <Content Include="Views\**\*.config" />
+        <Compile Remove="sks-angular\**" />
+        <Content Remove="sks-angular\**" />
+        <EmbeddedResource Remove="sks-angular\**" />
+        <None Remove="sks-angular\**" />
+		        <Compile Remove="Stubs\**" />
+		<Content Remove="Stubs\**" />
+		<EmbeddedResource Remove="Stubs\**" />
+		<None Remove="Stubs\**" />
     </ItemGroup>
     <ItemGroup>
-      <None Update="Orders.db">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
+      <Reference Include="mscorlib"/>
+      <Reference Include="System.Core"/>
+      <Reference Include="System.Data"/>
+      <Reference Include="System"/>
+      <Reference Include="System.Runtime.Serialization"/>
+      <Reference Include="System.Xml"/>
+      <Reference Include="System.Xml.Linq"/>
+    </ItemGroup>
+    <ItemGroup>
+      <COMReference Include="Microsoft.StdFormat">
+      <Guid>{6B263850-900B-11D0-9484-00A0C91110ED}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>primary</WrapperTool>
+      </COMReference>
+      <COMReference Include="MSComCtl2">
+      <Guid>{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+      </COMReference>
+      <COMReference Include="AxMSComCtl2">
+      <Guid>{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+      </COMReference>
+      <COMReference Include="MSDataListLib">
+      <Guid>{F0D2F211-CCB0-11D0-A316-00AA00688B10}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+      </COMReference>
+      <COMReference Include="AxMSDataListLib">
+      <Guid>{F0D2F211-CCB0-11D0-A316-00AA00688B10}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+      </COMReference>
+      <COMReference Include="MSChart20Lib">
+      <Guid>{65E121D4-0C60-11D2-A9FC-0000F8754DA1}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+      </COMReference>
+      <COMReference Include="AxMSChart20Lib">
+      <Guid>{65E121D4-0C60-11D2-A9FC-0000F8754DA1}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>aximp</WrapperTool>
+      </COMReference>
     </ItemGroup>
 </Project>
 

@@ -51,10 +51,6 @@ namespace SKS
       [Intercepted]
       public static string ImgSrc { get; set; } = "";
 
-
-
-
-
       //UPGRADE_WARNING: (1047) Application will terminate when Sub Main() finishes. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1047
 
       [STAThread]
@@ -62,7 +58,7 @@ namespace SKS
       {
          Stub._System.Windows.Forms.Application.EnableVisualStyles();
          Stub._System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
-         ConnectionString = @"Data Source=Orders.db;Version=3;";
+         ConnectionString = "DRIVER=SQLite3 ODBC Driver; Database=Orders.db; LongNames=0; Timeout=1000; NoTXN=0; SyncPragma=NORMAL; StepAPI=0;";
 
          modConnection.OpenConnection();
          CurrentUserAdmin = true;
@@ -77,7 +73,7 @@ namespace SKS
          Mobilize.Web.StatusStrip sb = null;
          sb = null;
          ((Mobilize.Web.ToolStripStatusLabel) frmMain.DefInstance.sbStatusBar.Items[0]).Text = message;
-         if (frm != null)
+         if (!(frm is null))
          {
          	if (frm == frmAdjustStockManual.DefInstance)
             {
@@ -111,12 +107,12 @@ namespace SKS
             {
             	sb = frmRequestApproval.DefInstance.sbStatusBar;
             }
-            if (sb != null)
+            if (!(sb is null))
             {
-            	if (((Mobilize.Web.ToolStripStatusLabel) sb.Items[0]) != null)
-               {
-               	((Mobilize.Web.ToolStripStatusLabel) sb.Items[0]).Text = message;
-               }
+            	if (!(((Mobilize.Web.ToolStripStatusLabel) sb.Items[0]) is null))
+            	{
+            		((Mobilize.Web.ToolStripStatusLabel) sb.Items[0]).Text = message;
+            	}
             }
          }
       }

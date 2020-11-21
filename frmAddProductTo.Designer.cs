@@ -3,9 +3,8 @@ using Mobilize.Web.Extensions;
 
 namespace SKS
 {
-
-   partial class frmAddProductTo
-   {
+	partial class frmAddProductTo
+	{
 
       [Intercepted]
 
@@ -15,23 +14,22 @@ namespace SKS
       [Intercepted]
       private static bool m_InitializingDefInstance { get; set; }
 
-      [Intercepted]
       public static frmAddProductTo DefInstance
       {
       	get
       	{
-      		if (m_vb6FormDefInstance == null || m_vb6FormDefInstance.IsDisposed)
-            {
-            	m_InitializingDefInstance = true;
-            	m_vb6FormDefInstance = CreateInstance();
-            	m_InitializingDefInstance = false;
-            }
-            return m_vb6FormDefInstance;
-         }
-         set
-         {
-            m_vb6FormDefInstance = value;
-         }
+      		if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
+      		{
+      			m_InitializingDefInstance = true;
+      			m_vb6FormDefInstance = CreateInstance();
+      			m_InitializingDefInstance = false;
+      		}
+      		return m_vb6FormDefInstance;
+      	}
+      	set
+      	{
+      		m_vb6FormDefInstance = value;
+      	}
       }
 
       #endregion
@@ -49,7 +47,7 @@ namespace SKS
       [Intercepted]
       //Required by the Windows Form Designer
       private
-      System.ComponentModel.IContainer components { get; set; }
+      Mobilize.Web.Controls.Interfaces.IContainer components { get; set; }
 
       [Intercepted]
       public Mobilize.Web.ToolTip ToolTipMain { get; set; }
@@ -133,7 +131,7 @@ namespace SKS
       public Mobilize.Web.Label lblProductsRelated { get; set; }
 
       [Intercepted]
-      private Mobilize.Web.ListView listViewHelper1 { get; set; }
+      public Mobilize.Web.ListView listViewHelper1 { get; set; }
       //NOTE: The following procedure is required by the Windows Form Designer
       //It can be modified using the Windows Form Designer.
       //Do not modify it using the code editor.
@@ -142,7 +140,7 @@ namespace SKS
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new System.ComponentModel.Container();
+      	this.components = new Mobilize.Web.ControlCollection();
       	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddProductTo));
       	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
       	this.chkAll = new Mobilize.Web.CheckBox();
@@ -177,7 +175,6 @@ namespace SKS
       	this.lvProductsBy.SuspendLayout();
       	this.SuspendLayout();
       	this.listViewHelper1 = new Mobilize.Web.ListView(this.components);
-         ;
       	// 
       	// chkAll
       	// 
@@ -194,7 +191,7 @@ namespace SKS
          this.chkAll.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.chkAll.Size = new System.Drawing.Size(81, 17);
          this.chkAll.TabIndex = 13;
-         this.chkAll.TabStop = false;
+         this.chkAll.Properties().TabStop = false;
          this.chkAll.Text = "Check All";
          this.chkAll.TextAlign = Mobilize.Web.ContentAlignment.MiddleLeft;
          this.chkAll.Visible = true;
@@ -210,7 +207,7 @@ namespace SKS
          this.cmdRemove.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.cmdRemove.Size = new System.Drawing.Size(97, 25);
          this.cmdRemove.TabIndex = 12;
-         this.cmdRemove.TabStop = false;
+         this.cmdRemove.Properties().TabStop = false;
          this.cmdRemove.Text = "&Remove ";
          this.cmdRemove.TextImageRelation = Mobilize.Web.TextImageRelation.ImageAboveText;
          this.cmdRemove.UseVisualStyleBackColor = false;
@@ -220,7 +217,7 @@ namespace SKS
          // 
          this.sbStatusBar.AllowDrop = true;
          this.sbStatusBar.Properties().BackColor = Mobilize.Web.SystemColors.Control;
-         this.sbStatusBar.Properties().Dock = Mobilize.Web.DockStyle.Bottom;
+         this.sbStatusBar.Dock = Mobilize.Web.DockStyle.Bottom;
          this.sbStatusBar.Location = new System.Drawing.Point(0, 488);
          this.sbStatusBar.Name = "sbStatusBar";
          this.sbStatusBar.Properties().ShowItemToolTips = true;
@@ -234,7 +231,7 @@ namespace SKS
          this.sbStatusBar_Panels_Panel1.Properties().BorderStyle = Mobilize.Web.Border3DStyle.SunkenOuter;
          this.sbStatusBar_Panels_Panel1.DoubleClickEnabled = true;
          this.sbStatusBar_Panels_Panel1.Margin = new Mobilize.Web.Padding(0);
-         this.sbStatusBar_Panels_Panel1.Properties().Size = new System.Drawing.Size(423, 23);
+         this.sbStatusBar_Panels_Panel1.Size = new System.Drawing.Size(423, 23);
          this.sbStatusBar_Panels_Panel1.Properties().Spring = true;
          this.sbStatusBar_Panels_Panel1.TextAlign = Mobilize.Web.ContentAlignment.MiddleLeft;
          this.sbStatusBar_Panels_Panel1.TextImageRelation = Mobilize.Web.TextImageRelation.ImageBeforeText;
@@ -299,7 +296,7 @@ namespace SKS
          this.cmdProducts.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.cmdProducts.Size = new System.Drawing.Size(25, 21);
          this.cmdProducts.TabIndex = 5;
-         this.cmdProducts.TabStop = false;
+         this.cmdProducts.Properties().TabStop = false;
          this.cmdProducts.Text = "...";
          this.cmdProducts.TextImageRelation = Mobilize.Web.TextImageRelation.ImageAboveText;
          this.cmdProducts.UseVisualStyleBackColor = false;
@@ -485,6 +482,9 @@ namespace SKS
          this.lblProductsRelated.Size = new System.Drawing.Size(409, 17);
          this.lblProductsRelated.TabIndex = 10;
          this.lblProductsRelated.Text = "Products";
+         // 
+         // frmAddProductTo
+         // 
          this.AllowDrop = true;
          this.Properties().AutoScaleDimensions = new System.Drawing.SizeF(6, 13);
          this.Properties().AutoScaleMode = Stub._System.Windows.Forms.AutoScaleMode.Font;
@@ -505,10 +505,10 @@ namespace SKS
          this.Name = "frmAddProductTo";
          this.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.Text = "Create New Product Item";
+         this.Activated += new System.EventHandler(this.frmAddProductTo_Activated);
          this.Closed += new System.EventHandler(this.Form_Closed);
          this.FormClosing += new Mobilize.Web.FormClosingEventHandler(this.Form_FormClosing);this.lvProducts.ItemClick += new Mobilize.Web.ListViewItemClickEventHandler(this.lvProducts_ItemClick);
          this.listViewHelper1.SetCorrectEventsBehavior(this.lvProducts, true);
-         ;
          this.sbStatusBar.ResumeLayout(false);
          this.Frame1.ResumeLayout(false);
          this.lvProducts.ResumeLayout(false);
@@ -516,6 +516,5 @@ namespace SKS
          this.ResumeLayout(false);
       }
       #endregion
-
    }
 }

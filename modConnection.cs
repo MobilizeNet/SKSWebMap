@@ -15,63 +15,60 @@ namespace SKS
 
       private static DbConnection _CurrentConnection { get; set; } = null;
 
-      [Intercepted]
       internal static DbConnection CurrentConnection
       {
       	get
       	{
-      		if (_CurrentConnection == null)
-            {
-            	_CurrentConnection = UpgradeHelpers.DB.AdoFactoryManager.GetFactory().CreateConnection();
-            }
-            return _CurrentConnection;
-         }
-         set
-         {
-            _CurrentConnection = value;
-         }
+      		if (_CurrentConnection is null)
+      		{
+      			_CurrentConnection = UpgradeHelpers.DB.AdoFactoryManager.GetFactory().CreateConnection();
+      		}
+      		return _CurrentConnection;
+      	}
+      	set
+      	{
+      		_CurrentConnection = value;
+      	}
       }
 
       [Intercepted]
 
       private static ADORecordSetHelper _rs { get; set; } = null;
 
-      [Intercepted]
       internal static ADORecordSetHelper rs
       {
       	get
       	{
-      		if (_rs == null)
-            {
-            	_rs = new ADORecordSetHelper("");
-            }
-            return _rs;
-         }
-         set
-         {
-            _rs = value;
-         }
+      		if (_rs is null)
+      		{
+      			_rs = new ADORecordSetHelper("");
+      		}
+      		return _rs;
+      	}
+      	set
+      	{
+      		_rs = value;
+      	}
       }
 
       [Intercepted]
 
       private static ADORecordSetHelper _rs2 { get; set; } = null;
 
-      [Intercepted]
       internal static ADORecordSetHelper rs2
       {
       	get
       	{
-      		if (_rs2 == null)
-            {
-            	_rs2 = new ADORecordSetHelper("");
-            }
-            return _rs2;
-         }
-         set
-         {
-            _rs2 = value;
-         }
+      		if (_rs2 is null)
+      		{
+      			_rs2 = new ADORecordSetHelper("");
+      		}
+      		return _rs2;
+      	}
+      	set
+      	{
+      		_rs2 = value;
+      	}
       }
 
 

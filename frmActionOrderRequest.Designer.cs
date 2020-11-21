@@ -3,9 +3,8 @@ using Mobilize.Web.Extensions;
 
 namespace SKS
 {
-
-   partial class frmActionOrderRequest
-   {
+	partial class frmActionOrderRequest
+	{
 
       [Intercepted]
 
@@ -15,23 +14,22 @@ namespace SKS
       [Intercepted]
       private static bool m_InitializingDefInstance { get; set; }
 
-      [Intercepted]
       public static frmActionOrderRequest DefInstance
       {
       	get
       	{
-      		if (m_vb6FormDefInstance == null || m_vb6FormDefInstance.IsDisposed)
-            {
-            	m_InitializingDefInstance = true;
-            	m_vb6FormDefInstance = CreateInstance();
-            	m_InitializingDefInstance = false;
-            }
-            return m_vb6FormDefInstance;
-         }
-         set
-         {
-            m_vb6FormDefInstance = value;
-         }
+      		if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
+      		{
+      			m_InitializingDefInstance = true;
+      			m_vb6FormDefInstance = CreateInstance();
+      			m_InitializingDefInstance = false;
+      		}
+      		return m_vb6FormDefInstance;
+      	}
+      	set
+      	{
+      		m_vb6FormDefInstance = value;
+      	}
       }
 
       #endregion
@@ -50,7 +48,7 @@ namespace SKS
       [Intercepted]
       //Required by the Windows Form Designer
       private
-      System.ComponentModel.IContainer components { get; set; }
+      Mobilize.Web.Controls.Interfaces.IContainer components { get; set; }
 
       [Intercepted]
       public Mobilize.Web.ToolTip ToolTipMain { get; set; }
@@ -182,7 +180,7 @@ namespace SKS
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new System.ComponentModel.Container();
+      	this.components = new Mobilize.Web.ControlCollection();
       	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActionOrderRequest));
       	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
       	this.txtPromisedBy = new Mobilize.Web.TextBox();
@@ -244,7 +242,7 @@ namespace SKS
          this.txtPromisedBy.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtPromisedBy.Size = new System.Drawing.Size(105, 20);
          this.txtPromisedBy.TabIndex = 38;
-         this.txtPromisedBy.TabStop = false;
+         this.txtPromisedBy.Properties().TabStop = false;
          // 
          // txtRequiredBy
          // 
@@ -261,7 +259,7 @@ namespace SKS
          this.txtRequiredBy.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtRequiredBy.Size = new System.Drawing.Size(105, 20);
          this.txtRequiredBy.TabIndex = 37;
-         this.txtRequiredBy.TabStop = false;
+         this.txtRequiredBy.Properties().TabStop = false;
          // 
          // txtReceivedBy
          // 
@@ -278,7 +276,7 @@ namespace SKS
          this.txtReceivedBy.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtReceivedBy.Size = new System.Drawing.Size(105, 20);
          this.txtReceivedBy.TabIndex = 33;
-         this.txtReceivedBy.TabStop = false;
+         this.txtReceivedBy.Properties().TabStop = false;
          // 
          // cmdApprove
          // 
@@ -310,7 +308,7 @@ namespace SKS
          this.txtStatus.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtStatus.Size = new System.Drawing.Size(105, 20);
          this.txtStatus.TabIndex = 31;
-         this.txtStatus.TabStop = false;
+         this.txtStatus.Properties().TabStop = false;
          // 
          // txtReceived
          // 
@@ -327,7 +325,7 @@ namespace SKS
          this.txtReceived.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtReceived.Size = new System.Drawing.Size(105, 20);
          this.txtReceived.TabIndex = 29;
-         this.txtReceived.TabStop = false;
+         this.txtReceived.Properties().TabStop = false;
          // 
          // txtChangedBy
          // 
@@ -344,7 +342,7 @@ namespace SKS
          this.txtChangedBy.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtChangedBy.Size = new System.Drawing.Size(105, 20);
          this.txtChangedBy.TabIndex = 25;
-         this.txtChangedBy.TabStop = false;
+         this.txtChangedBy.Properties().TabStop = false;
          // 
          // txtChanged
          // 
@@ -361,7 +359,7 @@ namespace SKS
          this.txtChanged.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtChanged.Size = new System.Drawing.Size(105, 20);
          this.txtChanged.TabIndex = 24;
-         this.txtChanged.TabStop = false;
+         this.txtChanged.Properties().TabStop = false;
          // 
          // txtOrderID
          // 
@@ -378,7 +376,7 @@ namespace SKS
          this.txtOrderID.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtOrderID.Size = new System.Drawing.Size(105, 20);
          this.txtOrderID.TabIndex = 23;
-         this.txtOrderID.TabStop = false;
+         this.txtOrderID.Properties().TabStop = false;
          // 
          // txtNotes
          // 
@@ -396,7 +394,7 @@ namespace SKS
          this.txtNotes.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtNotes.Size = new System.Drawing.Size(457, 44);
          this.txtNotes.TabIndex = 3;
-         this.txtNotes.TabStop = false;
+         this.txtNotes.Properties().TabStop = false;
          // 
          // txtSubTotal
          // 
@@ -413,7 +411,7 @@ namespace SKS
          this.txtSubTotal.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtSubTotal.Size = new System.Drawing.Size(145, 20);
          this.txtSubTotal.TabIndex = 21;
-         this.txtSubTotal.TabStop = false;
+         this.txtSubTotal.Properties().TabStop = false;
          this.txtSubTotal.TextAlign = Mobilize.Web.HorizontalAlignment.Right;
          // 
          // txtTotal
@@ -431,7 +429,7 @@ namespace SKS
          this.txtTotal.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtTotal.Size = new System.Drawing.Size(145, 20);
          this.txtTotal.TabIndex = 19;
-         this.txtTotal.TabStop = false;
+         this.txtTotal.Properties().TabStop = false;
          this.txtTotal.TextAlign = Mobilize.Web.HorizontalAlignment.Right;
          // 
          // txtTotalTax
@@ -449,7 +447,7 @@ namespace SKS
          this.txtTotalTax.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtTotalTax.Size = new System.Drawing.Size(145, 20);
          this.txtTotalTax.TabIndex = 17;
-         this.txtTotalTax.TabStop = false;
+         this.txtTotalTax.Properties().TabStop = false;
          this.txtTotalTax.TextAlign = Mobilize.Web.HorizontalAlignment.Right;
          // 
          // txtFreightCharge
@@ -467,7 +465,7 @@ namespace SKS
          this.txtFreightCharge.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtFreightCharge.Size = new System.Drawing.Size(145, 20);
          this.txtFreightCharge.TabIndex = 6;
-         this.txtFreightCharge.TabStop = false;
+         this.txtFreightCharge.Properties().TabStop = false;
          this.txtFreightCharge.TextAlign = Mobilize.Web.HorizontalAlignment.Right;
          // 
          // txtSalesTax
@@ -485,7 +483,7 @@ namespace SKS
          this.txtSalesTax.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtSalesTax.Size = new System.Drawing.Size(145, 20);
          this.txtSalesTax.TabIndex = 5;
-         this.txtSalesTax.TabStop = false;
+         this.txtSalesTax.Properties().TabStop = false;
          this.txtSalesTax.TextAlign = Mobilize.Web.HorizontalAlignment.Right;
          // 
          // txtEntry
@@ -507,21 +505,30 @@ namespace SKS
          // fgDetails
          // 
          this.fgDetails.AllowDrop = true;
+         this.fgDetails.AllowUserToAddRows = false;
+         this.fgDetails.AllowUserToDeleteRows = false;
+         this.fgDetails.Properties().AllowUserToResizeColumns = false;
+         this.fgDetails.Properties().AllowUserToResizeRows = false;
          this.fgDetails.Properties().BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.fgDetails.Properties().ColumnHeadersHeightSizeMode = Mobilize.Web.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
          this.fgDetails.ColumnsCount = 0;
          this.fgDetails.FixedColumns = 0;
          this.fgDetails.FixedRows = 0;
          this.fgDetails.Location = new System.Drawing.Point(8, 224);
          this.fgDetails.Name = "fgDetails";
+         this.fgDetails.Properties().ReadOnly = true;
+         this.fgDetails.Properties().SelectionMode = Mobilize.Web.DataGridViewSelectionMode.CellSelect;
+         this.fgDetails.Properties().ShowCellToolTips = false;
          this.fgDetails.Size = new System.Drawing.Size(505, 177);
+         this.fgDetails.Properties().StandardTab = true;
          this.fgDetails.TabIndex = 4;
-         this.fgDetails.TabStop = false;
+         this.fgDetails.Properties().TabStop = false;
          // 
          // sbStatusBar
          // 
          this.sbStatusBar.AllowDrop = true;
          this.sbStatusBar.Properties().BackColor = Mobilize.Web.SystemColors.Control;
-         this.sbStatusBar.Properties().Dock = Mobilize.Web.DockStyle.Bottom;
+         this.sbStatusBar.Dock = Mobilize.Web.DockStyle.Bottom;
          this.sbStatusBar.Location = new System.Drawing.Point(0, 509);
          this.sbStatusBar.Name = "sbStatusBar";
          this.sbStatusBar.Properties().ShowItemToolTips = true;
@@ -535,7 +542,7 @@ namespace SKS
          this.sbStatusBar_Panels_Panel1.Properties().BorderStyle = Mobilize.Web.Border3DStyle.SunkenOuter;
          this.sbStatusBar_Panels_Panel1.DoubleClickEnabled = true;
          this.sbStatusBar_Panels_Panel1.Margin = new Mobilize.Web.Padding(0);
-         this.sbStatusBar_Panels_Panel1.Properties().Size = new System.Drawing.Size(523, 25);
+         this.sbStatusBar_Panels_Panel1.Size = new System.Drawing.Size(523, 25);
          this.sbStatusBar_Panels_Panel1.Properties().Spring = true;
          this.sbStatusBar_Panels_Panel1.TextAlign = Mobilize.Web.ContentAlignment.MiddleLeft;
          this.sbStatusBar_Panels_Panel1.TextImageRelation = Mobilize.Web.TextImageRelation.ImageBeforeText;
@@ -603,7 +610,7 @@ namespace SKS
          this.txtCustomerContact.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtCustomerContact.Size = new System.Drawing.Size(209, 20);
          this.txtCustomerContact.TabIndex = 11;
-         this.txtCustomerContact.TabStop = false;
+         this.txtCustomerContact.Properties().TabStop = false;
          // 
          // txtCustomerCompany
          // 
@@ -620,7 +627,7 @@ namespace SKS
          this.txtCustomerCompany.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtCustomerCompany.Size = new System.Drawing.Size(145, 20);
          this.txtCustomerCompany.TabIndex = 10;
-         this.txtCustomerCompany.TabStop = false;
+         this.txtCustomerCompany.Properties().TabStop = false;
          // 
          // Label5
          // 
@@ -829,6 +836,9 @@ namespace SKS
          this.Label6.Size = new System.Drawing.Size(33, 17);
          this.Label6.TabIndex = 12;
          this.Label6.Text = "Notes:";
+         // 
+         // frmActionOrderRequest
+         // 
          this.AllowDrop = true;
          this.Properties().AutoScaleDimensions = new System.Drawing.SizeF(6, 13);
          this.Properties().AutoScaleMode = Stub._System.Windows.Forms.AutoScaleMode.Font;
@@ -878,6 +888,7 @@ namespace SKS
          this.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.Properties().StartPosition = Mobilize.Web.FormStartPosition.Manual;
          this.Text = "Create Invoice";
+         this.Activated += new System.EventHandler(this.frmActionOrderRequest_Activated);
          this.Closed += new System.EventHandler(this.Form_Closed);
          this.sbStatusBar.ResumeLayout(false);
          this.Frame2.ResumeLayout(false);
@@ -886,10 +897,14 @@ namespace SKS
 
       void ReLoadForm(bool addEvents)
       {
-         this.MdiParent = SKS.frmMain.DefInstance;
-         SKS.frmMain.DefInstance.Show();
+      	//This form is an MDI child.
+      	//This code simulates the VB6 
+      	// functionality of automatically
+      	// loading and showing an MDI
+      	// child's parent.
+      	this.MdiParent = SKS.frmMain.DefInstance;
+      	SKS.frmMain.DefInstance.Show();
       }
       #endregion
-
    }
 }

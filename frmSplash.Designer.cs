@@ -3,9 +3,8 @@ using Mobilize.Web.Extensions;
 
 namespace SKS
 {
-
-   partial class frmSplash
-   {
+	partial class frmSplash
+	{
 
       [Intercepted]
 
@@ -15,23 +14,22 @@ namespace SKS
       [Intercepted]
       private static bool m_InitializingDefInstance { get; set; }
 
-      [Intercepted]
       public static frmSplash DefInstance
       {
       	get
       	{
-      		if (m_vb6FormDefInstance == null || m_vb6FormDefInstance.IsDisposed)
-            {
-            	m_InitializingDefInstance = true;
-            	m_vb6FormDefInstance = CreateInstance();
-            	m_InitializingDefInstance = false;
-            }
-            return m_vb6FormDefInstance;
-         }
-         set
-         {
-            m_vb6FormDefInstance = value;
-         }
+      		if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
+      		{
+      			m_InitializingDefInstance = true;
+      			m_vb6FormDefInstance = CreateInstance();
+      			m_InitializingDefInstance = false;
+      		}
+      		return m_vb6FormDefInstance;
+      	}
+      	set
+      	{
+      		m_vb6FormDefInstance = value;
+      	}
       }
 
       #endregion
@@ -49,7 +47,7 @@ namespace SKS
       [Intercepted]
       //Required by the Windows Form Designer
       private
-      System.ComponentModel.IContainer components { get; set; }
+      Mobilize.Web.Controls.Interfaces.IContainer components { get; set; }
 
       [Intercepted]
       public Mobilize.Web.ToolTip ToolTipMain { get; set; }
@@ -67,7 +65,7 @@ namespace SKS
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new System.ComponentModel.Container();
+      	this.components = new Mobilize.Web.ControlCollection();
       	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSplash));
       	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
       	this.Timer1 = new Mobilize.Web.Timer(components);
@@ -91,6 +89,9 @@ namespace SKS
          this.Image1.Size = new System.Drawing.Size(964, 642);
          this.Image1.SizeMode = Mobilize.Web.PictureBoxSizeMode.StretchImage;
          this.Image1.Visible = true;
+         // 
+         // frmSplash
+         // 
          this.AllowDrop = true;
          this.Properties().AutoScaleDimensions = new System.Drawing.SizeF(6, 13);
          this.Properties().AutoScaleMode = Stub._System.Windows.Forms.AutoScaleMode.Font;
@@ -106,11 +107,11 @@ namespace SKS
          this.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.Properties().ShowInTaskbar = false;
          this.Properties().StartPosition = Mobilize.Web.FormStartPosition.CenterScreen;
+         this.Activated += new System.EventHandler(this.frmSplash_Activated);
          this.Closed += new System.EventHandler(this.Form_Closed);
          this.KeyPress += new Mobilize.Web.KeyPressEventHandler(this.Form_KeyPress);
          this.ResumeLayout(false);
       }
       #endregion
-
    }
 }

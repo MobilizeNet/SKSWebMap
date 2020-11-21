@@ -3,35 +3,15 @@
     top: -1px;
 }
 .SKS_frmLogin .frmLogin {
-    
+    background-color: rgba(240, 240, 240, 1);
     width: 289px;
     height: 137px;
     overflow: hidden;
     left: 189px;
     top: 232px;
 }
-.SKS_frmLogin ._lblLabels_0 {
-    
-    color: rgba(0, 0, 0, 1);
-    left: 39px;
-    top: 26px;
-    width: 72px;
-    height: 18px;
-    position: absolute;
-    white-space: nowrap;
-    overflow: hidden;
-}
-.SKS_frmLogin .txtUserName {
-    background-color: rgba(255, 255, 255, 1);
-    color: rgba(0, 0, 0, 1);
-    left: 118px;
-    top: 25px;
-    width: 155px;
-    height: 23px;
-    position: absolute;
-}
 .SKS_frmLogin ._lblLabels_1 {
-    
+    background-color: rgba(240, 240, 240, 1);
     color: rgba(0, 0, 0, 1);
     left: 39px;
     top: 52px;
@@ -41,17 +21,19 @@
     white-space: nowrap;
     overflow: hidden;
 }
-.SKS_frmLogin .txtPassword {
-    background-color: rgba(255, 255, 255, 1);
+.SKS_frmLogin ._lblLabels_0 {
+    background-color: rgba(240, 240, 240, 1);
     color: rgba(0, 0, 0, 1);
-    left: 118px;
-    top: 51px;
-    width: 155px;
-    height: 23px;
+    left: 39px;
+    top: 26px;
+    width: 72px;
+    height: 18px;
     position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .SKS_frmLogin .cmdOK {
-    
+    background-color: rgba(240, 240, 240, 1);
     color: rgba(0, 0, 0, 1);
     left: 89px;
     top: 100px;
@@ -63,8 +45,17 @@
     vertical-align: middle;
     display: table-cell;
 }
+.SKS_frmLogin .txtPassword {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 118px;
+    top: 51px;
+    width: 155px;
+    height: 23px;
+    position: absolute;
+}
 .SKS_frmLogin .cmdCancel {
-    
+    background-color: rgba(240, 240, 240, 1);
     color: rgba(0, 0, 0, 1);
     left: 196px;
     top: 100px;
@@ -75,4 +66,13 @@
     display: table-cell;
     vertical-align: middle;
     display: table-cell;
+}
+.SKS_frmLogin .txtUserName {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 118px;
+    top: 25px;
+    width: 155px;
+    height: 23px;
+    position: absolute;
 }

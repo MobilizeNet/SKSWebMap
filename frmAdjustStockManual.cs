@@ -1,6 +1,6 @@
 using Microsoft.VisualBasic;
 using System;
-using Stub._System.Media;
+using System.Media;
 using UpgradeHelpers.DB.ADO;
 using UpgradeHelpers.Helpers;
 using Mobilize.WebMap.Common.Attributes;
@@ -14,8 +14,45 @@ namespace SKS
       : Mobilize.Web.Form
    {
 
-      [Intercepted]
+   	public frmAdjustStockManual()
+   		: base()
+   	{
+   		if (m_vb6FormDefInstance is null)
+   		{
+   			if (m_InitializingDefInstance)
+   			{
+   				m_vb6FormDefInstance = this;
+   			}
+   			else
+   			{
+   				try
+   				{
+   					//For the start-up form, the first instance created is the default instance.
+   					if (!(System.Reflection.Assembly.GetExecutingAssembly().EntryPoint is null) && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType())
+                  {
+                  	m_vb6FormDefInstance = this;
+                  }
+               }
+               catch
+               {
+               }
+            }
+         }
+         //This call is required by the Windows Form Designer.
+         InitializeComponent();
+         ReLoadForm(false);
+      }
 
+
+      private void frmAdjustStockManual_Activated(System.Object eventSender, System.EventArgs eventArgs)
+      {
+         if ( Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm != eventSender)
+         {
+            Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm = (Mobilize.Web.Form) eventSender;
+         }
+      }
+
+      [Intercepted]
 
       private bool editingData { get; set; } = false;
 
@@ -58,41 +95,9 @@ namespace SKS
       [Intercepted]
       private double unitPrice { get; set; } = 0;
 
-
-      public frmAdjustStockManual()
-      	: base()
-      {
-      	if (m_vb6FormDefInstance == null)
-         {
-         	if (m_InitializingDefInstance)
-         	{
-         		m_vb6FormDefInstance = this;
-         	}
-         	else
-         	{
-         		try
-         		{
-         			//For the start-up form, the first instance created is the default instance.
-         			if (System.Reflection.Assembly.GetExecutingAssembly().EntryPoint != null && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType())
-                  {
-                  	m_vb6FormDefInstance = this;
-                  }
-               }
-               catch
-               {
-               }
-            }
-         }
-         //This call is required by the Windows Form Designer.
-         InitializeComponent();
-         ReLoadForm(false);
-      }
-
-
-
       private void cmdClose_Click(Object eventSender, EventArgs eventArgs)
       {
-         this.Close();
+      	this.Close();
       }
 
       private void cmdSave_Click(Object eventSender, EventArgs eventArgs)
@@ -131,7 +136,8 @@ namespace SKS
             modConnection.rs["Date"] = DateTimeHelper.ToString(DateTime.Today);
             modConnection.rs["Action"] = "MOD";
             modConnection.rs.Update();
-            newManualLogId = Convert.ToInt32(modConnection.rs["ManualID"]);
+            modConnection.ExecuteSql("SELECT last_insert_rowid()");
+            newManualLogId = Convert.ToInt32(modConnection.rs[0]);
 
             //NEW
             modConnection.ExecuteSql("Select * from StockLog");
@@ -145,7 +151,8 @@ namespace SKS
             modConnection.rs["DocType"] = "MANUAL";
             modConnection.rs["DocID"] = newManualLogId;
             modConnection.rs.Update();
-            newStockLogId = Convert.ToInt32(modConnection.rs["ID"]);
+            modConnection.ExecuteSql("SELECT last_insert_rowid()");
+            newStockLogId = Convert.ToInt32(modConnection.rs[0]);
 
             modConnection.ExecuteSql("Update Products Set UnitsInStock = UnitsInStock + " + deltaStock.ToString() +
                                      " Where ProductId = '& currentIdProduct &'");
@@ -156,12 +163,12 @@ namespace SKS
             }
             else
             {
-               this.Close();
+            	this.Close();
             }
          }
          catch (System.Exception excep)
          {
-            Mobilize.Web.MessageBox.Show("An error has occurred adding the data. Error: (" + Stub._Microsoft.VisualBasic.Information.Err().Number.ToString() + ") " + excep.Message, "Error", Mobilize.Web.MessageBoxButtons.OK, Mobilize.Web.MessageBoxIcon.Error);
+            Mobilize.Web.MessageBox.Show("An error has occurred adding the data. Error: (" + Mobilize.Web.Information.Err().Number.ToString() + ") " + excep.Message, "Error", Mobilize.Web.MessageBoxButtons.OK, Mobilize.Web.MessageBoxIcon.Error);
          }
 
       }
@@ -194,10 +201,10 @@ namespace SKS
 
       private void cmdProducts_Click(Object eventSender, EventArgs eventArgs)
       {
-      	frmProducts.DefInstance.ShowDialog();
-      	txtCode.Text = frmProducts.DefInstance.CurrentProductID;
-      	txtName.Text = "";
-      	DoSearchProduct();
+         frmProducts.DefInstance.ShowDialog();
+         txtCode.Text = frmProducts.DefInstance.CurrentProductID;
+         txtName.Text = "";
+         DoSearchProduct();
       }
 
       private void lvProducts_ItemClick(Mobilize.Web.ListViewItem Item)
@@ -263,8 +270,8 @@ namespace SKS
          		for (modMain.i = 1; modMain.i <= tempForEndVar; modMain.i++)
          		{
          			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-         			if (modConnection.rs.GetField(modMain.i) != null)
-                  {
+         			if (!(modConnection.rs.GetField(modMain.i) is null))
+         			{
                      Mobilize.Web.ListView.GetListViewSubItem(x, modMain.i).Text = Convert.ToString(modConnection.rs[modMain.i]);
                   }
                }
@@ -272,7 +279,7 @@ namespace SKS
             }
             if (lvProducts.Items.Count == 1)
             {
-            	lvProducts.Items[0].Selected = true;
+            	lvProducts.Items[lvProducts.Items[0].Index].Selected = true;
             }
          }
       }
@@ -280,13 +287,13 @@ namespace SKS
 
       private void DoSearchStocks()
       {
-      	if (lvProducts.FocusedItem == null)
+         if (lvProducts.FocusedItem is null)
          {
-         	return;
+            return;
          }
          if (editingData)
          {
-         	if ( Mobilize.Web.MessageBox.Show("Do you want to cancel previous edited data?", "Data edition", Mobilize.Web.MessageBoxButtons.YesNo, Mobilize.Web.MessageBoxIcon.Question) != Mobilize.Web.DialogResult.Yes)
+            if ( Mobilize.Web.MessageBox.Show("Do you want to cancel previous edited data?", "Data edition", Mobilize.Web.MessageBoxButtons.YesNo, Mobilize.Web.MessageBoxIcon.Question) != Mobilize.Web.DialogResult.Yes)
             {
             	return;
             }
@@ -335,16 +342,16 @@ namespace SKS
             }
             if (lvStocks.Items.Count == 1)
             {
-            	lvStocks.Items[0].Selected = true;
+            	lvStocks.Items[lvStocks.Items[0].Index].Selected = true;
             }
          }
       }
 
       private void RetrieveDataProduct()
       {
-      	if (editingData)
-      	{
-      		if ( Mobilize.Web.MessageBox.Show("Do you want to cancel previous edited data?", "Data edition", Mobilize.Web.MessageBoxButtons.YesNo, Mobilize.Web.MessageBoxIcon.Question) != Mobilize.Web.DialogResult.Yes)
+         if (editingData)
+         {
+            if ( Mobilize.Web.MessageBox.Show("Do you want to cancel previous edited data?", "Data edition", Mobilize.Web.MessageBoxButtons.YesNo, Mobilize.Web.MessageBoxIcon.Question) != Mobilize.Web.DialogResult.Yes)
             {
             	return;
             }
@@ -352,14 +359,14 @@ namespace SKS
 
          bool setEmpty = true;
          Mobilize.Web.ListViewItem withVar = null;
-         if (lvStocks.FocusedItem != null)
+         if (!(lvStocks.FocusedItem is null))
          {
          	//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-         	if (lvStocks.FocusedItem != null)
-            {
-            	currentIdStock = Convert.ToInt32(Double.Parse(lvStocks.FocusedItem.Text));
-            	withVar = lvStocks.FocusedItem;
-            	currentStock = Double.Parse(Mobilize.Web.ListView.GetListViewSubItem(withVar, 1).Text);
+         	if (!(lvStocks.FocusedItem is null))
+         	{
+         		currentIdStock = Convert.ToInt32(Double.Parse(lvStocks.FocusedItem.Text));
+         		withVar = lvStocks.FocusedItem;
+         		currentStock = Double.Parse(Mobilize.Web.ListView.GetListViewSubItem(withVar, 1).Text);
                currentStockPrice = Double.Parse(Mobilize.Web.ListView.GetListViewSubItem(withVar, 4).Text);
                codeGeneratedChange = true;
                txtOriginalQuantity.Text = currentStock.ToString();
@@ -394,13 +401,13 @@ namespace SKS
 
       private void txtValues_Enter(Object eventSender, EventArgs eventArgs)
       {
-      	int Index = Array.IndexOf(this.txtValues, eventSender);
-      	modFunctions.SelectAll(txtValues[Index]);
+         int Index = Array.IndexOf(this.txtValues, eventSender);
+         modFunctions.SelectAll(txtValues[Index]);
       }
 
       private void txtValues_KeyPress(Object eventSender, Mobilize.Web.KeyPressEventArgs eventArgs)
       {
-      	int KeyAscii = Strings.AscW(eventArgs.KeyChar);
+      	int KeyAscii = Convert.ToInt32(eventArgs.KeyChar);
       	try
       	{
       		if (KeyAscii >= ((int)Mobilize.Web.Keys.D0) && KeyAscii <= ((int)Mobilize.Web.Keys.D9))
@@ -430,63 +437,62 @@ namespace SKS
 
       private void txtValues_TextChanged(Object eventSender, EventArgs eventArgs)
       {
-      	int Index = Array.IndexOf(this.txtValues, eventSender);
-      	if (!codeGeneratedChange)
-      	{
-      		editingData = true;
-      		codeGeneratedChange = true;
-      		//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-      		if (!String.IsNullOrEmpty(txtValues[0].Text))
-      		{
-      			changedStockPrice = Double.Parse(txtValues[0].Text);
-      		}
-      		//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-      		if (!String.IsNullOrEmpty(txtValues[1].Text))
-      		{
-      			changedStock = Double.Parse(txtValues[1].Text);
-      		}
-      		switch(Index)
-      		{
-      			case 1 :
-      				if (changedStock > currentStock)
-      				{
-      					changedStock = currentStock;
-      					modMain.LogStatus("Cannot pass the original stock, to add more, add a new stock manually", this);
-      					txtValues[1].Text = changedStock.ToString();
-      				}
-      				break;
-      		}
-      		lblNewQuantity.Text = StringsHelper.Format(changedStock * Double.Parse(currentQuantityPerUnit), "##,###.00") + currentUnit;
-      		lblCurrentQuantity.Text = StringsHelper.Format(currentStock * Double.Parse(currentQuantityPerUnit), "##,###.00") + currentUnit;
-      		codeGeneratedChange = false;
-      	}
+         int Index = Array.IndexOf(this.txtValues, eventSender);
+         if (!codeGeneratedChange)
+         {
+            editingData = true;
+            codeGeneratedChange = true;
+            //UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+            if (!String.IsNullOrEmpty(txtValues[0].Text))
+            {
+            	changedStockPrice = Double.Parse(txtValues[0].Text);
+            }
+            //UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+            if (!String.IsNullOrEmpty(txtValues[1].Text))
+            {
+            	changedStock = Double.Parse(txtValues[1].Text);
+            }
+            switch(Index)
+            {
+            	case 1 :
+            		if (changedStock > currentStock)
+            		{
+            			changedStock = currentStock;
+            			modMain.LogStatus("Cannot pass the original stock, to add more, add a new stock manually", this);
+            			txtValues[1].Text = changedStock.ToString();
+            		}
+            		break;
+            }
+            lblNewQuantity.Text = StringsHelper.Format(changedStock * Double.Parse(currentQuantityPerUnit), "##,###.00") + currentUnit;
+            lblCurrentQuantity.Text = StringsHelper.Format(currentStock * Double.Parse(currentQuantityPerUnit), "##,###.00") + currentUnit;
+            codeGeneratedChange = false;
+         }
       }
 
       private void ClearFields()
       {
-      	codeGeneratedChange = true;
-      	txtValues[0].Text = "";
-      	txtValues[1].Text = "";
-      	txtValues[0].ReadOnly = true;
-      	txtValues[1].ReadOnly = true;
-      	txtCode.Text = "";
-      	txtName.Text = "";
-      	txtUnit.Text = "";
-      	txtStockID.Text = "";
-      	txtOriginalPrice.Text = "";
-      	txtOriginalQuantity.Text = "";
-      	txtProductName.Text = "";
-      	txtQuantityPerUnit.Text = "";
-      	lvProducts.Items.Clear();
-      	lvStocks.Items.Clear();
-      	lblCurrentQuantity.Text = "";
-      	lblNewQuantity.Text = "";
-      	txtCode.Focus();
-      	editingData = false;
-      	codeGeneratedChange = false;
-      	modMain.ClearLogStatus(this);
+         codeGeneratedChange = true;
+         txtValues[0].Text = "";
+         txtValues[1].Text = "";
+         txtValues[0].ReadOnly = true;
+         txtValues[1].ReadOnly = true;
+         txtCode.Text = "";
+         txtName.Text = "";
+         txtUnit.Text = "";
+         txtStockID.Text = "";
+         txtOriginalPrice.Text = "";
+         txtOriginalQuantity.Text = "";
+         txtProductName.Text = "";
+         txtQuantityPerUnit.Text = "";
+         lvProducts.Items.Clear();
+         lvStocks.Items.Clear();
+         lblCurrentQuantity.Text = "";
+         lblNewQuantity.Text = "";
+         txtCode.Focus();
+         editingData = false;
+         codeGeneratedChange = false;
+         modMain.ClearLogStatus(this);
       }
-
       private void Form_Closed(Object eventSender, EventArgs eventArgs)
       {
       }

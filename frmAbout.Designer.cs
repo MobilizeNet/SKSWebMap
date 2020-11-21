@@ -3,9 +3,8 @@ using Mobilize.Web.Extensions;
 
 namespace SKS
 {
-
-   partial class frmAbout
-   {
+	partial class frmAbout
+	{
 
       [Intercepted]
 
@@ -15,23 +14,22 @@ namespace SKS
       [Intercepted]
       private static bool m_InitializingDefInstance { get; set; }
 
-      [Intercepted]
       public static frmAbout DefInstance
       {
       	get
       	{
-      		if (m_vb6FormDefInstance == null || m_vb6FormDefInstance.IsDisposed)
-            {
-            	m_InitializingDefInstance = true;
-            	m_vb6FormDefInstance = CreateInstance();
-            	m_InitializingDefInstance = false;
-            }
-            return m_vb6FormDefInstance;
-         }
-         set
-         {
-            m_vb6FormDefInstance = value;
-         }
+      		if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
+      		{
+      			m_InitializingDefInstance = true;
+      			m_vb6FormDefInstance = CreateInstance();
+      			m_InitializingDefInstance = false;
+      		}
+      		return m_vb6FormDefInstance;
+      	}
+      	set
+      	{
+      		m_vb6FormDefInstance = value;
+      	}
       }
 
       #endregion
@@ -50,7 +48,7 @@ namespace SKS
       [Intercepted]
       //Required by the Windows Form Designer
       private
-      System.ComponentModel.IContainer components { get; set; }
+      Mobilize.Web.Controls.Interfaces.IContainer components { get; set; }
 
       [Intercepted]
       public Mobilize.Web.ToolTip ToolTipMain { get; set; }
@@ -89,7 +87,7 @@ namespace SKS
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new System.ComponentModel.Container();
+      	this.components = new Mobilize.Web.ControlCollection();
       	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbout));
       	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
       	this.picIcon = new Mobilize.Web.PictureBox();
@@ -108,7 +106,7 @@ namespace SKS
       	this.picIcon.BackColor = Mobilize.Web.SystemColors.Control;
          this.picIcon.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.picIcon.Properties().CausesValidation = true;
-         this.picIcon.Properties().Dock = Mobilize.Web.DockStyle.None;
+         this.picIcon.Dock = Mobilize.Web.DockStyle.None;
          this.picIcon.Enabled = true;
          this.picIcon.Image = "assets/images/SKS.frmAbout.picIcon.Image.png";
          this.picIcon.Location = new System.Drawing.Point(16, 16);
@@ -211,6 +209,9 @@ namespace SKS
          this.lblDisclaimer.Size = new System.Drawing.Size(132, 13);
          this.lblDisclaimer.TabIndex = 3;
          this.lblDisclaimer.Text = "Copyright 2018 Mobilize.Net";
+         // 
+         // frmAbout
+         // 
          this.AcceptButton = this.cmdOK;
          this.AllowDrop = true;
          this.Properties().AutoScaleDimensions = new System.Drawing.SizeF(6, 13);
@@ -234,6 +235,7 @@ namespace SKS
          this.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.Properties().ShowInTaskbar = false;
          this.Text = "About Salmon King Seafood";
+         this.Activated += new System.EventHandler(this.frmAbout_Activated);
          this.Closed += new System.EventHandler(this.Form_Closed);
          this.ResumeLayout(false);
       }
@@ -250,6 +252,5 @@ namespace SKS
       	this.Line1[0] = _Line1_0;
       }
       #endregion
-
    }
 }

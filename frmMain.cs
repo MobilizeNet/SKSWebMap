@@ -10,18 +10,42 @@ namespace SKS
       : Mobilize.Web.Form
    {
 
-
    	public frmMain()
    		: base()
    	{
-   		if (m_vb6FormDefInstance == null)
-         {
-         	m_vb6FormDefInstance = this;
+   		if (m_vb6FormDefInstance is null)
+   		{
+   			if (m_InitializingDefInstance)
+   			{
+   				m_vb6FormDefInstance = this;
+   			}
+   			else
+   			{
+   				try
+   				{
+   					//For the start-up form, the first instance created is the default instance.
+   					if (!(System.Reflection.Assembly.GetExecutingAssembly().EntryPoint is null) && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType())
+                  {
+                  	m_vb6FormDefInstance = this;
+                  }
+               }
+               catch
+               {
+               }
+            }
          }
          //This call is required by the Windows Form Designer.
          InitializeComponent();
       }
 
+
+      private void frmMain_Activated(System.Object eventSender, System.EventArgs eventArgs)
+      {
+         if ( Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm != eventSender)
+         {
+            Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm = (Mobilize.Web.Form) eventSender;
+         }
+      }
 
       //UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
       private void MDIForm_Load()
@@ -70,27 +94,27 @@ namespace SKS
 
       public void mnuOrderReceptionsApproval_Click(Object eventSender, EventArgs eventArgs)
       {
-      	frmReceptionApproval.DefInstance.Show();
+         frmReceptionApproval.DefInstance.Show();
       }
 
       public void mnuOrderRequestsApproval_Click(Object eventSender, EventArgs eventArgs)
       {
-      	frmRequestApproval.DefInstance.Show();
+         frmRequestApproval.DefInstance.Show();
       }
 
       public void mnuProducts_Click(Object eventSender, EventArgs eventArgs)
       {
-      	frmProducts.DefInstance.ShowDialog();
+         frmProducts.DefInstance.ShowDialog();
       }
 
       public void mnuProviders_Click(Object eventSender, EventArgs eventArgs)
       {
-      	frmProviders.DefInstance.ShowDialog();
+         frmProviders.DefInstance.ShowDialog();
       }
 
       public void mnuSecurity_Click(Object eventSender, EventArgs eventArgs)
       {
-      	frmUsersManage.DefInstance.Show();
+         frmUsersManage.DefInstance.Show();
       }
    	//UPGRADE_NOTE: (7001) The following declaration (Form_Unload) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
    	//private void Form_Unload(int Cancel)

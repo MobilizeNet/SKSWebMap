@@ -12,35 +12,21 @@ namespace SKS
       : Mobilize.Web.Form
    {
 
-      [Intercepted]
-
-      private bool NewMode { get; set; } = false;
-
-      [Intercepted]
-      private bool EditMode { get; set; } = false;
-
-      [Intercepted]
-      private bool CancellingMode { get; set; } = false;
-
-      [Intercepted]
-      public string CurrentProductID { get; set; } = "";
-
-
-      public frmProducts()
-      	: base()
-      {
-      	if (m_vb6FormDefInstance == null)
-         {
-         	if (m_InitializingDefInstance)
-         	{
-         		m_vb6FormDefInstance = this;
-         	}
-         	else
-         	{
-         		try
-         		{
-         			//For the start-up form, the first instance created is the default instance.
-         			if (System.Reflection.Assembly.GetExecutingAssembly().EntryPoint != null && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType())
+   	public frmProducts()
+   		: base()
+   	{
+   		if (m_vb6FormDefInstance is null)
+   		{
+   			if (m_InitializingDefInstance)
+   			{
+   				m_vb6FormDefInstance = this;
+   			}
+   			else
+   			{
+   				try
+   				{
+   					//For the start-up form, the first instance created is the default instance.
+   					if (!(System.Reflection.Assembly.GetExecutingAssembly().EntryPoint is null) && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType())
                   {
                   	m_vb6FormDefInstance = this;
                   }
@@ -56,6 +42,26 @@ namespace SKS
       }
 
 
+      private void frmProducts_Activated(System.Object eventSender, System.EventArgs eventArgs)
+      {
+         if ( Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm != eventSender)
+         {
+            Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm = (Mobilize.Web.Form) eventSender;
+         }
+      }
+
+      [Intercepted]
+      private bool NewMode { get; set; } = false;
+
+      [Intercepted]
+      private bool EditMode { get; set; } = false;
+
+      [Intercepted]
+      private bool CancellingMode { get; set; } = false;
+
+      [Intercepted]
+      public string CurrentProductID { get; set; } = "";
+
       //SKS Demo TODO: Go the the designer and change the data binding of _txtField_4 like this:
       //_txtField_4.DataBindings.Add("Text", dcProducts, "UnitPrice", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged, null, "C2");
 
@@ -69,14 +75,15 @@ namespace SKS
          txtCategory.Text = cmbCategory.GetItemData(cmbCategory.SelectedIndex).ToString();
       }
 
+
       private void Form_Closed(Object eventSender, EventArgs eventArgs)
       {
-      	CurrentProductID = Convert.ToString(dcProducts.Recordset.Fields["ProductId"].Value);
+         CurrentProductID = Convert.ToString(dcProducts.Recordset["ProductId"]);
       }
 
       private void txtCategory_TextChanged(Object eventSender, EventArgs eventArgs)
       {
-      	if (cmbCategory.Items.Count == 0)
+         if (cmbCategory.Items.Count == 0)
          {
          	modFunctions.LoadCombo("Categories", cmbCategory, "CategoryName", "CategoryID");
          }
@@ -100,15 +107,15 @@ namespace SKS
       }
 
       //UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-
       private void Form_Load()
       {
-      	txtCategory.Visible = false;
-      	dcProducts.ConnectionString = modMain.ConnectionString;
-      	NewMode = false;
-      	EditMode = false;
-      	CancellingMode = false;
-      	if (cmbCategory.Items.Count == 0)
+         txtCategory.Height = 0;
+         txtCategory.Width = 0;
+         dcProducts.ConnectionString = modMain.ConnectionString;
+         NewMode = false;
+         EditMode = false;
+         CancellingMode = false;
+         if (cmbCategory.Items.Count == 0)
          {
          	modFunctions.LoadCombo("Categories", cmbCategory, "CategoryName", "CategoryID");
          }
@@ -125,8 +132,9 @@ namespace SKS
          		//Add new record 
          		NewMode = true;
          		dcProducts.Recordset.AddNew();
-         		dcProducts.Recordset.Fields["UnitsInStock"].Value = 0;
-         		dcProducts.Recordset.Fields["UnitsOnOrder"].Value = 0;
+         		dcProducts.Recordset["UnitsInStock"] = 0;
+         		dcProducts.Recordset["UnitsOnOrder"] = 0;
+         		dcProducts.Recordset["Discontinued"] = 0;
          		break;
          	case "Edit" :
          		//Edit mode 
@@ -136,6 +144,7 @@ namespace SKS
          	case "Save" :
          		//Save data 
          		dcProducts.Recordset.Update();
+         		dcProducts.Recordset.Requery();  // SQLite ODBC driver needs to requery the info 
          		EditMode = false;
          		NewMode = false;
          		break;

@@ -14,7 +14,6 @@ namespace WebSite
         /// <param name="args">The arguments.</param>
         public static void Start(string[] args)
         {
-            UpgradeHelpers.DB.DbProviderFactories.RegisterFactory("System.Data.SQLite", typeof(System.Data.SQLite.SQLiteFactory));
             SKS.modMain.Main();
         }
 
@@ -24,7 +23,6 @@ namespace WebSite
         /// <param name="args">The arguments.</param>
         public static void Main(string[] args)
         {
-            
             BuildWebHost(args).Run();
         }
 
@@ -42,6 +40,9 @@ namespace WebSite
                 //    options.LogDirectory = "LogFiles";
                 //    options.FileSizeLimit = 20 * 1024 * 1024;
                 //}))
+                //// IIS Deployment
+                //.UseUrls("http://localhost:81")
+                //.UseIISIntegration()
                 .UseStartup<Startup>()
                 .Build();
         }

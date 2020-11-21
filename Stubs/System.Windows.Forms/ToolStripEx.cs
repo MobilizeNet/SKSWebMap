@@ -7,8 +7,6 @@ namespace Stub._System.Windows.Forms
 
       public System.Drawing.Color BackColor { get; set; }
 
-      public Mobilize.Web.DockStyle Dock { get; set; }
-
    }
 
 }

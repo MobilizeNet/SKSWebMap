@@ -21,15 +21,15 @@
               "src/favicon.ico"
             ],
             "styles": [
-              "node_modules/@mobilize/winforms-components/dist/styles/jQueryStyles.css",
-              {
-              "input": "node_modules/@progress/kendo-theme-material/dist/all.css"
-              },
+              "node_modules/@progress/kendo-theme-default/dist/all.css",
+              "node_modules/@mobilize/winforms-components/style-min/styles.css",
+              "node_modules/@mobilize/winforms-components/style-min/jQueryStyles.css",
               "node_modules/material-icons/iconfont/material-icons.css",
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/simple-web-notification/web-notification.js"
             ]
           },
           "configurations": {
@@ -55,8 +55,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular:build",
-            "proxyConfig": "proxy.conf.json"
+            "browserTarget": "angular:build"
           },
           "configurations": {
             "production": {
@@ -82,10 +81,9 @@
               "node_modules/mobilize-client-core/dist/js/webmap.js"
             ],
             "styles": [
-              "node_modules/@mobilize/winforms-components/dist/styles/jQueryStyles.css",
-              {
-              "input": "node_modules/@progress/kendo-theme-material/dist/all.css"
-              },
+              "node_modules/@progress/kendo-theme-default/dist/all.css",
+              "node_modules/@mobilize/winforms-components/style-min/styles.css",
+              "node_modules/@mobilize/winforms-components/style-min/jQueryStyles.css",
               "node_modules/material-icons/iconfont/material-icons.css",
               "src/styles.css"
             ],

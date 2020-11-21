@@ -1,6 +1,6 @@
 using Microsoft.VisualBasic;
 using System;
-using Stub._System.Media;
+using System.Media;
 using UpgradeHelpers.DB.ADO;
 using UpgradeHelpers.Helpers;
 using Mobilize.WebMap.Common.Attributes;
@@ -14,8 +14,45 @@ namespace SKS
       : Mobilize.Web.Form
    {
 
-      [Intercepted]
+   	public frmOrderReception()
+   		: base()
+   	{
+   		if (m_vb6FormDefInstance is null)
+   		{
+   			if (m_InitializingDefInstance)
+   			{
+   				m_vb6FormDefInstance = this;
+   			}
+   			else
+   			{
+   				try
+   				{
+   					//For the start-up form, the first instance created is the default instance.
+   					if (!(System.Reflection.Assembly.GetExecutingAssembly().EntryPoint is null) && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType())
+                  {
+                  	m_vb6FormDefInstance = this;
+                  }
+               }
+               catch
+               {
+               }
+            }
+         }
+         //This call is required by the Windows Form Designer.
+         InitializeComponent();
+         ReLoadForm(false);
+      }
 
+
+      private void frmOrderReception_Activated(System.Object eventSender, System.EventArgs eventArgs)
+      {
+         if ( Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm != eventSender)
+         {
+            Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm = (Mobilize.Web.Form) eventSender;
+         }
+      }
+
+      [Intercepted]
       private string currentProviderName { get; set; } = "";
 
       [Intercepted]
@@ -42,38 +79,6 @@ namespace SKS
 
       [Intercepted]
       private double currentTotalTax { get; set; } = 0;
-
-
-      public frmOrderReception()
-      	: base()
-      {
-      	if (m_vb6FormDefInstance == null)
-         {
-         	if (m_InitializingDefInstance)
-         	{
-         		m_vb6FormDefInstance = this;
-         	}
-         	else
-         	{
-         		try
-         		{
-         			//For the start-up form, the first instance created is the default instance.
-         			if (System.Reflection.Assembly.GetExecutingAssembly().EntryPoint != null && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType())
-                  {
-                  	m_vb6FormDefInstance = this;
-                  }
-               }
-               catch
-               {
-               }
-            }
-         }
-         //This call is required by the Windows Form Designer.
-         InitializeComponent();
-         ReLoadForm(false);
-      }
-
-
 
       private void cmdAddProducts_Click(Object eventSender, EventArgs eventArgs)
       {
@@ -155,8 +160,8 @@ namespace SKS
          		for (modMain.i = 1; modMain.i <= tempForEndVar; modMain.i++)
          		{
          			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-         			if (modConnection.rs.GetField(modMain.i) != null)
-                  {
+         			if (!(modConnection.rs.GetField(modMain.i) is null))
+         			{
                      Mobilize.Web.ListView.GetListViewSubItem(x, modMain.i).Text = Convert.ToString(modConnection.rs[modMain.i]);
                   }
                }
@@ -164,7 +169,7 @@ namespace SKS
             }
             if (lvProviders.Items.Count == 1)
             {
-            	lvProviders.Items[0].Selected = true;
+            	lvProviders.Items[lvProviders.Items[0].Index].Selected = true;
             }
          }
       }
@@ -176,42 +181,43 @@ namespace SKS
 
       private void cmdProviders_Click(Object eventSender, EventArgs eventArgs)
       {
-      	frmProviders.DefInstance.ShowDialog();
-      	txtProviderName.Text = "";
-      	txtContactLastName.Text = "";
-      	txtContactName.Text = "";
-      	DoSearchProvider(frmProviders.DefInstance.CurrentProviderID);
+         frmProviders.DefInstance.ShowDialog();
+         txtProviderName.Text = "";
+         txtContactLastName.Text = "";
+         txtContactName.Text = "";
+         DoSearchProvider(frmProviders.DefInstance.CurrentProviderID);
       }
 
       private void cmdSave_Click(Object eventSender, EventArgs eventArgs)
       {
-      	int newOrderId = 0;
+         int newOrderId = 0;
 
-      	try
-      	{
-      		modConnection.ExecuteSql("Select * from OrderReceptions");
-      		modConnection.rs.AddNew();
-      		modConnection.rs["ProviderId"] = currentIdProvider;
-      		modConnection.rs["ReceivedBy"] = modMain.UserId;
-      		modConnection.rs["OrderDate"] = DateTimeHelper.ToString(DateTime.Today);
-      		modConnection.rs["Notes"] = txtNotes.Text;
-      		modConnection.rs["FreightCharge"] = currentFreightCharge;
-      		modConnection.rs["SalesTaxRate"] = currentTax * 0.01d;
-      		modConnection.rs["Status"] = "RECEIVED";
-      		modConnection.rs.Update();
-      		newOrderId = Convert.ToInt32(modConnection.rs["OrderID"]);
+         try
+         {
+            modConnection.ExecuteSql("Select * from OrderReceptions");
+            modConnection.rs.AddNew();
+            modConnection.rs["ProviderId"] = currentIdProvider;
+            modConnection.rs["ReceivedBy"] = modMain.UserId;
+            modConnection.rs["OrderDate"] = DateTimeHelper.ToString(DateTime.Today);
+            modConnection.rs["Notes"] = txtNotes.Text;
+            modConnection.rs["FreightCharge"] = currentFreightCharge;
+            modConnection.rs["SalesTaxRate"] = currentTax * 0.01d;
+            modConnection.rs["Status"] = "RECEIVED";
+            modConnection.rs.Update();
 
+            modConnection.ExecuteSql("SELECT last_insert_rowid() ");
+            newOrderId = Convert.ToInt32(modConnection.rs[0]);
 
-      		int tempForEndVar = fgProducts.RowsCount - 1;
-      		for (modMain.i = 1; modMain.i <= tempForEndVar; modMain.i++)
-      		{
-      			if (Convert.ToString(fgProducts[modMain.i, 0].Value) != "0")
+            int tempForEndVar = fgProducts.RowsCount - 1;
+            for (modMain.i = 1; modMain.i <= tempForEndVar; modMain.i++)
+            {
+            	if (Convert.ToString(fgProducts[modMain.i, 0].Value) != "0")
                {
                	modConnection.ExecuteSql("Insert into OrderReceptionDetails (OrderID, ProductID, DateSold, Quantity, UnitPrice, SalePrice, SalesTax, LineTotal) Values (" + newOrderId.ToString() + ", '" + Convert.ToString(fgProducts[modMain.i, 1].Value) + "', '" + DateTime.Today.ToString("MM/dd/yyyy") + "'," + Convert.ToString(fgProducts[modMain.i, 0].Value) + "," + Convert.ToString(fgProducts[modMain.i, 3].Value) + "," + Convert.ToString(fgProducts[modMain.i, 4].Value) + "," + (currentTax * 0.01d).ToString() + "," + Convert.ToString(fgProducts[modMain.i, 4].Value) + ")");
 
                	//UnitsInTransit
                	//ExecuteSql "Update Products Set UnitsOnOrder = UnitsOnOrder + " & fgProducts.TextMatrix(i, 0) & _
-               	//'" Where ProductId = '" & fgProducts.TextMatrix(i, 1) & "'"
+               	//        '" Where ProductId = '" & fgProducts.TextMatrix(i, 1) & "'"
 
                }
             }
@@ -225,12 +231,12 @@ namespace SKS
             }
             else
             {
-               this.Close();
+            	this.Close();
             }
          }
          catch (System.Exception excep)
          {
-            Mobilize.Web.MessageBox.Show("An error has occurred adding the data. Error: (" + Stub._Microsoft.VisualBasic.Information.Err().Number.ToString() + ") " + excep.Message, "Error", Mobilize.Web.MessageBoxButtons.OK, Mobilize.Web.MessageBoxIcon.Error);
+            Mobilize.Web.MessageBox.Show("An error has occurred adding the data. Error: (" + Mobilize.Web.Information.Err().Number.ToString() + ") " + excep.Message, "Error", Mobilize.Web.MessageBoxButtons.OK, Mobilize.Web.MessageBoxIcon.Error);
          }
       }
 
@@ -255,15 +261,14 @@ namespace SKS
       }
 
       //UPGRADE_WARNING: (2050) MSFlexGridLib.MSFlexGrid Event fgProducts.EnterCell was not upgraded. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2050
-
       private void fgProducts_EnterCell()
       {
-      	SaveEdits();
+         SaveEdits();
       }
 
       private void fgProducts_KeyPress(Object eventSender, Mobilize.Web.KeyPressEventArgs eventArgs)
       {
-      	int KeyAscii = Strings.AscW(eventArgs.KeyChar);
+      	int KeyAscii = Convert.ToInt32(eventArgs.KeyChar);
       	try
       	{
       		if (fgProducts.CurrentColumnIndex != 0)
@@ -278,7 +283,7 @@ namespace SKS
             {
             	//Case 45, 46, 47, 48 To 59, 65 To 90, 97 To 122
             	MakeTextBoxVisible(txtEntry, fgProducts);
-            	txtEntry.Text = Strings.ChrW(KeyAscii).ToString();
+            	txtEntry.Text = Strings.Chr(KeyAscii).ToString();
             	txtEntry.SelectionStart = 1;
             }
             else
@@ -301,11 +306,13 @@ namespace SKS
       	int Shift = ((int) eventArgs.KeyData) / 65536;
       	try
       	{
-      		EditKeyCode(fgProducts, Mobilize.Web.ReferenceExtensions.Ref(() => txtEntry), KeyCode, Shift);
+            Mobilize.Web.TextBox tempRefParam = txtEntry;
+            EditKeyCode(fgProducts, Mobilize.Web.ReferenceExtensions.Ref(() => tempRefParam), KeyCode, Shift);
+            txtEntry = tempRefParam;
          }
          finally
          {
-         	eventArgs.Handled = KeyCode == 0;
+            eventArgs.Handled = KeyCode == 0;
          }
       }
 
@@ -314,8 +321,8 @@ namespace SKS
       	switch(KeyCode)
       	{
       		case 27 :  //ESC 
-      			txtBox.Text = "";
-      			txtBox.Visible = false;
+      			txtBox.RefValue.Text = "";
+      			txtBox.RefValue.Visible = false;
       			grid.Focus();
       			break;
       		case 13 :  //Return 
@@ -362,18 +369,18 @@ namespace SKS
 
       private void txtEntry_Leave(Object eventSender, EventArgs eventArgs)
       {
-      	SaveEdits();
+         SaveEdits();
       }
 
 
       private void fgProducts_CellLeave(Object eventSender, EventArgs eventArgs)
       {
-      	SaveEdits();
+         SaveEdits();
       }
 
       private void txtEntry_KeyPress(Object eventSender, Mobilize.Web.KeyPressEventArgs eventArgs)
       {
-      	int KeyAscii = Strings.AscW(eventArgs.KeyChar);
+      	int KeyAscii = Convert.ToInt32(eventArgs.KeyChar);
       	try
       	{
       		if (KeyAscii == 46 || KeyAscii >= 48 && KeyAscii <= 57)
@@ -398,12 +405,12 @@ namespace SKS
 
       private void SaveEdits()
       {
-      	if (!txtEntry.Visible || !modFunctions.ValidateTextBoxDouble(txtEntry, this) || !modFunctions.ValidateTextDouble(Convert.ToString(fgProducts[fgProducts.CurrentRowIndex, 3].Value), this) || !modFunctions.ValidateTextDouble(Convert.ToString(fgProducts[fgProducts.CurrentRowIndex, 4].Value), this))
-      	{
-      		return;
-      	}
-      	double previousLinePrice = modFunctions.DoubleValue(Convert.ToString(fgProducts[fgProducts.CurrentRowIndex, 4].Value));
-      	fgProducts.SetCellValue( fgProducts.CurrentColumnIndex, fgProducts.CurrentRowIndex, txtEntry.Text);
+         if (!txtEntry.Visible || !modFunctions.ValidateTextBoxDouble(txtEntry, this) || !modFunctions.ValidateTextDouble(Convert.ToString(fgProducts[fgProducts.CurrentRowIndex, 3].Value), this) || !modFunctions.ValidateTextDouble(Convert.ToString(fgProducts[fgProducts.CurrentRowIndex, 4].Value), this))
+         {
+            return;
+         }
+         double previousLinePrice = modFunctions.DoubleValue(Convert.ToString(fgProducts[fgProducts.CurrentRowIndex, 4].Value));
+         fgProducts.SetCellValue( fgProducts.CurrentColumnIndex, fgProducts.CurrentRowIndex, txtEntry.Text);
          double lineQuantity = modFunctions.DoubleValue(txtEntry.Text);
          double lineUnitPrice = modFunctions.DoubleValue(Convert.ToString(fgProducts[fgProducts.CurrentRowIndex, 3].Value));
          previousLinePrice = modFunctions.DoubleValue(Convert.ToString(fgProducts[fgProducts.CurrentRowIndex, 4].Value));
@@ -416,12 +423,12 @@ namespace SKS
 
       private void ReCalculateTotals(double previous, double current)
       {
-      	currentSubTotal = currentSubTotal - previous + current;
-      	currentTotalTax = currentSubTotal * currentTax * 0.01d;
-      	currentTotal = currentFreightCharge + currentSubTotal + currentTotalTax;
-      	txtSubTotal.Text = StringsHelper.Format(currentSubTotal, "#,##0.00");
-      	txtTotalTax.Text = StringsHelper.Format(currentTotalTax, "#,##0.00");
-      	txtTotal.Text = StringsHelper.Format(currentTotal, "#,##0.00");
+         currentSubTotal = currentSubTotal - previous + current;
+         currentTotalTax = currentSubTotal * currentTax * 0.01d;
+         currentTotal = currentFreightCharge + currentSubTotal + currentTotalTax;
+         txtSubTotal.Text = StringsHelper.Format(currentSubTotal, "#,##0.00");
+         txtTotalTax.Text = StringsHelper.Format(currentTotalTax, "#,##0.00");
+         txtTotal.Text = StringsHelper.Format(currentTotal, "#,##0.00");
       }
 
       private void Form_FormClosing(Object eventSender, Mobilize.Web.FormClosingEventArgs eventArgs)
@@ -451,11 +458,10 @@ namespace SKS
       }
 
       //UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-
       private void Form_Load()
       {
-      	editingData = false;
-      	ClearFields();
+         editingData = false;
+         ClearFields();
       }
 
       private void lvProviders_ItemClick(Mobilize.Web.ListViewItem Item)
@@ -474,7 +480,7 @@ namespace SKS
          }
          Mobilize.Web.ListViewItem withVar = null;
          //UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-         if (lvProviders.FocusedItem != null)
+         if (!(lvProviders.FocusedItem is null))
          {
          	withVar = lvProviders.FocusedItem;
          	currentIdProvider = Convert.ToInt32(Double.Parse(lvProviders.FocusedItem.Text));
@@ -492,38 +498,38 @@ namespace SKS
 
       private void LoadProductsById()
       {
-      	string Table = "ProductsByProvider";
-      	string ColumnName = "ProviderId";
-      	int Id = currentIdProvider;
+         string Table = "ProductsByProvider";
+         string ColumnName = "ProviderId";
+         int Id = currentIdProvider;
 
-      	modConnection.ExecuteSql("Select p.ProductID, p.ProductName, p.UnitPrice, p.UnitsInStock, p.UnitsOnOrder, p.QuantityPerUnit, p.Unit from Products as p, " + Table + " as pb Where pb." + ColumnName + " = " + Id.ToString() + " And pb.ProductId = p.ProductId");
+         modConnection.ExecuteSql("Select p.ProductID, p.ProductName, p.UnitPrice, p.UnitsInStock, p.UnitsOnOrder, p.QuantityPerUnit, p.Unit from Products as p, " + Table + " as pb Where pb." + ColumnName + " = " + Id.ToString() + " And pb.ProductId = p.ProductId");
 
-      	//lvProducts.ListItems.Clear
-      	//If rs.RecordCount > 0 Then
-      	//    With rs
-      	//        While Not .EOF
-      	//            Set x = lvProducts.ListItems.Add(, , 0)
-      	//            For i = 1 To 5
-      	//                If Not IsEmpty(.Fields(i - 1)) Then
-      	//                    x.SubItems(i) = .Fields(i - 1)
-      	//                End If
-      	//            Next i
-      	//            x.SubItems(6) = .Fields(5) & .Fields(6)
-      	//            .MoveNext
-      	//        Wend
-      	//    End With
-      	//End If
+         //lvProducts.ListItems.Clear
+         //If rs.RecordCount > 0 Then
+         //    With rs
+         //        While Not .EOF
+         //            Set x = lvProducts.ListItems.Add(, , 0)
+         //            For i = 1 To 5
+         //                If Not IsEmpty(.Fields(i - 1)) Then
+         //                    x.SubItems(i) = .Fields(i - 1)
+         //                End If
+         //            Next i
+         //            x.SubItems(6) = .Fields(5) & .Fields(6)
+         //            .MoveNext
+         //        Wend
+         //    End With
+         //End If
 
-      	int lng = 0;
-      	int intLoopCount = 0;
-      	const int SCROOL_WIDTH = 320;
-      	int i = 0;
-      	fgProducts.ColumnsCount = 8;
-      	fgProducts.FixedColumns = 0;
-      	fgProducts.RowsCount = 0;
-      	fgProducts.AddItem("Quantity" + "\t" + "Code" + "\t" + "Product" + "\t" + "UnitPrice" + "\t" + "Price" + "\t" + "Existence" + "\t" + "Ordered" + "\t" + "Quantity per unit");
-      	fgProducts.RowsCount = modConnection.rs.RecordCount + 1;
-      	if (fgProducts.RowsCount == 1)
+         int lng = 0;
+         int intLoopCount = 0;
+         const int SCROOL_WIDTH = 320;
+         int i = 0;
+         fgProducts.ColumnsCount = 8;
+         fgProducts.FixedColumns = 0;
+         fgProducts.RowsCount = 0;
+         fgProducts.AddItem("Quantity" + "\t" + "Code" + "\t" + "Product" + "\t" + "UnitPrice" + "\t" + "Price" + "\t" + "Existence" + "\t" + "Ordered" + "\t" + "Quantity per unit");
+         fgProducts.RowsCount = modConnection.rs.RecordCount + 1;
+         if (fgProducts.RowsCount == 1)
          {
          	fgProducts.FixedRows = 0;
          }
@@ -574,60 +580,60 @@ namespace SKS
 
       private void txtProviderName_TextChanged(Object eventSender, EventArgs eventArgs)
       {
-      	DoSearchProvider();
+         DoSearchProvider();
       }
 
       private void txtNotes_TextChanged(Object eventSender, EventArgs eventArgs)
       {
-      	editingData = true;
+         editingData = true;
       }
 
       private void txtContactName_TextChanged(Object eventSender, EventArgs eventArgs)
       {
-      	DoSearchProvider();
+         DoSearchProvider();
       }
 
       private void ClearFields()
       {
 
-      	fgProducts.RowsCount = 0;
-      	fgProducts.ColumnsCount = 0;
+         fgProducts.RowsCount = 0;
+         fgProducts.ColumnsCount = 0;
 
-      	currentSubTotal = 0;
-      	currentTotal = 0;
-      	currentTax = 0;
-      	currentTotalTax = 0;
-      	currentFreightCharge = 0;
+         currentSubTotal = 0;
+         currentTotal = 0;
+         currentTax = 0;
+         currentTotalTax = 0;
+         currentFreightCharge = 0;
 
-      	txtSubTotal.Text = "";
-      	txtTotal.Text = "";
-      	txtTotalTax.Text = "";
-      	txtSalesTax.Text = "";
-      	txtFreightCharge.Text = "";
+         txtSubTotal.Text = "";
+         txtTotal.Text = "";
+         txtTotalTax.Text = "";
+         txtSalesTax.Text = "";
+         txtFreightCharge.Text = "";
 
-      	txtProviderName.Text = "";
-      	txtContactLastName.Text = "";
-      	txtContactName.Text = "";
-      	txtProviderContact.Text = "";
-      	txtProviderCompany.Text = "";
-      	cmdSave.Enabled = false;
-      	cmdAddProducts.Enabled = false;
-      	txtNotes.Text = "";
-      	//txtProviderName.SetFocus
-      	ReCalculateTotals(0, 0);
-      	editingData = false;
+         txtProviderName.Text = "";
+         txtContactLastName.Text = "";
+         txtContactName.Text = "";
+         txtProviderContact.Text = "";
+         txtProviderCompany.Text = "";
+         cmdSave.Enabled = false;
+         cmdAddProducts.Enabled = false;
+         txtNotes.Text = "";
+         //txtProviderName.SetFocus
+         ReCalculateTotals(0, 0);
+         editingData = false;
       }
 
       private void txtFreightCharge_TextChanged(Object eventSender, EventArgs eventArgs)
       {
-      	currentFreightCharge = modFunctions.DoubleValue(txtFreightCharge.Text);
-      	ReCalculateTotals(0, 0);
-      	editingData = true;
+         currentFreightCharge = modFunctions.DoubleValue(txtFreightCharge.Text);
+         ReCalculateTotals(0, 0);
+         editingData = true;
       }
 
       private void txtFreightCharge_KeyPress(Object eventSender, Mobilize.Web.KeyPressEventArgs eventArgs)
       {
-      	int KeyAscii = Strings.AscW(eventArgs.KeyChar);
+      	int KeyAscii = Convert.ToInt32(eventArgs.KeyChar);
       	try
       	{
       		if (KeyAscii >= ((int)Mobilize.Web.Keys.D0) && KeyAscii <= ((int)Mobilize.Web.Keys.D9))
@@ -657,20 +663,20 @@ namespace SKS
 
       private void txtContactLastName_TextChanged(Object eventSender, EventArgs eventArgs)
       {
-      	editingData = true;
+         editingData = true;
       }
 
 
       private void txtSalesTax_TextChanged(Object eventSender, EventArgs eventArgs)
       {
-      	currentTax = modFunctions.DoubleValue(txtSalesTax.Text);
-      	ReCalculateTotals(0, 0);
-      	editingData = true;
+         currentTax = modFunctions.DoubleValue(txtSalesTax.Text);
+         ReCalculateTotals(0, 0);
+         editingData = true;
       }
 
       private void txtSalesTax_KeyPress(Object eventSender, Mobilize.Web.KeyPressEventArgs eventArgs)
       {
-      	int KeyAscii = Strings.AscW(eventArgs.KeyChar);
+      	int KeyAscii = Convert.ToInt32(eventArgs.KeyChar);
       	try
       	{
       		if (KeyAscii >= ((int)Mobilize.Web.Keys.D0) && KeyAscii <= ((int)Mobilize.Web.Keys.D9))
@@ -697,7 +703,6 @@ namespace SKS
             eventArgs.KeyChar = Convert.ToChar(KeyAscii);
          }
       }
-
       private void Form_Closed(Object eventSender, EventArgs eventArgs)
       {
       }

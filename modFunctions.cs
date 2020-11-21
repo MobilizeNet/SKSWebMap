@@ -3,8 +3,8 @@ using System;
 using System.Collections.Specialized;
 using System.Text;
 using UpgradeHelpers.DB.ADO;
+using UpgradeHelpers.Helpers;
 using Mobilize.WebMap.Common.Attributes;
-using Mobilize.Web.Extensions;
 
 namespace SKS
 {
@@ -17,43 +17,43 @@ namespace SKS
    	internal static void AppendAND(dynamic filter)
       {
       	//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-      	if (!String.IsNullOrEmpty(filter))
+      	if (!String.IsNullOrEmpty(filter.RefValue))
       	{
-      		filter.RefValue = filter + " AND ";
-         }
+      		filter.RefValue = filter.RefValue + " AND ";
+      	}
       }
 
       internal static bool AddToCollection(OrderedDictionary col, string Item)
       {
-         bool result = false;
-         if (!Exists(col, Item))
-         {
-         	col.Add(Item, Item);
-         	result = true;
-         }
-         return result;
+      	bool result = false;
+      	if (!Exists(col, Item))
+      	{
+      		col.Add(Item, Item);
+      		result = true;
+      	}
+      	return result;
       }
 
       internal static bool Exists(OrderedDictionary col, string Index)
       {
-         object o = null;
-         try
-         {
-         	//UPGRADE_WARNING: (1068) col() of type Variant is being forced to Scalar. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1068
-         	o = col[Index];
-         }
-         catch
-         {
-         }
+      	object o = null;
+      	try
+      	{
+      		//UPGRADE_WARNING: (1068) col() of type Variant is being forced to Scalar. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1068
+      		o = col[Index];
+      	}
+      	catch
+      	{
+      	}
 
-         //UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-         return !Object.Equals(o, null);
+      	//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+      	return !Object.Equals(o, null);
       }
 
 
       internal static double DoubleValue(string strValue)
       {
-         if ((strValue?.Length ?? 0) != 0)
+      	if (Strings.Len(strValue) != 0)
          {
          	return Double.Parse(strValue);
          }
@@ -100,12 +100,12 @@ namespace SKS
       internal static void SelectAll(Mobilize.Web.TextBox txtBox)
       {
       	txtBox.SelectionStart = 0;
-      	txtBox.SelectionLength = txtBox?.Text?.Length ?? 0;
+      	txtBox.SelectionLength = Strings.Len(txtBox.Text);
       }
 
       internal static int UpCase(int KeyAscii)
       {
-      	return Strings.AscW(Strings.ChrW(KeyAscii).ToString().ToUpper()[0]);
+      	return Strings.Asc(Strings.Chr(KeyAscii).ToString().ToUpper()[0]);
       }
 
 
@@ -147,7 +147,7 @@ namespace SKS
       	if (combo.SelectedIndex == -1)
          {
          	result = true;
-            Mobilize.Web.MessageBox.Show("Please select an option from the list", System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).ProductName, Mobilize.Web.MessageBoxButtons.OK, Mobilize.Web.MessageBoxIcon.Exclamation);
+            Mobilize.Web.MessageBox.Show("Please select an option from the list", AssemblyHelper.GetTitle(System.Reflection.Assembly.GetExecutingAssembly()), Mobilize.Web.MessageBoxButtons.OK, Mobilize.Web.MessageBoxIcon.Exclamation);
             //UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
             if (!Index.Equals(0))
             {
@@ -164,12 +164,12 @@ namespace SKS
 
       internal static bool NoRecords(Mobilize.Web.ListView lstView, string Prompt = "")
       {
-      	if (lstView.Items.Count == 0 || lstView.FocusedItem == null)
+      	if (lstView.Items.Count == 0 || lstView.FocusedItem is null)
          {
          	//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
          	if (!String.IsNullOrEmpty(Prompt))
          	{
-               Mobilize.Web.MessageBox.Show(Prompt, System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).ProductName, Mobilize.Web.MessageBoxButtons.OK, Mobilize.Web.MessageBoxIcon.Exclamation);
+               Mobilize.Web.MessageBox.Show(Prompt, AssemblyHelper.GetTitle(System.Reflection.Assembly.GetExecutingAssembly()), Mobilize.Web.MessageBoxButtons.OK, Mobilize.Web.MessageBoxIcon.Exclamation);
             }
             return true;
          }
@@ -239,7 +239,7 @@ namespace SKS
       	if (String.IsNullOrEmpty(stext.Text.Trim()) || stext.Text == "  /  /    ")
          {
          	result = true;
-            Mobilize.Web.MessageBox.Show("You need to fill in all required fields", System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).ProductName, Mobilize.Web.MessageBoxButtons.OK, Mobilize.Web.MessageBoxIcon.Exclamation);
+            Mobilize.Web.MessageBox.Show("You need to fill in all required fields", AssemblyHelper.GetTitle(System.Reflection.Assembly.GetExecutingAssembly()), Mobilize.Web.MessageBoxButtons.OK, Mobilize.Web.MessageBoxIcon.Exclamation);
             //UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
             if (!TabIndex.Equals(0))
             {
@@ -258,10 +258,10 @@ namespace SKS
       {
       	//if the input is not a numeric then true
       	bool result = false;
-      	if (!Stub._Microsoft.VisualBasic.Information.IsNumeric(textbox.Text))
+      	if (!Mobilize.Web.Information.IsNumeric(textbox.Text))
          {
          	result = true;
-            Mobilize.Web.MessageBox.Show("The field requires a numeric value.", System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).ProductName, Mobilize.Web.MessageBoxButtons.OK, Mobilize.Web.MessageBoxIcon.Exclamation);
+            Mobilize.Web.MessageBox.Show("The field requires a numeric value.", AssemblyHelper.GetTitle(System.Reflection.Assembly.GetExecutingAssembly()), Mobilize.Web.MessageBoxButtons.OK, Mobilize.Web.MessageBoxIcon.Exclamation);
             textbox.Focus();
             SelectAll(textbox);
          }

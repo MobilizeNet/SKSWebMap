@@ -1,6 +1,7 @@
 using System;
 using UpgradeHelpers.DB.ADO;
 using Mobilize.WebMap.Common.Attributes;
+using Mobilize.Web.Extensions;
 
 namespace SKS
 {
@@ -10,8 +11,45 @@ namespace SKS
       : Mobilize.Web.Form
    {
 
-      [Intercepted]
+   	public frmProviders()
+   		: base()
+   	{
+   		if (m_vb6FormDefInstance is null)
+   		{
+   			if (m_InitializingDefInstance)
+   			{
+   				m_vb6FormDefInstance = this;
+   			}
+   			else
+   			{
+   				try
+   				{
+   					//For the start-up form, the first instance created is the default instance.
+   					if (!(System.Reflection.Assembly.GetExecutingAssembly().EntryPoint is null) && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType())
+                  {
+                  	m_vb6FormDefInstance = this;
+                  }
+               }
+               catch
+               {
+               }
+            }
+         }
+         //This call is required by the Windows Form Designer.
+         InitializeComponent();
+         ReLoadForm(false);
+      }
 
+
+      private void frmProviders_Activated(System.Object eventSender, System.EventArgs eventArgs)
+      {
+         if ( Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm != eventSender)
+         {
+            Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm = (Mobilize.Web.Form) eventSender;
+         }
+      }
+
+      [Intercepted]
       private bool NewMode { get; set; } = false;
 
       [Intercepted]
@@ -34,38 +72,7 @@ namespace SKS
       //End Sub
 
 
-      public frmProviders()
-      	: base()
-      {
-      	if (m_vb6FormDefInstance == null)
-         {
-         	if (m_InitializingDefInstance)
-         	{
-         		m_vb6FormDefInstance = this;
-         	}
-         	else
-         	{
-         		try
-         		{
-         			//For the start-up form, the first instance created is the default instance.
-         			if (System.Reflection.Assembly.GetExecutingAssembly().EntryPoint != null && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType())
-                  {
-                  	m_vb6FormDefInstance = this;
-                  }
-               }
-               catch
-               {
-               }
-            }
-         }
-         //This call is required by the Windows Form Designer.
-         InitializeComponent();
-         ReLoadForm(false);
-      }
-
-
       //UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-
       private void Form_Load()
       {
       	dcProviders.ConnectionString = modMain.ConnectionString;
@@ -77,7 +84,7 @@ namespace SKS
 
       private void Form_Closed(Object eventSender, EventArgs eventArgs)
       {
-      	CurrentProviderID = Convert.ToInt32(dcProviders.Recordset.Fields["ProviderId"].Value);
+      	CurrentProviderID = Convert.ToInt32(dcProviders.Recordset["ProviderId"]);
       }
 
       private void Toolbar1_ButtonClick(Object eventSender, EventArgs eventArgs)
@@ -127,66 +134,67 @@ namespace SKS
 
       private void Save()
       {
-      	//Save data
-      	if (modFunctions.TextBoxEmpty(txtField[0]))
-      	{
-      		return;
-      	}
-      	if (modFunctions.TextBoxEmpty(txtField[1]))
-      	{
-      		return;
-      	}
-      	if (modFunctions.TextBoxEmpty(txtField[2]))
-      	{
-      		return;
-      	}
-      	if (modFunctions.TextBoxEmpty(txtField[4]))
-      	{
-      		return;
-      	}
-      	if (modFunctions.TextBoxEmpty(txtField[5]))
-      	{
-      		return;
-      	}
-      	if (modFunctions.TextBoxEmpty(txtField[6]))
-      	{
-      		return;
-      	}
-      	if (modFunctions.TextBoxEmpty(txtField[7]))
-      	{
-      		return;
-      	}
-      	if (modFunctions.TextBoxEmpty(txtField[7]))
-      	{
-      		return;
-      	}
-      	if (modFunctions.TextBoxEmpty(txtField[10]))
-      	{
-      		return;
-      	}
-      	if (modFunctions.TextBoxEmpty(txtField[11]))
-      	{
-      		return;
-      	}
-      	if (modFunctions.TextBoxEmpty(txtField[12]))
-      	{
-      		return;
-      	}
-      	if (modFunctions.TextBoxEmpty(txtField[14]))
-      	{
-      		return;
-      	}
-      	dcProviders.Recordset.Update();
-      	EditMode = false;
-      	NewMode = false;
+         //Save data
+         if (modFunctions.TextBoxEmpty(txtField[0]))
+         {
+            return;
+         }
+         if (modFunctions.TextBoxEmpty(txtField[1]))
+         {
+            return;
+         }
+         if (modFunctions.TextBoxEmpty(txtField[2]))
+         {
+            return;
+         }
+         if (modFunctions.TextBoxEmpty(txtField[4]))
+         {
+            return;
+         }
+         if (modFunctions.TextBoxEmpty(txtField[5]))
+         {
+            return;
+         }
+         if (modFunctions.TextBoxEmpty(txtField[6]))
+         {
+            return;
+         }
+         if (modFunctions.TextBoxEmpty(txtField[7]))
+         {
+            return;
+         }
+         if (modFunctions.TextBoxEmpty(txtField[7]))
+         {
+            return;
+         }
+         if (modFunctions.TextBoxEmpty(txtField[10]))
+         {
+            return;
+         }
+         if (modFunctions.TextBoxEmpty(txtField[11]))
+         {
+            return;
+         }
+         if (modFunctions.TextBoxEmpty(txtField[12]))
+         {
+            return;
+         }
+         if (modFunctions.TextBoxEmpty(txtField[14]))
+         {
+            return;
+         }
+         dcProviders.Recordset.Update();
+         dcProviders.Recordset.Requery();
+         EditMode = false;
+         NewMode = false;
       }
 
       private void txtField_TextChanged(Object eventSender, EventArgs eventArgs)
       {
-      	if (!CancellingMode)
-      	{
-      		EditMode = true;
-      	}
+         if (!CancellingMode)
+         {
+            EditMode = true;
+         }
       }
 
    	//Used in search form

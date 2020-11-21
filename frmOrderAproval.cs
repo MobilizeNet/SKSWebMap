@@ -11,26 +11,21 @@ namespace SKS
       : Mobilize.Web.Form
    {
 
-      [Intercepted]
-
-      private string Id { get; set; } = "";
-
-
-      public frmReceptionApproval()
-      	: base()
-      {
-      	if (m_vb6FormDefInstance == null)
-         {
-         	if (m_InitializingDefInstance)
-         	{
-         		m_vb6FormDefInstance = this;
-         	}
-         	else
-         	{
-         		try
-         		{
-         			//For the start-up form, the first instance created is the default instance.
-         			if (System.Reflection.Assembly.GetExecutingAssembly().EntryPoint != null && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType())
+   	public frmReceptionApproval()
+   		: base()
+   	{
+   		if (m_vb6FormDefInstance is null)
+   		{
+   			if (m_InitializingDefInstance)
+   			{
+   				m_vb6FormDefInstance = this;
+   			}
+   			else
+   			{
+   				try
+   				{
+   					//For the start-up form, the first instance created is the default instance.
+   					if (!(System.Reflection.Assembly.GetExecutingAssembly().EntryPoint is null) && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType())
                   {
                   	m_vb6FormDefInstance = this;
                   }
@@ -46,6 +41,16 @@ namespace SKS
       }
 
 
+      private void frmReceptionApproval_Activated(System.Object eventSender, System.EventArgs eventArgs)
+      {
+         if ( Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm != eventSender)
+         {
+            Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm = (Mobilize.Web.Form) eventSender;
+         }
+      }
+
+      [Intercepted]
+      private string Id { get; set; } = "";
 
 
       private void cmbStatus_SelectedIndexChanged(Object eventSender, EventArgs eventArgs)
@@ -89,46 +94,45 @@ namespace SKS
 
       private void dtTo_ValueChanged(Object eventSender, EventArgs eventArgs)
       {
-      	chkTo.CheckState = Mobilize.Web.CheckState.Checked;
+         chkTo.CheckState = Mobilize.Web.CheckState.Checked;
          DoSearchReception();
       }
 
 
       private void fgOrders_DoubleClick(Object eventSender, EventArgs eventArgs)
       {
-      	cmdInfo_Click(cmdInfo, new EventArgs());
+         cmdInfo_Click(cmdInfo, new EventArgs());
       }
 
       //UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-
       private void Form_Load()
       {
-      	InitGrid();
+         InitGrid();
       }
 
       private void txtOrderID_TextChanged(Object eventSender, EventArgs eventArgs)
       {
-      	DoSearchReception();
+         DoSearchReception();
       }
 
       private void txtProductID_TextChanged(Object eventSender, EventArgs eventArgs)
       {
-      	DoSearchReception();
+         DoSearchReception();
       }
 
       private void txtProviderName_TextChanged(Object eventSender, EventArgs eventArgs)
       {
-      	DoSearchReception();
+         DoSearchReception();
       }
 
       private void txtContactLastName_TextChanged(Object eventSender, EventArgs eventArgs)
       {
-      	DoSearchReception();
+         DoSearchReception();
       }
 
       private void txtContactName_TextChanged(Object eventSender, EventArgs eventArgs)
       {
-      	DoSearchReception();
+         DoSearchReception();
       }
 
       //UPGRADE_NOTE: (7001) The following declaration (txtName_Change) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
@@ -144,17 +148,17 @@ namespace SKS
 
       private void cmdProviders_Click(Object eventSender, EventArgs eventArgs)
       {
-      	frmProviders.DefInstance.Show(); //vbModal
-      	txtProviderName.Text = "";
-      	txtContactLastName.Text = "";
-      	txtContactName.Text = "";
-      	DoSearchReception(frmProviders.DefInstance.CurrentProviderID);
+         frmProviders.DefInstance.Show(); //vbModal
+         txtProviderName.Text = "";
+         txtContactLastName.Text = "";
+         txtContactName.Text = "";
+         DoSearchReception(frmProviders.DefInstance.CurrentProviderID);
       }
 
       private void DoSearchReception(int Id = -1)
       {
-      	string filter = "";
-      	if (Id != -1)
+         string filter = "";
+         if (Id != -1)
          {
          	filter = "o.ProviderID = " + Id.ToString();
          }
@@ -239,9 +243,9 @@ namespace SKS
          	int tempForEndVar = modConnection.rs.FieldsMetadata.Count - 1;
          	for (int j = 0; j <= tempForEndVar; j++)
          	{
-         		if (modConnection.rs.GetField(j) != null)
-               {
-               	fgOrders.SetCellValue( j, i, Convert.ToString(modConnection.rs[j]));
+         		if (!(modConnection.rs.GetField(j) is null))
+         		{
+         			fgOrders.SetCellValue( j, i, Convert.ToString(modConnection.rs[j]));
                }
             }
             modConnection.rs.MoveNext();
@@ -251,15 +255,14 @@ namespace SKS
 
       private void InitGrid()
       {
-      	fgOrders.RowsCount = 0;
-      	fgOrders.ColumnsCount = 7;
-      	fgOrders.FixedColumns = 0;
-      	fgOrders.AddItem("Date" + "\t" + "Order" + "\t" + "Supplier" + "\t" + "Contact" + "\t" + "Received by" + "\t" + "Price" + "\t" + "Status");
-      	fgOrders.RowsCount = 1;
-      	fgOrders.FixedRows = 0;
+         fgOrders.RowsCount = 0;
+         fgOrders.ColumnsCount = 7;
+         fgOrders.FixedColumns = 0;
+         fgOrders.AddItem("Date" + "\t" + "Order" + "\t" + "Supplier" + "\t" + "Contact" + "\t" + "Received by" + "\t" + "Price" + "\t" + "Status");
+         fgOrders.RowsCount = 1;
+         fgOrders.FixedRows = 0;
+         fgOrders.Properties().SelectionMode = Mobilize.Web.DataGridViewSelectionMode.FullRowSelect;
       }
-
-
 
       //UPGRADE_NOTE: (7001) The following declaration (MakeTextBoxVisible) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
       //private void MakeTextBoxVisible(TextBox txtBox, UpgradeHelpers.DataGridViewFlex grid)
@@ -270,7 +273,6 @@ namespace SKS
       	//Application.DoEvents();
       	//txtBox.Focus();
       //}
-
       private void Form_Closed(Object eventSender, EventArgs eventArgs)
       {
       }

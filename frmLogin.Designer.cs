@@ -3,9 +3,8 @@ using Mobilize.Web.Extensions;
 
 namespace SKS
 {
-
-   partial class frmLogin
-   {
+	partial class frmLogin
+	{
 
       [Intercepted]
 
@@ -15,23 +14,22 @@ namespace SKS
       [Intercepted]
       private static bool m_InitializingDefInstance { get; set; }
 
-      [Intercepted]
       public static frmLogin DefInstance
       {
       	get
       	{
-      		if (m_vb6FormDefInstance == null || m_vb6FormDefInstance.IsDisposed)
-            {
-            	m_InitializingDefInstance = true;
-            	m_vb6FormDefInstance = CreateInstance();
-            	m_InitializingDefInstance = false;
-            }
-            return m_vb6FormDefInstance;
-         }
-         set
-         {
-            m_vb6FormDefInstance = value;
-         }
+      		if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
+      		{
+      			m_InitializingDefInstance = true;
+      			m_vb6FormDefInstance = CreateInstance();
+      			m_InitializingDefInstance = false;
+      		}
+      		return m_vb6FormDefInstance;
+      	}
+      	set
+      	{
+      		m_vb6FormDefInstance = value;
+      	}
       }
 
       #endregion
@@ -49,7 +47,7 @@ namespace SKS
       [Intercepted]
       //Required by the Windows Form Designer
       private
-      System.ComponentModel.IContainer components { get; set; }
+      Mobilize.Web.Controls.Interfaces.IContainer components { get; set; }
 
       [Intercepted]
       public Mobilize.Web.ToolTip ToolTipMain { get; set; }
@@ -82,7 +80,7 @@ namespace SKS
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new System.ComponentModel.Container();
+      	this.components = new Mobilize.Web.ControlCollection();
       	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
       	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
       	this.txtUserName = new Mobilize.Web.TextBox();
@@ -180,6 +178,9 @@ namespace SKS
          this._lblLabels_1.Size = new System.Drawing.Size(72, 18);
          this._lblLabels_1.TabIndex = 2;
          this._lblLabels_1.Text = "&Password:";
+         // 
+         // frmLogin
+         // 
          this.AcceptButton = this.cmdOK;
          this.AllowDrop = true;
          this.Properties().AutoScaleDimensions = new System.Drawing.SizeF(6, 13);
@@ -194,7 +195,7 @@ namespace SKS
          this.Controls.Add(this._lblLabels_0);
          this.Controls.Add(this._lblLabels_1);
          this.FormBorderStyle = Mobilize.Web.FormBorderStyle.FixedSingle;
-         this.Icon = null;
+         this.Icon = (Mobilize.Web.Icon)new Mobilize.Web.Icon("assets/images/SKS.frmLogin.frmLogin.Icon.png");
          this.Properties().Location = new System.Drawing.Point(189, 232);
          this.MaximizeBox = false;
          this.MinimizeBox = false;
@@ -203,6 +204,7 @@ namespace SKS
          this.Properties().ShowInTaskbar = false;
          this.Properties().StartPosition = Mobilize.Web.FormStartPosition.CenterScreen;
          this.Text = "Login";
+         this.Activated += new System.EventHandler(this.frmLogin_Activated);
          this.Closed += new System.EventHandler(this.Form_Closed);
          this.ResumeLayout(false);
       }
@@ -219,6 +221,5 @@ namespace SKS
       	this.lblLabels[1] = _lblLabels_1;
       }
       #endregion
-
    }
 }
