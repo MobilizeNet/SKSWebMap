@@ -2,8 +2,8 @@ namespace Stub._System.Windows.Forms
 {
 
    public class StatusStripEx
-      : Stub._System.Windows.Forms.ToolStripEx
-   {
+      : ToolStripEx
+    {
 
       public bool ShowItemToolTips { get; set; }
 

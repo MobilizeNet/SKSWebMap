@@ -4,7 +4,7 @@ namespace Stub._System.Windows.Forms
    public class ControlEx
    {
 
-      public Stub._System.Windows.Forms.RightToLeft RightToLeft { get; set; }
+      public RightToLeft RightToLeft { get; set; }
 
       public Mobilize.Web.Cursor Cursor { get; set; }
 

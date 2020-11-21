@@ -2,12 +2,12 @@ namespace Stub._System.Windows.Forms
 {
 
    public class ContainerControlEx
-      : Stub._System.Windows.Forms.ControlEx
-   {
+      : ControlEx
+    {
 
       public System.Drawing.SizeF AutoScaleDimensions { get; set; }
 
-      public Stub._System.Windows.Forms.AutoScaleMode AutoScaleMode { get; set; }
+      public AutoScaleMode AutoScaleMode { get; set; }
 
    }
 

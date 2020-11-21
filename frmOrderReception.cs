@@ -1,36 +1,35 @@
-using Microsoft.VisualBasic;
-using System;
-using System.Media;
-using UpgradeHelpers.DB.ADO;
-using UpgradeHelpers.Helpers;
-using Mobilize.WebMap.Common.Attributes;
-using Mobilize.Web.Extensions;
-
 namespace SKS
 {
+    using System;
+    using System.Media;
+    using Microsoft.VisualBasic;
+    using Mobilize.Web.Extensions;
+    using Mobilize.WebMap.Common.Attributes;
+    using UpgradeHelpers.DB.ADO;
+    using UpgradeHelpers.Helpers;
 
-   [Observable]
-   internal partial class frmOrderReception
+    [Observable]
+    internal partial class frmOrderReception
       : Mobilize.Web.Form
    {
 
-   	public frmOrderReception()
-   		: base()
-   	{
-   		if (m_vb6FormDefInstance is null)
-   		{
-   			if (m_InitializingDefInstance)
-   			{
-   				m_vb6FormDefInstance = this;
-   			}
-   			else
-   			{
-   				try
-   				{
-   					//For the start-up form, the first instance created is the default instance.
-   					if (!(System.Reflection.Assembly.GetExecutingAssembly().EntryPoint is null) && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType())
+    public frmOrderReception()
+        : base()
+    {
+        if (m_vb6FormDefInstance is null)
+        {
+            if (m_InitializingDefInstance)
+            {
+                m_vb6FormDefInstance = this;
+            }
+            else
+            {
+                try
+                {
+                    // For the start-up form, the first instance created is the default instance.
+                    if (!(System.Reflection.Assembly.GetExecutingAssembly().EntryPoint is null) && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType())
                   {
-                  	m_vb6FormDefInstance = this;
+                    m_vb6FormDefInstance = this;
                   }
                }
                catch
@@ -38,13 +37,13 @@ namespace SKS
                }
             }
          }
-         //This call is required by the Windows Form Designer.
-         InitializeComponent();
-         ReLoadForm(false);
+
+         // This call is required by the Windows Form Designer.
+        InitializeComponent();
+        ReLoadForm(false);
       }
 
-
-      private void frmOrderReception_Activated(System.Object eventSender, System.EventArgs eventArgs)
+    private void frmOrderReception_Activated(object eventSender, EventArgs eventArgs)
       {
          if ( Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm != eventSender)
          {
@@ -52,134 +51,143 @@ namespace SKS
          }
       }
 
-      [Intercepted]
-      private string currentProviderName { get; set; } = "";
+    [Intercepted]
+    private string currentProviderName { get; set; } = "";
 
-      [Intercepted]
-      private int currentIdProvider { get; set; } = 0;
+    [Intercepted]
+    private int currentIdProvider { get; set; } = 0;
 
-      [Intercepted]
-      private string currentContactName { get; set; } = "";
+    [Intercepted]
+    private string currentContactName { get; set; } = "";
 
-      [Intercepted]
-      private bool editingData { get; set; } = false;
+    [Intercepted]
+    private bool editingData { get; set; } = false;
 
-      [Intercepted]
+    [Intercepted]
 
-      private double currentSubTotal { get; set; } = 0;
+    private double currentSubTotal { get; set; } = 0;
 
-      [Intercepted]
-      private double currentTotal { get; set; } = 0;
+    [Intercepted]
+    private double currentTotal { get; set; } = 0;
 
-      [Intercepted]
-      private double currentTax { get; set; } = 0;
+    [Intercepted]
+    private double currentTax { get; set; } = 0;
 
-      [Intercepted]
-      private double currentFreightCharge { get; set; } = 0;
+    [Intercepted]
+    private double currentFreightCharge { get; set; } = 0;
 
-      [Intercepted]
-      private double currentTotalTax { get; set; } = 0;
+    [Intercepted]
+    private double currentTotalTax { get; set; } = 0;
 
-      private void cmdAddProducts_Click(Object eventSender, EventArgs eventArgs)
+    private void cmdAddProducts_Click(object eventSender, EventArgs eventArgs)
       {
-      	frmAddProductTo.DefInstance.Id = currentIdProvider;
-      	frmAddProductTo.DefInstance.ObjectReferred = "Provider " + txtProviderCompany.Text + "|" + txtProviderContact.Text;
-      	frmAddProductTo.DefInstance.Table = "ProductsByProvider";
-      	frmAddProductTo.DefInstance.ColumnName = "ProviderId";
-      	frmAddProductTo.DefInstance.LoadData();
-      	frmAddProductTo.DefInstance.ShowDialog();
-      	if (frmAddProductTo.DefInstance.SavedChanges)
-      	{
-      		LoadProductsById();
-      	}
+        frmAddProductTo.DefInstance.Id = currentIdProvider;
+        frmAddProductTo.DefInstance.ObjectReferred = "Provider " + txtProviderCompany.Text + "|" + txtProviderContact.Text;
+        frmAddProductTo.DefInstance.Table = "ProductsByProvider";
+        frmAddProductTo.DefInstance.ColumnName = "ProviderId";
+        frmAddProductTo.DefInstance.LoadData();
+        frmAddProductTo.DefInstance.ShowDialog();
+        if (frmAddProductTo.DefInstance.SavedChanges)
+        {
+            LoadProductsById();
+        }
       }
 
-      //UPGRADE_NOTE: (7001) The following declaration (txtName_Change) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
-      //private void txtName_Change()
-      //{
-      	//DoSearchProvider();
-      //}
+      // UPGRADE_NOTE: (7001) The following declaration (txtName_Change) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
+      // private void txtName_Change()
+      // {
+        // DoSearchProvider();
+      // }
 
-      private void DoSearchProvider(int Id = 0)
+    private void DoSearchProvider(int Id = 0)
       {
-      	string filter = "";
-      	//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-      	if (!Id.Equals(0))
-      	{
-      		filter = "ProviderID = " + Id.ToString();
-      	}
-      	//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-      	if (!String.IsNullOrEmpty(txtProviderName.Text))
-      	{
-      		//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-      		if (!String.IsNullOrEmpty(filter))
-      		{
-      			filter = filter + " AND ";
-      		}
-      		filter = "ProviderName LIKE '%" + txtProviderName.Text + "%'";
-      	}
-      	//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-      	if (!String.IsNullOrEmpty(txtContactName.Text))
-      	{
-      		//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-      		if (!String.IsNullOrEmpty(filter))
-      		{
-      			filter = filter + " AND ";
-      		}
-      		filter = filter + "ContactFirstName LIKE '%" + txtContactName.Text + "%'";
-      	}
-      	//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-      	if (!String.IsNullOrEmpty(txtContactLastName.Text))
-      	{
-      		//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-      		if (!String.IsNullOrEmpty(filter))
-      		{
-      			filter = filter + " AND ";
-      		}
-      		filter = filter + "ContactLastName LIKE '%" + txtContactLastName.Text + "%'";
-      	}
+        string filter = "";
+        // UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+        if (!Id.Equals(0))
+        {
+            filter = "ProviderID = " + Id.ToString();
+        }
 
-      	//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-      	if (!String.IsNullOrEmpty(filter))
-      	{
-      		filter = "Where " + filter;
-      	}
-      	modConnection.ExecuteSql("Select ProviderID, ProviderName, ContactFirstName, ContactLastName, City, StateOrProvince, 'Country/Region' From Providers " + filter);
-      	lvProviders.Items.Clear();
-         Mobilize.Web.ListViewItem x = null;
-         if (modConnection.rs.RecordCount == 0)
+        // UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+        if (!string.IsNullOrEmpty(txtProviderName.Text))
+        {
+            // UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+            if (!string.IsNullOrEmpty(filter))
+            {
+                filter = filter + " AND ";
+            }
+
+            filter = "ProviderName LIKE '%" + txtProviderName.Text + "%'";
+        }
+
+        // UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+        if (!string.IsNullOrEmpty(txtContactName.Text))
+        {
+            // UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+            if (!string.IsNullOrEmpty(filter))
+            {
+                filter = filter + " AND ";
+            }
+
+            filter = filter + "ContactFirstName LIKE '%" + txtContactName.Text + "%'";
+        }
+
+        // UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+        if (!string.IsNullOrEmpty(txtContactLastName.Text))
+        {
+            // UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+            if (!string.IsNullOrEmpty(filter))
+            {
+                filter = filter + " AND ";
+            }
+
+            filter = filter + "ContactLastName LIKE '%" + txtContactLastName.Text + "%'";
+        }
+
+        // UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+        if (!string.IsNullOrEmpty(filter))
+        {
+            filter = "Where " + filter;
+        }
+
+        modConnection.ExecuteSql("Select ProviderID, ProviderName, ContactFirstName, ContactLastName, City, StateOrProvince, 'Country/Region' From Providers " + filter);
+        lvProviders.Items.Clear();
+        Mobilize.Web.ListViewItem x = null;
+        if (modConnection.rs.RecordCount == 0)
          {
-         	modMain.LogStatus("There are no records with the selected criteria", this);
+            modMain.LogStatus("There are no records with the selected criteria", this);
          }
          else
          {
-         	while (!modConnection.rs.EOF)
-         	{
-         		x = lvProviders.Items.Add(Convert.ToString(modConnection.rs[0]));
-         		int tempForEndVar = (modConnection.rs.FieldsMetadata.Count - 1);
-         		for (modMain.i = 1; modMain.i <= tempForEndVar; modMain.i++)
-         		{
-         			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-         			if (!(modConnection.rs.GetField(modMain.i) is null))
-         			{
+            while (!modConnection.rs.EOF)
+            {
+                x = lvProviders.Items.Add(Convert.ToString(modConnection.rs[0]));
+                int tempForEndVar = (modConnection.rs.FieldsMetadata.Count - 1);
+                for (modMain.i = 1; modMain.i <= tempForEndVar; modMain.i++)
+                {
+                    // UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+                    if (!(modConnection.rs.GetField(modMain.i) is null))
+                    {
                      Mobilize.Web.ListView.GetListViewSubItem(x, modMain.i).Text = Convert.ToString(modConnection.rs[modMain.i]);
                   }
                }
-               modConnection.rs.MoveNext();
+
+                modConnection.rs.MoveNext();
             }
+
             if (lvProviders.Items.Count == 1)
             {
-            	lvProviders.Items[lvProviders.Items[0].Index].Selected = true;
+                lvProviders.Items[lvProviders.Items[0].Index].Selected = true;
             }
          }
       }
 
-      private void cmdClose_Click(Object eventSender, EventArgs eventArgs)
+    private void cmdClose_Click(object eventSender, EventArgs eventArgs)
       {
          this.Close();
       }
 
-      private void cmdProviders_Click(Object eventSender, EventArgs eventArgs)
+    private void cmdProviders_Click(object eventSender, EventArgs eventArgs)
       {
          frmProviders.DefInstance.ShowDialog();
          txtProviderName.Text = "";
@@ -188,7 +196,7 @@ namespace SKS
          DoSearchProvider(frmProviders.DefInstance.CurrentProviderID);
       }
 
-      private void cmdSave_Click(Object eventSender, EventArgs eventArgs)
+    private void cmdSave_Click(object eventSender, EventArgs eventArgs)
       {
          int newOrderId = 0;
 
@@ -211,80 +219,81 @@ namespace SKS
             int tempForEndVar = fgProducts.RowsCount - 1;
             for (modMain.i = 1; modMain.i <= tempForEndVar; modMain.i++)
             {
-            	if (Convert.ToString(fgProducts[modMain.i, 0].Value) != "0")
+                if (Convert.ToString(fgProducts[modMain.i, 0].Value) != "0")
                {
-               	modConnection.ExecuteSql("Insert into OrderReceptionDetails (OrderID, ProductID, DateSold, Quantity, UnitPrice, SalePrice, SalesTax, LineTotal) Values (" + newOrderId.ToString() + ", '" + Convert.ToString(fgProducts[modMain.i, 1].Value) + "', '" + DateTime.Today.ToString("MM/dd/yyyy") + "'," + Convert.ToString(fgProducts[modMain.i, 0].Value) + "," + Convert.ToString(fgProducts[modMain.i, 3].Value) + "," + Convert.ToString(fgProducts[modMain.i, 4].Value) + "," + (currentTax * 0.01d).ToString() + "," + Convert.ToString(fgProducts[modMain.i, 4].Value) + ")");
+                modConnection.ExecuteSql("Insert into OrderReceptionDetails (OrderID, ProductID, DateSold, Quantity, UnitPrice, SalePrice, SalesTax, LineTotal) Values (" + newOrderId.ToString() + ", '" + Convert.ToString(fgProducts[modMain.i, 1].Value) + "', '" + DateTime.Today.ToString("MM/dd/yyyy") + "'," + Convert.ToString(fgProducts[modMain.i, 0].Value) + "," + Convert.ToString(fgProducts[modMain.i, 3].Value) + "," + Convert.ToString(fgProducts[modMain.i, 4].Value) + "," + (currentTax * 0.01d).ToString() + "," + Convert.ToString(fgProducts[modMain.i, 4].Value) + ")");
 
-               	//UnitsInTransit
-               	//ExecuteSql "Update Products Set UnitsOnOrder = UnitsOnOrder + " & fgProducts.TextMatrix(i, 0) & _
-               	//        '" Where ProductId = '" & fgProducts.TextMatrix(i, 1) & "'"
+                // UnitsInTransit
+                // ExecuteSql "Update Products Set UnitsOnOrder = UnitsOnOrder + " & fgProducts.TextMatrix(i, 0) & _
+                //        '" Where ProductId = '" & fgProducts.TextMatrix(i, 1) & "'"
 
                }
             }
 
-
-
             editingData = false;
             if ( Mobilize.Web.MessageBox.Show("Order reception added successfully" + Environment.NewLine + "Would you like to add a new order reception?", "New data", Mobilize.Web.MessageBoxButtons.YesNo, Mobilize.Web.MessageBoxIcon.Question) == Mobilize.Web.DialogResult.Yes)
             {
-            	ClearFields();
+                ClearFields();
             }
             else
             {
-            	this.Close();
+                this.Close();
             }
          }
-         catch (System.Exception excep)
+         catch (Exception excep)
          {
             Mobilize.Web.MessageBox.Show("An error has occurred adding the data. Error: (" + Mobilize.Web.Information.Err().Number.ToString() + ") " + excep.Message, "Error", Mobilize.Web.MessageBoxButtons.OK, Mobilize.Web.MessageBoxIcon.Error);
          }
       }
 
-      private void MakeTextBoxVisible(Mobilize.Web.TextBox txtBox, Mobilize.Web.VBUC.FlexGrid grid)
+    private void MakeTextBoxVisible(Mobilize.Web.TextBox txtBox, Mobilize.Web.VBUC.FlexGrid grid)
       {
-      	txtBox.Text = Convert.ToString(grid[grid.CurrentRowIndex, grid.CurrentColumnIndex].Value);
-      	//txtBox.Move .CellLeft + .Left, .CellTop + .Top, .CellWidth, .CellHeight
-      	txtBox.Visible = true;
-      	txtBox.Enabled = true;
-      	//DoEvents
-      	txtBox.Focus();
-      	modFunctions.SelectAll(txtBox);
+        txtBox.Text = Convert.ToString(grid[grid.CurrentRowIndex, grid.CurrentColumnIndex].Value);
+        // txtBox.Move .CellLeft + .Left, .CellTop + .Top, .CellWidth, .CellHeight
+        txtBox.Visible = true;
+        txtBox.Enabled = true;
+        // DoEvents
+        txtBox.Focus();
+        modFunctions.SelectAll(txtBox);
       }
 
-      private void fgProducts_Click(Object eventSender, EventArgs eventArgs)
+    private void fgProducts_Click(object eventSender, EventArgs eventArgs)
       {
-      	if (fgProducts.CurrentColumnIndex != 0)
+        if (fgProducts.CurrentColumnIndex != 0)
          {
-         	return;
+            return;
          }
-         MakeTextBoxVisible(txtEntry, fgProducts);
+
+        MakeTextBoxVisible(txtEntry, fgProducts);
       }
 
-      //UPGRADE_WARNING: (2050) MSFlexGridLib.MSFlexGrid Event fgProducts.EnterCell was not upgraded. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2050
-      private void fgProducts_EnterCell()
+      // UPGRADE_WARNING: (2050) MSFlexGridLib.MSFlexGrid Event fgProducts.EnterCell was not upgraded. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2050
+    private void fgProducts_EnterCell()
       {
          SaveEdits();
       }
 
-      private void fgProducts_KeyPress(Object eventSender, Mobilize.Web.KeyPressEventArgs eventArgs)
+    private void fgProducts_KeyPress(object eventSender, Mobilize.Web.KeyPressEventArgs eventArgs)
       {
-      	int KeyAscii = Convert.ToInt32(eventArgs.KeyChar);
-      	try
-      	{
-      		if (fgProducts.CurrentColumnIndex != 0)
+        int KeyAscii = Convert.ToInt32(eventArgs.KeyChar);
+        try
+        {
+            if (fgProducts.CurrentColumnIndex != 0)
             {
-            	if (KeyAscii == 0)
+                if (KeyAscii == 0)
                {
-               	eventArgs.Handled = true;
+                eventArgs.Handled = true;
                }
-               return;
+
+                return;
             }
+
             if (KeyAscii == 46 || KeyAscii >= 48 && KeyAscii <= 57)
             {
-            	//Case 45, 46, 47, 48 To 59, 65 To 90, 97 To 122
-            	MakeTextBoxVisible(txtEntry, fgProducts);
-            	txtEntry.Text = Strings.Chr(KeyAscii).ToString();
-            	txtEntry.SelectionStart = 1;
+                // Case 45, 46, 47, 48 To 59, 65 To 90, 97 To 122
+                MakeTextBoxVisible(txtEntry, fgProducts);
+                txtEntry.Text = Strings.Chr(KeyAscii).ToString();
+                txtEntry.SelectionStart = 1;
             }
             else
             {
@@ -294,18 +303,19 @@ namespace SKS
          {
             if (KeyAscii == 0)
             {
-            	eventArgs.Handled = true;
+                eventArgs.Handled = true;
             }
+
             eventArgs.KeyChar = Convert.ToChar(KeyAscii);
          }
       }
 
-      private void txtEntry_KeyDown(Object eventSender, Mobilize.Web.KeyEventArgs eventArgs)
+    private void txtEntry_KeyDown(object eventSender, Mobilize.Web.KeyEventArgs eventArgs)
       {
-      	int KeyCode = (int) eventArgs.KeyCode;
-      	int Shift = ((int) eventArgs.KeyData) / 65536;
-      	try
-      	{
+        int KeyCode = (int) eventArgs.KeyCode;
+        int Shift = ((int) eventArgs.KeyData) / 65536;
+        try
+        {
             Mobilize.Web.TextBox tempRefParam = txtEntry;
             EditKeyCode(fgProducts, Mobilize.Web.ReferenceExtensions.Ref(() => tempRefParam), KeyCode, Shift);
             txtEntry = tempRefParam;
@@ -316,99 +326,104 @@ namespace SKS
          }
       }
 
-      private void EditKeyCode(Mobilize.Web.VBUC.FlexGrid grid, dynamic txtBox, int KeyCode, int Shift)
+    private void EditKeyCode(Mobilize.Web.VBUC.FlexGrid grid, dynamic txtBox, int KeyCode, int Shift)
       {
-      	switch(KeyCode)
-      	{
-      		case 27 :  //ESC 
-      			txtBox.RefValue.Text = "";
-      			txtBox.RefValue.Visible = false;
-      			grid.Focus();
-      			break;
-      		case 13 :  //Return 
-      			grid.Focus();
-      			break;
-      		case 37 :  //Left Arrow 
-      			grid.Focus();
-               Stub._System.Windows.Forms.Application.DoEvents();
-               if (grid.CurrentColumnIndex > grid.FixedColumns)
+        switch(KeyCode)
+        {
+            case 27 :  // ESC 
+                txtBox.RefValue.Text = "";
+                txtBox.RefValue.Visible = false;
+                grid.Focus();
+                break;
+            case 13 :  // Return 
+                grid.Focus();
+                break;
+            case 37 :  // Left Arrow 
+                grid.Focus();
+                Stub._System.Windows.Forms.Application.DoEvents();
+                if (grid.CurrentColumnIndex > grid.FixedColumns)
                {
                   (
                   grid.CurrentColumnIndex)--;
                }
-               break;
-            case 38 :  //Up Arrow 
-               grid.Focus();
-               Stub._System.Windows.Forms.Application.DoEvents();
-               if (grid.CurrentRowIndex > grid.FixedRows)
+
+                break;
+            case 38 :  // Up Arrow 
+                grid.Focus();
+                Stub._System.Windows.Forms.Application.DoEvents();
+                if (grid.CurrentRowIndex > grid.FixedRows)
                {
                   (
                   grid.CurrentRowIndex)--;
                }
-               break;
-            case 39 :  //Right Arrow 
-               grid.Focus();
-               Stub._System.Windows.Forms.Application.DoEvents();
-               if (grid.CurrentColumnIndex < grid.ColumnsCount - 1)
+
+                break;
+            case 39 :  // Right Arrow 
+                grid.Focus();
+                Stub._System.Windows.Forms.Application.DoEvents();
+                if (grid.CurrentColumnIndex < grid.ColumnsCount - 1)
                {
                   (
                   grid.CurrentColumnIndex)++;
                }
-               break;
-            case 40 :  //Down Arrow 
-               grid.Focus();
-               Stub._System.Windows.Forms.Application.DoEvents();
-               if (grid.CurrentRowIndex < grid.RowsCount - 1)
+
+                break;
+            case 40 :  // Down Arrow 
+                grid.Focus();
+                Stub._System.Windows.Forms.Application.DoEvents();
+                if (grid.CurrentRowIndex < grid.RowsCount - 1)
                {
                   (
                   grid.CurrentRowIndex)++;
                }
-               break;
+
+                break;
          }
       }
 
-      private void txtEntry_Leave(Object eventSender, EventArgs eventArgs)
+    private void txtEntry_Leave(object eventSender, EventArgs eventArgs)
       {
          SaveEdits();
       }
 
-
-      private void fgProducts_CellLeave(Object eventSender, EventArgs eventArgs)
+    private void fgProducts_CellLeave(object eventSender, EventArgs eventArgs)
       {
          SaveEdits();
       }
 
-      private void txtEntry_KeyPress(Object eventSender, Mobilize.Web.KeyPressEventArgs eventArgs)
+    private void txtEntry_KeyPress(object eventSender, Mobilize.Web.KeyPressEventArgs eventArgs)
       {
-      	int KeyAscii = Convert.ToInt32(eventArgs.KeyChar);
-      	try
-      	{
-      		if (KeyAscii == 46 || KeyAscii >= 48 && KeyAscii <= 57)
+        int KeyAscii = Convert.ToInt32(eventArgs.KeyChar);
+        try
+        {
+            if (KeyAscii == 46 || KeyAscii >= 48 && KeyAscii <= 57)
             {
-            	//Alphanumeric
-            	//Case 45, 46, 47, 48 To 59, 65 To 90, 97 To 122
+                // Alphanumeric
+                // Case 45, 46, 47, 48 To 59, 65 To 90, 97 To 122
             }
             else
             {
-            	KeyAscii = 0;
+                KeyAscii = 0;
             }
          }
          finally
          {
             if (KeyAscii == 0)
             {
-            	eventArgs.Handled = true;
+                eventArgs.Handled = true;
             }
+
             eventArgs.KeyChar = Convert.ToChar(KeyAscii);
          }
       }
 
-      private void SaveEdits()
+    private void SaveEdits()
       {
          if (!txtEntry.Visible || !modFunctions.ValidateTextBoxDouble(txtEntry, this) || !modFunctions.ValidateTextDouble(Convert.ToString(fgProducts[fgProducts.CurrentRowIndex, 3].Value), this) || !modFunctions.ValidateTextDouble(Convert.ToString(fgProducts[fgProducts.CurrentRowIndex, 4].Value), this))
          {
             return;
          }
+
          double previousLinePrice = modFunctions.DoubleValue(Convert.ToString(fgProducts[fgProducts.CurrentRowIndex, 4].Value));
          fgProducts.SetCellValue( fgProducts.CurrentColumnIndex, fgProducts.CurrentRowIndex, txtEntry.Text);
          double lineQuantity = modFunctions.DoubleValue(txtEntry.Text);
@@ -421,7 +436,7 @@ namespace SKS
          editingData = true;
       }
 
-      private void ReCalculateTotals(double previous, double current)
+    private void ReCalculateTotals(double previous, double current)
       {
          currentSubTotal = currentSubTotal - previous + current;
          currentTotalTax = currentSubTotal * currentTax * 0.01d;
@@ -431,23 +446,23 @@ namespace SKS
          txtTotal.Text = StringsHelper.Format(currentTotal, "#,##0.00");
       }
 
-      private void Form_FormClosing(Object eventSender, Mobilize.Web.FormClosingEventArgs eventArgs)
+    private void Form_FormClosing(object eventSender, Mobilize.Web.FormClosingEventArgs eventArgs)
       {
-      	int Cancel = (eventArgs.Cancel) ? 1 : 0;
-      	int UnloadMode = (int) eventArgs.CloseReason;
-      	try
-      	{
+        int Cancel = (eventArgs.Cancel) ? 1 : 0;
+        int UnloadMode = (int) eventArgs.CloseReason;
+        try
+        {
             Mobilize.Web.DialogResult res = (Mobilize.Web.DialogResult) 0;
             if (editingData)
             {
-            	res = Mobilize.Web.MessageBox.Show("Do you want to save the edited data?", "Save data", Mobilize.Web.MessageBoxButtons.YesNoCancel, Mobilize.Web.MessageBoxIcon.Question);
-               if (res == Mobilize.Web.DialogResult.Yes)
+                res = Mobilize.Web.MessageBox.Show("Do you want to save the edited data?", "Save data", Mobilize.Web.MessageBoxButtons.YesNoCancel, Mobilize.Web.MessageBoxIcon.Question);
+                if (res == Mobilize.Web.DialogResult.Yes)
                {
-               	cmdSave_Click(cmdSave, new EventArgs());
+                cmdSave_Click(cmdSave, new EventArgs());
                }
                else if (res != Mobilize.Web.DialogResult.No)
                {
-               	Cancel = -1;
+                Cancel = -1;
                }
             }
          }
@@ -457,46 +472,48 @@ namespace SKS
          }
       }
 
-      //UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-      private void Form_Load()
+      // UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+    private void Form_Load()
       {
          editingData = false;
          ClearFields();
       }
 
-      private void lvProviders_ItemClick(Mobilize.Web.ListViewItem Item)
+    private void lvProviders_ItemClick(Mobilize.Web.ListViewItem Item)
       {
-      	RetrieveDataProvider();
+        RetrieveDataProvider();
       }
 
-      private void RetrieveDataProvider()
+    private void RetrieveDataProvider()
       {
-      	if (editingData)
-      	{
-      		if ( Mobilize.Web.MessageBox.Show("Do you want to cancel previous edited data?", "Data edition", Mobilize.Web.MessageBoxButtons.YesNo, Mobilize.Web.MessageBoxIcon.Question) != Mobilize.Web.DialogResult.Yes)
+        if (editingData)
+        {
+            if ( Mobilize.Web.MessageBox.Show("Do you want to cancel previous edited data?", "Data edition", Mobilize.Web.MessageBoxButtons.YesNo, Mobilize.Web.MessageBoxIcon.Question) != Mobilize.Web.DialogResult.Yes)
             {
-            	return;
+                return;
             }
          }
-         Mobilize.Web.ListViewItem withVar = null;
-         //UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
-         if (!(lvProviders.FocusedItem is null))
+
+        Mobilize.Web.ListViewItem withVar = null;
+         // UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+        if (!(lvProviders.FocusedItem is null))
          {
-         	withVar = lvProviders.FocusedItem;
-         	currentIdProvider = Convert.ToInt32(Double.Parse(lvProviders.FocusedItem.Text));
-         	currentProviderName = Mobilize.Web.ListView.GetListViewSubItem(withVar, 1).Text;
+            withVar = lvProviders.FocusedItem;
+            currentIdProvider = Convert.ToInt32(double.Parse(lvProviders.FocusedItem.Text));
+            currentProviderName = Mobilize.Web.ListView.GetListViewSubItem(withVar, 1).Text;
             currentContactName = Mobilize.Web.ListView.GetListViewSubItem(withVar, 2).Text + " " + Mobilize.Web.ListView.GetListViewSubItem(withVar, 3).Text;
             txtProviderCompany.Text = currentProviderName;
             txtProviderContact.Text = currentContactName;
             editingData = false;
          }
-         LoadProductsById();
-         cmdSave.Enabled = true;
-         cmdAddProducts.Enabled = true;
+
+        LoadProductsById();
+        cmdSave.Enabled = true;
+        cmdAddProducts.Enabled = true;
 
       }
 
-      private void LoadProductsById()
+    private void LoadProductsById()
       {
          string Table = "ProductsByProvider";
          string ColumnName = "ProviderId";
@@ -504,8 +521,8 @@ namespace SKS
 
          modConnection.ExecuteSql("Select p.ProductID, p.ProductName, p.UnitPrice, p.UnitsInStock, p.UnitsOnOrder, p.QuantityPerUnit, p.Unit from Products as p, " + Table + " as pb Where pb." + ColumnName + " = " + Id.ToString() + " And pb.ProductId = p.ProductId");
 
-         //lvProducts.ListItems.Clear
-         //If rs.RecordCount > 0 Then
+         // lvProducts.ListItems.Clear
+         // If rs.RecordCount > 0 Then
          //    With rs
          //        While Not .EOF
          //            Set x = lvProducts.ListItems.Add(, , 0)
@@ -518,7 +535,7 @@ namespace SKS
          //            .MoveNext
          //        Wend
          //    End With
-         //End If
+         // End If
 
          int lng = 0;
          int intLoopCount = 0;
@@ -531,31 +548,33 @@ namespace SKS
          fgProducts.RowsCount = modConnection.rs.RecordCount + 1;
          if (fgProducts.RowsCount == 1)
          {
-         	fgProducts.FixedRows = 0;
+            fgProducts.FixedRows = 0;
          }
          else
          {
-         	fgProducts.FixedRows = 1;
+            fgProducts.FixedRows = 1;
          }
+
          i = 1;
          while (!modConnection.rs.EOF)
          {
-         	fgProducts.SetCellValue( 0, i, "0");
+            fgProducts.SetCellValue( 0, i, "0");
             for (int j = 1; j <= 6; j++)
             {
-            	if (j == 4)
+                if (j == 4)
                {
-               	fgProducts.SetCellValue( j, i, "0");
+                fgProducts.SetCellValue( j, i, "0");
                }
                else if (j < 4)
                {
-               	fgProducts.SetCellValue( j, i, Convert.ToString(modConnection.rs[j - 1]));
+                fgProducts.SetCellValue( j, i, Convert.ToString(modConnection.rs[j - 1]));
                }
                else
                {
-               	fgProducts.SetCellValue( j, i, Convert.ToString(modConnection.rs[j - 2]));
+                fgProducts.SetCellValue( j, i, Convert.ToString(modConnection.rs[j - 2]));
                }
             }
+
             fgProducts.SetCellValue( 7, i, Convert.ToString(modConnection.rs[5]) + Convert.ToString(modConnection.rs[6]));
             modConnection.rs.MoveNext();
             i++;
@@ -563,37 +582,35 @@ namespace SKS
 
       }
 
+      // UPGRADE_NOTE: (7001) The following declaration (lvProducts_ItemCheck) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
+      // private void lvProducts_ItemCheck(ListViewItem Item)
+      // {
+        // if (Item.Checked)
+        // {
+            // Item.Text = "1";
+        // }
+        // else
+        // {
+            // Item.Text = "0";
+        // }
+      // }
 
-      //UPGRADE_NOTE: (7001) The following declaration (lvProducts_ItemCheck) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
-      //private void lvProducts_ItemCheck(ListViewItem Item)
-      //{
-      	//if (Item.Checked)
-      	//{
-      		//Item.Text = "1";
-      	//}
-      	//else
-      	//{
-      		//Item.Text = "0";
-      	//}
-      //}
-
-
-      private void txtProviderName_TextChanged(Object eventSender, EventArgs eventArgs)
+    private void txtProviderName_TextChanged(object eventSender, EventArgs eventArgs)
       {
          DoSearchProvider();
       }
 
-      private void txtNotes_TextChanged(Object eventSender, EventArgs eventArgs)
+    private void txtNotes_TextChanged(object eventSender, EventArgs eventArgs)
       {
          editingData = true;
       }
 
-      private void txtContactName_TextChanged(Object eventSender, EventArgs eventArgs)
+    private void txtContactName_TextChanged(object eventSender, EventArgs eventArgs)
       {
          DoSearchProvider();
       }
 
-      private void ClearFields()
+    private void ClearFields()
       {
 
          fgProducts.RowsCount = 0;
@@ -619,24 +636,24 @@ namespace SKS
          cmdSave.Enabled = false;
          cmdAddProducts.Enabled = false;
          txtNotes.Text = "";
-         //txtProviderName.SetFocus
+         // txtProviderName.SetFocus
          ReCalculateTotals(0, 0);
          editingData = false;
       }
 
-      private void txtFreightCharge_TextChanged(Object eventSender, EventArgs eventArgs)
+    private void txtFreightCharge_TextChanged(object eventSender, EventArgs eventArgs)
       {
          currentFreightCharge = modFunctions.DoubleValue(txtFreightCharge.Text);
          ReCalculateTotals(0, 0);
          editingData = true;
       }
 
-      private void txtFreightCharge_KeyPress(Object eventSender, Mobilize.Web.KeyPressEventArgs eventArgs)
+    private void txtFreightCharge_KeyPress(object eventSender, Mobilize.Web.KeyPressEventArgs eventArgs)
       {
-      	int KeyAscii = Convert.ToInt32(eventArgs.KeyChar);
-      	try
-      	{
-      		if (KeyAscii >= ((int)Mobilize.Web.Keys.D0) && KeyAscii <= ((int)Mobilize.Web.Keys.D9))
+        int KeyAscii = Convert.ToInt32(eventArgs.KeyChar);
+        try
+        {
+            if (KeyAscii >= ((int)Mobilize.Web.Keys.D0) && KeyAscii <= ((int)Mobilize.Web.Keys.D9))
             {
             }
             else if (KeyAscii == ((int)Mobilize.Web.Keys.Back) || KeyAscii == ((int)Mobilize.Web.Keys.Clear) || KeyAscii == ((int)Mobilize.Web.Keys.Delete))
@@ -647,39 +664,39 @@ namespace SKS
             }
             else
             {
-            	KeyAscii = 0;
-               Stub._System.Media.SystemSounds.Beep.Play();
+                KeyAscii = 0;
+                Stub._System.Media.SystemSounds.Beep.Play();
             }
          }
          finally
          {
             if (KeyAscii == 0)
             {
-            	eventArgs.Handled = true;
+                eventArgs.Handled = true;
             }
+
             eventArgs.KeyChar = Convert.ToChar(KeyAscii);
          }
       }
 
-      private void txtContactLastName_TextChanged(Object eventSender, EventArgs eventArgs)
+    private void txtContactLastName_TextChanged(object eventSender, EventArgs eventArgs)
       {
          editingData = true;
       }
 
-
-      private void txtSalesTax_TextChanged(Object eventSender, EventArgs eventArgs)
+    private void txtSalesTax_TextChanged(object eventSender, EventArgs eventArgs)
       {
          currentTax = modFunctions.DoubleValue(txtSalesTax.Text);
          ReCalculateTotals(0, 0);
          editingData = true;
       }
 
-      private void txtSalesTax_KeyPress(Object eventSender, Mobilize.Web.KeyPressEventArgs eventArgs)
+    private void txtSalesTax_KeyPress(object eventSender, Mobilize.Web.KeyPressEventArgs eventArgs)
       {
-      	int KeyAscii = Convert.ToInt32(eventArgs.KeyChar);
-      	try
-      	{
-      		if (KeyAscii >= ((int)Mobilize.Web.Keys.D0) && KeyAscii <= ((int)Mobilize.Web.Keys.D9))
+        int KeyAscii = Convert.ToInt32(eventArgs.KeyChar);
+        try
+        {
+            if (KeyAscii >= ((int)Mobilize.Web.Keys.D0) && KeyAscii <= ((int)Mobilize.Web.Keys.D9))
             {
             }
             else if (KeyAscii == ((int)Mobilize.Web.Keys.Back) || KeyAscii == ((int)Mobilize.Web.Keys.Clear) || KeyAscii == ((int)Mobilize.Web.Keys.Delete))
@@ -690,20 +707,22 @@ namespace SKS
             }
             else
             {
-            	KeyAscii = 0;
-               Stub._System.Media.SystemSounds.Beep.Play();
+                KeyAscii = 0;
+                Stub._System.Media.SystemSounds.Beep.Play();
             }
          }
          finally
          {
             if (KeyAscii == 0)
             {
-            	eventArgs.Handled = true;
+                eventArgs.Handled = true;
             }
+
             eventArgs.KeyChar = Convert.ToChar(KeyAscii);
          }
       }
-      private void Form_Closed(Object eventSender, EventArgs eventArgs)
+
+    private void Form_Closed(object eventSender, EventArgs eventArgs)
       {
       }
 

@@ -5,7 +5,7 @@ namespace Mobilize.Web.Extensions
    {
 
       public static Stub._System.Windows.Forms.
-         ContainerControlEx Properties(this Mobilize.Web.ContainerControl containerControl)
+         ContainerControlEx Properties(this ContainerControl containerControl)
       {
          return new Stub._System.Windows.Forms.ContainerControlEx();
       }

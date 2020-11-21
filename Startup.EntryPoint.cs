@@ -34,15 +34,15 @@ namespace WebSite
         public static IWebHost BuildWebHost(string[] args){
             return WebHost.CreateDefaultBuilder(args)
                 //// logging
-                //.ConfigureLogging(builder => builder.AddFile(options =>
-                //{
+                // .ConfigureLogging(builder => builder.AddFile(options =>
+                // {
                 //    options.FileName = "log-";
                 //    options.LogDirectory = "LogFiles";
                 //    options.FileSizeLimit = 20 * 1024 * 1024;
-                //}))
+                // }))
                 //// IIS Deployment
-                //.UseUrls("http://localhost:81")
-                //.UseIISIntegration()
+                // .UseUrls("http://localhost:81")
+                // .UseIISIntegration()
                 .UseStartup<Startup>()
                 .Build();
         }

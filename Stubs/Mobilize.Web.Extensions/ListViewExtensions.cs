@@ -5,7 +5,7 @@ namespace Mobilize.Web.Extensions
    {
 
       public static Stub._System.Windows.Forms.ListViewEx
-         Properties(this Mobilize.Web.ListView listView)
+         Properties(this ListView listView)
       {
          return new Stub._System.Windows.Forms.ListViewEx();
       }

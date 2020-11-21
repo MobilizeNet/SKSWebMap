@@ -2,8 +2,8 @@ namespace Stub._System.Windows.Forms
 {
 
    public class PictureBoxEx
-      : Stub._System.Windows.Forms.ControlEx
-   {
+      : ControlEx
+    {
 
       public bool CausesValidation { get; set; }
 

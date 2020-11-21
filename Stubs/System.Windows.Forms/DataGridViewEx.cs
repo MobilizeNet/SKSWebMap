@@ -2,8 +2,8 @@ namespace Stub._System.Windows.Forms
 {
 
    public class DataGridViewEx
-      : Stub._System.Windows.Forms.ControlEx
-   {
+      : ControlEx
+    {
 
       public bool ShowCellToolTips { get; set; }
 

@@ -4,9 +4,9 @@ namespace Stub._Microsoft.VisualBasic
    public class Information
    {
 
-      public static Stub._Microsoft.VisualBasic.ErrObject Err()
+      public static ErrObject Err()
       {
-         return default(Stub._Microsoft.VisualBasic.ErrObject);
+         return default(ErrObject);
       }
 
       public static bool IsNumeric(object Expression)

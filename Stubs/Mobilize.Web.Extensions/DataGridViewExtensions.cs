@@ -5,7 +5,7 @@ namespace Mobilize.Web.Extensions
    {
 
       public static Stub._System.Windows.Forms.
-         DataGridViewEx Properties(this Mobilize.Web.DataGridView dataGridView)
+         DataGridViewEx Properties(this DataGridView dataGridView)
       {
          return new Stub._System.Windows.Forms.DataGridViewEx();
       }

@@ -5,7 +5,7 @@ namespace Mobilize.Web.Extensions
    {
 
       public static Stub._System.Windows.Forms.PictureBoxEx
-         Properties(this Mobilize.Web.PictureBox pictureBox)
+         Properties(this PictureBox pictureBox)
       {
          return new Stub._System.Windows.Forms.PictureBoxEx();
       }

@@ -4,11 +4,11 @@ namespace Stub._Microsoft.VisualBasic
    public class Interaction
    {
 
-      public static Stub._Microsoft.VisualBasic.MsgBoxResult MsgBox
-         (object Prompt, Stub._Microsoft.VisualBasic.MsgBoxStyle
-         Buttons = default(Stub._Microsoft.VisualBasic.MsgBoxStyle), object Title = default(object))
+      public static MsgBoxResult MsgBox
+         (object Prompt, MsgBoxStyle
+         Buttons = default(MsgBoxStyle), object Title = default(object))
       {
-         return default(Stub._Microsoft.VisualBasic.MsgBoxResult);
+         return default(MsgBoxResult);
       }
 
    }

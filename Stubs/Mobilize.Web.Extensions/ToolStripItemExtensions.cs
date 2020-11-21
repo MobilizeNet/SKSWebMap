@@ -5,7 +5,7 @@ namespace Mobilize.Web.Extensions
    {
 
       public static Stub._System.Windows.Forms.
-         ToolStripItemEx Properties(this Mobilize.Web.ToolStripItem toolStripItem)
+         ToolStripItemEx Properties(this ToolStripItem toolStripItem)
       {
          return new Stub._System.Windows.Forms.ToolStripItemEx();
       }

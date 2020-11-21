@@ -2,7 +2,7 @@ namespace Stub._UpgradeHelpers
 {
 
    public class DataGridViewFlexEx
-      : Stub._System.Windows.Forms.DataGridViewEx
+      : _System.Windows.Forms.DataGridViewEx
    {
 
       public bool AllowBigSelection { get; set; }

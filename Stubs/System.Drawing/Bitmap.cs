@@ -4,7 +4,7 @@ namespace Stub._System.Drawing
    public class Bitmap
    {
 
-      public Bitmap(System.String original)
+      public Bitmap(string original)
       {
       }
 

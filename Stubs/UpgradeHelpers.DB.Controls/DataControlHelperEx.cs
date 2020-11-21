@@ -2,7 +2,7 @@ namespace Stub._UpgradeHelpers.DB.Controls
 {
 
    public class DataControlHelperEx
-      : Stub._System.Windows.Forms.ContainerControlEx
+      : _System.Windows.Forms.ContainerControlEx
    {
 
       public System.Drawing.Color BackColor { get; set; }
