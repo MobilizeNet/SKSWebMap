@@ -3,44 +3,24 @@
     top: -1px;
 }
 .SKS_frmMain .frmMain {
+    background-color: rgba(171, 171, 171, 1);
     width: 100%;
     height: 100%;
     overflow: hidden;
     left: 11px;
     top: 54px;
 }
-.SKS_frmMain .mnuProducts {
-    width: 167px;
-    height: 22px;
-    position: absolute;
-}
-.SKS_frmMain .mnuSecurity {
-    width: 167px;
-    height: 22px;
-    position: absolute;
-}
-.SKS_frmMain .mnuAccounts {
-    width: 88px;
-    height: 20px;
-    position: absolute;
-}
-.SKS_frmMain .mnuAddStockManually {
-    width: 165px;
-    height: 22px;
-    position: absolute;
-}
-.SKS_frmMain .mnuAdjustStockManually {
-    width: 165px;
-    height: 22px;
-    position: absolute;
-}
-.SKS_frmMain .mnuMainInventory {
-    width: 69px;
-    height: 20px;
-    position: absolute;
+.SKS_frmMain .sbStatusBar {
+    background-color: rgba(240, 240, 240, 1);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    position: fixed;
+    border: inset 1px;
 }
 .SKS_frmMain .sbStatusBar_Panels_Panel1 {
-    width: 906px;
+    width: 901px;
     height: 25px;
     position: absolute;
 }
@@ -53,87 +33,4 @@
     width: 96px;
     height: 25px;
     position: absolute;
-}
-.SKS_frmMain .mnuAbout {
-    width: 107px;
-    height: 22px;
-    position: absolute;
-}
-.SKS_frmMain .mnuHelp {
-    width: 44px;
-    height: 20px;
-    position: absolute;
-}
-.SKS_frmMain .MainMenu1 {
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 40px;
-    position: absolute;
-    background: rgb(63, 81, 181);
-    color: white;
-}
-.SKS_frmMain .MainMenu1 li {
-    color: white;
-}
-
-.SKS_frmMain .mnuProviders {
-    width: 177px;
-    height: 22px;
-    position: absolute;
-}
-.SKS_frmMain .mnuExit {
-    width: 177px;
-    height: 22px;
-    position: absolute;
-}
-.SKS_frmMain .mnuFile {
-    width: 37px;
-    height: 20px;
-    position: absolute;
-}
-.SKS_frmMain .mnuCustomer {
-    width: 177px;
-    height: 22px;
-    position: absolute;
-}
-.SKS_frmMain .mnuCreateOrderReception {
-    width: 195px;
-    height: 22px;
-    position: absolute;
-}
-.SKS_frmMain .mnuOrderReceptionsApproval {
-    width: 195px;
-    height: 22px;
-    position: absolute;
-}
-.SKS_frmMain .mnuOrders {
-    width: 54px;
-    height: 20px;
-    position: absolute;
-}
-.SKS_frmMain .mnuCreateOrderRequest {
-    width: 195px;
-    height: 22px;
-    position: absolute;
-}
-.SKS_frmMain .mnuOrderRequestsApproval {
-    width: 195px;
-    height: 22px;
-    position: absolute;
-}
-.SKS_frmMain .lExit2 {
-    width: 192px;
-    height: 6px;
-    position: absolute;
-}
-.SKS_frmMain .sbStatusBar {
-    background: lightgray;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 25px;
-    position: fixed;
-    border: inset 1px;
-    z-index: -15000 !important;
 }

@@ -3,9 +3,8 @@ using Mobilize.Web.Extensions;
 
 namespace SKS
 {
-
-   partial class frmReceptionApproval
-   {
+	partial class frmReceptionApproval
+	{
 
       [Intercepted]
 
@@ -15,23 +14,22 @@ namespace SKS
       [Intercepted]
       private static bool m_InitializingDefInstance { get; set; }
 
-      [Intercepted]
       public static frmReceptionApproval DefInstance
       {
       	get
       	{
-      		if (m_vb6FormDefInstance == null || m_vb6FormDefInstance.IsDisposed)
-            {
-            	m_InitializingDefInstance = true;
-            	m_vb6FormDefInstance = CreateInstance();
-            	m_InitializingDefInstance = false;
-            }
-            return m_vb6FormDefInstance;
-         }
-         set
-         {
-            m_vb6FormDefInstance = value;
-         }
+      		if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
+      		{
+      			m_InitializingDefInstance = true;
+      			m_vb6FormDefInstance = CreateInstance();
+      			m_InitializingDefInstance = false;
+      		}
+      		return m_vb6FormDefInstance;
+      	}
+      	set
+      	{
+      		m_vb6FormDefInstance = value;
+      	}
       }
 
       #endregion
@@ -50,7 +48,7 @@ namespace SKS
       [Intercepted]
       //Required by the Windows Form Designer
       private
-      System.ComponentModel.IContainer components { get; set; }
+      Mobilize.Web.Controls.Interfaces.IContainer components { get; set; }
 
       [Intercepted]
       public Mobilize.Web.ToolTip ToolTipMain { get; set; }
@@ -134,7 +132,7 @@ namespace SKS
       public Mobilize.Web.GroupBox Frame1 { get; set; }
 
       [Intercepted]
-      private Stub._UpgradeHelpers.Gui.ListControlHelper listBoxComboBoxHelper1 { get; set; }
+      public Stub._UpgradeHelpers.Gui.ListControlHelper listBoxComboBoxHelper1 { get; set; }
       //NOTE: The following procedure is required by the Windows Form Designer
       //It can be modified using the Windows Form Designer.
       //Do not modify it using the code editor.
@@ -143,7 +141,7 @@ namespace SKS
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new System.ComponentModel.Container();
+      	this.components = new Mobilize.Web.ControlCollection();
       	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReceptionApproval));
       	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
       	this.cmdApprove = new Mobilize.Web.Button();
@@ -176,7 +174,6 @@ namespace SKS
       	this.Frame1.SuspendLayout();
       	this.SuspendLayout();
       	this.listBoxComboBoxHelper1 = new Stub._UpgradeHelpers.Gui.ListControlHelper(this.components);
-         ;
       	// 
       	// cmdApprove
       	// 
@@ -212,15 +209,23 @@ namespace SKS
          // 
          this.fgOrders.Properties().AllowBigSelection = false;
          this.fgOrders.AllowDrop = true;
+         this.fgOrders.AllowUserToAddRows = false;
+         this.fgOrders.AllowUserToDeleteRows = false;
+         this.fgOrders.Properties().AllowUserToResizeColumns = false;
+         this.fgOrders.Properties().AllowUserToResizeRows = false;
          this.fgOrders.Properties().BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.fgOrders.Properties().ColumnHeadersHeightSizeMode = Mobilize.Web.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
          this.fgOrders.ColumnsCount = 1;
          this.fgOrders.FixedColumns = 0;
          this.fgOrders.FixedRows = 0;
          this.fgOrders.Location = new System.Drawing.Point(8, 168);
          this.fgOrders.Name = "fgOrders";
+         this.fgOrders.Properties().ReadOnly = true;
          this.fgOrders.RowsCount = 1;
          this.fgOrders.Properties().SelectionMode = Mobilize.Web.DataGridViewSelectionMode.FullRowSelect;
+         this.fgOrders.Properties().ShowCellToolTips = false;
          this.fgOrders.Size = new System.Drawing.Size(505, 265);
+         this.fgOrders.Properties().StandardTab = true;
          this.fgOrders.TabIndex = 8;
          this.fgOrders.DoubleClick += new System.EventHandler(this.fgOrders_DoubleClick);
          // 
@@ -228,7 +233,7 @@ namespace SKS
          // 
          this.sbStatusBar.AllowDrop = true;
          this.sbStatusBar.Properties().BackColor = Mobilize.Web.SystemColors.Control;
-         this.sbStatusBar.Properties().Dock = Mobilize.Web.DockStyle.Bottom;
+         this.sbStatusBar.Dock = Mobilize.Web.DockStyle.Bottom;
          this.sbStatusBar.Location = new System.Drawing.Point(0, 471);
          this.sbStatusBar.Name = "sbStatusBar";
          this.sbStatusBar.Properties().ShowItemToolTips = true;
@@ -242,7 +247,7 @@ namespace SKS
          this.sbStatusBar_Panels_Panel1.Properties().BorderStyle = Mobilize.Web.Border3DStyle.SunkenOuter;
          this.sbStatusBar_Panels_Panel1.DoubleClickEnabled = true;
          this.sbStatusBar_Panels_Panel1.Margin = new Mobilize.Web.Padding(0);
-         this.sbStatusBar_Panels_Panel1.Properties().Size = new System.Drawing.Size(523, 25);
+         this.sbStatusBar_Panels_Panel1.Size = new System.Drawing.Size(523, 25);
          this.sbStatusBar_Panels_Panel1.Properties().Spring = true;
          this.sbStatusBar_Panels_Panel1.TextAlign = Mobilize.Web.ContentAlignment.MiddleLeft;
          this.sbStatusBar_Panels_Panel1.TextImageRelation = Mobilize.Web.TextImageRelation.ImageBeforeText;
@@ -324,7 +329,7 @@ namespace SKS
          this.cmbStatus.Size = new System.Drawing.Size(145, 21);
          this.cmbStatus.Sorted = false;
          this.cmbStatus.TabIndex = 1;
-         this.cmbStatus.TabStop = true;
+         this.cmbStatus.Properties().TabStop = true;
          this.cmbStatus.Visible = true;
          this.cmbStatus.Items.AddRange(new object[]{"All", "Received", "Cancelled", "Approved"});
          this.cmbStatus.SelectedIndexChanged += new System.EventHandler(this.cmbStatus_SelectedIndexChanged);
@@ -344,7 +349,7 @@ namespace SKS
          this.chkTo.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.chkTo.Size = new System.Drawing.Size(41, 17);
          this.chkTo.TabIndex = 23;
-         this.chkTo.TabStop = false;
+         this.chkTo.Properties().TabStop = false;
          this.chkTo.Text = "To:";
          this.chkTo.TextAlign = Mobilize.Web.ContentAlignment.MiddleLeft;
          this.chkTo.Visible = true;
@@ -364,7 +369,7 @@ namespace SKS
          this.chkFrom.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.chkFrom.Size = new System.Drawing.Size(47, 17);
          this.chkFrom.TabIndex = 22;
-         this.chkFrom.TabStop = false;
+         this.chkFrom.Properties().TabStop = false;
          this.chkFrom.Text = "From:";
          this.chkFrom.TextAlign = Mobilize.Web.ContentAlignment.MiddleLeft;
          this.chkFrom.Visible = true;
@@ -443,7 +448,7 @@ namespace SKS
          this.cmdProviders.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.cmdProviders.Size = new System.Drawing.Size(25, 21);
          this.cmdProviders.TabIndex = 14;
-         this.cmdProviders.TabStop = false;
+         this.cmdProviders.Properties().TabStop = false;
          this.cmdProviders.Text = "...";
          this.cmdProviders.TextImageRelation = Mobilize.Web.TextImageRelation.ImageAboveText;
          this.cmdProviders.UseVisualStyleBackColor = false;
@@ -577,6 +582,9 @@ namespace SKS
          this.Label2.Size = new System.Drawing.Size(89, 17);
          this.Label2.TabIndex = 15;
          this.Label2.Text = "First Name";
+         // 
+         // frmReceptionApproval
+         // 
          this.AllowDrop = true;
          this.Properties().AutoScaleDimensions = new System.Drawing.SizeF(6, 13);
          this.Properties().AutoScaleMode = Stub._System.Windows.Forms.AutoScaleMode.Font;
@@ -599,8 +607,8 @@ namespace SKS
          this.Properties().StartPosition = Mobilize.Web.FormStartPosition.Manual;
          this.Text = "Add Stock to Inventory";
          this.listBoxComboBoxHelper1.SetItemData(this.cmbStatus, new int[]{0, 0, 0, 0});
+         this.Activated += new System.EventHandler(this.frmReceptionApproval_Activated);
          this.Closed += new System.EventHandler(this.Form_Closed);
-         ;
          this.sbStatusBar.ResumeLayout(false);
          this.Frame1.ResumeLayout(false);
          this.ResumeLayout(false);
@@ -608,10 +616,14 @@ namespace SKS
 
       void ReLoadForm(bool addEvents)
       {
-         this.MdiParent = SKS.frmMain.DefInstance;
-         SKS.frmMain.DefInstance.Show();
+      	//This form is an MDI child.
+      	//This code simulates the VB6 
+      	// functionality of automatically
+      	// loading and showing an MDI
+      	// child's parent.
+      	this.MdiParent = SKS.frmMain.DefInstance;
+      	SKS.frmMain.DefInstance.Show();
       }
       #endregion
-
    }
 }

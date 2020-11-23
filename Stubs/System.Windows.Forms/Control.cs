@@ -6,11 +6,6 @@ namespace Stub._System.Windows.Forms
 
       public class ControlCollection
       {
-
-         public void Add(Mobilize.Web.Control value)
-         {
-         }
-
       }
 
    }

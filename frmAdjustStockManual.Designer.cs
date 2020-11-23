@@ -3,9 +3,8 @@ using Mobilize.Web.Extensions;
 
 namespace SKS
 {
-
-   partial class frmAdjustStockManual
-   {
+	partial class frmAdjustStockManual
+	{
 
       [Intercepted]
 
@@ -15,23 +14,22 @@ namespace SKS
       [Intercepted]
       private static bool m_InitializingDefInstance { get; set; }
 
-      [Intercepted]
       public static frmAdjustStockManual DefInstance
       {
       	get
       	{
-      		if (m_vb6FormDefInstance == null || m_vb6FormDefInstance.IsDisposed)
-            {
-            	m_InitializingDefInstance = true;
-            	m_vb6FormDefInstance = CreateInstance();
-            	m_InitializingDefInstance = false;
-            }
-            return m_vb6FormDefInstance;
-         }
-         set
-         {
-            m_vb6FormDefInstance = value;
-         }
+      		if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
+      		{
+      			m_InitializingDefInstance = true;
+      			m_vb6FormDefInstance = CreateInstance();
+      			m_InitializingDefInstance = false;
+      		}
+      		return m_vb6FormDefInstance;
+      	}
+      	set
+      	{
+      		m_vb6FormDefInstance = value;
+      	}
       }
 
       #endregion
@@ -49,7 +47,7 @@ namespace SKS
       [Intercepted]
       //Required by the Windows Form Designer
       private
-      System.ComponentModel.IContainer components { get; set; }
+      Mobilize.Web.Controls.Interfaces.IContainer components { get; set; }
 
       [Intercepted]
       public Mobilize.Web.ToolTip ToolTipMain { get; set; }
@@ -205,7 +203,7 @@ namespace SKS
       public Mobilize.Web.TextBox[] txtValues { get; set; } = new Mobilize.Web.TextBox[2];
 
       [Intercepted]
-      private Mobilize.Web.ListView listViewHelper1 { get; set; }
+      public Mobilize.Web.ListView listViewHelper1 { get; set; }
       //NOTE: The following procedure is required by the Windows Form Designer
       //It can be modified using the Windows Form Designer.
       //Do not modify it using the code editor.
@@ -214,7 +212,7 @@ namespace SKS
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new System.ComponentModel.Container();
+      	this.components = new Mobilize.Web.ControlCollection();
       	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdjustStockManual));
       	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
       	this.sbStatusBar = new Mobilize.Web.StatusStrip();
@@ -273,13 +271,12 @@ namespace SKS
       	this.lvProducts.SuspendLayout();
       	this.SuspendLayout();
       	this.listViewHelper1 = new Mobilize.Web.ListView(this.components);
-         ;
       	// 
       	// sbStatusBar
       	// 
       	this.sbStatusBar.AllowDrop = true;
       	this.sbStatusBar.Properties().BackColor = Mobilize.Web.SystemColors.Control;
-         this.sbStatusBar.Properties().Dock = Mobilize.Web.DockStyle.Bottom;
+         this.sbStatusBar.Dock = Mobilize.Web.DockStyle.Bottom;
          this.sbStatusBar.Location = new System.Drawing.Point(0, 538);
          this.sbStatusBar.Name = "sbStatusBar";
          this.sbStatusBar.Properties().ShowItemToolTips = true;
@@ -293,7 +290,7 @@ namespace SKS
          this.sbStatusBar_Panels_Panel1.Properties().BorderStyle = Mobilize.Web.Border3DStyle.SunkenOuter;
          this.sbStatusBar_Panels_Panel1.DoubleClickEnabled = true;
          this.sbStatusBar_Panels_Panel1.Margin = new Mobilize.Web.Padding(0);
-         this.sbStatusBar_Panels_Panel1.Properties().Size = new System.Drawing.Size(425, 25);
+         this.sbStatusBar_Panels_Panel1.Size = new System.Drawing.Size(425, 25);
          this.sbStatusBar_Panels_Panel1.Properties().Spring = true;
          this.sbStatusBar_Panels_Panel1.TextAlign = Mobilize.Web.ContentAlignment.MiddleLeft;
          this.sbStatusBar_Panels_Panel1.TextImageRelation = Mobilize.Web.TextImageRelation.ImageBeforeText;
@@ -312,7 +309,7 @@ namespace SKS
          this.txtStockID.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtStockID.Size = new System.Drawing.Size(81, 20);
          this.txtStockID.TabIndex = 26;
-         this.txtStockID.TabStop = false;
+         this.txtStockID.Properties().TabStop = false;
          // 
          // txtOriginalPrice
          // 
@@ -329,7 +326,7 @@ namespace SKS
          this.txtOriginalPrice.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtOriginalPrice.Size = new System.Drawing.Size(81, 20);
          this.txtOriginalPrice.TabIndex = 25;
-         this.txtOriginalPrice.TabStop = false;
+         this.txtOriginalPrice.Properties().TabStop = false;
          this.txtOriginalPrice.TextAlign = Mobilize.Web.HorizontalAlignment.Right;
          // 
          // _txtValues_0
@@ -367,7 +364,7 @@ namespace SKS
          this.txtQuantityPerUnit.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtQuantityPerUnit.Size = new System.Drawing.Size(81, 20);
          this.txtQuantityPerUnit.TabIndex = 21;
-         this.txtQuantityPerUnit.TabStop = false;
+         this.txtQuantityPerUnit.Properties().TabStop = false;
          this.txtQuantityPerUnit.TextAlign = Mobilize.Web.HorizontalAlignment.Right;
          // 
          // txtProductName
@@ -385,7 +382,7 @@ namespace SKS
          this.txtProductName.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtProductName.Size = new System.Drawing.Size(145, 20);
          this.txtProductName.TabIndex = 20;
-         this.txtProductName.TabStop = false;
+         this.txtProductName.Properties().TabStop = false;
          // 
          // txtUnit
          // 
@@ -402,7 +399,7 @@ namespace SKS
          this.txtUnit.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtUnit.Size = new System.Drawing.Size(81, 20);
          this.txtUnit.TabIndex = 19;
-         this.txtUnit.TabStop = false;
+         this.txtUnit.Properties().TabStop = false;
          // 
          // _txtValues_1
          // 
@@ -439,7 +436,7 @@ namespace SKS
          this.txtOriginalQuantity.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.txtOriginalQuantity.Size = new System.Drawing.Size(81, 20);
          this.txtOriginalQuantity.TabIndex = 14;
-         this.txtOriginalQuantity.TabStop = false;
+         this.txtOriginalQuantity.Properties().TabStop = false;
          this.txtOriginalQuantity.TextAlign = Mobilize.Web.HorizontalAlignment.Right;
          // 
          // Frame3
@@ -589,7 +586,7 @@ namespace SKS
          this.cmdProducts.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.cmdProducts.Size = new System.Drawing.Size(25, 21);
          this.cmdProducts.TabIndex = 10;
-         this.cmdProducts.TabStop = false;
+         this.cmdProducts.Properties().TabStop = false;
          this.cmdProducts.Text = "...";
          this.cmdProducts.TextImageRelation = Mobilize.Web.TextImageRelation.ImageAboveText;
          this.cmdProducts.UseVisualStyleBackColor = false;
@@ -881,6 +878,9 @@ namespace SKS
          this.Label3.Size = new System.Drawing.Size(121, 17);
          this.Label3.TabIndex = 8;
          this.Label3.Text = "Select a product first";
+         // 
+         // frmAdjustStockManual
+         // 
          this.AllowDrop = true;
          this.Properties().AutoScaleDimensions = new System.Drawing.SizeF(6, 13);
          this.Properties().AutoScaleMode = Stub._System.Windows.Forms.AutoScaleMode.Font;
@@ -922,11 +922,11 @@ namespace SKS
          this.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.Properties().StartPosition = Mobilize.Web.FormStartPosition.Manual;
          this.Text = "Inventory Adjust";
+         this.Activated += new System.EventHandler(this.frmAdjustStockManual_Activated);
          this.Closed += new System.EventHandler(this.Form_Closed);
          this.FormClosing += new Mobilize.Web.FormClosingEventHandler(this.Form_FormClosing);this.lvStocks.ItemClick += new Mobilize.Web.ListViewItemClickEventHandler(this.lvStocks_ItemClick);
          this.listViewHelper1.SetCorrectEventsBehavior(this.lvStocks, true);this.lvProducts.ItemClick += new Mobilize.Web.ListViewItemClickEventHandler(this.lvProducts_ItemClick);
          this.listViewHelper1.SetCorrectEventsBehavior(this.lvProducts, true);
-         ;
          this.sbStatusBar.ResumeLayout(false);
          this.Frame3.ResumeLayout(false);
          this.lvStocks.ResumeLayout(false);
@@ -938,8 +938,13 @@ namespace SKS
       void ReLoadForm(bool addEvents)
       {
       	InitializetxtValues();
-         this.MdiParent = SKS.frmMain.DefInstance;
-         SKS.frmMain.DefInstance.Show();
+      	//This form is an MDI child.
+      	//This code simulates the VB6 
+      	// functionality of automatically
+      	// loading and showing an MDI
+      	// child's parent.
+      	this.MdiParent = SKS.frmMain.DefInstance;
+      	SKS.frmMain.DefInstance.Show();
       }
 
       void InitializetxtValues()
@@ -949,6 +954,5 @@ namespace SKS
       	this.txtValues[1] = _txtValues_1;
       }
       #endregion
-
    }
 }

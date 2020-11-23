@@ -3,9 +3,8 @@ using Mobilize.Web.Extensions;
 
 namespace SKS
 {
-
-   partial class frmSearch
-   {
+	partial class frmSearch
+	{
 
       [Intercepted]
 
@@ -15,23 +14,22 @@ namespace SKS
       [Intercepted]
       private static bool m_InitializingDefInstance { get; set; }
 
-      [Intercepted]
       public static frmSearch DefInstance
       {
       	get
       	{
-      		if (m_vb6FormDefInstance == null || m_vb6FormDefInstance.IsDisposed)
-            {
-            	m_InitializingDefInstance = true;
-            	m_vb6FormDefInstance = CreateInstance();
-            	m_InitializingDefInstance = false;
-            }
-            return m_vb6FormDefInstance;
-         }
-         set
-         {
-            m_vb6FormDefInstance = value;
-         }
+      		if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
+      		{
+      			m_InitializingDefInstance = true;
+      			m_vb6FormDefInstance = CreateInstance();
+      			m_InitializingDefInstance = false;
+      		}
+      		return m_vb6FormDefInstance;
+      	}
+      	set
+      	{
+      		m_vb6FormDefInstance = value;
+      	}
       }
 
       #endregion
@@ -49,7 +47,7 @@ namespace SKS
       [Intercepted]
       //Required by the Windows Form Designer
       private
-      System.ComponentModel.IContainer components { get; set; }
+      Mobilize.Web.Controls.Interfaces.IContainer components { get; set; }
 
       [Intercepted]
       public Mobilize.Web.ToolTip ToolTipMain { get; set; }
@@ -91,7 +89,7 @@ namespace SKS
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new System.ComponentModel.Container();
+      	this.components = new Mobilize.Web.ControlCollection();
       	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSearch));
       	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
       	this.cmdClose = new Mobilize.Web.Button();
@@ -142,7 +140,7 @@ namespace SKS
          this.ctrlLiner1.BackColor = Mobilize.Web.SystemColors.Control;
          this.ctrlLiner1.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.ctrlLiner1.Properties().CausesValidation = true;
-         this.ctrlLiner1.Properties().Dock = Mobilize.Web.DockStyle.None;
+         this.ctrlLiner1.Dock = Mobilize.Web.DockStyle.None;
          this.ctrlLiner1.Enabled = true;
          this.ctrlLiner1.Location = new System.Drawing.Point(0, 56);
          this.ctrlLiner1.Name = "ctrlLiner1";
@@ -167,7 +165,7 @@ namespace SKS
          this.cboSrchBy.Size = new System.Drawing.Size(145, 21);
          this.cboSrchBy.Sorted = false;
          this.cboSrchBy.TabIndex = 3;
-         this.cboSrchBy.TabStop = true;
+         this.cboSrchBy.Properties().TabStop = true;
          this.cboSrchBy.Visible = true;
          this.cboSrchBy.SelectedIndexChanged += new System.EventHandler(this.cboSrchBy_SelectedIndexChanged);
          // 
@@ -214,7 +212,7 @@ namespace SKS
          this.Label19.Size = new System.Drawing.Size(50, 16);
          this.Label19.TabIndex = 4;
          this.Label19.Text = "Search";
-         this.Label19.Properties().TextAlign = Mobilize.Web.ContentAlignment.TopRight;
+         this.Label19.TextAlign = Mobilize.Web.ContentAlignment.TopRight;
          // 
          // Image3
          // 
@@ -242,7 +240,7 @@ namespace SKS
          this.Label1.Size = new System.Drawing.Size(62, 13);
          this.Label1.TabIndex = 2;
          this.Label1.Text = "Search by:";
-         this.Label1.Properties().TextAlign = Mobilize.Web.ContentAlignment.TopRight;
+         this.Label1.TextAlign = Mobilize.Web.ContentAlignment.TopRight;
          // 
          // lblSrchBy
          // 
@@ -258,7 +256,10 @@ namespace SKS
          this.lblSrchBy.Size = new System.Drawing.Size(116, 13);
          this.lblSrchBy.TabIndex = 1;
          this.lblSrchBy.Text = "Field";
-         this.lblSrchBy.Properties().TextAlign = Mobilize.Web.ContentAlignment.TopRight;
+         this.lblSrchBy.TextAlign = Mobilize.Web.ContentAlignment.TopRight;
+         // 
+         // frmSearch
+         // 
          this.AllowDrop = true;
          this.Properties().AutoScaleDimensions = new System.Drawing.SizeF(6, 13);
          this.Properties().AutoScaleMode = Stub._System.Windows.Forms.AutoScaleMode.Font;
@@ -274,8 +275,8 @@ namespace SKS
          this.Controls.Add(this.Image3);
          this.Controls.Add(this.Label1);
          this.Controls.Add(this.lblSrchBy);
-         this.FormBorderStyle = Mobilize.Web.FormBorderStyle.FixedSingle;
-         this.Icon = null;
+         this.FormBorderStyle = Mobilize.Web.FormBorderStyle.FixedDialog;
+         this.Icon = (Mobilize.Web.Icon)new Mobilize.Web.Icon("assets/images/SKS.frmSearch.frmSearch.Icon.png");
          this.Properties().Location = new System.Drawing.Point(486, 322);
          this.MaximizeBox = false;
          this.MinimizeBox = false;
@@ -284,10 +285,10 @@ namespace SKS
          this.Properties().ShowInTaskbar = false;
          this.Properties().StartPosition = Mobilize.Web.FormStartPosition.CenterScreen;
          this.Text = "Search";
+         this.Activated += new System.EventHandler(this.frmSearch_Activated);
          this.Closed += new System.EventHandler(this.Form_Closed);
          this.ResumeLayout(false);
       }
       #endregion
-
    }
 }

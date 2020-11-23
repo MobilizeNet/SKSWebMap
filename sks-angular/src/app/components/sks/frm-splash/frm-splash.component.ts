@@ -9,7 +9,7 @@ import { WebMapService} from "@mobilize/angularclient";
    templateUrl : "./frm-splash.component.html",
    encapsulation : ViewEncapsulation.None
 })
-@dataTransfer(["frmSKS.frmSplash"])
+@dataTransfer(["frmSKSfrmSplash"])
 export class frmSplashComponent extends FormComponent {
    protected webServices : WebMapService;
    constructor (wmservice : WebMapService,

@@ -9,7 +9,7 @@ import { WebMapService} from "@mobilize/angularclient";
    templateUrl : "./frm-search.component.html",
    encapsulation : ViewEncapsulation.None
 })
-@dataTransfer(["frmSKS.frmSearch"])
+@dataTransfer(["frmSKSfrmSearch"])
 export class frmSearchComponent extends FormComponent {
    protected webServices : WebMapService;
    constructor (wmservice : WebMapService,

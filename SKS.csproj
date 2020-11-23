@@ -1,51 +1,40 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <StartupObject>WebSite.Startup</StartupObject>
         <AssemblyName>SKS</AssemblyName>
-        <ProjectGuid>c83435e8-3b9f-4b39-b67f-c83120cafc71</ProjectGuid>
+        <ProjectGuid>{97CD7E7D-6787-43D9-83C7-D0D801BFF0D1}</ProjectGuid>
         <Deterministic>False</Deterministic>
+        <LangVersion>7.3</LangVersion>
     </PropertyGroup>
     <ItemGroup>
         <ProjectReference Include="Stubs\Stubs.csproj" />
     </ItemGroup>
     <ItemGroup>
-
-        <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
-        <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0" />
         <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
+        <PackageReference Include="Microsoft.VisualBasic" Version="10.4.0-preview.18571.3" />
         <PackageReference Include="Mobilize.Extensions.Logging.RollingFile" Version="2.1.1-rc0027" />
-        <PackageReference Include="Mobilize.WebMap.CoreServices.All" Version="6.0.0-rc.110" />
-        <PackageReference Include="Mobilize.Web.BundleBasic.All" Version="5.0.6-rc0024" />
-        <PackageReference Include="Mobilize.VBUC.Helpers.All" Version="8.1.2-rc0876" />
-        <PackageReference Include="Mobilize.Weaving.WebMapExtensions.All" Version="6.0.0-rc.101" />
-        <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
-        <PackageReference Include="System.Data.Odbc" Version="4.5.0" />
-        <PackageReference Include="System.Data.SqlClient" Version="4.6.1" />
-        <PackageReference Include="System.Data.SQLite" Version="1.0.111" />
+        <PackageReference Include="Mobilize.Web.BundleBasic.All" Version="6.1.4" />
+        <PackageReference Include="Mobilize.Weaving.WebMapExtensions.All" Version="7.0.18" />
+        <PackageReference Include="Mobilize.Weaving" Version="2.0.1" />
+        <PackageReference Include="Mobilize.WebMap.CoreServices.All" Version="7.0.18" />
+        <PackageReference Include="Mobilize.VBUC.Helpers.All" Version="9.0.1" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Remove="packages\**" />
-        <Compile Remove="Stubs\**" />
-        <Content Remove="packages\**" />
-        <Content Remove="Stubs\**" />
-        <EmbeddedResource Remove="packages\**" />
-        <EmbeddedResource Remove="Stubs\**" />
-        <None Remove="packages\**" />
-        <None Remove="Stubs\**" />
-        <Compile Remove="*-angular\**" />
-        <Content Remove="*-angular\**" />
-        <EmbeddedResource Remove="*-angular\**" />
-        <None Remove="*-angular\**" />
-    </ItemGroup>
-    <ItemGroup>
-      <None Update="Orders.db">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
+        <Content Include="Views\**\*.cshtml" />
+        <Content Include="Views\**\*.config" />
+        <Compile Remove="sks-angular\**" />
+        <Content Remove="sks-angular\**" />
+        <EmbeddedResource Remove="sks-angular\**" />
+        <None Remove="sks-angular\**" />
+		        <Compile Remove="Stubs\**" />
+		<Content Remove="Stubs\**" />
+		<EmbeddedResource Remove="Stubs\**" />
+		<None Remove="Stubs\**" />
     </ItemGroup>
 </Project>
 

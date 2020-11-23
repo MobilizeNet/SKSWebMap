@@ -9,7 +9,7 @@ import { WebMapService} from "@mobilize/angularclient";
    templateUrl : "./frm-add-product-to.component.html",
    encapsulation : ViewEncapsulation.None
 })
-@dataTransfer(["frmSKS.frmAddProductTo"])
+@dataTransfer(["frmSKSfrmAddProductTo"])
 export class frmAddProductToComponent extends FormComponent {
    protected webServices : WebMapService;
    constructor (wmservice : WebMapService,

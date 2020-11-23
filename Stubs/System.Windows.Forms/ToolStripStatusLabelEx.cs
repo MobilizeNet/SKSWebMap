@@ -2,8 +2,8 @@ namespace Stub._System.Windows.Forms
 {
 
    public class ToolStripStatusLabelEx
-      : Stub._System.Windows.Forms.ToolStripItemEx
-   {
+      : ToolStripItemEx
+    {
 
       public Mobilize.Web.ToolStripStatusLabelBorderSides BorderSides { get; set; }
 

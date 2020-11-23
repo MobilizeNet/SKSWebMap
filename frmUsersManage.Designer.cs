@@ -3,9 +3,8 @@ using Mobilize.Web.Extensions;
 
 namespace SKS
 {
-
-   partial class frmUsersManage
-   {
+	partial class frmUsersManage
+	{
 
       [Intercepted]
 
@@ -15,23 +14,22 @@ namespace SKS
       [Intercepted]
       private static bool m_InitializingDefInstance { get; set; }
 
-      [Intercepted]
       public static frmUsersManage DefInstance
       {
       	get
       	{
-      		if (m_vb6FormDefInstance == null || m_vb6FormDefInstance.IsDisposed)
-            {
-            	m_InitializingDefInstance = true;
-            	m_vb6FormDefInstance = CreateInstance();
-            	m_InitializingDefInstance = false;
-            }
-            return m_vb6FormDefInstance;
-         }
-         set
-         {
-            m_vb6FormDefInstance = value;
-         }
+      		if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
+      		{
+      			m_InitializingDefInstance = true;
+      			m_vb6FormDefInstance = CreateInstance();
+      			m_InitializingDefInstance = false;
+      		}
+      		return m_vb6FormDefInstance;
+      	}
+      	set
+      	{
+      		m_vb6FormDefInstance = value;
+      	}
       }
 
       #endregion
@@ -50,7 +48,7 @@ namespace SKS
       [Intercepted]
       //Required by the Windows Form Designer
       private
-      System.ComponentModel.IContainer components { get; set; }
+      Mobilize.Web.Controls.Interfaces.IContainer components { get; set; }
 
       [Intercepted]
       public Mobilize.Web.ToolTip ToolTipMain { get; set; }
@@ -131,7 +129,7 @@ namespace SKS
       public Mobilize.Web.Label[] Label1 { get; set; } = new Mobilize.Web.Label[5];
 
       [Intercepted]
-      private Mobilize.Web.ListView listViewHelper1 { get; set; }
+      public Mobilize.Web.ListView listViewHelper1 { get; set; }
       //NOTE: The following procedure is required by the Windows Form Designer
       //It can be modified using the Windows Form Designer.
       //Do not modify it using the code editor.
@@ -140,7 +138,7 @@ namespace SKS
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new System.ComponentModel.Container();
+      	this.components = new Mobilize.Web.ControlCollection();
       	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsersManage));
       	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
       	this.lstAccounts = new Mobilize.Web.ListView();
@@ -171,7 +169,6 @@ namespace SKS
       	this.Frame1.SuspendLayout();
       	this.SuspendLayout();
       	this.listViewHelper1 = new Mobilize.Web.ListView(this.components);
-         ;
       	// 
       	// lstAccounts
       	// 
@@ -244,7 +241,7 @@ namespace SKS
          this.ctrlLiner1.BackColor = Mobilize.Web.SystemColors.Control;
          this.ctrlLiner1.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.ctrlLiner1.Properties().CausesValidation = true;
-         this.ctrlLiner1.Properties().Dock = Mobilize.Web.DockStyle.None;
+         this.ctrlLiner1.Dock = Mobilize.Web.DockStyle.None;
          this.ctrlLiner1.Enabled = true;
          this.ctrlLiner1.Location = new System.Drawing.Point(0, 56);
          this.ctrlLiner1.Name = "ctrlLiner1";
@@ -345,7 +342,7 @@ namespace SKS
          this.cboLevel.Size = new System.Drawing.Size(193, 21);
          this.cboLevel.Sorted = false;
          this.cboLevel.TabIndex = 3;
-         this.cboLevel.TabStop = true;
+         this.cboLevel.Properties().TabStop = true;
          this.cboLevel.Visible = true;
          // 
          // _Label1_2
@@ -371,7 +368,7 @@ namespace SKS
          this._Label1_0.BorderStyle = Mobilize.Web.BorderStyle.None;
          this._Label1_0.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Bold | Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this._Label1_0.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
-         this._Label1_0.Location = new System.Drawing.Point(16, 24);
+         this._Label1_0.Location = new System.Drawing.Point(16, 32);
          this._Label1_0.Name = "_Label1_0";
          this._Label1_0.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this._Label1_0.Size = new System.Drawing.Size(70, 13);
@@ -496,7 +493,7 @@ namespace SKS
          this.Label19.Size = new System.Drawing.Size(34, 16);
          this.Label19.TabIndex = 18;
          this.Label19.Text = "User";
-         this.Label19.Properties().TextAlign = Mobilize.Web.ContentAlignment.TopRight;
+         this.Label19.TextAlign = Mobilize.Web.ContentAlignment.TopRight;
          // 
          // Label4
          // 
@@ -524,12 +521,15 @@ namespace SKS
          this.Image1.Size = new System.Drawing.Size(32, 32);
          this.Image1.SizeMode = Mobilize.Web.PictureBoxSizeMode.StretchImage;
          this.Image1.Visible = true;
+         // 
+         // frmUsersManage
+         // 
          this.AllowDrop = true;
          this.Properties().AutoScaleDimensions = new System.Drawing.SizeF(6, 13);
          this.Properties().AutoScaleMode = Stub._System.Windows.Forms.AutoScaleMode.Font;
          this.AutoScroll = true;
          this.BackColor = Mobilize.Web.SystemColors.Control;
-         this.Properties().ClientSize = new System.Drawing.Size(345, 414);
+         this.Properties().ClientSize = new System.Drawing.Size(341, 414);
          this.Controls.Add(this.lstAccounts);
          this.Controls.Add(this.cmdClear);
          this.Controls.Add(this.cmdSave);
@@ -543,7 +543,7 @@ namespace SKS
          this.Controls.Add(this.Label4);
          this.Controls.Add(this.Image1);
          this.FormBorderStyle = Mobilize.Web.FormBorderStyle.FixedSingle;
-         this.Icon = null;
+         this.Icon = (Mobilize.Web.Icon)new Mobilize.Web.Icon("assets/images/SKS.frmUsersManage.frmUsersManage.Icon.png");
          this.Properties().Location = new System.Drawing.Point(327, 144);
          this.MaximizeBox = false;
          this.MinimizeBox = true;
@@ -551,11 +551,10 @@ namespace SKS
          this.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
          this.Properties().StartPosition = Mobilize.Web.FormStartPosition.Manual;
          this.Text = "Users Management";
-         //this.Image1.Cursor = vbCustom;
          this.ToolTipMain.SetToolTip(this.Image1, "View warnings");
+         this.Activated += new System.EventHandler(this.frmUsersManage_Activated);
          this.Closed += new System.EventHandler(this.Form_Closed);
          this.listViewHelper1.SetCorrectEventsBehavior(this.lstAccounts, true);
-         ;
          this.lstAccounts.ResumeLayout(false);
          this.Frame1.ResumeLayout(false);
          this.ResumeLayout(false);
@@ -564,8 +563,13 @@ namespace SKS
       void ReLoadForm(bool addEvents)
       {
       	InitializeLabel1();
-         this.MdiParent = SKS.frmMain.DefInstance;
-         SKS.frmMain.DefInstance.Show();
+      	//This form is an MDI child.
+      	//This code simulates the VB6 
+      	// functionality of automatically
+      	// loading and showing an MDI
+      	// child's parent.
+      	this.MdiParent = SKS.frmMain.DefInstance;
+      	SKS.frmMain.DefInstance.Show();
       }
 
       void InitializeLabel1()
@@ -578,6 +582,5 @@ namespace SKS
       	this.Label1[4] = _Label1_4;
       }
       #endregion
-
    }
 }

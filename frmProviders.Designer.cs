@@ -3,9 +3,8 @@ using Mobilize.Web.Extensions;
 
 namespace SKS
 {
-
-   partial class frmProviders
-   {
+	partial class frmProviders
+	{
 
       [Intercepted]
 
@@ -15,23 +14,22 @@ namespace SKS
       [Intercepted]
       private static bool m_InitializingDefInstance { get; set; }
 
-      [Intercepted]
       public static frmProviders DefInstance
       {
       	get
       	{
-      		if (m_vb6FormDefInstance == null || m_vb6FormDefInstance.IsDisposed)
-            {
-            	m_InitializingDefInstance = true;
-            	m_vb6FormDefInstance = CreateInstance();
-            	m_InitializingDefInstance = false;
-            }
-            return m_vb6FormDefInstance;
-         }
-         set
-         {
-            m_vb6FormDefInstance = value;
-         }
+      		if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
+      		{
+      			m_InitializingDefInstance = true;
+      			m_vb6FormDefInstance = CreateInstance();
+      			m_InitializingDefInstance = false;
+      		}
+      		return m_vb6FormDefInstance;
+      	}
+      	set
+      	{
+      		m_vb6FormDefInstance = value;
+      	}
       }
 
       #endregion
@@ -41,14 +39,6 @@ namespace SKS
       {
       	frmProviders theInstance = new frmProviders();
       	theInstance.Form_Load();
-      	//The MDI form in the VB6 project had its
-      	//AutoShowChildren property set to True
-      	//To simulate the VB6 behavior, we need to
-      	//automatically Show the form whenever it
-      	//is loaded.  If you do not want this behavior
-      	//then delete the following line of code
-      	//UPGRADE_TODO: (2018) Remove the next line of code to stop form from automatically showing. More Information: http://www.vbtonet.com/ewis/ewi2018.aspx
-      	theInstance.Show();
       	return theInstance;
       }
 
@@ -58,7 +48,7 @@ namespace SKS
       [Intercepted]
       //Required by the Windows Form Designer
       private
-      System.ComponentModel.IContainer components { get; set; }
+      Mobilize.Web.Controls.Interfaces.IContainer components { get; set; }
 
       [Intercepted]
       public Mobilize.Web.ToolTip ToolTipMain { get; set; }
@@ -190,7 +180,7 @@ namespace SKS
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new System.ComponentModel.Container();
+      	this.components = new Mobilize.Web.ControlCollection();
       	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProviders));
       	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
       	this.dcProviders = new Mobilize.Web.VBUC.ADODataControlHelper();
@@ -232,7 +222,6 @@ namespace SKS
       	this.Toolbar1_Buttons_Button4 = new Mobilize.Web.ToolStripButton();
       	this.Toolbar1_Buttons_Button5 = new Mobilize.Web.ToolStripButton();
       	this.Toolbar1_Buttons_Button6 = new Mobilize.Web.ToolStripButton();
-         ;
       	this.Frame1.SuspendLayout();
       	this.Frame2.SuspendLayout();
       	this.Toolbar1.SuspendLayout();
@@ -243,7 +232,7 @@ namespace SKS
       	this.dcProviders.AllowDrop = true;
       	this.dcProviders.Properties().BackColor = Mobilize.Web.SystemColors.Window;
          this.dcProviders.Properties().BOFAction = UpgradeHelpers.DB.BOFActionEnum.MoveFirst;
-         this.dcProviders.ConnectionString = "Data Source=Orders.db;Version=3;";
+         this.dcProviders.ConnectionString = "Driver=SQLite3 ODBC Driver; Database=Orders.db;";
          this.dcProviders.CursorLocation = UpgradeHelpers.DB.ADO.CursorLocationEnum.adUseClient;
          this.dcProviders.Enabled = true;
          this.dcProviders.Properties().EOFAction = UpgradeHelpers.DB.EOFActionEnum.MoveLast;
@@ -255,8 +244,8 @@ namespace SKS
          this.dcProviders.Name = "dcProviders";
          this.dcProviders.Password = "";
          this.dcProviders.QueryTimeout = 30;
-         this.dcProviders.QueryType = System.Data.CommandType.TableDirect;
-         this.dcProviders.RecordSource = "Providers";
+         this.dcProviders.QueryType = System.Data.CommandType.Text;
+         this.dcProviders.RecordSource = "Select * from Providers";
          this.dcProviders.Text = "Suppliers";
          this.dcProviders.UserName = "";
          this.dcProviders.Width = 177;
@@ -736,11 +725,12 @@ namespace SKS
          this.ImageList1.Images.SetKeyName(2, "");
          this.ImageList1.Images.SetKeyName(3, "");
          this.ImageList1.Images.SetKeyName(4, "");
+         this.ImageList1.Images.SetKeyName(5, "");
          // 
          // Toolbar1
          // 
          this.Toolbar1.AllowDrop = true;
-         this.Toolbar1.Properties().Dock = Mobilize.Web.DockStyle.Top;
+         this.Toolbar1.Dock = Mobilize.Web.DockStyle.Top;
          this.Toolbar1.ImageList = ImageList1;
          this.Toolbar1.Location = new System.Drawing.Point(0, 0);
          this.Toolbar1.Name = "Toolbar1";
@@ -756,10 +746,10 @@ namespace SKS
          // 
          // Toolbar1_Buttons_Button1
          // 
-         this.Toolbar1_Buttons_Button1.Properties().DisplayStyle = Mobilize.Web.ToolStripItemDisplayStyle.ImageAndText;
+         this.Toolbar1_Buttons_Button1.DisplayStyle = Mobilize.Web.ToolStripItemDisplayStyle.ImageAndText;
          this.Toolbar1_Buttons_Button1.ImageIndex = 0;
          this.Toolbar1_Buttons_Button1.Properties().ImageScaling = Mobilize.Web.ToolStripItemImageScaling.None;
-         this.Toolbar1_Buttons_Button1.Properties().Size = new System.Drawing.Size(44, 39);
+         this.Toolbar1_Buttons_Button1.Size = new System.Drawing.Size(44, 39);
          this.Toolbar1_Buttons_Button1.Text = "Add";
          this.Toolbar1_Buttons_Button1.TextImageRelation = Mobilize.Web.TextImageRelation.ImageAboveText;
          this.Toolbar1_Buttons_Button1.Properties().ToolTipText = "Create a new record";
@@ -767,10 +757,10 @@ namespace SKS
          // 
          // Toolbar1_Buttons_Button2
          // 
-         this.Toolbar1_Buttons_Button2.Properties().DisplayStyle = Mobilize.Web.ToolStripItemDisplayStyle.ImageAndText;
+         this.Toolbar1_Buttons_Button2.DisplayStyle = Mobilize.Web.ToolStripItemDisplayStyle.ImageAndText;
          this.Toolbar1_Buttons_Button2.ImageIndex = 1;
          this.Toolbar1_Buttons_Button2.Properties().ImageScaling = Mobilize.Web.ToolStripItemImageScaling.None;
-         this.Toolbar1_Buttons_Button2.Properties().Size = new System.Drawing.Size(44, 39);
+         this.Toolbar1_Buttons_Button2.Size = new System.Drawing.Size(44, 39);
          this.Toolbar1_Buttons_Button2.Text = "Edit";
          this.Toolbar1_Buttons_Button2.TextImageRelation = Mobilize.Web.TextImageRelation.ImageAboveText;
          this.Toolbar1_Buttons_Button2.Properties().ToolTipText = "Edit this record";
@@ -778,10 +768,10 @@ namespace SKS
          // 
          // Toolbar1_Buttons_Button3
          // 
-         this.Toolbar1_Buttons_Button3.Properties().DisplayStyle = Mobilize.Web.ToolStripItemDisplayStyle.ImageAndText;
+         this.Toolbar1_Buttons_Button3.DisplayStyle = Mobilize.Web.ToolStripItemDisplayStyle.ImageAndText;
          this.Toolbar1_Buttons_Button3.ImageIndex = 2;
          this.Toolbar1_Buttons_Button3.Properties().ImageScaling = Mobilize.Web.ToolStripItemImageScaling.None;
-         this.Toolbar1_Buttons_Button3.Properties().Size = new System.Drawing.Size(44, 39);
+         this.Toolbar1_Buttons_Button3.Size = new System.Drawing.Size(44, 39);
          this.Toolbar1_Buttons_Button3.Text = "Save";
          this.Toolbar1_Buttons_Button3.TextImageRelation = Mobilize.Web.TextImageRelation.ImageAboveText;
          this.Toolbar1_Buttons_Button3.Properties().ToolTipText = "Save the current changes";
@@ -789,10 +779,10 @@ namespace SKS
          // 
          // Toolbar1_Buttons_Button4
          // 
-         this.Toolbar1_Buttons_Button4.Properties().DisplayStyle = Mobilize.Web.ToolStripItemDisplayStyle.ImageAndText;
+         this.Toolbar1_Buttons_Button4.DisplayStyle = Mobilize.Web.ToolStripItemDisplayStyle.ImageAndText;
          this.Toolbar1_Buttons_Button4.ImageIndex = 3;
          this.Toolbar1_Buttons_Button4.Properties().ImageScaling = Mobilize.Web.ToolStripItemImageScaling.None;
-         this.Toolbar1_Buttons_Button4.Properties().Size = new System.Drawing.Size(44, 39);
+         this.Toolbar1_Buttons_Button4.Size = new System.Drawing.Size(44, 39);
          this.Toolbar1_Buttons_Button4.Text = "Delete";
          this.Toolbar1_Buttons_Button4.TextImageRelation = Mobilize.Web.TextImageRelation.ImageAboveText;
          this.Toolbar1_Buttons_Button4.Properties().ToolTipText = "Delete the current record";
@@ -800,10 +790,10 @@ namespace SKS
          // 
          // Toolbar1_Buttons_Button5
          // 
-         this.Toolbar1_Buttons_Button5.Properties().DisplayStyle = Mobilize.Web.ToolStripItemDisplayStyle.ImageAndText;
+         this.Toolbar1_Buttons_Button5.DisplayStyle = Mobilize.Web.ToolStripItemDisplayStyle.ImageAndText;
          this.Toolbar1_Buttons_Button5.ImageIndex = 4;
          this.Toolbar1_Buttons_Button5.Properties().ImageScaling = Mobilize.Web.ToolStripItemImageScaling.None;
-         this.Toolbar1_Buttons_Button5.Properties().Size = new System.Drawing.Size(44, 39);
+         this.Toolbar1_Buttons_Button5.Size = new System.Drawing.Size(44, 39);
          this.Toolbar1_Buttons_Button5.Text = "Search";
          this.Toolbar1_Buttons_Button5.TextImageRelation = Mobilize.Web.TextImageRelation.ImageAboveText;
          this.Toolbar1_Buttons_Button5.Properties().ToolTipText = "Search for a record";
@@ -811,17 +801,20 @@ namespace SKS
          // 
          // Toolbar1_Buttons_Button6
          // 
-         this.Toolbar1_Buttons_Button6.Properties().DisplayStyle = Mobilize.Web.ToolStripItemDisplayStyle.ImageAndText;
+         this.Toolbar1_Buttons_Button6.DisplayStyle = Mobilize.Web.ToolStripItemDisplayStyle.ImageAndText;
+         this.Toolbar1_Buttons_Button6.ImageIndex = 5;
          this.Toolbar1_Buttons_Button6.Properties().ImageScaling = Mobilize.Web.ToolStripItemImageScaling.None;
-         this.Toolbar1_Buttons_Button6.Properties().Size = new System.Drawing.Size(44, 39);
+         this.Toolbar1_Buttons_Button6.Size = new System.Drawing.Size(44, 39);
          this.Toolbar1_Buttons_Button6.Text = "Cancel";
          this.Toolbar1_Buttons_Button6.TextImageRelation = Mobilize.Web.TextImageRelation.ImageAboveText;
          this.Toolbar1_Buttons_Button6.Properties().ToolTipText = "Cancel edited changes";
          this.Toolbar1_Buttons_Button6.Click += new System.EventHandler(this.Toolbar1_ButtonClick);
+         // 
+         // frmProviders
+         // 
          this.AllowDrop = true;
          this.Properties().AutoScaleDimensions = new System.Drawing.SizeF(6, 13);
          this.Properties().AutoScaleMode = Stub._System.Windows.Forms.AutoScaleMode.Font;
-         this.AutoScroll = true;
          this.BackColor = Mobilize.Web.SystemColors.Control;
          this.Properties().ClientSize = new System.Drawing.Size(454, 447);
          this.Controls.Add(this.dcProviders);
@@ -833,10 +826,9 @@ namespace SKS
          this.MinimizeBox = false;
          this.Name = "frmProviders";
          this.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
-         this.Properties().StartPosition = Mobilize.Web.FormStartPosition.Manual;
          this.Text = "Suppliers";
+         this.Activated += new System.EventHandler(this.frmProviders_Activated);
          this.Closed += new System.EventHandler(this.Form_Closed);
-         ;
          this.Frame1.ResumeLayout(false);
          this.Frame2.ResumeLayout(false);
          this.Toolbar1.ResumeLayout(false);
@@ -846,9 +838,7 @@ namespace SKS
       void ReLoadForm(bool addEvents)
       {
       	InitializetxtField();
-         this.MdiParent = SKS.frmMain.DefInstance;
-         SKS.frmMain.DefInstance.Show();
-         VB6_AddADODataBinding();
+      	VB6_AddADODataBinding();
       }
 
       void InitializetxtField()
@@ -891,6 +881,5 @@ namespace SKS
       _txtField_1.DataBindings.Add("Text", dcProviders, "PaymentTerms", false, Mobilize.Web.DataSourceUpdateMode.OnPropertyChanged);
    }
    #endregion
-
-   }
+}
 }
