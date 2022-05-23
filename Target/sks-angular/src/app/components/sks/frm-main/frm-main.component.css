@@ -1,0 +1,36 @@
+.SKS_frmMain {
+    left: -1px;
+    top: -1px;
+}
+.SKS_frmMain .frmMain {
+    background-color: rgba(171, 171, 171, 1);
+    width: 1113px;
+    height: 708px;
+    overflow: hidden;
+    left: 11px;
+    top: 54px;
+}
+.SKS_frmMain .sbStatusBar {
+    background-color: rgba(240, 240, 240, 1);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    position: fixed;
+    border: inset 1px;
+}
+.SKS_frmMain .sbStatusBar_Panels_Panel3 {
+    width: 96px;
+    height: 25px;
+    position: absolute;
+}
+.SKS_frmMain .sbStatusBar_Panels_Panel2 {
+    width: 96px;
+    height: 25px;
+    position: absolute;
+}
+.SKS_frmMain .sbStatusBar_Panels_Panel1 {
+    width: 901px;
+    height: 25px;
+    position: absolute;
+}

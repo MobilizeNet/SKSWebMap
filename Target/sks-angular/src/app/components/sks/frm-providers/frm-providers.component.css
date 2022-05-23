@@ -1,0 +1,358 @@
+.SKS_frmProviders {
+    left: -1px;
+    top: -1px;
+}
+.SKS_frmProviders .frmProviders {
+    background-color: rgba(240, 240, 240, 1);
+    width: 454px;
+    height: 447px;
+    overflow: hidden;
+    left: 3px;
+    top: 25px;
+}
+.SKS_frmProviders .Toolbar1 {
+    left: 0px;
+    top: 0px;
+    width: 454px;
+    height: 44px;
+    position: absolute;
+}
+.SKS_frmProviders .Toolbar1_Buttons_Button6 {
+    width: 44px;
+    height: 39px;
+    position: absolute;
+}
+.SKS_frmProviders .Toolbar1_Buttons_Button5 {
+    width: 44px;
+    height: 39px;
+    position: absolute;
+}
+.SKS_frmProviders .Toolbar1_Buttons_Button4 {
+    width: 44px;
+    height: 39px;
+    position: absolute;
+}
+.SKS_frmProviders .Toolbar1_Buttons_Button3 {
+    width: 44px;
+    height: 39px;
+    position: absolute;
+}
+.SKS_frmProviders .Toolbar1_Buttons_Button2 {
+    width: 44px;
+    height: 39px;
+    position: absolute;
+}
+.SKS_frmProviders .Toolbar1_Buttons_Button1 {
+    width: 44px;
+    height: 39px;
+    position: absolute;
+}
+.SKS_frmProviders .Frame1 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 48px;
+    width: 433px;
+    height: 353px;
+    position: absolute;
+}
+.SKS_frmProviders .Label1 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 24px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProviders .Label6 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 114px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProviders .Label8 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 232px;
+    top: 115px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProviders .Label9 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 232px;
+    top: 145px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProviders .Label10 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 232px;
+    top: 176px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProviders .Label11 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 54px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProviders .Label12 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 200px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProviders .Label13 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 145px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProviders .Label14 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 176px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProviders .Label15 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 83px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProviders .Label4 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 272px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProviders ._txtField_9 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 312px;
+    top: 145px;
+    width: 105px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProviders ._txtField_14 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 216px;
+    width: 401px;
+    height: 52px;
+    position: absolute;
+}
+.SKS_frmProviders ._txtField_10 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 312px;
+    top: 176px;
+    width: 105px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProviders ._txtField_8 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 312px;
+    top: 115px;
+    width: 105px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProviders .Frame2 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 224px;
+    top: 14px;
+    width: 194px;
+    height: 97px;
+    position: absolute;
+}
+.SKS_frmProviders .Label2 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 43px;
+    width: 57px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProviders .Label3 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 69px;
+    width: 57px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProviders .Label7 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 16px;
+    width: 49px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmProviders ._txtField_12 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 64px;
+    top: 40px;
+    width: 121px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProviders ._txtField_13 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 64px;
+    top: 64px;
+    width: 121px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProviders ._txtField_11 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 64px;
+    top: 16px;
+    width: 121px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProviders ._txtField_5 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 104px;
+    top: 114px;
+    width: 105px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProviders ._txtField_2 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 104px;
+    top: 54px;
+    width: 105px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProviders ._txtField_7 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 104px;
+    top: 176px;
+    width: 105px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProviders ._txtField_6 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 104px;
+    top: 145px;
+    width: 105px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProviders ._txtField_0 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 104px;
+    top: 24px;
+    width: 105px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProviders ._txtField_4 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 104px;
+    top: 83px;
+    width: 105px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmProviders ._txtField_1 {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 16px;
+    top: 288px;
+    width: 401px;
+    height: 52px;
+    position: absolute;
+}
+.SKS_frmProviders .dcProviders {
+    background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 408px;
+    width: 200px;
+    height: 25px;
+    position: absolute;
+    overflow: hidden;
+}

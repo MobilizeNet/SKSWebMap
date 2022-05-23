@@ -1,0 +1,270 @@
+.SKS_frmRequestApproval {
+    left: -1px;
+    top: -1px;
+}
+.SKS_frmRequestApproval .frmRequestApproval {
+    background-color: rgba(240, 240, 240, 1);
+    width: 523px;
+    height: 496px;
+    overflow: hidden;
+    left: 3px;
+    top: 25px;
+}
+.SKS_frmRequestApproval .Frame1 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 8px;
+    width: 505px;
+    height: 153px;
+    position: absolute;
+}
+.SKS_frmRequestApproval .Label2 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 48px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmRequestApproval .Label4 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 16px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmRequestApproval .Label3 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 256px;
+    top: 48px;
+    width: 65px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmRequestApproval .Label6 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 80px;
+    width: 65px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmRequestApproval .Label1 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 8px;
+    top: 112px;
+    width: 89px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmRequestApproval .Label8 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 256px;
+    top: 112px;
+    width: 73px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmRequestApproval .Label5 {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 288px;
+    top: 16px;
+    width: 41px;
+    height: 17px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.SKS_frmRequestApproval .dtTo {
+    left: 384px;
+    top: 80px;
+    width: 97px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmRequestApproval .dtFrom {
+    left: 136px;
+    top: 80px;
+    width: 97px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmRequestApproval .txtCompanyName {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 88px;
+    top: 16px;
+    width: 145px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmRequestApproval .cmdCustomers {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 240px;
+    top: 16px;
+    width: 25px;
+    height: 21px;
+    position: absolute;
+    padding: 0px 0px 0px 0px;
+    display: table-cell;
+    vertical-align: middle;
+    display: table-cell;
+}
+.SKS_frmRequestApproval .txtContactName {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 88px;
+    top: 48px;
+    width: 145px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmRequestApproval .txtContactLastName {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 336px;
+    top: 48px;
+    width: 145px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmRequestApproval .txtOrderID {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 88px;
+    top: 112px;
+    width: 145px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmRequestApproval .txtProductID {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 336px;
+    top: 112px;
+    width: 145px;
+    height: 20px;
+    position: absolute;
+}
+.SKS_frmRequestApproval .chkFrom {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 88px;
+    top: 80px;
+    width: 47px;
+    height: 17px;
+    position: absolute;
+}
+.SKS_frmRequestApproval .chkTo {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 336px;
+    top: 80px;
+    width: 41px;
+    height: 17px;
+    position: absolute;
+}
+.SKS_frmRequestApproval .cmbStatus {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 336px;
+    top: 16px;
+    width: 145px;
+    height: 21px;
+    position: absolute;
+}
+.SKS_frmRequestApproval .cmdClose {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 424px;
+    top: 440px;
+    width: 89px;
+    height: 25px;
+    position: absolute;
+    padding: 0px 0px 0px 0px;
+    display: table-cell;
+    vertical-align: middle;
+    display: table-cell;
+}
+.SKS_frmRequestApproval .cmdCancel {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 328px;
+    top: 440px;
+    width: 89px;
+    height: 25px;
+    position: absolute;
+    padding: 0px 0px 0px 0px;
+    display: table-cell;
+    vertical-align: middle;
+    display: table-cell;
+}
+.SKS_frmRequestApproval .sbStatusBar {
+    background-color: rgba(240, 240, 240, 1);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    border: inset 1px;
+}
+.SKS_frmRequestApproval .sbStatusBar_Panels_Panel1 {
+    width: 523px;
+    height: 25px;
+    position: absolute;
+}
+.SKS_frmRequestApproval .fgOrders {
+    left: 8px;
+    top: 168px;
+    width: 505px;
+    height: 265px;
+    position: absolute;
+}
+.SKS_frmRequestApproval .cmdInfo {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 136px;
+    top: 440px;
+    width: 89px;
+    height: 25px;
+    position: absolute;
+    padding: 0px 0px 0px 0px;
+    display: table-cell;
+    vertical-align: middle;
+    display: table-cell;
+}
+.SKS_frmRequestApproval .cmdApprove {
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(0, 0, 0, 1);
+    left: 232px;
+    top: 440px;
+    width: 89px;
+    height: 25px;
+    position: absolute;
+    padding: 0px 0px 0px 0px;
+    display: table-cell;
+    vertical-align: middle;
+    display: table-cell;
+}

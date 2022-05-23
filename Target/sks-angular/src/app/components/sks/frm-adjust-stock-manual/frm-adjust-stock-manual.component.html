@@ -1,0 +1,43 @@
+<div *ngIf="model">
+    <wm-window [model]="model" id="frmAdjustStockManual" class="SKS_frmAdjustStockManual">
+        <ng-template let-model>
+            <div class="frmAdjustStockManual">
+                <wm-label #Label3 id="Label3" [model]="model.Label3" class="Label3" tabindex="9">Select a product first</wm-label>
+                <wm-label #Label1 id="Label1" [model]="model.Label1" class="Label1" tabindex="16">Old Price</wm-label>
+                <wm-label #Label2 id="Label2" [model]="model.Label2" class="Label2" tabindex="17">Quantity</wm-label>
+                <wm-label #Label6 id="Label6" [model]="model.Label6" class="Label6" tabindex="18">New Price</wm-label>
+                <wm-label #Label7 id="Label7" [model]="model.Label7" class="Label7" tabindex="19">New Quantity</wm-label>
+                <wm-label #Label9 id="Label9" [model]="model.Label9" class="Label9" tabindex="23">Unit</wm-label>
+                <wm-label #Label8 id="Label8" [model]="model.Label8" class="Label8" tabindex="24">Product</wm-label>
+                <wm-label #Label10 id="Label10" [model]="model.Label10" class="Label10" tabindex="25">Quantity</wm-label>
+                <wm-label #Label11 id="Label11" [model]="model.Label11" class="Label11" tabindex="28">Stock ID:</wm-label>
+                <wm-label #lblCurrentQuantity id="lblCurrentQuantity" [model]="model.lblCurrentQuantity" class="lblCurrentQuantity" tabindex="30"></wm-label>
+                <wm-label #Label12 id="Label12" [model]="model.Label12" class="Label12" tabindex="31">Stock quantity</wm-label>
+                <wm-label #lblNewQuantity id="lblNewQuantity" [model]="model.lblNewQuantity" class="lblNewQuantity" tabindex="32"></wm-label>
+                <wm-label #Label14 id="Label14" [model]="model.Label14" class="Label14" tabindex="33">Adjusted quantity</wm-label>
+                <wm-listview #lvProducts id="lvProducts" [model]="model.lvProducts" class="lvProducts" tabindex="3"></wm-listview>
+                <wm-button #cmdSave id="cmdSave" [model]="model.cmdSave" class="cmdSave" tabindex="7"></wm-button>
+                <wm-button #cmdClose id="cmdClose" [model]="model.cmdClose" class="cmdClose" tabindex="8"></wm-button>
+                <wm-groupbox #Frame1 id="Frame1" [model]="model.Frame1" class="Frame1" tabindex="10">
+          <wm-label #Label4 id="Label4" [model]="model.Label4" class="Label4" tabindex="12">Name</wm-label>
+          <wm-label #Label5 id="Label5" [model]="model.Label5" class="Label5" tabindex="13">Code</wm-label>
+          <wm-button #cmdProducts id="cmdProducts" [model]="model.cmdProducts" class="cmdProducts" tabindex="11"></wm-button>
+          <wm-textbox #txtName id="txtName" [model]="model.txtName" class="txtName" tabindex="2"></wm-textbox>
+          <wm-textbox #txtCode id="txtCode" [model]="model.txtCode" class="txtCode" tabindex="1"></wm-textbox>
+</wm-groupbox>
+                <wm-groupbox #Frame3 id="Frame3" [model]="model.Frame3" class="Frame3" tabindex="14">
+          <wm-listview #lvStocks id="lvStocks" [model]="model.lvStocks" class="lvStocks" tabindex="4"></wm-listview>
+</wm-groupbox>
+                <wm-textbox #txtOriginalQuantity id="txtOriginalQuantity" [model]="model.txtOriginalQuantity" class="txtOriginalQuantity" tabindex="15"></wm-textbox>
+                <wm-textbox #_txtValues_1 id="_txtValues_1" [model]="model._txtValues_1" class="_txtValues_1" tabindex="6"></wm-textbox>
+                <wm-textbox #txtUnit id="txtUnit" [model]="model.txtUnit" class="txtUnit" tabindex="20"></wm-textbox>
+                <wm-textbox #txtProductName id="txtProductName" [model]="model.txtProductName" class="txtProductName" tabindex="21"></wm-textbox>
+                <wm-textbox #txtQuantityPerUnit id="txtQuantityPerUnit" [model]="model.txtQuantityPerUnit" class="txtQuantityPerUnit" tabindex="22"></wm-textbox>
+                <wm-textbox #_txtValues_0 id="_txtValues_0" [model]="model._txtValues_0" class="_txtValues_0" tabindex="5"></wm-textbox>
+                <wm-textbox #txtOriginalPrice id="txtOriginalPrice" [model]="model.txtOriginalPrice" class="txtOriginalPrice" tabindex="26"></wm-textbox>
+                <wm-textbox #txtStockID id="txtStockID" [model]="model.txtStockID" class="txtStockID" tabindex="27"></wm-textbox>
+                <wm-statusstrip #sbStatusBar id="sbStatusBar" [model]="model.sbStatusBar" class="sbStatusBar" tabindex="29"></wm-statusstrip>
+            </div>
+        </ng-template>
+    </wm-window>
+</div>

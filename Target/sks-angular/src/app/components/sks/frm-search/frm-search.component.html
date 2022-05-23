@@ -1,0 +1,20 @@
+<div *ngIf="model">
+    <wm-window [model]="model" id="frmSearch" class="SKS_frmSearch">
+        <ng-template let-model>
+            <div class="frmSearch">
+                <wm-label #lblSrchBy id="lblSrchBy" [model]="model.lblSrchBy" class="lblSrchBy" tabindex="2">Field</wm-label>
+                <wm-label #Label1 id="Label1" [model]="model.Label1" class="Label1" tabindex="3">Search by:</wm-label>
+                <wm-picturebox #Image3 id="Image3" [model]="model.Image3" class="Image3" tabindex="0">
+</wm-picturebox>
+                <wm-label #Label19 id="Label19" [model]="model.Label19" class="Label19" tabindex="5">Search</wm-label>
+                <wm-label #Label20 id="Label20" [model]="model.Label20" class="Label20" tabindex="6">Search for a specific item</wm-label>
+                <wm-textbox #txtSrchStr id="txtSrchStr" [model]="model.txtSrchStr" class="txtSrchStr" tabindex="1"></wm-textbox>
+                <wm-combobox #cboSrchBy id="cboSrchBy" [model]="model.cboSrchBy" class="cboSrchBy" tabindex="4"></wm-combobox>
+                <wm-picturebox #ctrlLiner1 id="ctrlLiner1" [model]="model.ctrlLiner1" class="ctrlLiner1" tabindex="7">
+</wm-picturebox>
+                <wm-button #cmdSearch id="cmdSearch" [model]="model.cmdSearch" class="cmdSearch" tabindex="8"></wm-button>
+                <wm-button #cmdClose id="cmdClose" [model]="model.cmdClose" class="cmdClose" tabindex="9"></wm-button>
+            </div>
+        </ng-template>
+    </wm-window>
+</div>

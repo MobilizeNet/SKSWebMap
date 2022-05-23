@@ -1,0 +1,10 @@
+<div *ngIf="model">
+    <wm-window [model]="model" id="frmMain" class="SKS_frmMain">
+        <ng-template let-model>
+            <div class="frmMain">
+                <wm-toolstrip #MainMenu1 id="MainMenu1" [model]="model.MainMenu1" class="MainMenu1" tabindex="0"></wm-toolstrip>
+                <wm-statusstrip #sbStatusBar id="sbStatusBar" [model]="model.sbStatusBar" class="sbStatusBar" tabindex="1"></wm-statusstrip>
+            </div>
+        </ng-template>
+    </wm-window>
+</div>

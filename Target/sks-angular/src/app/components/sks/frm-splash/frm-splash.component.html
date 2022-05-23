@@ -1,0 +1,11 @@
+<div *ngIf="model">
+    <wm-window [model]="model" id="frmSplash" class="SKS_frmSplash">
+        <ng-template let-model>
+            <div class="frmSplash">
+                <wm-picturebox #Image1 id="Image1" [model]="model.Image1" class="Image1" tabindex="0">
+</wm-picturebox>
+                <wm-timer data-tag="timer tag" #Timer1 id="Timer1" [model]="model.Timer1" class="Timer1"></wm-timer>
+            </div>
+        </ng-template>
+    </wm-window>
+</div>

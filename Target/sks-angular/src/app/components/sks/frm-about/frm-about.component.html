@@ -1,0 +1,17 @@
+<div *ngIf="model">
+    <wm-window [model]="model" id="frmAbout" class="SKS_frmAbout">
+        <ng-template let-model>
+            <div class="frmAbout">
+                <wm-label #lblDisclaimer id="lblDisclaimer" [model]="model.lblDisclaimer" class="lblDisclaimer" tabindex="4">Copyright 2018 Mobilize.Net</wm-label>
+                <wm-label #lblVersion id="lblVersion" [model]="model.lblVersion" class="lblVersion" tabindex="6">Version: Mobilize - WebMAP </wm-label>
+                <wm-label #_Line1_0 id="_Line1_0" [model]="model._Line1_0" class="_Line1_0" tabindex="0"></wm-label>
+                <wm-label #lblTitle id="lblTitle" [model]="model.lblTitle" class="lblTitle" tabindex="5">Salmon King Seafood</wm-label>
+                <wm-label #lblDescription id="lblDescription" [model]="model.lblDescription" class="lblDescription" tabindex="3">Order Processing Software by Mobilize.net</wm-label>
+                <wm-label #_Line1_1 id="_Line1_1" [model]="model._Line1_1" class="_Line1_1" tabindex="0"></wm-label>
+                <wm-button #cmdOK id="cmdOK" [model]="model.cmdOK" class="cmdOK" tabindex="1"></wm-button>
+                <wm-picturebox #picIcon id="picIcon" [model]="model.picIcon" class="picIcon" tabindex="2">
+</wm-picturebox>
+            </div>
+        </ng-template>
+    </wm-window>
+</div>

@@ -1,0 +1,43 @@
+<div *ngIf="model">
+    <wm-window [model]="model" id="frmOrderReception" class="SKS_frmOrderReception">
+        <ng-template let-model>
+            <div class="frmOrderReception">
+                <wm-label #Label6 id="Label6" [model]="model.Label6" class="Label6" tabindex="23">Notes:</wm-label>
+                <wm-label #Label8 id="Label8" [model]="model.Label8" class="Label8" tabindex="26">Sales Tax</wm-label>
+                <wm-label #Label9 id="Label9" [model]="model.Label9" class="Label9" tabindex="27">Sub Total</wm-label>
+                <wm-label #Label10 id="Label10" [model]="model.Label10" class="Label10" tabindex="29">Total Tax</wm-label>
+                <wm-label #Label11 id="Label11" [model]="model.Label11" class="Label11" tabindex="31">Total</wm-label>
+                <wm-label #Label12 id="Label12" [model]="model.Label12" class="Label12" tabindex="33">Freight</wm-label>
+                <wm-label #Label7 id="Label7" [model]="model.Label7" class="Label7" tabindex="11">Quantity</wm-label>
+                <wm-groupbox #Frame2 id="Frame2" [model]="model.Frame2" class="Frame2" tabindex="12">
+          <wm-label #Label1 id="Label1" [model]="model.Label1" class="Label1" tabindex="18">Contact:</wm-label>
+          <wm-label #Label5 id="Label5" [model]="model.Label5" class="Label5" tabindex="19">Name:</wm-label>
+          <wm-textbox #txtProviderCompany id="txtProviderCompany" [model]="model.txtProviderCompany" class="txtProviderCompany" tabindex="20"></wm-textbox>
+          <wm-textbox #txtProviderContact id="txtProviderContact" [model]="model.txtProviderContact" class="txtProviderContact" tabindex="21"></wm-textbox>
+</wm-groupbox>
+                <wm-groupbox #Frame1 id="Frame1" [model]="model.Frame1" class="Frame1" tabindex="13">
+          <wm-label #Label2 id="Label2" [model]="model.Label2" class="Label2" tabindex="15">First Name</wm-label>
+          <wm-label #Label4 id="Label4" [model]="model.Label4" class="Label4" tabindex="16">Supplier</wm-label>
+          <wm-label #Label3 id="Label3" [model]="model.Label3" class="Label3" tabindex="17">Last name</wm-label>
+          <wm-listview #lvProviders id="lvProviders" [model]="model.lvProviders" class="lvProviders" tabindex="4"></wm-listview>
+          <wm-button #cmdProviders id="cmdProviders" [model]="model.cmdProviders" class="cmdProviders" tabindex="14"></wm-button>
+          <wm-textbox #txtContactName id="txtContactName" [model]="model.txtContactName" class="txtContactName" tabindex="2"></wm-textbox>
+          <wm-textbox #txtContactLastName id="txtContactLastName" [model]="model.txtContactLastName" class="txtContactLastName" tabindex="3"></wm-textbox>
+          <wm-textbox #txtProviderName id="txtProviderName" [model]="model.txtProviderName" class="txtProviderName" tabindex="1"></wm-textbox>
+</wm-groupbox>
+                <wm-button #cmdAddProducts id="cmdAddProducts" [model]="model.cmdAddProducts" class="cmdAddProducts" tabindex="22"></wm-button>
+                <wm-button #cmdClose id="cmdClose" [model]="model.cmdClose" class="cmdClose" tabindex="10"></wm-button>
+                <wm-button #cmdSave id="cmdSave" [model]="model.cmdSave" class="cmdSave" tabindex="9"></wm-button>
+                <wm-statusstrip #sbStatusBar id="sbStatusBar" [model]="model.sbStatusBar" class="sbStatusBar" tabindex="24"></wm-statusstrip>
+                <wm-datagridviewflex #fgProducts id="fgProducts" [model]="model.fgProducts" class="fgProducts" tabindex="6"></wm-datagridviewflex>
+                <wm-textbox #txtEntry id="txtEntry" [model]="model.txtEntry" class="txtEntry" tabindex="25"></wm-textbox>
+                <wm-textbox #txtSalesTax id="txtSalesTax" [model]="model.txtSalesTax" class="txtSalesTax" tabindex="7"></wm-textbox>
+                <wm-textbox #txtFreightCharge id="txtFreightCharge" [model]="model.txtFreightCharge" class="txtFreightCharge" tabindex="8"></wm-textbox>
+                <wm-textbox #txtTotalTax id="txtTotalTax" [model]="model.txtTotalTax" class="txtTotalTax" tabindex="28"></wm-textbox>
+                <wm-textbox #txtTotal id="txtTotal" [model]="model.txtTotal" class="txtTotal" tabindex="30"></wm-textbox>
+                <wm-textbox #txtSubTotal id="txtSubTotal" [model]="model.txtSubTotal" class="txtSubTotal" tabindex="32"></wm-textbox>
+                <wm-textbox #txtNotes id="txtNotes" [model]="model.txtNotes" class="txtNotes" tabindex="5"></wm-textbox>
+            </div>
+        </ng-template>
+    </wm-window>
+</div>

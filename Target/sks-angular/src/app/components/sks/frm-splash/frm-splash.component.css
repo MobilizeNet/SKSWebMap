@@ -1,0 +1,19 @@
+.SKS_frmSplash {
+    left: -1px;
+    top: -1px;
+}
+.SKS_frmSplash .frmSplash {
+    background-color: rgba(240, 240, 240, 1);
+    width: 943px;
+    height: 613px;
+    overflow: hidden;
+    left: 17px;
+    top: 116px;
+}
+.SKS_frmSplash .Image1 {
+    left: 0px;
+    top: 0px;
+    width: 964px;
+    height: 642px;
+    position: absolute;
+}

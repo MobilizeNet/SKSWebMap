@@ -1,0 +1,32 @@
+<div *ngIf="model">
+    <wm-window [model]="model" id="frmUsersManage" class="SKS_frmUsersManage">
+        <ng-template let-model>
+            <div class="frmUsersManage">
+                <wm-picturebox #Image1 id="Image1" [model]="model.Image1" class="Image1" tabindex="0">
+</wm-picturebox>
+                <wm-label #Label4 id="Label4" [model]="model.Label4" class="Label4" tabindex="18">Set user information and access level</wm-label>
+                <wm-label #Label19 id="Label19" [model]="model.Label19" class="Label19" tabindex="19">User</wm-label>
+                <wm-label #_Label1_4 id="_Label1_4" [model]="model._Label1_4" class="_Label1_4" tabindex="20">* Required fields</wm-label>
+                <wm-button #cmdDelete id="cmdDelete" [model]="model.cmdDelete" class="cmdDelete" tabindex="10"></wm-button>
+                <wm-button #cmdEdit id="cmdEdit" [model]="model.cmdEdit" class="cmdEdit" tabindex="9"></wm-button>
+                <wm-button #cmdClose id="cmdClose" [model]="model.cmdClose" class="cmdClose" tabindex="7"></wm-button>
+                <wm-groupbox #Frame1 id="Frame1" [model]="model.Frame1" class="Frame1" tabindex="11">
+          <wm-label #lblId id="lblId" [model]="model.lblId" class="lblId" tabindex="12"></wm-label>
+          <wm-label #_Label1_3 id="_Label1_3" [model]="model._Label1_3" class="_Label1_3" tabindex="13">User level: *</wm-label>
+          <wm-label #_Label1_1 id="_Label1_1" [model]="model._Label1_1" class="_Label1_1" tabindex="14">New password: *</wm-label>
+          <wm-label #_Label1_0 id="_Label1_0" [model]="model._Label1_0" class="_Label1_0" tabindex="15">Username: *</wm-label>
+          <wm-label #_Label1_2 id="_Label1_2" [model]="model._Label1_2" class="_Label1_2" tabindex="17">Full name: *</wm-label>
+          <wm-combobox #cboLevel id="cboLevel" [model]="model.cboLevel" class="cboLevel" tabindex="4"></wm-combobox>
+          <wm-textbox #txtUsername id="txtUsername" [model]="model.txtUsername" class="txtUsername" tabindex="1"></wm-textbox>
+          <wm-textbox #txtPassword id="txtPassword" [model]="model.txtPassword" class="txtPassword" tabindex="2"></wm-textbox>
+          <wm-textbox #txtFullname id="txtFullname" [model]="model.txtFullname" class="txtFullname" tabindex="3"></wm-textbox>
+</wm-groupbox>
+                <wm-picturebox #ctrlLiner1 id="ctrlLiner1" [model]="model.ctrlLiner1" class="ctrlLiner1" tabindex="16">
+</wm-picturebox>
+                <wm-button #cmdSave id="cmdSave" [model]="model.cmdSave" class="cmdSave" tabindex="5"></wm-button>
+                <wm-button #cmdClear id="cmdClear" [model]="model.cmdClear" class="cmdClear" tabindex="6"></wm-button>
+                <wm-listview #lstAccounts id="lstAccounts" [model]="model.lstAccounts" class="lstAccounts" tabindex="8"></wm-listview>
+            </div>
+        </ng-template>
+    </wm-window>
+</div>

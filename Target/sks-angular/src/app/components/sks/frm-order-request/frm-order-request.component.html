@@ -1,0 +1,45 @@
+<div *ngIf="model">
+    <wm-window [model]="model" id="frmOrderRequest" class="SKS_frmOrderRequest">
+        <ng-template let-model>
+            <div class="frmOrderRequest">
+                <wm-label #Label6 id="Label6" [model]="model.Label6" class="Label6" tabindex="35">Required by date:</wm-label>
+                <wm-label #Label7 id="Label7" [model]="model.Label7" class="Label7" tabindex="23">Promised by date:</wm-label>
+                <wm-label #Label8 id="Label8" [model]="model.Label8" class="Label8" tabindex="26">Sales Tax:</wm-label>
+                <wm-label #Label9 id="Label9" [model]="model.Label9" class="Label9" tabindex="27">Sub Total:</wm-label>
+                <wm-label #Label10 id="Label10" [model]="model.Label10" class="Label10" tabindex="29">Total Tax:</wm-label>
+                <wm-label #Label11 id="Label11" [model]="model.Label11" class="Label11" tabindex="31">Total:</wm-label>
+                <wm-label #Label12 id="Label12" [model]="model.Label12" class="Label12" tabindex="33">Freight Charge:</wm-label>
+                <wm-label #Label13 id="Label13" [model]="model.Label13" class="Label13" tabindex="34">Line quantity:</wm-label>
+                <wm-datetimepicker #dtPromised id="dtPromised" [model]="model.dtPromised" class="dtPromised" format="dddd, MMMM dd, yyyy" tabindex="6"></wm-datetimepicker>
+                <wm-groupbox #Frame2 id="Frame2" [model]="model.Frame2" class="Frame2" tabindex="12">
+          <wm-label #Label1 id="Label1" [model]="model.Label1" class="Label1" tabindex="18">Contact:</wm-label>
+          <wm-label #Label5 id="Label5" [model]="model.Label5" class="Label5" tabindex="19">Company:</wm-label>
+          <wm-textbox #txtCustomerCompany id="txtCustomerCompany" [model]="model.txtCustomerCompany" class="txtCustomerCompany" tabindex="20"></wm-textbox>
+          <wm-textbox #txtCustomerContact id="txtCustomerContact" [model]="model.txtCustomerContact" class="txtCustomerContact" tabindex="21"></wm-textbox>
+</wm-groupbox>
+                <wm-groupbox #Frame1 id="Frame1" [model]="model.Frame1" class="Frame1" tabindex="13">
+          <wm-label #Label2 id="Label2" [model]="model.Label2" class="Label2" tabindex="15">Contact name:</wm-label>
+          <wm-label #Label4 id="Label4" [model]="model.Label4" class="Label4" tabindex="16">Company name:</wm-label>
+          <wm-label #Label3 id="Label3" [model]="model.Label3" class="Label3" tabindex="17">Contact last name:</wm-label>
+          <wm-listview #lvCustomers id="lvCustomers" [model]="model.lvCustomers" class="lvCustomers" tabindex="4"></wm-listview>
+          <wm-textbox #txtCompanyName id="txtCompanyName" [model]="model.txtCompanyName" class="txtCompanyName" tabindex="1"></wm-textbox>
+          <wm-button #cmdCustomers id="cmdCustomers" [model]="model.cmdCustomers" class="cmdCustomers" tabindex="14"></wm-button>
+          <wm-textbox #txtContactName id="txtContactName" [model]="model.txtContactName" class="txtContactName" tabindex="2"></wm-textbox>
+          <wm-textbox #txtContactLastName id="txtContactLastName" [model]="model.txtContactLastName" class="txtContactLastName" tabindex="3"></wm-textbox>
+</wm-groupbox>
+                <wm-button #cmdClose id="cmdClose" [model]="model.cmdClose" class="cmdClose" tabindex="11"></wm-button>
+                <wm-button #cmdAddProducts id="cmdAddProducts" [model]="model.cmdAddProducts" class="cmdAddProducts" tabindex="22"></wm-button>
+                <wm-button #cmdSave id="cmdSave" [model]="model.cmdSave" class="cmdSave" tabindex="10"></wm-button>
+                <wm-datetimepicker #dtRequired id="dtRequired" [model]="model.dtRequired" class="dtRequired" format="dddd, MMMM dd, yyyy" tabindex="5"></wm-datetimepicker>
+                <wm-statusstrip #sbStatusBar id="sbStatusBar" [model]="model.sbStatusBar" class="sbStatusBar" tabindex="24"></wm-statusstrip>
+                <wm-datagridviewflex #fgProducts id="fgProducts" [model]="model.fgProducts" class="fgProducts" tabindex="7"></wm-datagridviewflex>
+                <wm-textbox #txtEntry id="txtEntry" [model]="model.txtEntry" class="txtEntry" tabindex="25"></wm-textbox>
+                <wm-textbox #txtSalesTax id="txtSalesTax" [model]="model.txtSalesTax" class="txtSalesTax" tabindex="8"></wm-textbox>
+                <wm-textbox #txtFreightCharge id="txtFreightCharge" [model]="model.txtFreightCharge" class="txtFreightCharge" tabindex="9"></wm-textbox>
+                <wm-textbox #txtTotalTax id="txtTotalTax" [model]="model.txtTotalTax" class="txtTotalTax" tabindex="28"></wm-textbox>
+                <wm-textbox #txtTotal id="txtTotal" [model]="model.txtTotal" class="txtTotal" tabindex="30"></wm-textbox>
+                <wm-textbox #txtSubTotal id="txtSubTotal" [model]="model.txtSubTotal" class="txtSubTotal" tabindex="32"></wm-textbox>
+            </div>
+        </ng-template>
+    </wm-window>
+</div>
