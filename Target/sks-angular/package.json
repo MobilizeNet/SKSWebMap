@@ -12,7 +12,7 @@
   },
   "private": true,
  "dependencies": {
-    "@mobilize/wfnet-c1-components": "0.3.0-rc0336",
+    "@mobilize/wfnet-c1-components": "0.3.16",
     "@mobilize/winforms-components": "7.25.11",
     "@mobilize/wm-netsupport": "2.43.75",
     "moment": "2.29.1",

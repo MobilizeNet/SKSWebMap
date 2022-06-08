@@ -37,6 +37,7 @@ To build the frontend code make sure you already have [Node.js LTS](https://node
 
 Open a terminal at `SKS\sks-angular` and run:
 ```
+npm config set "@mobilize:registry" "https://packages.mobilize.net/npm/mobilizenet-npm/"
 npm install
 npm run build
 ```
