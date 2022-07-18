@@ -3,7 +3,7 @@ This repository contains a Winforms demo for sales purpose.
 
 If you want more technical documentation about our webmap product:
 
-* [General Product Information](http://https://www.mobilize.net/products/app-migrations/webmap/ "General Product Information")
+* [General Product Information](https://www.mobilize.net/products/app-migrations/webmap/ "General Product Information")
 * [Documentation for WebMap](http://https://docs.mobilize.net/webmap/ "Documentation for WebMap")
 
 ## Repository Contents
