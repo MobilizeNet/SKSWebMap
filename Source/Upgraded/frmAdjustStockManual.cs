@@ -137,7 +137,7 @@ namespace SKS
 			}
 			catch (System.Exception excep)
 			{
-				//UPGRADE_WARNING: (2081) Err.Number has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2081
+				//UPGRADE_WARNING: (2081) Err.Number has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2081
 				MessageBox.Show("An error has occurred adding the data. Error: (" + Information.Err().Number.ToString() + ") " + excep.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 
@@ -204,22 +204,22 @@ namespace SKS
 		private void DoSearchProduct()
 		{
 			string filter = "";
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(txtCode.Text))
 			{
 				filter = "ProductId LIKE '%" + txtCode.Text + "%'";
 			}
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(txtName.Text))
 			{
-				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 				if (!String.IsNullOrEmpty(filter))
 				{
 					filter = filter + " AND ";
 				}
 				filter = filter + "ProductName LIKE '%" + txtName.Text + "%'";
 			}
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(filter))
 			{
 				filter = "Where " + filter;
@@ -239,7 +239,7 @@ namespace SKS
 					int tempForEndVar = (modConnection.rs.FieldsMetadata.Count - 1);
 					for (modMain.i = 1; modMain.i <= tempForEndVar; modMain.i++)
 					{
-						//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+						//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 						if (!(modConnection.rs.GetField(modMain.i) is null))
 						{
 							ListViewHelper.GetListViewSubItem(x, modMain.i).Text = Convert.ToString(modConnection.rs[modMain.i]);
@@ -257,7 +257,7 @@ namespace SKS
 
 		private void DoSearchStocks()
 		{
-			if (lvProducts.FocusedItem is null)
+			if (lvProducts.FocusedItem == null)
 			{
 				return;
 			}
@@ -273,12 +273,12 @@ namespace SKS
 			currentIdProduct = lvProducts.FocusedItem.Text;
 			ListViewItem withVar = null;
 			withVar = lvProducts.FocusedItem;
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(ListViewHelper.GetListViewSubItem(withVar, 5).Text))
 			{
 				currentQuantityPerUnit = ListViewHelper.GetListViewSubItem(withVar, 5).Text;
 			}
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(ListViewHelper.GetListViewSubItem(withVar, 6).Text))
 			{
 				currentUnit = ListViewHelper.GetListViewSubItem(withVar, 6).Text;
@@ -329,9 +329,9 @@ namespace SKS
 
 			bool setEmpty = true;
 			ListViewItem withVar = null;
-			if (!(lvStocks.FocusedItem is null))
+			if (lvStocks.FocusedItem != null)
 			{
-				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 				if (!(lvStocks.FocusedItem is null))
 				{
 					currentIdStock = Convert.ToInt32(Double.Parse(lvStocks.FocusedItem.Text));
@@ -412,12 +412,12 @@ namespace SKS
 			{
 				editingData = true;
 				codeGeneratedChange = true;
-				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 				if (!String.IsNullOrEmpty(txtValues[0].Text))
 				{
 					changedStockPrice = Double.Parse(txtValues[0].Text);
 				}
-				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 				if (!String.IsNullOrEmpty(txtValues[1].Text))
 				{
 					changedStock = Double.Parse(txtValues[1].Text);

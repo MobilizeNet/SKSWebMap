@@ -62,7 +62,7 @@ namespace SKS
 			}
 		}
 
-		//UPGRADE_NOTE: (7001) The following declaration (Frame1_Click) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
+		//UPGRADE_NOTE: (7001) The following declaration (Frame1_Click) seems to be dead code More Information: https://docs.mobilize.net/vbuc/ewis#7001
 		//private void Frame1_Click()
 		//{
 			//this.Close();

@@ -33,7 +33,7 @@ namespace SKS
 			theInstance.Form_Load();
 			return theInstance;
 		}
-		private string[] visualControls = new string[]{"components", "ToolTipMain", "txtNotes", "txtSubTotal", "txtTotal", "txtTotalTax", "txtFreightCharge", "txtSalesTax", "txtEntry", "fgProducts", "sbStatusBar_Panels_Panel1", "sbStatusBar", "cmdSave", "cmdClose", "cmdAddProducts", "txtProviderName", "txtContactLastName", "txtContactName", "cmdProviders", "lvProviders_ColumnHeader_1_", "lvProviders_ColumnHeader_2_", "lvProviders_ColumnHeader_3_", "lvProviders_ColumnHeader_4_", "lvProviders_ColumnHeader_5_", "lvProviders_ColumnHeader_6_", "lvProviders_ColumnHeader_7_", "lvProviders", "Label3", "Label4", "Label2", "Frame1", "txtProviderContact", "txtProviderCompany", "Label5", "Label1", "Frame2", "Label7", "Label12", "Label11", "Label10", "Label9", "Label8", "Label6", "listViewHelper1"};
+		private string[] visualControls = new string[]{"components", "ToolTipMain", "txtNotes", "txtSubTotal", "txtTotal", "txtTotalTax", "txtFreightCharge", "txtSalesTax", "txtEntry", "fgProducts", "sbStatusBar_Panels_Panel1", "sbStatusBar", "cmdSave", "cmdClose", "cmdAddProducts", "txtProviderName", "txtContactLastName", "txtContactName", "cmdProviders", "lvProviders_ColumnHeader_1_", "lvProviders_ColumnHeader_2_", "lvProviders_ColumnHeader_3_", "lvProviders_ColumnHeader_4_", "lvProviders_ColumnHeader_5_", "lvProviders_ColumnHeader_6_", "lvProviders_ColumnHeader_7_", "lvProviders", "Label3", "Label4", "Label2", "Frame1", "txtProviderContact", "txtProviderCompany", "Label5", "Label1", "Frame2", "Label7", "Label12", "Label11", "Label10", "Label9", "Label8", "Label6", "listViewHelper1", "commandButtonHelper1"};
 		//Required by the Windows Form Designer
 		private System.ComponentModel.IContainer components;
 		public System.Windows.Forms.ToolTip ToolTipMain;
@@ -79,6 +79,7 @@ namespace SKS
 		public System.Windows.Forms.Label Label8;
 		public System.Windows.Forms.Label Label6;
 		public UpgradeHelpers.Gui.ListViewHelper listViewHelper1;
+		public UpgradeHelpers.Gui.CommandButtonHelper commandButtonHelper1;
 		//NOTE: The following procedure is required by the Windows Form Designer
 		//It can be modified using the Windows Form Designer.
 		//Do not modify it using the code editor.
@@ -136,6 +137,8 @@ namespace SKS
 			this.SuspendLayout();
 			this.listViewHelper1 = new UpgradeHelpers.Gui.ListViewHelper(this.components);
 			((System.ComponentModel.ISupportInitialize) this.listViewHelper1).BeginInit();
+			this.commandButtonHelper1 = new UpgradeHelpers.Gui.CommandButtonHelper(this.components);
+			((System.ComponentModel.ISupportInitialize) this.fgProducts).BeginInit();
 			// 
 			// txtNotes
 			// 
@@ -144,6 +147,7 @@ namespace SKS
 			this.txtNotes.BackColor = System.Drawing.SystemColors.Window;
 			this.txtNotes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtNotes.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtNotes.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.txtNotes.Location = new System.Drawing.Point(56, 240);
 			this.txtNotes.MaxLength = 0;
@@ -161,6 +165,7 @@ namespace SKS
 			this.txtSubTotal.BackColor = System.Drawing.SystemColors.Menu;
 			this.txtSubTotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtSubTotal.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtSubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtSubTotal.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.txtSubTotal.Location = new System.Drawing.Point(352, 536);
 			this.txtSubTotal.MaxLength = 0;
@@ -179,6 +184,7 @@ namespace SKS
 			this.txtTotal.BackColor = System.Drawing.SystemColors.Menu;
 			this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtTotal.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtTotal.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.txtTotal.Location = new System.Drawing.Point(88, 560);
 			this.txtTotal.MaxLength = 0;
@@ -197,6 +203,7 @@ namespace SKS
 			this.txtTotalTax.BackColor = System.Drawing.SystemColors.Menu;
 			this.txtTotalTax.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtTotalTax.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtTotalTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtTotalTax.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.txtTotalTax.Location = new System.Drawing.Point(352, 512);
 			this.txtTotalTax.MaxLength = 0;
@@ -215,6 +222,7 @@ namespace SKS
 			this.txtFreightCharge.BackColor = System.Drawing.SystemColors.Window;
 			this.txtFreightCharge.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtFreightCharge.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtFreightCharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtFreightCharge.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.txtFreightCharge.Location = new System.Drawing.Point(88, 536);
 			this.txtFreightCharge.MaxLength = 0;
@@ -233,6 +241,7 @@ namespace SKS
 			this.txtSalesTax.BackColor = System.Drawing.SystemColors.Window;
 			this.txtSalesTax.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtSalesTax.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtSalesTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtSalesTax.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.txtSalesTax.Location = new System.Drawing.Point(88, 512);
 			this.txtSalesTax.MaxLength = 0;
@@ -251,6 +260,7 @@ namespace SKS
 			this.txtEntry.BackColor = System.Drawing.SystemColors.Window;
 			this.txtEntry.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtEntry.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtEntry.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtEntry.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.txtEntry.Location = new System.Drawing.Point(88, 488);
 			this.txtEntry.MaxLength = 0;
@@ -278,6 +288,7 @@ namespace SKS
 			this.fgProducts.Location = new System.Drawing.Point(8, 288);
 			this.fgProducts.Name = "fgProducts";
 			this.fgProducts.ReadOnly = true;
+			this.fgProducts.RowsCount = 2;
 			this.fgProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
 			this.fgProducts.ShowCellToolTips = false;
 			this.fgProducts.Size = new System.Drawing.Size(505, 177);
@@ -292,6 +303,7 @@ namespace SKS
 			this.sbStatusBar.AllowDrop = true;
 			this.sbStatusBar.BackColor = System.Drawing.SystemColors.Control;
 			this.sbStatusBar.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.sbStatusBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.sbStatusBar.Location = new System.Drawing.Point(0, 623);
 			this.sbStatusBar.Name = "sbStatusBar";
 			this.sbStatusBar.ShowItemToolTips = true;
@@ -314,6 +326,7 @@ namespace SKS
 			// 
 			this.cmdSave.AllowDrop = true;
 			this.cmdSave.BackColor = System.Drawing.SystemColors.Control;
+			this.cmdSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cmdSave.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cmdSave.Location = new System.Drawing.Point(320, 584);
 			this.cmdSave.Name = "cmdSave";
@@ -329,6 +342,7 @@ namespace SKS
 			// 
 			this.cmdClose.AllowDrop = true;
 			this.cmdClose.BackColor = System.Drawing.SystemColors.Control;
+			this.cmdClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cmdClose.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cmdClose.Location = new System.Drawing.Point(424, 584);
 			this.cmdClose.Name = "cmdClose";
@@ -344,6 +358,7 @@ namespace SKS
 			// 
 			this.cmdAddProducts.AllowDrop = true;
 			this.cmdAddProducts.BackColor = System.Drawing.SystemColors.Control;
+			this.cmdAddProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cmdAddProducts.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cmdAddProducts.Location = new System.Drawing.Point(488, 264);
 			this.cmdAddProducts.Name = "cmdAddProducts";
@@ -369,6 +384,7 @@ namespace SKS
 			this.Frame1.Controls.Add(this.Label4);
 			this.Frame1.Controls.Add(this.Label2);
 			this.Frame1.Enabled = true;
+			this.Frame1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Frame1.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.Frame1.Location = new System.Drawing.Point(8, 8);
 			this.Frame1.Name = "Frame1";
@@ -385,6 +401,7 @@ namespace SKS
 			this.txtProviderName.BackColor = System.Drawing.SystemColors.Window;
 			this.txtProviderName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtProviderName.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtProviderName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtProviderName.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.txtProviderName.Location = new System.Drawing.Point(88, 16);
 			this.txtProviderName.MaxLength = 0;
@@ -401,6 +418,7 @@ namespace SKS
 			this.txtContactLastName.BackColor = System.Drawing.SystemColors.Window;
 			this.txtContactLastName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtContactLastName.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtContactLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtContactLastName.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.txtContactLastName.Location = new System.Drawing.Point(336, 48);
 			this.txtContactLastName.MaxLength = 0;
@@ -417,6 +435,7 @@ namespace SKS
 			this.txtContactName.BackColor = System.Drawing.SystemColors.Window;
 			this.txtContactName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtContactName.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtContactName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtContactName.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.txtContactName.Location = new System.Drawing.Point(88, 48);
 			this.txtContactName.MaxLength = 0;
@@ -430,6 +449,7 @@ namespace SKS
 			// 
 			this.cmdProviders.AllowDrop = true;
 			this.cmdProviders.BackColor = System.Drawing.SystemColors.Control;
+			this.cmdProviders.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cmdProviders.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cmdProviders.Location = new System.Drawing.Point(456, 16);
 			this.cmdProviders.Name = "cmdProviders";
@@ -447,6 +467,7 @@ namespace SKS
 			this.lvProviders.AllowDrop = true;
 			this.lvProviders.BackColor = System.Drawing.SystemColors.Window;
 			this.lvProviders.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lvProviders.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lvProviders.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.lvProviders.FullRowSelect = true;
 			this.lvProviders.GridLines = true;
@@ -507,6 +528,7 @@ namespace SKS
 			this.Label3.AllowDrop = true;
 			this.Label3.BackColor = System.Drawing.SystemColors.Control;
 			this.Label3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Label3.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.Label3.Location = new System.Drawing.Point(240, 48);
 			this.Label3.Name = "Label3";
@@ -520,6 +542,7 @@ namespace SKS
 			this.Label4.AllowDrop = true;
 			this.Label4.BackColor = System.Drawing.SystemColors.Control;
 			this.Label4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Label4.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.Label4.Location = new System.Drawing.Point(8, 16);
 			this.Label4.Name = "Label4";
@@ -533,6 +556,7 @@ namespace SKS
 			this.Label2.AllowDrop = true;
 			this.Label2.BackColor = System.Drawing.SystemColors.Control;
 			this.Label2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Label2.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.Label2.Location = new System.Drawing.Point(8, 48);
 			this.Label2.Name = "Label2";
@@ -550,6 +574,7 @@ namespace SKS
 			this.Frame2.Controls.Add(this.Label5);
 			this.Frame2.Controls.Add(this.Label1);
 			this.Frame2.Enabled = true;
+			this.Frame2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Frame2.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.Frame2.Location = new System.Drawing.Point(8, 184);
 			this.Frame2.Name = "Frame2";
@@ -566,6 +591,7 @@ namespace SKS
 			this.txtProviderContact.BackColor = System.Drawing.SystemColors.Menu;
 			this.txtProviderContact.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtProviderContact.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtProviderContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtProviderContact.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.txtProviderContact.Location = new System.Drawing.Point(288, 16);
 			this.txtProviderContact.MaxLength = 0;
@@ -583,6 +609,7 @@ namespace SKS
 			this.txtProviderCompany.BackColor = System.Drawing.SystemColors.Menu;
 			this.txtProviderCompany.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtProviderCompany.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtProviderCompany.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtProviderCompany.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.txtProviderCompany.Location = new System.Drawing.Point(72, 16);
 			this.txtProviderCompany.MaxLength = 0;
@@ -598,6 +625,7 @@ namespace SKS
 			this.Label5.AllowDrop = true;
 			this.Label5.BackColor = System.Drawing.SystemColors.Control;
 			this.Label5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Label5.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.Label5.Location = new System.Drawing.Point(8, 16);
 			this.Label5.Name = "Label5";
@@ -611,6 +639,7 @@ namespace SKS
 			this.Label1.AllowDrop = true;
 			this.Label1.BackColor = System.Drawing.SystemColors.Control;
 			this.Label1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Label1.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.Label1.Location = new System.Drawing.Point(232, 16);
 			this.Label1.Name = "Label1";
@@ -624,6 +653,7 @@ namespace SKS
 			this.Label7.AllowDrop = true;
 			this.Label7.BackColor = System.Drawing.SystemColors.Control;
 			this.Label7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.Label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Label7.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.Label7.Location = new System.Drawing.Point(8, 488);
 			this.Label7.Name = "Label7";
@@ -637,6 +667,7 @@ namespace SKS
 			this.Label12.AllowDrop = true;
 			this.Label12.BackColor = System.Drawing.SystemColors.Control;
 			this.Label12.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.Label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Label12.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.Label12.Location = new System.Drawing.Point(8, 536);
 			this.Label12.Name = "Label12";
@@ -650,6 +681,7 @@ namespace SKS
 			this.Label11.AllowDrop = true;
 			this.Label11.BackColor = System.Drawing.SystemColors.Control;
 			this.Label11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.Label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Label11.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.Label11.Location = new System.Drawing.Point(8, 560);
 			this.Label11.Name = "Label11";
@@ -663,6 +695,7 @@ namespace SKS
 			this.Label10.AllowDrop = true;
 			this.Label10.BackColor = System.Drawing.SystemColors.Control;
 			this.Label10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.Label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Label10.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.Label10.Location = new System.Drawing.Point(272, 512);
 			this.Label10.Name = "Label10";
@@ -676,6 +709,7 @@ namespace SKS
 			this.Label9.AllowDrop = true;
 			this.Label9.BackColor = System.Drawing.SystemColors.Control;
 			this.Label9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Label9.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.Label9.Location = new System.Drawing.Point(272, 536);
 			this.Label9.Name = "Label9";
@@ -689,6 +723,7 @@ namespace SKS
 			this.Label8.AllowDrop = true;
 			this.Label8.BackColor = System.Drawing.SystemColors.Control;
 			this.Label8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.Label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Label8.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.Label8.Location = new System.Drawing.Point(8, 512);
 			this.Label8.Name = "Label8";
@@ -702,6 +737,7 @@ namespace SKS
 			this.Label6.AllowDrop = true;
 			this.Label6.BackColor = System.Drawing.SystemColors.Control;
 			this.Label6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.Label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Label6.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.Label6.Location = new System.Drawing.Point(8, 248);
 			this.Label6.Name = "Label6";
@@ -739,6 +775,7 @@ namespace SKS
 			this.Controls.Add(this.Label9);
 			this.Controls.Add(this.Label8);
 			this.Controls.Add(this.Label6);
+			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Location = new System.Drawing.Point(3, 25);
 			this.MaximizeBox = false;
@@ -750,6 +787,7 @@ namespace SKS
 			this.Activated += new System.EventHandler(this.frmOrderReception_Activated);
 			this.Closed += new System.EventHandler(this.Form_Closed);
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_FormClosing);
+			((System.ComponentModel.ISupportInitialize) this.fgProducts).EndInit();
 			this.listViewHelper1.SetItemClickMethod(this.lvProviders, "lvProviders_ItemClick");
 			this.listViewHelper1.SetCorrectEventsBehavior(this.lvProviders, true);
 			((System.ComponentModel.ISupportInitialize) this.listViewHelper1).EndInit();

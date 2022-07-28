@@ -32,7 +32,7 @@ namespace SKS
 			frmSearch theInstance = new frmSearch();
 			return theInstance;
 		}
-		private string[] visualControls = new string[]{"components", "ToolTipMain", "cmdClose", "cmdSearch", "ctrlLiner1", "cboSrchBy", "txtSrchStr", "Label20", "Label19", "Image3", "Label1", "lblSrchBy"};
+		private string[] visualControls = new string[]{"components", "ToolTipMain", "cmdClose", "cmdSearch", "ctrlLiner1", "cboSrchBy", "txtSrchStr", "Label20", "Label19", "Image3", "Label1", "lblSrchBy", "commandButtonHelper1"};
 		//Required by the Windows Form Designer
 		private System.ComponentModel.IContainer components;
 		public System.Windows.Forms.ToolTip ToolTipMain;
@@ -46,6 +46,7 @@ namespace SKS
 		public System.Windows.Forms.PictureBox Image3;
 		public System.Windows.Forms.Label Label1;
 		public System.Windows.Forms.Label lblSrchBy;
+		public UpgradeHelpers.Gui.CommandButtonHelper commandButtonHelper1;
 		//NOTE: The following procedure is required by the Windows Form Designer
 		//It can be modified using the Windows Form Designer.
 		//Do not modify it using the code editor.
@@ -66,11 +67,13 @@ namespace SKS
 			this.Label1 = new System.Windows.Forms.Label();
 			this.lblSrchBy = new System.Windows.Forms.Label();
 			this.SuspendLayout();
+			this.commandButtonHelper1 = new UpgradeHelpers.Gui.CommandButtonHelper(this.components);
 			// 
 			// cmdClose
 			// 
 			this.cmdClose.AllowDrop = true;
 			this.cmdClose.BackColor = System.Drawing.SystemColors.Control;
+			this.cmdClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cmdClose.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cmdClose.Location = new System.Drawing.Point(272, 104);
 			this.cmdClose.Name = "cmdClose";
@@ -86,6 +89,7 @@ namespace SKS
 			// 
 			this.cmdSearch.AllowDrop = true;
 			this.cmdSearch.BackColor = System.Drawing.SystemColors.Control;
+			this.cmdSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cmdSearch.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cmdSearch.Location = new System.Drawing.Point(184, 104);
 			this.cmdSearch.Name = "cmdSearch";
@@ -105,6 +109,7 @@ namespace SKS
 			this.ctrlLiner1.CausesValidation = true;
 			this.ctrlLiner1.Dock = System.Windows.Forms.DockStyle.None;
 			this.ctrlLiner1.Enabled = true;
+			this.ctrlLiner1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.ctrlLiner1.Location = new System.Drawing.Point(0, 56);
 			this.ctrlLiner1.Name = "ctrlLiner1";
 			this.ctrlLiner1.Size = new System.Drawing.Size(385, 2);
@@ -120,6 +125,7 @@ namespace SKS
 			this.cboSrchBy.CausesValidation = true;
 			this.cboSrchBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cboSrchBy.Enabled = true;
+			this.cboSrchBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cboSrchBy.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.cboSrchBy.IntegralHeight = true;
 			this.cboSrchBy.Location = new System.Drawing.Point(208, 144);
@@ -139,6 +145,7 @@ namespace SKS
 			this.txtSrchStr.BackColor = System.Drawing.SystemColors.Window;
 			this.txtSrchStr.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtSrchStr.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtSrchStr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtSrchStr.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.txtSrchStr.Location = new System.Drawing.Point(136, 72);
 			this.txtSrchStr.MaxLength = 0;
@@ -153,6 +160,7 @@ namespace SKS
 			this.Label20.AutoSize = true;
 			this.Label20.BackColor = System.Drawing.Color.Transparent;
 			this.Label20.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.Label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Label20.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
 			this.Label20.Location = new System.Drawing.Point(49, 32);
 			this.Label20.Name = "Label20";
@@ -182,6 +190,7 @@ namespace SKS
 			this.Image3.AllowDrop = true;
 			this.Image3.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.Image3.Enabled = true;
+			this.Image3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Image3.Image = (System.Drawing.Image) resources.GetObject("Image3.Image");
 			this.Image3.Location = new System.Drawing.Point(8, 8);
 			this.Image3.Name = "Image3";
@@ -238,6 +247,7 @@ namespace SKS
 			this.Controls.Add(this.Image3);
 			this.Controls.Add(this.Label1);
 			this.Controls.Add(this.lblSrchBy);
+			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.Icon = (System.Drawing.Icon) resources.GetObject("frmSearch.Icon");
 			this.Location = new System.Drawing.Point(486, 322);

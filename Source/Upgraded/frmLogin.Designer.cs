@@ -32,7 +32,7 @@ namespace SKS
 			frmLogin theInstance = new frmLogin();
 			return theInstance;
 		}
-		private string[] visualControls = new string[]{"components", "ToolTipMain", "txtUserName", "cmdCancel", "txtPassword", "cmdOK", "_lblLabels_0", "_lblLabels_1", "lblLabels"};
+		private string[] visualControls = new string[]{"components", "ToolTipMain", "txtUserName", "cmdCancel", "txtPassword", "cmdOK", "_lblLabels_0", "_lblLabels_1", "lblLabels", "commandButtonHelper1"};
 		//Required by the Windows Form Designer
 		private System.ComponentModel.IContainer components;
 		public System.Windows.Forms.ToolTip ToolTipMain;
@@ -43,6 +43,7 @@ namespace SKS
 		private System.Windows.Forms.Label _lblLabels_0;
 		private System.Windows.Forms.Label _lblLabels_1;
 		public System.Windows.Forms.Label[] lblLabels = new System.Windows.Forms.Label[2];
+		public UpgradeHelpers.Gui.CommandButtonHelper commandButtonHelper1;
 		//NOTE: The following procedure is required by the Windows Form Designer
 		//It can be modified using the Windows Form Designer.
 		//Do not modify it using the code editor.
@@ -59,6 +60,7 @@ namespace SKS
 			this._lblLabels_0 = new System.Windows.Forms.Label();
 			this._lblLabels_1 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
+			this.commandButtonHelper1 = new UpgradeHelpers.Gui.CommandButtonHelper(this.components);
 			// 
 			// txtUserName
 			// 
@@ -67,6 +69,7 @@ namespace SKS
 			this.txtUserName.BackColor = System.Drawing.SystemColors.Window;
 			this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtUserName.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.txtUserName.Location = new System.Drawing.Point(118, 25);
 			this.txtUserName.MaxLength = 0;
@@ -79,6 +82,7 @@ namespace SKS
 			// 
 			this.cmdCancel.AllowDrop = true;
 			this.cmdCancel.BackColor = System.Drawing.SystemColors.Control;
+			this.cmdCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cmdCancel.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cmdCancel.Location = new System.Drawing.Point(196, 100);
 			this.cmdCancel.Name = "cmdCancel";
@@ -97,6 +101,7 @@ namespace SKS
 			this.txtPassword.BackColor = System.Drawing.SystemColors.Window;
 			this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtPassword.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.txtPassword.ImeMode = System.Windows.Forms.ImeMode.Disable;
 			this.txtPassword.Location = new System.Drawing.Point(118, 51);
@@ -111,6 +116,7 @@ namespace SKS
 			// 
 			this.cmdOK.AllowDrop = true;
 			this.cmdOK.BackColor = System.Drawing.SystemColors.Control;
+			this.cmdOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cmdOK.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cmdOK.Location = new System.Drawing.Point(89, 100);
 			this.cmdOK.Name = "cmdOK";
@@ -127,6 +133,7 @@ namespace SKS
 			this._lblLabels_0.AllowDrop = true;
 			this._lblLabels_0.BackColor = System.Drawing.SystemColors.Control;
 			this._lblLabels_0.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this._lblLabels_0.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this._lblLabels_0.ForeColor = System.Drawing.SystemColors.ControlText;
 			this._lblLabels_0.Location = new System.Drawing.Point(39, 26);
 			this._lblLabels_0.Name = "_lblLabels_0";
@@ -140,6 +147,7 @@ namespace SKS
 			this._lblLabels_1.AllowDrop = true;
 			this._lblLabels_1.BackColor = System.Drawing.SystemColors.Control;
 			this._lblLabels_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this._lblLabels_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this._lblLabels_1.ForeColor = System.Drawing.SystemColors.ControlText;
 			this._lblLabels_1.Location = new System.Drawing.Point(39, 52);
 			this._lblLabels_1.Name = "_lblLabels_1";
@@ -163,6 +171,7 @@ namespace SKS
 			this.Controls.Add(this.cmdOK);
 			this.Controls.Add(this._lblLabels_0);
 			this.Controls.Add(this._lblLabels_1);
+			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Icon = (System.Drawing.Icon) resources.GetObject("frmLogin.Icon");
 			this.Location = new System.Drawing.Point(189, 232);

@@ -84,7 +84,7 @@ namespace SKS
 			}
 			catch (System.Exception excep)
 			{
-				//UPGRADE_WARNING: (2081) Err.Number has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2081
+				//UPGRADE_WARNING: (2081) Err.Number has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2081
 				MessageBox.Show("An error has occurred adding the data. Error: (" + Information.Err().Number.ToString() + ") " + excep.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 
@@ -121,13 +121,13 @@ namespace SKS
 			}
 			catch (System.Exception excep)
 			{
-				//UPGRADE_WARNING: (2081) Err.Number has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2081
+				//UPGRADE_WARNING: (2081) Err.Number has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2081
 				MessageBox.Show("An error has occurred adding the data. Error: (" + Information.Err().Number.ToString() + ") " + excep.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 
 		}
 
-		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 		private void Form_Load()
 		{
 			// LoadData
@@ -161,7 +161,7 @@ namespace SKS
 			txtOrderID.Text = OrderId.ToString();
 			txtReceived.Text = Convert.ToString(modConnection.rs["OrderDate"]);
 			txtReceivedBy.Text = Convert.ToString(modConnection.rs["Fullname"]);
-			//UPGRADE_WARNING: (1049) Use of Null/IsNull() detected. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1049
+			//UPGRADE_WARNING: (1049) Use of Null/IsNull() detected. More Information: https://docs.mobilize.net/vbuc/ewis#1049
 			if (!System.DBNull.Value.Equals(modConnection.rs["Notes"]))
 			{
 				txtNotes.Text = Convert.ToString(modConnection.rs["Notes"]);
@@ -175,12 +175,12 @@ namespace SKS
 			txtStatus.Text = Convert.ToString(modConnection.rs["Status"]);
 			txtRequiredBy.Text = Convert.ToString(modConnection.rs["RequiredByDate"]);
 			txtPromisedBy.Text = Convert.ToString(modConnection.rs["PromisedByDate"]);
-			//UPGRADE_WARNING: (1049) Use of Null/IsNull() detected. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1049
+			//UPGRADE_WARNING: (1049) Use of Null/IsNull() detected. More Information: https://docs.mobilize.net/vbuc/ewis#1049
 			if (!System.DBNull.Value.Equals(modConnection.rs["ChangedDate"]))
 			{
 				txtChanged.Text = Convert.ToString(modConnection.rs["ChangedDate"]);
 			}
-			//UPGRADE_WARNING: (1049) Use of Null/IsNull() detected. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1049
+			//UPGRADE_WARNING: (1049) Use of Null/IsNull() detected. More Information: https://docs.mobilize.net/vbuc/ewis#1049
 			if (!System.DBNull.Value.Equals(modConnection.rs["ChangedBy"]))
 			{
 				txtChangedBy.Text = Convert.ToString(modConnection.rs["ChangedBy"]);
@@ -260,7 +260,7 @@ namespace SKS
 				int tempForEndVar = modConnection.rs.FieldsMetadata.Count;
 				for (int j = 1; j <= tempForEndVar; j++)
 				{
-					//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+					//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 					if (!(modConnection.rs.GetField(i) is null))
 					{
 						fgDetails[i, j - 1].Value = Convert.ToString(modConnection.rs[j - 1]);

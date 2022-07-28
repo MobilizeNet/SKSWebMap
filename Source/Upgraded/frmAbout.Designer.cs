@@ -33,7 +33,7 @@ namespace SKS
 			theInstance.Form_Load();
 			return theInstance;
 		}
-		private string[] visualControls = new string[]{"components", "ToolTipMain", "picIcon", "cmdOK", "_Line1_1", "lblDescription", "lblTitle", "_Line1_0", "lblVersion", "lblDisclaimer", "Line1"};
+		private string[] visualControls = new string[]{"components", "ToolTipMain", "picIcon", "cmdOK", "_Line1_1", "lblDescription", "lblTitle", "_Line1_0", "lblVersion", "lblDisclaimer", "Line1", "commandButtonHelper1"};
 		//Required by the Windows Form Designer
 		private System.ComponentModel.IContainer components;
 		public System.Windows.Forms.ToolTip ToolTipMain;
@@ -46,6 +46,7 @@ namespace SKS
 		public System.Windows.Forms.Label lblVersion;
 		public System.Windows.Forms.Label lblDisclaimer;
 		public System.Windows.Forms.Label[] Line1 = new System.Windows.Forms.Label[2];
+		public UpgradeHelpers.Gui.CommandButtonHelper commandButtonHelper1;
 		//NOTE: The following procedure is required by the Windows Form Designer
 		//It can be modified using the Windows Form Designer.
 		//Do not modify it using the code editor.
@@ -64,6 +65,7 @@ namespace SKS
 			this.lblVersion = new System.Windows.Forms.Label();
 			this.lblDisclaimer = new System.Windows.Forms.Label();
 			this.SuspendLayout();
+			this.commandButtonHelper1 = new UpgradeHelpers.Gui.CommandButtonHelper(this.components);
 			// 
 			// picIcon
 			// 
@@ -73,6 +75,7 @@ namespace SKS
 			this.picIcon.CausesValidation = true;
 			this.picIcon.Dock = System.Windows.Forms.DockStyle.None;
 			this.picIcon.Enabled = true;
+			this.picIcon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.picIcon.Image = (System.Drawing.Image) resources.GetObject("picIcon.Image");
 			this.picIcon.Location = new System.Drawing.Point(16, 16);
 			this.picIcon.Name = "picIcon";
@@ -86,6 +89,7 @@ namespace SKS
 			// 
 			this.cmdOK.AllowDrop = true;
 			this.cmdOK.BackColor = System.Drawing.SystemColors.Control;
+			this.cmdOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cmdOK.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cmdOK.Location = new System.Drawing.Point(272, 208);
 			this.cmdOK.Name = "cmdOK";
@@ -103,6 +107,7 @@ namespace SKS
 			this._Line1_1.BackColor = System.Drawing.Color.Gray;
 			this._Line1_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this._Line1_1.Enabled = false;
+			this._Line1_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this._Line1_1.Location = new System.Drawing.Point(5, 147);
 			this._Line1_1.Name = "_Line1_1";
 			this._Line1_1.Size = new System.Drawing.Size(294, 1);
@@ -114,6 +119,7 @@ namespace SKS
 			this.lblDescription.AutoSize = true;
 			this.lblDescription.BackColor = System.Drawing.SystemColors.Control;
 			this.lblDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblDescription.ForeColor = System.Drawing.Color.Black;
 			this.lblDescription.Location = new System.Drawing.Point(164, 80);
 			this.lblDescription.Name = "lblDescription";
@@ -142,6 +148,7 @@ namespace SKS
 			this._Line1_0.AllowDrop = true;
 			this._Line1_0.BackColor = System.Drawing.Color.White;
 			this._Line1_0.Enabled = false;
+			this._Line1_0.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this._Line1_0.Location = new System.Drawing.Point(6, 148);
 			this._Line1_0.Name = "_Line1_0";
 			this._Line1_0.Size = new System.Drawing.Size(293, 1);
@@ -153,6 +160,7 @@ namespace SKS
 			this.lblVersion.AutoSize = true;
 			this.lblVersion.BackColor = System.Drawing.SystemColors.Control;
 			this.lblVersion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lblVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblVersion.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.lblVersion.Location = new System.Drawing.Point(163, 56);
 			this.lblVersion.Name = "lblVersion";
@@ -167,6 +175,7 @@ namespace SKS
 			this.lblDisclaimer.AutoSize = true;
 			this.lblDisclaimer.BackColor = System.Drawing.SystemColors.Control;
 			this.lblDisclaimer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lblDisclaimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblDisclaimer.ForeColor = System.Drawing.Color.Black;
 			this.lblDisclaimer.Location = new System.Drawing.Point(17, 175);
 			this.lblDisclaimer.Name = "lblDisclaimer";
@@ -192,6 +201,7 @@ namespace SKS
 			this.Controls.Add(this._Line1_0);
 			this.Controls.Add(this.lblVersion);
 			this.Controls.Add(this.lblDisclaimer);
+			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.Location = new System.Drawing.Point(156, 129);
 			this.MaximizeBox = false;

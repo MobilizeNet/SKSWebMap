@@ -22,7 +22,7 @@ namespace SKS
 		public static string msg = "";
 		public static string ImgName = "", ImgSrc = "";
 
-		//UPGRADE_WARNING: (1047) Application will terminate when Sub Main() finishes. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1047
+		//UPGRADE_WARNING: (1047) Application will terminate when Sub Main() finishes. More Information: https://docs.mobilize.net/vbuc/ewis#1047
 		[STAThread]
 		public static void Main()
 		{
@@ -43,7 +43,7 @@ namespace SKS
 			StatusStrip sb = null;
 			sb = null;
 			((ToolStripStatusLabel) frmMain.DefInstance.sbStatusBar.Items[0]).Text = message;
-			if (!(frm is null))
+			if (frm != null)
 			{
 				if (frm == frmAdjustStockManual.DefInstance)
 				{
@@ -77,9 +77,9 @@ namespace SKS
 				{ 
 					sb = frmRequestApproval.DefInstance.sbStatusBar;
 				}
-				if (!(sb is null))
+				if (sb != null)
 				{
-					if (!(((ToolStripStatusLabel) sb.Items[0]) is null))
+					if (((ToolStripStatusLabel) sb.Items[0]) != null)
 					{
 						((ToolStripStatusLabel) sb.Items[0]).Text = message;
 					}

@@ -44,7 +44,7 @@ namespace SKS
 			}
 		}
 
-		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 		private void MDIForm_Load()
 		{
 			frmSplash.DefInstance.ShowDialog();
@@ -113,7 +113,7 @@ namespace SKS
 		{
 			frmUsersManage.DefInstance.Show();
 		}
-		//UPGRADE_NOTE: (7001) The following declaration (Form_Unload) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
+		//UPGRADE_NOTE: (7001) The following declaration (Form_Unload) seems to be dead code More Information: https://docs.mobilize.net/vbuc/ewis#7001
 		//private void Form_Unload(int Cancel)
 		//{
 		//}

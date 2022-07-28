@@ -59,7 +59,7 @@ namespace SKS
 
 		public void Search(string Table, string fieldToSearch, string itemToSearch)
 		{
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(itemToSearch))
 			{
 				Label20.Text = "Search for a " + itemToSearch;
@@ -82,7 +82,7 @@ namespace SKS
 			}
 			string txtToSearch = "";
 
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(txtSrchStr.Text.Trim()))
 			{
 				txtToSearch = txtSrchStr.Text;

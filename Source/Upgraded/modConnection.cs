@@ -63,7 +63,7 @@ namespace SKS
 		internal static void OpenConnection()
 		{
 			CurrentConnection = UpgradeHelpers.DB.AdoFactoryManager.GetFactory().CreateConnection();
-			//UPGRADE_TODO: (7010) The connection string must be verified to fullfill the .NET data provider connection string requirements. More Information: https://www.mobilize.net/vbtonet/ewis/ewi7010
+			//UPGRADE_TODO: (7010) The connection string must be verified to fullfill the .NET data provider connection string requirements. More Information: https://docs.mobilize.net/vbuc/ewis#7010
 			CurrentConnection.ConnectionString = modMain.ConnectionString;
 			CurrentConnection.Open();
 		}

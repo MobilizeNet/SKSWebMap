@@ -77,7 +77,7 @@ namespace SKS
 			{
 				modFunctions.LoadCombo("Categories", cmbCategory, "CategoryName", "CategoryID");
 			}
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (String.IsNullOrEmpty(txtCategory.Text))
 			{
 				cmbCategory.SelectedIndex = -1;
@@ -96,7 +96,7 @@ namespace SKS
 			cmbCategory.SelectedIndex = modMain.i;
 		}
 
-		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 		private void Form_Load()
 		{
 			txtCategory.Height = 0;

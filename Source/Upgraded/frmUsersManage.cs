@@ -220,7 +220,7 @@ namespace SKS
 			this.Close();
 		}
 
-		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 		private void Form_Load()
 		{
 			modConnection.ExecuteSql("Select * from Levels");

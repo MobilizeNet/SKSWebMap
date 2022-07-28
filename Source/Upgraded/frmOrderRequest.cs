@@ -76,7 +76,7 @@ namespace SKS
 			}
 		}
 
-		//UPGRADE_NOTE: (7001) The following declaration (txtName_Change) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
+		//UPGRADE_NOTE: (7001) The following declaration (txtName_Change) seems to be dead code More Information: https://docs.mobilize.net/vbuc/ewis#7001
 		//private void txtName_Change()
 		//{
 			//DoSearchCustomer();
@@ -90,30 +90,30 @@ namespace SKS
 			{
 				filter = "CustomerID = " + Id;
 			}
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(txtCompanyName.Text))
 			{
-				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 				if (!String.IsNullOrEmpty(filter))
 				{
 					filter = filter + " AND ";
 				}
 				filter = "CompanyName LIKE '%" + txtCompanyName.Text + "%'";
 			}
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(txtContactName.Text))
 			{
-				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 				if (!String.IsNullOrEmpty(filter))
 				{
 					filter = filter + " AND ";
 				}
 				filter = filter + "ContactFirstName LIKE '%" + txtContactName.Text + "%'";
 			}
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(txtContactLastName.Text))
 			{
-				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 				if (!String.IsNullOrEmpty(filter))
 				{
 					filter = filter + " AND ";
@@ -121,7 +121,7 @@ namespace SKS
 				filter = filter + "ContactLastName LIKE '%" + txtContactLastName.Text + "%'";
 			}
 
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(filter))
 			{
 				filter = "Where " + filter;
@@ -141,7 +141,7 @@ namespace SKS
 					int tempForEndVar = (modConnection.rs.FieldsMetadata.Count - 1);
 					for (modMain.i = 1; modMain.i <= tempForEndVar; modMain.i++)
 					{
-						//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+						//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 						if (!(modConnection.rs.GetField(modMain.i) is null))
 						{
 							ListViewHelper.GetListViewSubItem(x, modMain.i).Text = Convert.ToString(modConnection.rs[modMain.i]);
@@ -184,10 +184,10 @@ namespace SKS
 				modConnection.rs["EmployeeId"] = modMain.UserId;
 				System.DateTime TempDate = DateTime.FromOADate(0);
 				modConnection.rs["OrderDate"] = (DateTime.TryParse(DateTimeHelper.ToString(DateTime.Today), out TempDate)) ? TempDate.ToString("MM/dd/yyyy") : DateTimeHelper.ToString(DateTime.Today);
-				//UPGRADE_WARNING: (1068) dtRequired.value of type Variant is being forced to string. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1068
+				//UPGRADE_WARNING: (1068) dtRequired.value of type Variant is being forced to string. More Information: https://docs.mobilize.net/vbuc/ewis#1068
 				System.DateTime TempDate2 = DateTime.FromOADate(0);
 				modConnection.rs["RequiredByDate"] = (DateTime.TryParse(Convert.ToString(dtRequired.GetValue()), out TempDate2)) ? TempDate2.ToString("MM/dd/yyyy") : Convert.ToString(dtRequired.GetValue());
-				//UPGRADE_WARNING: (1068) dtPromised.value of type Variant is being forced to string. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1068
+				//UPGRADE_WARNING: (1068) dtPromised.value of type Variant is being forced to string. More Information: https://docs.mobilize.net/vbuc/ewis#1068
 				System.DateTime TempDate3 = DateTime.FromOADate(0);
 				modConnection.rs["PromisedByDate"] = (DateTime.TryParse(Convert.ToString(dtPromised.GetValue()), out TempDate3)) ? TempDate3.ToString("MM/dd/yyyy") : Convert.ToString(dtPromised.GetValue());
 				modConnection.rs["FreightCharge"] = currentFreightCharge;
@@ -225,7 +225,7 @@ namespace SKS
 			}
 			catch (System.Exception excep)
 			{
-				//UPGRADE_WARNING: (2081) Err.Number has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2081
+				//UPGRADE_WARNING: (2081) Err.Number has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2081
 				MessageBox.Show("An error has occurred adding the data. Error: (" + Information.Err().Number.ToString() + ") " + excep.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
@@ -267,7 +267,7 @@ namespace SKS
 			modFunctions.SelectAll(txtEntry);
 		}
 
-		//UPGRADE_WARNING: (2050) MSFlexGridLib.MSFlexGrid Event fgProducts.EnterCell was not upgraded. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2050
+		//UPGRADE_WARNING: (2050) MSFlexGridLib.MSFlexGrid Event fgProducts.EnterCell was not upgraded. More Information: https://docs.mobilize.net/vbuc/ewis#2050
 		private void fgProducts_EnterCell()
 		{
 			SaveEdits();
@@ -307,7 +307,7 @@ namespace SKS
 			}
 		}
 
-		//UPGRADE_NOTE: (7001) The following declaration (EditKeyCode) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
+		//UPGRADE_NOTE: (7001) The following declaration (EditKeyCode) seems to be dead code More Information: https://docs.mobilize.net/vbuc/ewis#7001
 		//private void EditKeyCode(UpgradeHelpers.DataGridViewFlex grid, ref TextBox txtBox, int KeyCode, int Shift)
 		//{
 			//switch(KeyCode)
@@ -426,7 +426,7 @@ namespace SKS
 			}
 		}
 
-		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 		private void Form_Load()
 		{
 			editingData = false;
@@ -449,7 +449,7 @@ namespace SKS
 			}
 
 			ListViewItem withVar = null;
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!(lvCustomers.FocusedItem is null))
 			{
 				withVar = lvCustomers.FocusedItem;
@@ -534,7 +534,7 @@ namespace SKS
 			}
 		}
 
-		//UPGRADE_NOTE: (7001) The following declaration (lvProducts_ItemCheck) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
+		//UPGRADE_NOTE: (7001) The following declaration (lvProducts_ItemCheck) seems to be dead code More Information: https://docs.mobilize.net/vbuc/ewis#7001
 		//private void lvProducts_ItemCheck(ListViewItem Item)
 		//{
 			//if (Item.Checked)

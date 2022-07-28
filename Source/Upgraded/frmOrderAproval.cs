@@ -100,7 +100,7 @@ namespace SKS
 			cmdInfo_Click(cmdInfo, new EventArgs());
 		}
 
-		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+		//UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 		private void Form_Load()
 		{
 			InitGrid();
@@ -131,7 +131,7 @@ namespace SKS
 			DoSearchReception();
 		}
 
-		//UPGRADE_NOTE: (7001) The following declaration (txtName_Change) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
+		//UPGRADE_NOTE: (7001) The following declaration (txtName_Change) seems to be dead code More Information: https://docs.mobilize.net/vbuc/ewis#7001
 		//private void txtName_Change()
 		//{
 			//DoSearchReception();
@@ -158,31 +158,31 @@ namespace SKS
 			{
 				filter = "o.ProviderID = " + Id.ToString();
 			}
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(txtProviderName.Text))
 			{
 				modFunctions.AppendAND(ref filter);
 				filter = "p.ProviderName LIKE '%" + txtProviderName.Text + "%'";
 			}
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(txtContactName.Text))
 			{
 				modFunctions.AppendAND(ref filter);
 				filter = filter + "p.ContactFirstName LIKE '%" + txtContactName.Text + "%'";
 			}
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(txtContactLastName.Text))
 			{
 				modFunctions.AppendAND(ref filter);
 				filter = filter + "p.ContactLastName LIKE '%" + txtContactLastName.Text + "%'";
 			}
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(txtOrderID.Text))
 			{
 				modFunctions.AppendAND(ref filter);
 				filter = filter + "o.OrderID = " + txtOrderID.Text;
 			}
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(txtProductID.Text))
 			{
 				modFunctions.AppendAND(ref filter);
@@ -191,13 +191,13 @@ namespace SKS
 			if (chkFrom.CheckState == CheckState.Checked)
 			{
 				modFunctions.AppendAND(ref filter);
-				//UPGRADE_WARNING: (1068) dtFrom.value of type Variant is being forced to DateTime. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1068
+				//UPGRADE_WARNING: (1068) dtFrom.value of type Variant is being forced to DateTime. More Information: https://docs.mobilize.net/vbuc/ewis#1068
 				filter = filter + "o.OrderDate >= #" + Convert.ToDateTime(dtFrom.GetValue()).ToString("MM/dd/yyyy") + "#";
 			}
 			if (chkTo.CheckState == CheckState.Checked)
 			{
 				modFunctions.AppendAND(ref filter);
-				//UPGRADE_WARNING: (1068) dtTo.value of type Variant is being forced to DateTime. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1068
+				//UPGRADE_WARNING: (1068) dtTo.value of type Variant is being forced to DateTime. More Information: https://docs.mobilize.net/vbuc/ewis#1068
 				filter = filter + "o.OrderDate <= #" + Convert.ToDateTime(dtTo.GetValue()).ToString("MM/dd/yyyy") + "#";
 			}
 			if (cmbStatus.SelectedIndex != -1 && cmbStatus.Text != "All")
@@ -207,7 +207,7 @@ namespace SKS
 			}
 
 			string where = " Where o.OrderID = d.OrderID And p.ProviderID = o.ProviderID And u.Username = o.ReceivedBy ";
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(filter))
 			{
 				filter = where + " AND " + filter;
@@ -239,7 +239,7 @@ namespace SKS
 				int tempForEndVar = modConnection.rs.FieldsMetadata.Count - 1;
 				for (int j = 0; j <= tempForEndVar; j++)
 				{
-					if (!(modConnection.rs.GetField(j) is null))
+					if (modConnection.rs.GetField(j) != null)
 					{
 						fgOrders[i, j].Value = Convert.ToString(modConnection.rs[j]);
 					}
@@ -260,7 +260,7 @@ namespace SKS
 			fgOrders.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 		}
 
-		//UPGRADE_NOTE: (7001) The following declaration (MakeTextBoxVisible) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
+		//UPGRADE_NOTE: (7001) The following declaration (MakeTextBoxVisible) seems to be dead code More Information: https://docs.mobilize.net/vbuc/ewis#7001
 		//private void MakeTextBoxVisible(TextBox txtBox, UpgradeHelpers.DataGridViewFlex grid)
 		//{
 			//txtBox.Text = Convert.ToString(grid[grid.CurrentRowIndex, grid.CurrentColumnIndex].Value);

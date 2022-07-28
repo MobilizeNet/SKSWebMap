@@ -149,7 +149,7 @@ namespace SKS
 			this.Close();
 			return;
 
-			//UPGRADE_WARNING: (2081) Err.Number has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2081
+			//UPGRADE_WARNING: (2081) Err.Number has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2081
 			MessageBox.Show("An error has occurred adding the data. Error: (" + Information.Err().Number.ToString() + ") " + Information.Err().Description, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 		}
 
@@ -236,7 +236,7 @@ namespace SKS
 					x = lvProductsBy.Items.Add(productCode);
 					for (modMain.i = 1; modMain.i <= 2; modMain.i++)
 					{
-						//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+						//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 						if (!(modConnection.rs.GetField(modMain.i) is null))
 						{
 							ListViewHelper.GetListViewSubItem(x, modMain.i).Text = Convert.ToString(modConnection.rs[modMain.i]);
@@ -251,22 +251,22 @@ namespace SKS
 		private void DoSearchProduct()
 		{
 			string filter = "";
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(txtCode.Text))
 			{
 				filter = "ProductId LIKE '%" + txtCode.Text + "%'";
 			}
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(txtName.Text))
 			{
-				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 				if (!String.IsNullOrEmpty(filter))
 				{
 					filter = filter + " AND ";
 				}
 				filter = filter + "ProductName LIKE '%" + txtName.Text + "%'";
 			}
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(filter))
 			{
 				filter = "Where " + filter;
@@ -283,7 +283,7 @@ namespace SKS
 					int tempForEndVar = (modConnection.rs.FieldsMetadata.Count - 1);
 					for (modMain.i = 1; modMain.i <= tempForEndVar; modMain.i++)
 					{
-						//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+						//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 						if (!(modConnection.rs.GetField(modMain.i) is null))
 						{
 							ListViewHelper.GetListViewSubItem(x, modMain.i).Text = Convert.ToString(modConnection.rs[modMain.i]);
@@ -305,7 +305,7 @@ namespace SKS
 			int i = 0;
 			bool found = false;
 			ListViewItem x = null;
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!(lvProducts.FocusedItem is null))
 			{
 				y = lvProducts.FocusedItem;
@@ -354,7 +354,7 @@ namespace SKS
 			}
 		}
 
-		//UPGRADE_NOTE: (7001) The following declaration (ClearFields) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
+		//UPGRADE_NOTE: (7001) The following declaration (ClearFields) seems to be dead code More Information: https://docs.mobilize.net/vbuc/ewis#7001
 		//private void ClearFields()
 		//{
 			//codeGeneratedChange = true;

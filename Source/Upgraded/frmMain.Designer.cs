@@ -269,6 +269,7 @@ namespace SKS
 			this.sbStatusBar.AllowDrop = true;
 			this.sbStatusBar.BackColor = System.Drawing.SystemColors.Control;
 			this.sbStatusBar.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.sbStatusBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.sbStatusBar.Location = new System.Drawing.Point(0, 683);
 			this.sbStatusBar.Name = "sbStatusBar";
 			this.sbStatusBar.ShowItemToolTips = true;
@@ -321,6 +322,7 @@ namespace SKS
 			this.Controls.Add(this.sbStatusBar);
 			this.Controls.Add(MainMenu1);
 			this.Enabled = true;
+			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.IsMdiContainer = true;
 			this.Location = new System.Drawing.Point(11, 54);
 			this.Name = "frmMain";

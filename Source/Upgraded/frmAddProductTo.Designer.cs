@@ -32,7 +32,7 @@ namespace SKS
 			frmAddProductTo theInstance = new frmAddProductTo();
 			return theInstance;
 		}
-		private string[] visualControls = new string[]{"components", "ToolTipMain", "chkAll", "cmdRemove", "sbStatusBar_Panels_Panel1", "sbStatusBar", "cmdClose", "cmdSave", "cmdProducts", "txtName", "txtCode", "lvProducts_ColumnHeader_1_", "lvProducts_ColumnHeader_2_", "lvProducts_ColumnHeader_3_", "lvProducts_ColumnHeader_4_", "lvProducts_ColumnHeader_5_", "lvProducts_ColumnHeader_6_", "lvProducts_ColumnHeader_7_", "lvProducts", "Label4", "Label5", "Frame1", "lvProductsBy_ColumnHeader_1_", "lvProductsBy_ColumnHeader_2_", "lvProductsBy_ColumnHeader_3_", "lvProductsBy_ColumnHeader_4_", "lvProductsBy", "lblProductsRelated", "listViewHelper1"};
+		private string[] visualControls = new string[]{"components", "ToolTipMain", "chkAll", "cmdRemove", "sbStatusBar_Panels_Panel1", "sbStatusBar", "cmdClose", "cmdSave", "cmdProducts", "txtName", "txtCode", "lvProducts_ColumnHeader_1_", "lvProducts_ColumnHeader_2_", "lvProducts_ColumnHeader_3_", "lvProducts_ColumnHeader_4_", "lvProducts_ColumnHeader_5_", "lvProducts_ColumnHeader_6_", "lvProducts_ColumnHeader_7_", "lvProducts", "Label4", "Label5", "Frame1", "lvProductsBy_ColumnHeader_1_", "lvProductsBy_ColumnHeader_2_", "lvProductsBy_ColumnHeader_3_", "lvProductsBy_ColumnHeader_4_", "lvProductsBy", "lblProductsRelated", "listViewHelper1", "commandButtonHelper1"};
 		//Required by the Windows Form Designer
 		private System.ComponentModel.IContainer components;
 		public System.Windows.Forms.ToolTip ToolTipMain;
@@ -63,6 +63,7 @@ namespace SKS
 		public System.Windows.Forms.ListView lvProductsBy;
 		public System.Windows.Forms.Label lblProductsRelated;
 		public UpgradeHelpers.Gui.ListViewHelper listViewHelper1;
+		public UpgradeHelpers.Gui.CommandButtonHelper commandButtonHelper1;
 		//NOTE: The following procedure is required by the Windows Form Designer
 		//It can be modified using the Windows Form Designer.
 		//Do not modify it using the code editor.
@@ -105,6 +106,7 @@ namespace SKS
 			this.SuspendLayout();
 			this.listViewHelper1 = new UpgradeHelpers.Gui.ListViewHelper(this.components);
 			((System.ComponentModel.ISupportInitialize) this.listViewHelper1).BeginInit();
+			this.commandButtonHelper1 = new UpgradeHelpers.Gui.CommandButtonHelper(this.components);
 			// 
 			// chkAll
 			// 
@@ -115,6 +117,7 @@ namespace SKS
 			this.chkAll.CheckAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.chkAll.CheckState = System.Windows.Forms.CheckState.Unchecked;
 			this.chkAll.Enabled = true;
+			this.chkAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.chkAll.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.chkAll.Location = new System.Drawing.Point(112, 454);
 			this.chkAll.Name = "chkAll";
@@ -131,6 +134,7 @@ namespace SKS
 			// 
 			this.cmdRemove.AllowDrop = true;
 			this.cmdRemove.BackColor = System.Drawing.SystemColors.Control;
+			this.cmdRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cmdRemove.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cmdRemove.Location = new System.Drawing.Point(8, 448);
 			this.cmdRemove.Name = "cmdRemove";
@@ -148,6 +152,7 @@ namespace SKS
 			this.sbStatusBar.AllowDrop = true;
 			this.sbStatusBar.BackColor = System.Drawing.SystemColors.Control;
 			this.sbStatusBar.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.sbStatusBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.sbStatusBar.Location = new System.Drawing.Point(0, 488);
 			this.sbStatusBar.Name = "sbStatusBar";
 			this.sbStatusBar.ShowItemToolTips = true;
@@ -170,6 +175,7 @@ namespace SKS
 			// 
 			this.cmdClose.AllowDrop = true;
 			this.cmdClose.BackColor = System.Drawing.SystemColors.Control;
+			this.cmdClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cmdClose.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cmdClose.Location = new System.Drawing.Point(328, 448);
 			this.cmdClose.Name = "cmdClose";
@@ -185,6 +191,7 @@ namespace SKS
 			// 
 			this.cmdSave.AllowDrop = true;
 			this.cmdSave.BackColor = System.Drawing.SystemColors.Control;
+			this.cmdSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cmdSave.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cmdSave.Location = new System.Drawing.Point(224, 448);
 			this.cmdSave.Name = "cmdSave";
@@ -207,6 +214,7 @@ namespace SKS
 			this.Frame1.Controls.Add(this.Label4);
 			this.Frame1.Controls.Add(this.Label5);
 			this.Frame1.Enabled = true;
+			this.Frame1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Frame1.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.Frame1.Location = new System.Drawing.Point(8, 8);
 			this.Frame1.Name = "Frame1";
@@ -220,6 +228,7 @@ namespace SKS
 			// 
 			this.cmdProducts.AllowDrop = true;
 			this.cmdProducts.BackColor = System.Drawing.SystemColors.Control;
+			this.cmdProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.cmdProducts.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.cmdProducts.Location = new System.Drawing.Point(360, 16);
 			this.cmdProducts.Name = "cmdProducts";
@@ -239,6 +248,7 @@ namespace SKS
 			this.txtName.BackColor = System.Drawing.SystemColors.Window;
 			this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtName.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.txtName.Location = new System.Drawing.Point(112, 40);
 			this.txtName.MaxLength = 0;
@@ -255,6 +265,7 @@ namespace SKS
 			this.txtCode.BackColor = System.Drawing.SystemColors.Window;
 			this.txtCode.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.txtCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.txtCode.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.txtCode.Location = new System.Drawing.Point(112, 16);
 			this.txtCode.MaxLength = 0;
@@ -270,6 +281,7 @@ namespace SKS
 			this.lvProducts.AllowDrop = true;
 			this.lvProducts.BackColor = System.Drawing.SystemColors.Window;
 			this.lvProducts.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lvProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lvProducts.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.lvProducts.FullRowSelect = true;
 			this.lvProducts.GridLines = true;
@@ -334,6 +346,7 @@ namespace SKS
 			this.Label4.AllowDrop = true;
 			this.Label4.BackColor = System.Drawing.SystemColors.Control;
 			this.Label4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.Label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Label4.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.Label4.Location = new System.Drawing.Point(16, 40);
 			this.Label4.Name = "Label4";
@@ -347,6 +360,7 @@ namespace SKS
 			this.Label5.AllowDrop = true;
 			this.Label5.BackColor = System.Drawing.SystemColors.Control;
 			this.Label5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.Label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.Label5.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.Label5.Location = new System.Drawing.Point(16, 16);
 			this.Label5.Name = "Label5";
@@ -361,6 +375,7 @@ namespace SKS
 			this.lvProductsBy.BackColor = System.Drawing.SystemColors.Window;
 			this.lvProductsBy.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lvProductsBy.CheckBoxes = true;
+			this.lvProductsBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lvProductsBy.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.lvProductsBy.FullRowSelect = true;
 			this.lvProductsBy.GridLines = true;
@@ -405,6 +420,7 @@ namespace SKS
 			this.lblProductsRelated.AllowDrop = true;
 			this.lblProductsRelated.BackColor = System.Drawing.SystemColors.Control;
 			this.lblProductsRelated.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.lblProductsRelated.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.lblProductsRelated.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.lblProductsRelated.Location = new System.Drawing.Point(8, 248);
 			this.lblProductsRelated.Name = "lblProductsRelated";
@@ -428,6 +444,7 @@ namespace SKS
 			this.Controls.Add(this.Frame1);
 			this.Controls.Add(this.lvProductsBy);
 			this.Controls.Add(this.lblProductsRelated);
+			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Location = new System.Drawing.Point(3, 25);
 			this.MaximizeBox = false;

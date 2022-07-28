@@ -15,7 +15,7 @@ namespace SKS
 
 		internal static void AppendAND(ref string filter)
 		{
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(filter))
 			{
 				filter = filter + " AND ";
@@ -38,14 +38,14 @@ namespace SKS
 			object o = null;
 			try
 			{
-				//UPGRADE_WARNING: (1068) col() of type Variant is being forced to Scalar. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1068
+				//UPGRADE_WARNING: (1068) col() of type Variant is being forced to Scalar. More Information: https://docs.mobilize.net/vbuc/ewis#1068
 				o = col[Index];
 			}
 			catch
 			{
 			}
 
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			return !Object.Equals(o, null);
 		}
 
@@ -116,7 +116,7 @@ namespace SKS
 		{
 			modConnection.ExecuteSql("Select * From " + Table);
 			combo.Items.Clear();
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(valueField))
 			{
 				while (!modConnection.rs.EOF)
@@ -147,7 +147,7 @@ namespace SKS
 			{
 				result = true;
 				MessageBox.Show("Please select an option from the list", AssemblyHelper.GetTitle(System.Reflection.Assembly.GetExecutingAssembly()), MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 				if (!Index.Equals(0))
 				{
 					//strip.SelectedItem = strip.Tabs(Index)
@@ -163,9 +163,9 @@ namespace SKS
 
 		internal static bool NoRecords(ListView lstView, string Prompt = "")
 		{
-			if (lstView.Items.Count == 0 || lstView.FocusedItem is null)
+			if (lstView.Items.Count == 0 || lstView.FocusedItem == null)
 			{
-				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 				if (!String.IsNullOrEmpty(Prompt))
 				{
 					MessageBox.Show(Prompt, AssemblyHelper.GetTitle(System.Reflection.Assembly.GetExecutingAssembly()), MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -191,7 +191,7 @@ namespace SKS
 			{
 				RcrdNo = 1;
 			}
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(Identifier))
 			{
 				return Identifier + RcrdNo.ToString() + DateTime.Today.ToString("MM");
@@ -233,13 +233,13 @@ namespace SKS
 
 		internal static bool TextBoxEmpty(TextBox stext, object TabObject = null, int TabIndex = 0)
 		{
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			bool result = false;
 			if (String.IsNullOrEmpty(stext.Text.Trim()) || stext.Text == "  /  /    ")
 			{
 				result = true;
 				MessageBox.Show("You need to fill in all required fields", AssemblyHelper.GetTitle(System.Reflection.Assembly.GetExecutingAssembly()), MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+				//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 				if (!TabIndex.Equals(0))
 				{
 					//TabObject.SelectedItem = TabObject.Tabs(TabIndex)
@@ -273,7 +273,7 @@ namespace SKS
 
 
 
-		//UPGRADE_NOTE: (7001) The following declaration (SaveDetection) seems to be dead code More Information: https://www.mobilize.net/vbtonet/ewis/ewi7001
+		//UPGRADE_NOTE: (7001) The following declaration (SaveDetection) seems to be dead code More Information: https://docs.mobilize.net/vbuc/ewis#7001
 		//private void SaveDetection(string Reference, string Title, string Description, string Table)
 		//{
 			//modConnection.ExecuteSql2("Select * from " + Table);
@@ -290,7 +290,7 @@ namespace SKS
 		internal static string ExecErr(string Prompt, string PromptFld = "", string Table = "", string RcrdFld = "", string RcrdStr = "")
 		{
 			StringBuilder Rcrds = new StringBuilder();
-			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+			//UPGRADE_WARNING: (2080) IsEmpty was upgraded to a comparison and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
 			if (!String.IsNullOrEmpty(Table))
 			{
 				modConnection.ExecuteSql("Select * from " + Table + " where " + RcrdFld + " = '" + RcrdStr + "'");
