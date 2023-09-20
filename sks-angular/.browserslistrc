@@ -1,0 +1,10 @@
+# This file is used by the build system to adjust CSS and JS output to support the specified browsers below.
+# For additional information regarding the format and rule options, please see:
+# https://github.com/browserslist/browserslist#queries
+
+# You can see what browsers were selected by your queries by running:
+#   npx browserslist
+
+
+# we only care about browsers with full support for ES2015
+Chrome >= 61    # let's keep it simple by picking just one representative from https://caniuse.com/#feat=es6

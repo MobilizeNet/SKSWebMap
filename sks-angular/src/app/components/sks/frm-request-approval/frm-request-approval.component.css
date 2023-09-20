@@ -7,11 +7,13 @@
     width: 523px;
     height: 496px;
     overflow: hidden;
+    font-size: 8.25pt;
     left: 3px;
     top: 25px;
 }
 .SKS_frmRequestApproval .Frame1 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 8px;
@@ -21,6 +23,7 @@
 }
 .SKS_frmRequestApproval .Label2 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 48px;
@@ -32,6 +35,7 @@
 }
 .SKS_frmRequestApproval .Label4 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 16px;
@@ -43,6 +47,7 @@
 }
 .SKS_frmRequestApproval .Label3 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 256px;
     top: 48px;
@@ -54,6 +59,7 @@
 }
 .SKS_frmRequestApproval .Label6 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 80px;
@@ -65,6 +71,7 @@
 }
 .SKS_frmRequestApproval .Label1 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 112px;
@@ -76,6 +83,7 @@
 }
 .SKS_frmRequestApproval .Label8 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 256px;
     top: 112px;
@@ -87,6 +95,7 @@
 }
 .SKS_frmRequestApproval .Label5 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 288px;
     top: 16px;
@@ -97,6 +106,7 @@
     overflow: hidden;
 }
 .SKS_frmRequestApproval .dtTo {
+    font-size: 8.25pt;
     left: 384px;
     top: 80px;
     width: 97px;
@@ -104,6 +114,7 @@
     position: absolute;
 }
 .SKS_frmRequestApproval .dtFrom {
+    font-size: 8.25pt;
     left: 136px;
     top: 80px;
     width: 97px;
@@ -112,6 +123,7 @@
 }
 .SKS_frmRequestApproval .txtCompanyName {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 88px;
     top: 16px;
@@ -121,6 +133,7 @@
 }
 .SKS_frmRequestApproval .cmdCustomers {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 240px;
     top: 16px;
@@ -134,6 +147,7 @@
 }
 .SKS_frmRequestApproval .txtContactName {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 88px;
     top: 48px;
@@ -143,6 +157,7 @@
 }
 .SKS_frmRequestApproval .txtContactLastName {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 336px;
     top: 48px;
@@ -152,6 +167,7 @@
 }
 .SKS_frmRequestApproval .txtOrderID {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 88px;
     top: 112px;
@@ -161,6 +177,7 @@
 }
 .SKS_frmRequestApproval .txtProductID {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 336px;
     top: 112px;
@@ -170,6 +187,7 @@
 }
 .SKS_frmRequestApproval .chkFrom {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 88px;
     top: 80px;
@@ -179,6 +197,7 @@
 }
 .SKS_frmRequestApproval .chkTo {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 336px;
     top: 80px;
@@ -188,6 +207,7 @@
 }
 .SKS_frmRequestApproval .cmbStatus {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 336px;
     top: 16px;
@@ -197,6 +217,7 @@
 }
 .SKS_frmRequestApproval .cmdClose {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 424px;
     top: 440px;
@@ -210,6 +231,7 @@
 }
 .SKS_frmRequestApproval .cmdCancel {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 328px;
     top: 440px;
@@ -223,6 +245,7 @@
 }
 .SKS_frmRequestApproval .sbStatusBar {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -244,6 +267,7 @@
 }
 .SKS_frmRequestApproval .cmdInfo {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 136px;
     top: 440px;
@@ -257,6 +281,7 @@
 }
 .SKS_frmRequestApproval .cmdApprove {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 232px;
     top: 440px;

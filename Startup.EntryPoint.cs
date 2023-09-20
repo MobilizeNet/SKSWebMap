@@ -6,7 +6,8 @@ namespace WebSite
     using Microsoft.AspNetCore;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
-
+    
+    [Mobilize.WebMap.Common.Attributes.ExcludeObservableWrapperTracking]
     public partial class Startup
     {
         /// <summary>

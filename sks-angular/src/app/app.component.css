@@ -18,8 +18,3 @@
   float: right;
   right: 3px;
 }
-
-/deep/ .mat-toolbar.mat-primary {
-  background: #00adee !important;
-  color: #fff;
-}

@@ -3,8 +3,9 @@ using Mobilize.Web.Extensions;
 
 namespace SKS
 {
-	partial class frmSearch
-	{
+
+   partial class frmSearch
+   {
 
 #region "Upgrade Support "
       [Intercepted]
@@ -15,33 +16,32 @@ namespace SKS
 
       public static frmSearch DefInstance
       {
-      	get
-      	{
-      		if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
-      		{
-      			m_InitializingDefInstance = true;
-      			m_vb6FormDefInstance = CreateInstance();
-      			m_InitializingDefInstance = false;
-      		}
-      		return m_vb6FormDefInstance;
-      	}
-      	set
-      	{
-      		m_vb6FormDefInstance = value;
-      	}
+         get
+         {
+            if ( m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed )
+            {
+               m_InitializingDefInstance = true;
+               m_vb6FormDefInstance = CreateInstance();
+               m_InitializingDefInstance = false;
+            }
+            return m_vb6FormDefInstance;
+         }
+         set
+         {
+            m_vb6FormDefInstance = value;
+         }
       }
+#endregion
 
-      #endregion
-      #region "Windows Form Designer generated code "
-
+#region "Windows Form Designer generated code "
       public static frmSearch CreateInstance()
       {
-      	frmSearch theInstance = new frmSearch();
-      	return theInstance;
+         frmSearch theInstance = new frmSearch();
+         return theInstance;
       }
 
       [Intercepted]
-      private string[] visualControls { get; set; } = new string[]{"components", "ToolTipMain", "cmdClose", "cmdSearch", "ctrlLiner1", "cboSrchBy", "txtSrchStr", "Label20", "Label19", "Image3", "Label1", "lblSrchBy"};
+      private string[] visualControls { get; set; } = new string[] { "components", "ToolTipMain", "cmdClose", "cmdSearch", "ctrlLiner1", "cboSrchBy", "txtSrchStr", "Label20", "Label19", "Image3", "Label1", "lblSrchBy", "commandButtonHelper1" };
 
       //Required by the Windows Form Designer
       [Intercepted]
@@ -79,37 +79,42 @@ namespace SKS
 
       [Intercepted]
       public Mobilize.Web.Label lblSrchBy { get; set; }
+
+      [Intercepted]
+      public Stub._UpgradeHelpers.Gui.Controls.CommandButtonHelper commandButtonHelper1 { get; set; }
+
       //NOTE: The following procedure is required by the Windows Form Designer
       //It can be modified using the Windows Form Designer.
       //Do not modify it using the code editor.
-
       [System.Diagnostics.DebuggerStepThrough()]
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new Mobilize.Web.ControlCollection();
-      	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSearch));
-      	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
-      	this.cmdClose = new Mobilize.Web.Button();
-      	this.cmdSearch = new Mobilize.Web.Button();
-      	this.ctrlLiner1 = new Mobilize.Web.PictureBox();
-      	this.cboSrchBy = new Mobilize.Web.ComboBox();
-      	this.txtSrchStr = new Mobilize.Web.TextBox();
-      	this.Label20 = new Mobilize.Web.Label();
-      	this.Label19 = new Mobilize.Web.Label();
-      	this.Image3 = new Mobilize.Web.PictureBox();
-      	this.Label1 = new Mobilize.Web.Label();
-      	this.lblSrchBy = new Mobilize.Web.Label();
-      	this.SuspendLayout();
-      	// 
-      	// cmdClose
-      	// 
-      	this.cmdClose.AllowDrop = true;
-      	this.cmdClose.BackColor = Mobilize.Web.SystemColors.Control;
+         this.components = new Mobilize.Web.ControlCollection();
+         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSearch));
+         this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
+         this.cmdClose = new Mobilize.Web.Button();
+         this.cmdSearch = new Mobilize.Web.Button();
+         this.ctrlLiner1 = new Mobilize.Web.PictureBox();
+         this.cboSrchBy = new Mobilize.Web.ComboBox();
+         this.txtSrchStr = new Mobilize.Web.TextBox();
+         this.Label20 = new Mobilize.Web.Label();
+         this.Label19 = new Mobilize.Web.Label();
+         this.Image3 = new Mobilize.Web.PictureBox();
+         this.Label1 = new Mobilize.Web.Label();
+         this.lblSrchBy = new Mobilize.Web.Label();
+         this.SuspendLayout();
+         this.commandButtonHelper1 = new Stub._UpgradeHelpers.Gui.Controls.CommandButtonHelper(this.components);
+         // 
+         // cmdClose
+         // 
+         this.cmdClose.AllowDrop = true;
+         this.cmdClose.BackColor = Mobilize.Web.SystemColors.Control;
+         this.cmdClose.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.cmdClose.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cmdClose.Location = new System.Drawing.Point(272, 104);
          this.cmdClose.Name = "cmdClose";
-         this.cmdClose.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cmdClose.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cmdClose.Size = new System.Drawing.Size(81, 25);
          this.cmdClose.TabIndex = 8;
          this.cmdClose.Text = "&Close";
@@ -121,10 +126,11 @@ namespace SKS
          // 
          this.cmdSearch.AllowDrop = true;
          this.cmdSearch.BackColor = Mobilize.Web.SystemColors.Control;
+         this.cmdSearch.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.cmdSearch.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cmdSearch.Location = new System.Drawing.Point(184, 104);
          this.cmdSearch.Name = "cmdSearch";
-         this.cmdSearch.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cmdSearch.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cmdSearch.Size = new System.Drawing.Size(81, 25);
          this.cmdSearch.TabIndex = 7;
          this.cmdSearch.Text = "&Search";
@@ -140,6 +146,7 @@ namespace SKS
          this.ctrlLiner1.Properties().CausesValidation = true;
          this.ctrlLiner1.Dock = Mobilize.Web.DockStyle.None;
          this.ctrlLiner1.Enabled = true;
+         this.ctrlLiner1.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.ctrlLiner1.Location = new System.Drawing.Point(0, 56);
          this.ctrlLiner1.Name = "ctrlLiner1";
          this.ctrlLiner1.Size = new System.Drawing.Size(385, 2);
@@ -155,11 +162,12 @@ namespace SKS
          this.cboSrchBy.CausesValidation = true;
          this.cboSrchBy.DropDownStyle = Mobilize.Web.ComboBoxStyle.DropDownList;
          this.cboSrchBy.Enabled = true;
+         this.cboSrchBy.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.cboSrchBy.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.cboSrchBy.IntegralHeight = true;
          this.cboSrchBy.Location = new System.Drawing.Point(208, 144);
          this.cboSrchBy.Name = "cboSrchBy";
-         this.cboSrchBy.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cboSrchBy.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cboSrchBy.Size = new System.Drawing.Size(145, 21);
          this.cboSrchBy.Sorted = false;
          this.cboSrchBy.TabIndex = 3;
@@ -174,11 +182,12 @@ namespace SKS
          this.txtSrchStr.BackColor = Mobilize.Web.SystemColors.Window;
          this.txtSrchStr.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtSrchStr.Properties().Cursor = null;
+         this.txtSrchStr.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtSrchStr.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtSrchStr.Location = new System.Drawing.Point(136, 72);
          this.txtSrchStr.MaxLength = 0;
          this.txtSrchStr.Name = "txtSrchStr";
-         this.txtSrchStr.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtSrchStr.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtSrchStr.Size = new System.Drawing.Size(217, 19);
          this.txtSrchStr.TabIndex = 0;
          // 
@@ -188,10 +197,11 @@ namespace SKS
          this.Label20.AutoSize = true;
          this.Label20.BackColor = System.Drawing.Color.Transparent;
          this.Label20.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.Label20.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Label20.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
          this.Label20.Location = new System.Drawing.Point(49, 32);
          this.Label20.Name = "Label20";
-         this.Label20.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Label20.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Label20.Size = new System.Drawing.Size(119, 13);
          this.Label20.TabIndex = 5;
          this.Label20.Text = "Search for a specific item";
@@ -206,7 +216,7 @@ namespace SKS
          this.Label19.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
          this.Label19.Location = new System.Drawing.Point(49, 8);
          this.Label19.Name = "Label19";
-         this.Label19.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Label19.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Label19.Size = new System.Drawing.Size(50, 16);
          this.Label19.TabIndex = 4;
          this.Label19.Text = "Search";
@@ -217,6 +227,7 @@ namespace SKS
          this.Image3.AllowDrop = true;
          this.Image3.BorderStyle = Mobilize.Web.BorderStyle.None;
          this.Image3.Enabled = true;
+         this.Image3.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Image3.Image = "assets/images/SKS.frmSearch.Image3.Image.png";
          this.Image3.Location = new System.Drawing.Point(8, 8);
          this.Image3.Name = "Image3";
@@ -234,7 +245,7 @@ namespace SKS
          this.Label1.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
          this.Label1.Location = new System.Drawing.Point(125, 144);
          this.Label1.Name = "Label1";
-         this.Label1.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Label1.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Label1.Size = new System.Drawing.Size(62, 13);
          this.Label1.TabIndex = 2;
          this.Label1.Text = "Search by:";
@@ -250,7 +261,7 @@ namespace SKS
          this.lblSrchBy.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
          this.lblSrchBy.Location = new System.Drawing.Point(7, 72);
          this.lblSrchBy.Name = "lblSrchBy";
-         this.lblSrchBy.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblSrchBy.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblSrchBy.Size = new System.Drawing.Size(116, 13);
          this.lblSrchBy.TabIndex = 1;
          this.lblSrchBy.Text = "Field";
@@ -273,20 +284,25 @@ namespace SKS
          this.Controls.Add(this.Image3);
          this.Controls.Add(this.Label1);
          this.Controls.Add(this.lblSrchBy);
+         this.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.FormBorderStyle = Mobilize.Web.FormBorderStyle.FixedDialog;
          this.Icon = (Mobilize.Web.Icon)new Mobilize.Web.Icon("assets/images/SKS.frmSearch.frmSearch.Icon.png");
          this.Properties().Location = new System.Drawing.Point(486, 322);
          this.MaximizeBox = false;
          this.MinimizeBox = false;
          this.Name = "frmSearch";
-         this.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Properties().ShowInTaskbar = false;
          this.Properties().StartPosition = Mobilize.Web.FormStartPosition.CenterScreen;
          this.Text = "Search";
+         this.commandButtonHelper1.SetStyle(this.cmdClose, 0);
+         this.commandButtonHelper1.SetStyle(this.cmdSearch, 0);
          this.Activated += new System.EventHandler(this.frmSearch_Activated);
          this.Closed += new System.EventHandler(this.Form_Closed);
          this.ResumeLayout(false);
       }
-      #endregion
+#endregion
+
    }
+
 }

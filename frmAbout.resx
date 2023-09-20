@@ -119,9 +119,9 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ToolTip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2641, 17</value>
+    <value>201, 17</value>
   </data>
   <data name="Line1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2729, 17</value>
+    <value>289, 17</value>
   </data>
 </root>

@@ -7,11 +7,13 @@
     width: 1113px;
     height: 708px;
     overflow: hidden;
+    font-size: 8.25pt;
     left: 11px;
     top: 54px;
 }
 .SKS_frmMain .sbStatusBar {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     left: 0;
     bottom: 0;
     width: 100%;

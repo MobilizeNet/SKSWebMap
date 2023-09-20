@@ -44,7 +44,7 @@ namespace WebSite
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton(p => config);
-            services.AddWebMap();
+            services.AddWebMap(false);
             services.RegisterModelMappers();
             services.RegisterWrappers();
             AddDesktopCompatibilityPlatform(services, Startup.Start);
@@ -69,6 +69,8 @@ namespace WebSite
             });
             services.AddHealthChecks();
             services.AddSignalR();
+            // Sorting commands service.
+            services.AddSingleton<Mobilize.WebMap.Common.Server.ISortingActionService>(new Mobilize.Web.Services.SortingCommandService());
         }
 
         /// <summary>
@@ -100,7 +102,7 @@ namespace WebSite
         private static void AddDesktopCompatibilityPlatform(IServiceCollection services, EntryPoint entryPoint)
         {
             services.AddScoped<ICommandFactory, CommandFactory>();
-            services.AddScoped<IApplication>((provider) => new ExtApplication(provider) { EntryPoint = entryPoint });
+            services.AddScoped<IApplication>((provider) => new ExtApplication(provider) { EntryPoint = entryPoint, AppName = "SKS" });
             services.AddTransient<IBackgroundWorkerManager, BackgroundWorkerManager>();
         }
     }

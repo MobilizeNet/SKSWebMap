@@ -7,11 +7,13 @@
     width: 289px;
     height: 137px;
     overflow: hidden;
+    font-size: 8.25pt;
     left: 189px;
     top: 232px;
 }
 .SKS_frmLogin ._lblLabels_1 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 39px;
     top: 52px;
@@ -23,6 +25,7 @@
 }
 .SKS_frmLogin ._lblLabels_0 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 39px;
     top: 26px;
@@ -34,6 +37,7 @@
 }
 .SKS_frmLogin .cmdOK {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 89px;
     top: 100px;
@@ -47,6 +51,7 @@
 }
 .SKS_frmLogin .txtPassword {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 118px;
     top: 51px;
@@ -56,6 +61,7 @@
 }
 .SKS_frmLogin .cmdCancel {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 196px;
     top: 100px;
@@ -69,6 +75,7 @@
 }
 .SKS_frmLogin .txtUserName {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 118px;
     top: 25px;

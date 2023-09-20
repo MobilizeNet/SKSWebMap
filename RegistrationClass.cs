@@ -21,6 +21,7 @@ namespace WebSite
     /// <summary>
     /// Registration for Wrappers and Mappers
     /// </summary>
+    [Mobilize.WebMap.Common.Attributes.ExcludeObservableWrapperTracking]
     public static class RegistrationClass
     {
         private static List<Assembly> assembliesForRegistrations = AssemblyRegistration.GetAssembliesForRegistration(Assembly.GetEntryAssembly());

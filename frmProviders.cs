@@ -11,23 +11,23 @@ namespace SKS
       : Mobilize.Web.Form
    {
 
-   	public frmProviders()
-   		: base()
-   	{
-   		if (m_vb6FormDefInstance is null)
-   		{
-   			if (m_InitializingDefInstance)
-   			{
-   				m_vb6FormDefInstance = this;
-   			}
-   			else
-   			{
-   				try
-   				{
-   					//For the start-up form, the first instance created is the default instance.
-   					if (!(System.Reflection.Assembly.GetExecutingAssembly().EntryPoint is null) && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType())
+      public frmProviders()
+      : base()
+      {
+         if ( m_vb6FormDefInstance is null )
+         {
+            if ( m_InitializingDefInstance )
+            {
+               m_vb6FormDefInstance = this;
+            }
+            else
+            {
+               try
+               {
+                  //For the start-up form, the first instance created is the default instance.
+                  if ( !(System.Reflection.Assembly.GetExecutingAssembly().EntryPoint is null) && System.Reflection.Assembly.GetExecutingAssembly().EntryPoint.DeclaringType == this.GetType() )
                   {
-                  	m_vb6FormDefInstance = this;
+                     m_vb6FormDefInstance = this;
                   }
                }
                catch
@@ -40,12 +40,11 @@ namespace SKS
          ReLoadForm(false);
       }
 
-
       private void frmProviders_Activated(System.Object eventSender, System.EventArgs eventArgs)
       {
-         if ( Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm != eventSender)
+         if ( Stub._UpgradeHelpers.Gui.Utils.ActivateHelper.myActiveForm != eventSender )
          {
-            Stub._UpgradeHelpers.Gui.ActivateHelper.myActiveForm = (Mobilize.Web.Form) eventSender;
+            Stub._UpgradeHelpers.Gui.Utils.ActivateHelper.myActiveForm = (Mobilize.Web.Form)eventSender;
          }
       }
 
@@ -66,59 +65,55 @@ namespace SKS
       //EditMode = False
       //CancellingMode = False
       //End Sub
-
       //Private Sub dcProviders_WillMove(ByVal adReason As ADODB.EventReasonEnum, adStatus As ADODB.EventStatusEnum, ByVal pRecordset As ADODB.Recordset)
       //CancellingMode = True
       //End Sub
-
-
-      //UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://www.mobilize.net/vbtonet/ewis/ewi2080
+      //UPGRADE_WARNING: (2080) Form_Load event was upgraded to Form_Load method and has a new behavior. More Information: https://docs.mobilize.net/vbuc/ewis#2080
       private void Form_Load()
       {
-      	dcProviders.ConnectionString = modMain.ConnectionString;
-
-      	NewMode = false;
-      	EditMode = false;
-      	CancellingMode = false;
+         dcProviders.ConnectionString = modMain.ConnectionString;
+         NewMode = false;
+         EditMode = false;
+         CancellingMode = false;
       }
 
       private void Form_Closed(Object eventSender, EventArgs eventArgs)
       {
-      	CurrentProviderID = Convert.ToInt32(dcProviders.Recordset["ProviderId"]);
+         CurrentProviderID = Convert.ToInt32(dcProviders.Recordset["ProviderId"]);
       }
 
       private void Toolbar1_ButtonClick(Object eventSender, EventArgs eventArgs)
       {
-         Mobilize.Web.ToolStripItem Button = (Mobilize.Web.ToolStripItem) eventSender;
+         Mobilize.Web.ToolStripItem Button = (Mobilize.Web.ToolStripItem)eventSender;
          object x = null;
          //SKS Demo TODO: dcProviders.SetFocus()
-         switch(Button.Text)
+         switch ( Button.Text )
          {
-         	case "Add" :
-         		//Add new record 
-         		NewMode = true;
-         		dcProviders.Recordset.AddNew();
-         		break;
-         	case "Edit" :
-         		//Edit mode 
-         		EditMode = true;
-         		break;
-         	case "Save" :
-         		Save();
-         		break;
-         	case "Delete" :
-         		//Delete record 
-         		if ( Mobilize.Web.MessageBox.Show("Are you sure you want to delete this record?", "Delete record", Mobilize.Web.MessageBoxButtons.YesNo, Mobilize.Web.MessageBoxIcon.Question) == Mobilize.Web.DialogResult.Yes)
+            case "Add":
+               //Add new record 
+               NewMode = true;
+               dcProviders.Recordset.AddNew();
+               break;
+            case "Edit":
+               //Edit mode 
+               EditMode = true;
+               break;
+            case "Save":
+               Save();
+               break;
+            case "Delete":
+               //Delete record 
+               if ( Mobilize.Web.MessageBox.Show("Are you sure you want to delete this record?", "Delete record", Mobilize.Web.MessageBoxButtons.YesNo, Mobilize.Web.MessageBoxIcon.Question) == Mobilize.Web.DialogResult.Yes )
                {
-               	dcProviders.Recordset.Delete();
-               	dcProviders.Recordset.Requery();
+                  dcProviders.Recordset.Delete();
+                  dcProviders.Recordset.Requery();
                }
                break;
-            case "Search" :
+            case "Search":
                //Search for records 
                modFunctions.SearchShow("Providers", "ProviderName", "Provider");
                break;
-            case "Cancel" :
+            case "Cancel":
                CancellingMode = true;
                //Cancel edited changes 
                EditMode = false;
@@ -131,57 +126,56 @@ namespace SKS
          }
       }
 
-
       private void Save()
       {
          //Save data
-         if (modFunctions.TextBoxEmpty(txtField[0]))
+         if ( modFunctions.TextBoxEmpty(txtField[0]) )
          {
-            return;
+            return ;
          }
-         if (modFunctions.TextBoxEmpty(txtField[1]))
+         if ( modFunctions.TextBoxEmpty(txtField[1]) )
          {
-            return;
+            return ;
          }
-         if (modFunctions.TextBoxEmpty(txtField[2]))
+         if ( modFunctions.TextBoxEmpty(txtField[2]) )
          {
-            return;
+            return ;
          }
-         if (modFunctions.TextBoxEmpty(txtField[4]))
+         if ( modFunctions.TextBoxEmpty(txtField[4]) )
          {
-            return;
+            return ;
          }
-         if (modFunctions.TextBoxEmpty(txtField[5]))
+         if ( modFunctions.TextBoxEmpty(txtField[5]) )
          {
-            return;
+            return ;
          }
-         if (modFunctions.TextBoxEmpty(txtField[6]))
+         if ( modFunctions.TextBoxEmpty(txtField[6]) )
          {
-            return;
+            return ;
          }
-         if (modFunctions.TextBoxEmpty(txtField[7]))
+         if ( modFunctions.TextBoxEmpty(txtField[7]) )
          {
-            return;
+            return ;
          }
-         if (modFunctions.TextBoxEmpty(txtField[7]))
+         if ( modFunctions.TextBoxEmpty(txtField[7]) )
          {
-            return;
+            return ;
          }
-         if (modFunctions.TextBoxEmpty(txtField[10]))
+         if ( modFunctions.TextBoxEmpty(txtField[10]) )
          {
-            return;
+            return ;
          }
-         if (modFunctions.TextBoxEmpty(txtField[11]))
+         if ( modFunctions.TextBoxEmpty(txtField[11]) )
          {
-            return;
+            return ;
          }
-         if (modFunctions.TextBoxEmpty(txtField[12]))
+         if ( modFunctions.TextBoxEmpty(txtField[12]) )
          {
-            return;
+            return ;
          }
-         if (modFunctions.TextBoxEmpty(txtField[14]))
+         if ( modFunctions.TextBoxEmpty(txtField[14]) )
          {
-            return;
+            return ;
          }
          dcProviders.Recordset.Update();
          dcProviders.Recordset.Requery();
@@ -191,22 +185,22 @@ namespace SKS
 
       private void txtField_TextChanged(Object eventSender, EventArgs eventArgs)
       {
-         if (!CancellingMode)
+         if ( !CancellingMode )
          {
             EditMode = true;
          }
       }
 
-   	//Used in search form
-   	//Public Sub SearchCriteria(field As String, value As String)
-   	//ExecuteSql "Select * from Providers where " & field & " LIKE '" & value & "%'"
-   	//If rs.RecordCount = 0 Then
-   	//    MsgBox "There are no records with the selected criteria", vbInformation, "Search"
-   	//Else
-   	//    LogStatus "There are " & rs.RecordCount & " that meet with the selected criteria"
-   	//    Set dcProviders.Recordset = rs
-   	//End If
-   	//End Sub
-
+   //Used in search form
+   //Public Sub SearchCriteria(field As String, value As String)
+   //ExecuteSql "Select * from Providers where " & field & " LIKE '" & value & "%'"
+   //If rs.RecordCount = 0 Then
+   //    MsgBox "There are no records with the selected criteria", vbInformation, "Search"
+   //Else
+   //    LogStatus "There are " & rs.RecordCount & " that meet with the selected criteria"
+   //    Set dcProviders.Recordset = rs
+   //End If
+   //End Sub
    }
+
 }

@@ -16,7 +16,7 @@ import { SKSModule } from './sks.module';
     WebMapModule,
     SKSModule,
   ],
-  providers: [WebMapService  ],
+  providers: [WebMapService],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

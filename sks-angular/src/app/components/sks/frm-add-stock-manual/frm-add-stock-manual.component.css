@@ -7,11 +7,13 @@
     width: 424px;
     height: 439px;
     overflow: hidden;
+    font-size: 8.25pt;
     left: 3px;
     top: 25px;
 }
 .SKS_frmAddStockManual .Label3 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 8px;
@@ -23,6 +25,7 @@
 }
 .SKS_frmAddStockManual .Label2 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 299px;
@@ -34,6 +37,7 @@
 }
 .SKS_frmAddStockManual .Label1 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 331px;
@@ -45,6 +49,7 @@
 }
 .SKS_frmAddStockManual .Label6 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 224px;
     top: 331px;
@@ -56,6 +61,7 @@
 }
 .SKS_frmAddStockManual .Label7 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 224px;
     top: 296px;
@@ -67,6 +73,7 @@
 }
 .SKS_frmAddStockManual .Label8 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 264px;
@@ -78,6 +85,7 @@
 }
 .SKS_frmAddStockManual .Label9 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 288px;
     top: 264px;
@@ -89,6 +97,7 @@
 }
 .SKS_frmAddStockManual .Label10 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 363px;
@@ -100,6 +109,7 @@
 }
 .SKS_frmAddStockManual .lblNewQuantity {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 104px;
     top: 363px;
@@ -111,6 +121,7 @@
 }
 .SKS_frmAddStockManual .lvProducts {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 104px;
@@ -120,6 +131,7 @@
 }
 .SKS_frmAddStockManual .Frame1 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 32px;
@@ -129,6 +141,7 @@
 }
 .SKS_frmAddStockManual .Label5 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 16px;
@@ -140,6 +153,7 @@
 }
 .SKS_frmAddStockManual .Label4 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 40px;
@@ -151,6 +165,7 @@
 }
 .SKS_frmAddStockManual .txtCode {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 112px;
     top: 16px;
@@ -160,6 +175,7 @@
 }
 .SKS_frmAddStockManual .txtName {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 112px;
     top: 40px;
@@ -169,6 +185,7 @@
 }
 .SKS_frmAddStockManual .cmdProducts {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 360px;
     top: 16px;
@@ -182,6 +199,7 @@
 }
 .SKS_frmAddStockManual ._txtValues_0 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 96px;
     top: 296px;
@@ -191,6 +209,7 @@
 }
 .SKS_frmAddStockManual ._txtValues_1 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 96px;
     top: 328px;
@@ -200,6 +219,7 @@
 }
 .SKS_frmAddStockManual ._txtValues_2 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 320px;
     top: 328px;
@@ -209,6 +229,7 @@
 }
 .SKS_frmAddStockManual .txtQuantityPerUnit {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 320px;
     top: 296px;
@@ -218,6 +239,7 @@
 }
 .SKS_frmAddStockManual .txtProductName {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 96px;
     top: 264px;
@@ -227,6 +249,7 @@
 }
 .SKS_frmAddStockManual .txtUnit {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 320px;
     top: 264px;
@@ -236,6 +259,7 @@
 }
 .SKS_frmAddStockManual .sbStatusBar {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -250,6 +274,7 @@
 }
 .SKS_frmAddStockManual .cmdClose {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 328px;
     top: 376px;
@@ -263,6 +288,7 @@
 }
 .SKS_frmAddStockManual .cmdSave {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 224px;
     top: 376px;

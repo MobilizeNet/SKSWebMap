@@ -3,8 +3,9 @@ using Mobilize.Web.Extensions;
 
 namespace SKS
 {
-	partial class frmActionOrderReception
-	{
+
+   partial class frmActionOrderReception
+   {
 
 #region "Upgrade Support "
       [Intercepted]
@@ -15,34 +16,33 @@ namespace SKS
 
       public static frmActionOrderReception DefInstance
       {
-      	get
-      	{
-      		if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
-      		{
-      			m_InitializingDefInstance = true;
-      			m_vb6FormDefInstance = CreateInstance();
-      			m_InitializingDefInstance = false;
-      		}
-      		return m_vb6FormDefInstance;
-      	}
-      	set
-      	{
-      		m_vb6FormDefInstance = value;
-      	}
+         get
+         {
+            if ( m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed )
+            {
+               m_InitializingDefInstance = true;
+               m_vb6FormDefInstance = CreateInstance();
+               m_InitializingDefInstance = false;
+            }
+            return m_vb6FormDefInstance;
+         }
+         set
+         {
+            m_vb6FormDefInstance = value;
+         }
       }
+#endregion
 
-      #endregion
-      #region "Windows Form Designer generated code "
-
+#region "Windows Form Designer generated code "
       public static frmActionOrderReception CreateInstance()
       {
-      	frmActionOrderReception theInstance = new frmActionOrderReception();
-      	theInstance.Form_Load();
-      	return theInstance;
+         frmActionOrderReception theInstance = new frmActionOrderReception();
+         theInstance.Form_Load();
+         return theInstance;
       }
 
       [Intercepted]
-      private string[] visualControls { get; set; } = new string[]{"components", "ToolTipMain", "txtReceivedBy", "cmdApprove", "txtStatus", "txtReceived", "txtChangedBy", "txtChanged", "txtOrderID", "txtNotes", "txtSubTotal", "txtTotal", "txtTotalTax", "txtFreightCharge", "txtSalesTax", "txtEntry", "fgDetails", "sbStatusBar_Panels_Panel1", "sbStatusBar", "cmdCancel", "cmdClose", "txtProviderContact", "txtProviderCompany", "Label5", "Label1", "Frame2", "Label7", "Label3", "Label19", "lblChangedBy", "Label4", "lblChanged", "Label12", "Label11", "Label10", "Label9", "Label8", "Label6"};
+      private string[] visualControls { get; set; } = new string[] { "components", "ToolTipMain", "txtReceivedBy", "cmdApprove", "txtStatus", "txtReceived", "txtChangedBy", "txtChanged", "txtOrderID", "txtNotes", "txtSubTotal", "txtTotal", "txtTotalTax", "txtFreightCharge", "txtSalesTax", "txtEntry", "fgDetails", "sbStatusBar_Panels_Panel1", "sbStatusBar", "cmdCancel", "cmdClose", "txtProviderContact", "txtProviderCompany", "Label5", "Label1", "Frame2", "Label7", "Label3", "Label19", "lblChangedBy", "Label4", "lblChanged", "Label12", "Label11", "Label10", "Label9", "Label8", "Label6", "commandButtonHelper1" };
 
       //Required by the Windows Form Designer
       [Intercepted]
@@ -158,70 +158,75 @@ namespace SKS
 
       [Intercepted]
       public Mobilize.Web.Label Label6 { get; set; }
+
+      [Intercepted]
+      public Stub._UpgradeHelpers.Gui.Controls.CommandButtonHelper commandButtonHelper1 { get; set; }
+
       //NOTE: The following procedure is required by the Windows Form Designer
       //It can be modified using the Windows Form Designer.
       //Do not modify it using the code editor.
-
       [System.Diagnostics.DebuggerStepThrough()]
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new Mobilize.Web.ControlCollection();
-      	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActionOrderReception));
-      	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
-      	this.txtReceivedBy = new Mobilize.Web.TextBox();
-      	this.cmdApprove = new Mobilize.Web.Button();
-      	this.txtStatus = new Mobilize.Web.TextBox();
-      	this.txtReceived = new Mobilize.Web.TextBox();
-      	this.txtChangedBy = new Mobilize.Web.TextBox();
-      	this.txtChanged = new Mobilize.Web.TextBox();
-      	this.txtOrderID = new Mobilize.Web.TextBox();
-      	this.txtNotes = new Mobilize.Web.TextBox();
-      	this.txtSubTotal = new Mobilize.Web.TextBox();
-      	this.txtTotal = new Mobilize.Web.TextBox();
-      	this.txtTotalTax = new Mobilize.Web.TextBox();
-      	this.txtFreightCharge = new Mobilize.Web.TextBox();
-      	this.txtSalesTax = new Mobilize.Web.TextBox();
-      	this.txtEntry = new Mobilize.Web.TextBox();
-      	this.fgDetails = new Mobilize.Web.VBUC.FlexGrid(this.components);
-      	this.sbStatusBar = new Mobilize.Web.StatusStrip();
-      	this.sbStatusBar_Panels_Panel1 = new Mobilize.Web.ToolStripStatusLabel();
-      	this.cmdCancel = new Mobilize.Web.Button();
-      	this.cmdClose = new Mobilize.Web.Button();
-      	this.Frame2 = new Mobilize.Web.GroupBox();
-      	this.txtProviderContact = new Mobilize.Web.TextBox();
-      	this.txtProviderCompany = new Mobilize.Web.TextBox();
-      	this.Label5 = new Mobilize.Web.Label();
-      	this.Label1 = new Mobilize.Web.Label();
-      	this.Label7 = new Mobilize.Web.Label();
-      	this.Label3 = new Mobilize.Web.Label();
-      	this.Label19 = new Mobilize.Web.Label();
-      	this.lblChangedBy = new Mobilize.Web.Label();
-      	this.Label4 = new Mobilize.Web.Label();
-      	this.lblChanged = new Mobilize.Web.Label();
-      	this.Label12 = new Mobilize.Web.Label();
-      	this.Label11 = new Mobilize.Web.Label();
-      	this.Label10 = new Mobilize.Web.Label();
-      	this.Label9 = new Mobilize.Web.Label();
-      	this.Label8 = new Mobilize.Web.Label();
-      	this.Label6 = new Mobilize.Web.Label();
-      	this.sbStatusBar.SuspendLayout();
-      	this.Frame2.SuspendLayout();
-      	this.SuspendLayout();
-      	// 
-      	// txtReceivedBy
-      	// 
-      	this.txtReceivedBy.AcceptsReturn = true;
-      	this.txtReceivedBy.AllowDrop = true;
-      	this.txtReceivedBy.BackColor = Mobilize.Web.SystemColors.Menu;
+         this.components = new Mobilize.Web.ControlCollection();
+         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActionOrderReception));
+         this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
+         this.txtReceivedBy = new Mobilize.Web.TextBox();
+         this.cmdApprove = new Mobilize.Web.Button();
+         this.txtStatus = new Mobilize.Web.TextBox();
+         this.txtReceived = new Mobilize.Web.TextBox();
+         this.txtChangedBy = new Mobilize.Web.TextBox();
+         this.txtChanged = new Mobilize.Web.TextBox();
+         this.txtOrderID = new Mobilize.Web.TextBox();
+         this.txtNotes = new Mobilize.Web.TextBox();
+         this.txtSubTotal = new Mobilize.Web.TextBox();
+         this.txtTotal = new Mobilize.Web.TextBox();
+         this.txtTotalTax = new Mobilize.Web.TextBox();
+         this.txtFreightCharge = new Mobilize.Web.TextBox();
+         this.txtSalesTax = new Mobilize.Web.TextBox();
+         this.txtEntry = new Mobilize.Web.TextBox();
+         this.fgDetails = new Mobilize.Web.VBUC.FlexGrid(this.components);
+         this.sbStatusBar = new Mobilize.Web.StatusStrip();
+         this.sbStatusBar_Panels_Panel1 = new Mobilize.Web.ToolStripStatusLabel();
+         this.cmdCancel = new Mobilize.Web.Button();
+         this.cmdClose = new Mobilize.Web.Button();
+         this.Frame2 = new Mobilize.Web.GroupBox();
+         this.txtProviderContact = new Mobilize.Web.TextBox();
+         this.txtProviderCompany = new Mobilize.Web.TextBox();
+         this.Label5 = new Mobilize.Web.Label();
+         this.Label1 = new Mobilize.Web.Label();
+         this.Label7 = new Mobilize.Web.Label();
+         this.Label3 = new Mobilize.Web.Label();
+         this.Label19 = new Mobilize.Web.Label();
+         this.lblChangedBy = new Mobilize.Web.Label();
+         this.Label4 = new Mobilize.Web.Label();
+         this.lblChanged = new Mobilize.Web.Label();
+         this.Label12 = new Mobilize.Web.Label();
+         this.Label11 = new Mobilize.Web.Label();
+         this.Label10 = new Mobilize.Web.Label();
+         this.Label9 = new Mobilize.Web.Label();
+         this.Label8 = new Mobilize.Web.Label();
+         this.Label6 = new Mobilize.Web.Label();
+         this.sbStatusBar.SuspendLayout();
+         this.Frame2.SuspendLayout();
+         this.SuspendLayout();
+         this.commandButtonHelper1 = new Stub._UpgradeHelpers.Gui.Controls.CommandButtonHelper(this.components);
+         // 
+         // txtReceivedBy
+         // 
+         this.txtReceivedBy.AcceptsReturn = true;
+         this.txtReceivedBy.AllowDrop = true;
+         this.txtReceivedBy.BackColor = Mobilize.Web.SystemColors.Menu;
          this.txtReceivedBy.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtReceivedBy.Properties().Cursor = null;
+         this.txtReceivedBy.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtReceivedBy.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtReceivedBy.Location = new System.Drawing.Point(96, 64);
          this.txtReceivedBy.MaxLength = 0;
          this.txtReceivedBy.Name = "txtReceivedBy";
          this.txtReceivedBy.ReadOnly = true;
-         this.txtReceivedBy.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtReceivedBy.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtReceivedBy.Size = new System.Drawing.Size(105, 20);
          this.txtReceivedBy.TabIndex = 33;
          // 
@@ -229,10 +234,11 @@ namespace SKS
          // 
          this.cmdApprove.AllowDrop = true;
          this.cmdApprove.BackColor = Mobilize.Web.SystemColors.Control;
+         this.cmdApprove.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.cmdApprove.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cmdApprove.Location = new System.Drawing.Point(232, 456);
          this.cmdApprove.Name = "cmdApprove";
-         this.cmdApprove.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cmdApprove.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cmdApprove.Size = new System.Drawing.Size(89, 25);
          this.cmdApprove.TabIndex = 0;
          this.cmdApprove.Text = "&Add";
@@ -247,12 +253,13 @@ namespace SKS
          this.txtStatus.BackColor = Mobilize.Web.SystemColors.Menu;
          this.txtStatus.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtStatus.Properties().Cursor = null;
+         this.txtStatus.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtStatus.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtStatus.Location = new System.Drawing.Point(408, 8);
          this.txtStatus.MaxLength = 0;
          this.txtStatus.Name = "txtStatus";
          this.txtStatus.ReadOnly = true;
-         this.txtStatus.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtStatus.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtStatus.Size = new System.Drawing.Size(105, 20);
          this.txtStatus.TabIndex = 31;
          // 
@@ -263,12 +270,13 @@ namespace SKS
          this.txtReceived.BackColor = Mobilize.Web.SystemColors.Menu;
          this.txtReceived.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtReceived.Properties().Cursor = null;
+         this.txtReceived.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtReceived.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtReceived.Location = new System.Drawing.Point(96, 36);
          this.txtReceived.MaxLength = 0;
          this.txtReceived.Name = "txtReceived";
          this.txtReceived.ReadOnly = true;
-         this.txtReceived.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtReceived.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtReceived.Size = new System.Drawing.Size(105, 20);
          this.txtReceived.TabIndex = 29;
          // 
@@ -279,12 +287,13 @@ namespace SKS
          this.txtChangedBy.BackColor = Mobilize.Web.SystemColors.Menu;
          this.txtChangedBy.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtChangedBy.Properties().Cursor = null;
+         this.txtChangedBy.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtChangedBy.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtChangedBy.Location = new System.Drawing.Point(408, 64);
          this.txtChangedBy.MaxLength = 0;
          this.txtChangedBy.Name = "txtChangedBy";
          this.txtChangedBy.ReadOnly = true;
-         this.txtChangedBy.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtChangedBy.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtChangedBy.Size = new System.Drawing.Size(105, 20);
          this.txtChangedBy.TabIndex = 25;
          // 
@@ -295,12 +304,13 @@ namespace SKS
          this.txtChanged.BackColor = Mobilize.Web.SystemColors.Menu;
          this.txtChanged.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtChanged.Properties().Cursor = null;
+         this.txtChanged.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtChanged.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtChanged.Location = new System.Drawing.Point(408, 36);
          this.txtChanged.MaxLength = 0;
          this.txtChanged.Name = "txtChanged";
          this.txtChanged.ReadOnly = true;
-         this.txtChanged.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtChanged.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtChanged.Size = new System.Drawing.Size(105, 20);
          this.txtChanged.TabIndex = 24;
          // 
@@ -311,12 +321,13 @@ namespace SKS
          this.txtOrderID.BackColor = Mobilize.Web.SystemColors.Menu;
          this.txtOrderID.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtOrderID.Properties().Cursor = null;
+         this.txtOrderID.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtOrderID.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtOrderID.Location = new System.Drawing.Point(96, 8);
          this.txtOrderID.MaxLength = 0;
          this.txtOrderID.Name = "txtOrderID";
          this.txtOrderID.ReadOnly = true;
-         this.txtOrderID.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtOrderID.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtOrderID.Size = new System.Drawing.Size(105, 20);
          this.txtOrderID.TabIndex = 23;
          // 
@@ -327,13 +338,14 @@ namespace SKS
          this.txtNotes.BackColor = Mobilize.Web.SystemColors.Menu;
          this.txtNotes.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtNotes.Properties().Cursor = null;
+         this.txtNotes.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtNotes.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtNotes.Location = new System.Drawing.Point(56, 152);
          this.txtNotes.MaxLength = 0;
          this.txtNotes.Multiline = true;
          this.txtNotes.Name = "txtNotes";
          this.txtNotes.ReadOnly = true;
-         this.txtNotes.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtNotes.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtNotes.Size = new System.Drawing.Size(457, 44);
          this.txtNotes.TabIndex = 3;
          // 
@@ -344,12 +356,13 @@ namespace SKS
          this.txtSubTotal.BackColor = Mobilize.Web.SystemColors.Menu;
          this.txtSubTotal.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtSubTotal.Properties().Cursor = null;
+         this.txtSubTotal.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtSubTotal.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtSubTotal.Location = new System.Drawing.Point(368, 408);
          this.txtSubTotal.MaxLength = 0;
          this.txtSubTotal.Name = "txtSubTotal";
          this.txtSubTotal.ReadOnly = true;
-         this.txtSubTotal.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtSubTotal.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtSubTotal.Size = new System.Drawing.Size(145, 20);
          this.txtSubTotal.TabIndex = 21;
          this.txtSubTotal.TabStop = false;
@@ -362,12 +375,13 @@ namespace SKS
          this.txtTotal.BackColor = Mobilize.Web.SystemColors.Menu;
          this.txtTotal.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtTotal.Properties().Cursor = null;
+         this.txtTotal.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtTotal.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtTotal.Location = new System.Drawing.Point(88, 432);
          this.txtTotal.MaxLength = 0;
          this.txtTotal.Name = "txtTotal";
          this.txtTotal.ReadOnly = true;
-         this.txtTotal.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtTotal.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtTotal.Size = new System.Drawing.Size(145, 20);
          this.txtTotal.TabIndex = 19;
          this.txtTotal.TabStop = false;
@@ -380,12 +394,13 @@ namespace SKS
          this.txtTotalTax.BackColor = Mobilize.Web.SystemColors.Menu;
          this.txtTotalTax.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtTotalTax.Properties().Cursor = null;
+         this.txtTotalTax.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtTotalTax.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtTotalTax.Location = new System.Drawing.Point(368, 384);
          this.txtTotalTax.MaxLength = 0;
          this.txtTotalTax.Name = "txtTotalTax";
          this.txtTotalTax.ReadOnly = true;
-         this.txtTotalTax.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtTotalTax.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtTotalTax.Size = new System.Drawing.Size(145, 20);
          this.txtTotalTax.TabIndex = 17;
          this.txtTotalTax.TabStop = false;
@@ -398,12 +413,13 @@ namespace SKS
          this.txtFreightCharge.BackColor = Mobilize.Web.SystemColors.Menu;
          this.txtFreightCharge.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtFreightCharge.Properties().Cursor = null;
+         this.txtFreightCharge.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtFreightCharge.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtFreightCharge.Location = new System.Drawing.Point(88, 408);
          this.txtFreightCharge.MaxLength = 0;
          this.txtFreightCharge.Name = "txtFreightCharge";
          this.txtFreightCharge.ReadOnly = true;
-         this.txtFreightCharge.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtFreightCharge.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtFreightCharge.Size = new System.Drawing.Size(145, 20);
          this.txtFreightCharge.TabIndex = 6;
          this.txtFreightCharge.TextAlign = Mobilize.Web.HorizontalAlignment.Right;
@@ -415,12 +431,13 @@ namespace SKS
          this.txtSalesTax.BackColor = Mobilize.Web.SystemColors.Menu;
          this.txtSalesTax.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtSalesTax.Properties().Cursor = null;
+         this.txtSalesTax.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtSalesTax.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtSalesTax.Location = new System.Drawing.Point(88, 384);
          this.txtSalesTax.MaxLength = 0;
          this.txtSalesTax.Name = "txtSalesTax";
          this.txtSalesTax.ReadOnly = true;
-         this.txtSalesTax.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtSalesTax.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtSalesTax.Size = new System.Drawing.Size(145, 20);
          this.txtSalesTax.TabIndex = 5;
          this.txtSalesTax.TextAlign = Mobilize.Web.HorizontalAlignment.Right;
@@ -432,11 +449,12 @@ namespace SKS
          this.txtEntry.BackColor = Mobilize.Web.SystemColors.Window;
          this.txtEntry.BorderStyle = Mobilize.Web.BorderStyle.None;
          this.txtEntry.Properties().Cursor = null;
+         this.txtEntry.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtEntry.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtEntry.Location = new System.Drawing.Point(416, 312);
          this.txtEntry.MaxLength = 0;
          this.txtEntry.Name = "txtEntry";
-         this.txtEntry.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtEntry.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtEntry.Size = new System.Drawing.Size(73, 19);
          this.txtEntry.TabIndex = 14;
          this.txtEntry.Visible = false;
@@ -468,16 +486,17 @@ namespace SKS
          this.sbStatusBar.AllowDrop = true;
          this.sbStatusBar.Properties().BackColor = Mobilize.Web.SystemColors.Control;
          this.sbStatusBar.Dock = Mobilize.Web.DockStyle.Bottom;
+         this.sbStatusBar.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.sbStatusBar.Location = new System.Drawing.Point(0, 494);
          this.sbStatusBar.Name = "sbStatusBar";
          this.sbStatusBar.Properties().ShowItemToolTips = true;
          this.sbStatusBar.Size = new System.Drawing.Size(523, 25);
          this.sbStatusBar.TabIndex = 13;
-         this.sbStatusBar.Items.AddRange(new Mobilize.Web.ToolStripItem[]{this.sbStatusBar_Panels_Panel1});
+         this.sbStatusBar.Items.AddRange(new Mobilize.Web.ToolStripItem[] { this.sbStatusBar_Panels_Panel1 });
          // 
          // sbStatusBar_Panels_Panel1
          // 
-         this.sbStatusBar_Panels_Panel1.BorderSides = (Mobilize.Web.ToolStripStatusLabelBorderSides) (Mobilize.Web.ToolStripStatusLabelBorderSides.Left | Mobilize.Web.ToolStripStatusLabelBorderSides.Top | Mobilize.Web.ToolStripStatusLabelBorderSides.Right | Mobilize.Web.ToolStripStatusLabelBorderSides.Bottom);
+         this.sbStatusBar_Panels_Panel1.BorderSides = (Mobilize.Web.ToolStripStatusLabelBorderSides)(Mobilize.Web.ToolStripStatusLabelBorderSides.Left | Mobilize.Web.ToolStripStatusLabelBorderSides.Top | Mobilize.Web.ToolStripStatusLabelBorderSides.Right | Mobilize.Web.ToolStripStatusLabelBorderSides.Bottom);
          this.sbStatusBar_Panels_Panel1.Properties().BorderStyle = Mobilize.Web.Border3DStyle.SunkenOuter;
          this.sbStatusBar_Panels_Panel1.DoubleClickEnabled = true;
          this.sbStatusBar_Panels_Panel1.Margin = new Mobilize.Web.Padding(0);
@@ -490,10 +509,11 @@ namespace SKS
          // 
          this.cmdCancel.AllowDrop = true;
          this.cmdCancel.BackColor = Mobilize.Web.SystemColors.Control;
+         this.cmdCancel.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.cmdCancel.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cmdCancel.Location = new System.Drawing.Point(328, 456);
          this.cmdCancel.Name = "cmdCancel";
-         this.cmdCancel.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cmdCancel.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cmdCancel.Size = new System.Drawing.Size(89, 25);
          this.cmdCancel.TabIndex = 1;
          this.cmdCancel.Text = "&Cancel";
@@ -505,10 +525,11 @@ namespace SKS
          // 
          this.cmdClose.AllowDrop = true;
          this.cmdClose.BackColor = Mobilize.Web.SystemColors.Control;
+         this.cmdClose.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.cmdClose.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cmdClose.Location = new System.Drawing.Point(424, 456);
          this.cmdClose.Name = "cmdClose";
-         this.cmdClose.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cmdClose.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cmdClose.Size = new System.Drawing.Size(89, 25);
          this.cmdClose.TabIndex = 2;
          this.cmdClose.Text = "&Close";
@@ -524,11 +545,13 @@ namespace SKS
          this.Frame2.Controls.Add(this.txtProviderCompany);
          this.Frame2.Controls.Add(this.Label5);
          this.Frame2.Controls.Add(this.Label1);
+         this.Frame2.Properties().Cursor = Stub._UpgradeHelpers.Helpers.CursorHelper.CursorDefault;
          this.Frame2.Enabled = true;
+         this.Frame2.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Frame2.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.Frame2.Location = new System.Drawing.Point(8, 96);
          this.Frame2.Name = "Frame2";
-         this.Frame2.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Frame2.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Frame2.Size = new System.Drawing.Size(505, 49);
          this.Frame2.TabIndex = 7;
          this.Frame2.Text = "Supplier";
@@ -541,12 +564,13 @@ namespace SKS
          this.txtProviderContact.BackColor = Mobilize.Web.SystemColors.Menu;
          this.txtProviderContact.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtProviderContact.Properties().Cursor = null;
+         this.txtProviderContact.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtProviderContact.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtProviderContact.Location = new System.Drawing.Point(288, 16);
          this.txtProviderContact.MaxLength = 0;
          this.txtProviderContact.Name = "txtProviderContact";
          this.txtProviderContact.ReadOnly = true;
-         this.txtProviderContact.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtProviderContact.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtProviderContact.Size = new System.Drawing.Size(209, 20);
          this.txtProviderContact.TabIndex = 11;
          this.txtProviderContact.TabStop = false;
@@ -558,12 +582,13 @@ namespace SKS
          this.txtProviderCompany.BackColor = Mobilize.Web.SystemColors.Menu;
          this.txtProviderCompany.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtProviderCompany.Properties().Cursor = null;
+         this.txtProviderCompany.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtProviderCompany.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtProviderCompany.Location = new System.Drawing.Point(72, 16);
          this.txtProviderCompany.MaxLength = 0;
          this.txtProviderCompany.Name = "txtProviderCompany";
          this.txtProviderCompany.ReadOnly = true;
-         this.txtProviderCompany.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtProviderCompany.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtProviderCompany.Size = new System.Drawing.Size(145, 20);
          this.txtProviderCompany.TabIndex = 10;
          this.txtProviderCompany.TabStop = false;
@@ -573,10 +598,11 @@ namespace SKS
          this.Label5.AllowDrop = true;
          this.Label5.BackColor = Mobilize.Web.SystemColors.Control;
          this.Label5.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.Label5.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Label5.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.Label5.Location = new System.Drawing.Point(8, 16);
          this.Label5.Name = "Label5";
-         this.Label5.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Label5.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Label5.Size = new System.Drawing.Size(57, 17);
          this.Label5.TabIndex = 9;
          this.Label5.Text = "Name:";
@@ -586,10 +612,11 @@ namespace SKS
          this.Label1.AllowDrop = true;
          this.Label1.BackColor = Mobilize.Web.SystemColors.Control;
          this.Label1.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.Label1.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Label1.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.Label1.Location = new System.Drawing.Point(232, 16);
          this.Label1.Name = "Label1";
-         this.Label1.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Label1.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Label1.Size = new System.Drawing.Size(57, 17);
          this.Label1.TabIndex = 8;
          this.Label1.Text = "Contact:";
@@ -599,10 +626,11 @@ namespace SKS
          this.Label7.AllowDrop = true;
          this.Label7.BackColor = Mobilize.Web.SystemColors.Control;
          this.Label7.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.Label7.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Label7.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.Label7.Location = new System.Drawing.Point(8, 64);
          this.Label7.Name = "Label7";
-         this.Label7.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Label7.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Label7.Size = new System.Drawing.Size(57, 17);
          this.Label7.TabIndex = 34;
          this.Label7.Text = "By:";
@@ -613,10 +641,11 @@ namespace SKS
          this.Label3.AllowDrop = true;
          this.Label3.BackColor = Mobilize.Web.SystemColors.Control;
          this.Label3.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.Label3.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Label3.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.Label3.Location = new System.Drawing.Point(328, 8);
          this.Label3.Name = "Label3";
-         this.Label3.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Label3.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Label3.Size = new System.Drawing.Size(49, 17);
          this.Label3.TabIndex = 32;
          this.Label3.Text = "Status:";
@@ -627,10 +656,11 @@ namespace SKS
          this.Label19.AllowDrop = true;
          this.Label19.BackColor = Mobilize.Web.SystemColors.Control;
          this.Label19.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.Label19.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Label19.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.Label19.Location = new System.Drawing.Point(8, 32);
          this.Label19.Name = "Label19";
-         this.Label19.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Label19.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Label19.Size = new System.Drawing.Size(57, 17);
          this.Label19.TabIndex = 30;
          this.Label19.Text = "Received:";
@@ -641,10 +671,11 @@ namespace SKS
          this.lblChangedBy.AllowDrop = true;
          this.lblChangedBy.BackColor = Mobilize.Web.SystemColors.Control;
          this.lblChangedBy.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.lblChangedBy.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.lblChangedBy.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.lblChangedBy.Location = new System.Drawing.Point(320, 64);
          this.lblChangedBy.Name = "lblChangedBy";
-         this.lblChangedBy.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblChangedBy.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblChangedBy.Size = new System.Drawing.Size(57, 17);
          this.lblChangedBy.TabIndex = 28;
          this.lblChangedBy.Text = "By:";
@@ -655,10 +686,11 @@ namespace SKS
          this.Label4.AllowDrop = true;
          this.Label4.BackColor = Mobilize.Web.SystemColors.Control;
          this.Label4.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.Label4.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Label4.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.Label4.Location = new System.Drawing.Point(16, 8);
          this.Label4.Name = "Label4";
-         this.Label4.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Label4.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Label4.Size = new System.Drawing.Size(49, 17);
          this.Label4.TabIndex = 27;
          this.Label4.Text = "Order Id:";
@@ -669,10 +701,11 @@ namespace SKS
          this.lblChanged.AllowDrop = true;
          this.lblChanged.BackColor = Mobilize.Web.SystemColors.Control;
          this.lblChanged.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.lblChanged.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.lblChanged.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.lblChanged.Location = new System.Drawing.Point(312, 36);
          this.lblChanged.Name = "lblChanged";
-         this.lblChanged.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblChanged.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblChanged.Size = new System.Drawing.Size(65, 17);
          this.lblChanged.TabIndex = 26;
          this.lblChanged.Text = "Changed:";
@@ -683,10 +716,11 @@ namespace SKS
          this.Label12.AllowDrop = true;
          this.Label12.BackColor = Mobilize.Web.SystemColors.Control;
          this.Label12.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.Label12.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Label12.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.Label12.Location = new System.Drawing.Point(8, 408);
          this.Label12.Name = "Label12";
-         this.Label12.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Label12.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Label12.Size = new System.Drawing.Size(57, 17);
          this.Label12.TabIndex = 22;
          this.Label12.Text = "Freight:";
@@ -696,10 +730,11 @@ namespace SKS
          this.Label11.AllowDrop = true;
          this.Label11.BackColor = Mobilize.Web.SystemColors.Control;
          this.Label11.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.Label11.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Label11.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.Label11.Location = new System.Drawing.Point(8, 432);
          this.Label11.Name = "Label11";
-         this.Label11.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Label11.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Label11.Size = new System.Drawing.Size(89, 17);
          this.Label11.TabIndex = 20;
          this.Label11.Text = "Total:";
@@ -709,10 +744,11 @@ namespace SKS
          this.Label10.AllowDrop = true;
          this.Label10.BackColor = Mobilize.Web.SystemColors.Control;
          this.Label10.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.Label10.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Label10.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.Label10.Location = new System.Drawing.Point(288, 384);
          this.Label10.Name = "Label10";
-         this.Label10.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Label10.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Label10.Size = new System.Drawing.Size(89, 17);
          this.Label10.TabIndex = 18;
          this.Label10.Text = "Total Tax:";
@@ -722,10 +758,11 @@ namespace SKS
          this.Label9.AllowDrop = true;
          this.Label9.BackColor = Mobilize.Web.SystemColors.Control;
          this.Label9.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.Label9.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Label9.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.Label9.Location = new System.Drawing.Point(288, 408);
          this.Label9.Name = "Label9";
-         this.Label9.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Label9.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Label9.Size = new System.Drawing.Size(89, 17);
          this.Label9.TabIndex = 16;
          this.Label9.Text = "Sub Total:";
@@ -735,10 +772,11 @@ namespace SKS
          this.Label8.AllowDrop = true;
          this.Label8.BackColor = Mobilize.Web.SystemColors.Control;
          this.Label8.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.Label8.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Label8.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.Label8.Location = new System.Drawing.Point(8, 384);
          this.Label8.Name = "Label8";
-         this.Label8.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Label8.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Label8.Size = new System.Drawing.Size(89, 17);
          this.Label8.TabIndex = 15;
          this.Label8.Text = "Sales Tax:";
@@ -748,10 +786,11 @@ namespace SKS
          this.Label6.AllowDrop = true;
          this.Label6.BackColor = Mobilize.Web.SystemColors.Control;
          this.Label6.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.Label6.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Label6.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.Label6.Location = new System.Drawing.Point(8, 160);
          this.Label6.Name = "Label6";
-         this.Label6.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Label6.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Label6.Size = new System.Drawing.Size(33, 17);
          this.Label6.TabIndex = 12;
          this.Label6.Text = "Notes:";
@@ -795,14 +834,18 @@ namespace SKS
          this.Controls.Add(this.Label9);
          this.Controls.Add(this.Label8);
          this.Controls.Add(this.Label6);
+         this.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.FormBorderStyle = Mobilize.Web.FormBorderStyle.FixedSingle;
          this.Properties().Location = new System.Drawing.Point(3, 25);
          this.MaximizeBox = false;
          this.MinimizeBox = false;
          this.Name = "frmActionOrderReception";
-         this.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Properties().StartPosition = Mobilize.Web.FormStartPosition.Manual;
          this.Text = "Add Stock to Inventory";
+         this.commandButtonHelper1.SetStyle(this.cmdApprove, 0);
+         this.commandButtonHelper1.SetStyle(this.cmdCancel, 0);
+         this.commandButtonHelper1.SetStyle(this.cmdClose, 0);
          this.Activated += new System.EventHandler(this.frmActionOrderReception_Activated);
          this.Closed += new System.EventHandler(this.Form_Closed);
          this.sbStatusBar.ResumeLayout(false);
@@ -812,14 +855,16 @@ namespace SKS
 
       void ReLoadForm(bool addEvents)
       {
-      	//This form is an MDI child.
-      	//This code simulates the VB6 
-      	// functionality of automatically
-      	// loading and showing an MDI
-      	// child's parent.
-      	this.MdiParent = SKS.frmMain.DefInstance;
-      	SKS.frmMain.DefInstance.Show();
+         //This form is an MDI child.
+         //This code simulates the VB6 
+         // functionality of automatically
+         // loading and showing an MDI
+         // child's parent.
+         this.MdiParent = SKS.frmMain.DefInstance;
+         SKS.frmMain.DefInstance.Show();
       }
-      #endregion
+#endregion
+
    }
+
 }

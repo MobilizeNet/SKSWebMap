@@ -7,10 +7,12 @@
     width: 341px;
     height: 414px;
     overflow: hidden;
+    font-size: 8.25pt;
     left: 327px;
     top: 144px;
 }
 .SKS_frmUsersManage .Image1 {
+    font-size: 8.25pt;
     left: 8px;
     top: 8px;
     width: 32px;
@@ -20,6 +22,7 @@
 .SKS_frmUsersManage .Label4 {
     width: auto;
     background-color: Transparent;
+    font-size: 8.25pt;
     color: #404040;
     left: 48px;
     top: 32px;
@@ -54,6 +57,7 @@
 }
 .SKS_frmUsersManage .cmdDelete {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 256px;
     top: 384px;
@@ -67,6 +71,7 @@
 }
 .SKS_frmUsersManage .cmdEdit {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 168px;
     top: 384px;
@@ -80,6 +85,7 @@
 }
 .SKS_frmUsersManage .cmdClose {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 256px;
     top: 232px;
@@ -163,6 +169,7 @@
 }
 .SKS_frmUsersManage .cboLevel {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 120px;
     top: 120px;
@@ -172,6 +179,7 @@
 }
 .SKS_frmUsersManage .txtUsername {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 120px;
     top: 24px;
@@ -191,6 +199,7 @@
 }
 .SKS_frmUsersManage .txtFullname {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 120px;
     top: 88px;
@@ -200,6 +209,7 @@
 }
 .SKS_frmUsersManage .ctrlLiner1 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     left: 0px;
     top: 56px;
     width: 313px;
@@ -208,6 +218,7 @@
 }
 .SKS_frmUsersManage .cmdSave {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 80px;
     top: 232px;
@@ -221,6 +232,7 @@
 }
 .SKS_frmUsersManage .cmdClear {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 168px;
     top: 232px;
@@ -234,6 +246,7 @@
 }
 .SKS_frmUsersManage .lstAccounts {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 0px;
     top: 264px;

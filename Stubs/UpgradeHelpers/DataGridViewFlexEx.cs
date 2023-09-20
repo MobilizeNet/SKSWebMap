@@ -5,6 +5,8 @@ namespace Stub._UpgradeHelpers
       : Stub._System.Windows.Forms.DataGridViewEx
    {
 
+      public bool AllowBigSelection { get; set; }
+
       public bool AllowUserToResizeColumns { get; set; }
 
       public bool AllowUserToResizeRows { get; set; }
@@ -17,8 +19,6 @@ namespace Stub._UpgradeHelpers
       public bool ReadOnly { get; set; }
 
       public Mobilize.Web.DataGridViewSelectionMode SelectionMode { get; set; }
-
-      public bool AllowBigSelection { get; set; }
 
    }
 

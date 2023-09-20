@@ -1,16 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
         <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <StartupObject>WebSite.Startup</StartupObject>
         <AssemblyName>SKS</AssemblyName>
-        <ProjectGuid>{36D43D3A-4BD5-467D-BEA3-7FED68E38E6E}</ProjectGuid>
+        <ProjectGuid>12ffce2c-cc44-46e8-b3ad-57e1b3406b62</ProjectGuid>
         <Deterministic>False</Deterministic>
         <LangVersion>7.3</LangVersion>
-    </PropertyGroup>
+             <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+         </PropertyGroup>
     <ItemGroup>
-        <ProjectReference Include="Stubs\Stubs.csproj" />
+        <ProjectReference Include="Stubs\Stubs.csproj"/>
     </ItemGroup>
     <ItemGroup>
             <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
@@ -18,11 +19,12 @@
             <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
         <PackageReference Include="Microsoft.VisualBasic" Version="10.4.0-preview.18571.3" />
         <PackageReference Include="Mobilize.Extensions.Logging.RollingFile" Version="2.1.1-rc0027" />
-        <PackageReference Include="Mobilize.Web.BundleBasic.All" Version="6.3.5" />
-        <PackageReference Include="Mobilize.Weaving.WebMapExtensions.All" Version="7.0.33" />
-        <PackageReference Include="Mobilize.Weaving" Version="2.0.4" />
-        <PackageReference Include="Mobilize.WebMap.CoreServices.All" Version="7.0.39" />
-        <PackageReference Include="Mobilize.VBUC.Helpers.All" Version="9.1.3" />
+        <PackageReference Include="System.Resources.Extensions" Version="6.0.0" />
+        <PackageReference Include="Mobilize.Web.BundleBasic.All" Version="10.4.6"/>
+        <PackageReference Include="Mobilize.Web.VBUC.All" Version="10.4.6"/>
+        <PackageReference Include="Mobilize.Weaving.WebMapExtensions.All" Version="8.0.0" PrivateAssets="all"/>
+        <PackageReference Include="Mobilize.Weaving" Version="2.4.0" PrivateAssets="all"/>
+        <PackageReference Include="Mobilize.WebMap.CoreServices.All" Version="8.1.0"/>
     </ItemGroup>
     <ItemGroup>
         <Content Include="Views\**\*.cshtml" />
@@ -37,25 +39,25 @@
 		<None Remove="Stubs\**" />
     </ItemGroup>
     <ItemGroup>
-      <COMReference Include="Microsoft.StdFormat">
-      <Guid>{6B263850-900B-11D0-9484-00A0C91110ED}</Guid>
+      <Reference Include="mscorlib"/>
+      <Reference Include="System.Core"/>
+      <Reference Include="System.Data"/>
+      <Reference Include="System"/>
+      <Reference Include="System.Xml"/>
+    </ItemGroup>
+    <ItemGroup>
+      <COMReference Include="MSChartLib">
+      <Guid>{02B5E320-7292-11CF-93D5-0020AF99504A}</Guid>
       <Lcid>0</Lcid>
       <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <WrapperTool>primary</WrapperTool>
-      </COMReference>
-      <COMReference Include="MSComCtl2">
-      <Guid>{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}</Guid>
-      <Lcid>0</Lcid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>0</VersionMinor>
+      <VersionMinor>1</VersionMinor>
       <WrapperTool>tlbimp</WrapperTool>
       </COMReference>
-      <COMReference Include="AxMSComCtl2">
-      <Guid>{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}</Guid>
+      <COMReference Include="AxMSChartLib">
+      <Guid>{02B5E320-7292-11CF-93D5-0020AF99504A}</Guid>
       <Lcid>0</Lcid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
       <WrapperTool>aximp</WrapperTool>
       </COMReference>
       <COMReference Include="MSDataListLib">
@@ -72,19 +74,26 @@
       <VersionMinor>0</VersionMinor>
       <WrapperTool>aximp</WrapperTool>
       </COMReference>
-      <COMReference Include="MSChart20Lib">
-      <Guid>{65E121D4-0C60-11D2-A9FC-0000F8754DA1}</Guid>
+      <COMReference Include="MSComCtl2">
+      <Guid>{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}</Guid>
       <Lcid>0</Lcid>
       <VersionMajor>2</VersionMajor>
       <VersionMinor>0</VersionMinor>
       <WrapperTool>tlbimp</WrapperTool>
       </COMReference>
-      <COMReference Include="AxMSChart20Lib">
-      <Guid>{65E121D4-0C60-11D2-A9FC-0000F8754DA1}</Guid>
+      <COMReference Include="AxMSComCtl2">
+      <Guid>{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}</Guid>
       <Lcid>0</Lcid>
       <VersionMajor>2</VersionMajor>
       <VersionMinor>0</VersionMinor>
       <WrapperTool>aximp</WrapperTool>
+      </COMReference>
+      <COMReference Include="Microsoft.StdFormat">
+      <Guid>{6B263850-900B-11D0-9484-00A0C91110ED}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>primary</WrapperTool>
       </COMReference>
     </ItemGroup>
 </Project>

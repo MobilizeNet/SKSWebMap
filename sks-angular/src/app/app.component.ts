@@ -9,6 +9,8 @@ import { WebMapService } from '@mobilize/angularclient';
 export class AppComponent {
   title = 'app';
   constructor( private webmapService: WebMapService) {
+     
    webmapService.init();
- }
+    }
 }
+

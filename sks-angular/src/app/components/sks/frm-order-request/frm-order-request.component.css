@@ -7,11 +7,13 @@
     width: 523px;
     height: 703px;
     overflow: hidden;
+    font-size: 8.25pt;
     left: 3px;
     top: 25px;
 }
 .SKS_frmOrderRequest .Label6 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 320px;
@@ -23,6 +25,7 @@
 }
 .SKS_frmOrderRequest .Label7 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 256px;
     top: 320px;
@@ -34,6 +37,7 @@
 }
 .SKS_frmOrderRequest .Label8 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 568px;
@@ -45,6 +49,7 @@
 }
 .SKS_frmOrderRequest .Label9 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 272px;
     top: 616px;
@@ -56,6 +61,7 @@
 }
 .SKS_frmOrderRequest .Label10 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 272px;
     top: 592px;
@@ -67,6 +73,7 @@
 }
 .SKS_frmOrderRequest .Label11 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 616px;
@@ -78,6 +85,7 @@
 }
 .SKS_frmOrderRequest .Label12 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 592px;
@@ -89,6 +97,7 @@
 }
 .SKS_frmOrderRequest .Label13 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 544px;
@@ -99,6 +108,7 @@
     overflow: hidden;
 }
 .SKS_frmOrderRequest .dtPromised {
+    font-size: 8.25pt;
     left: 352px;
     top: 320px;
     width: 97px;
@@ -107,6 +117,7 @@
 }
 .SKS_frmOrderRequest .Frame2 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 256px;
@@ -116,6 +127,7 @@
 }
 .SKS_frmOrderRequest .Label1 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 232px;
     top: 16px;
@@ -127,6 +139,7 @@
 }
 .SKS_frmOrderRequest .Label5 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 16px;
@@ -138,6 +151,7 @@
 }
 .SKS_frmOrderRequest .txtCustomerCompany {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 72px;
     top: 16px;
@@ -147,6 +161,7 @@
 }
 .SKS_frmOrderRequest .txtCustomerContact {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 288px;
     top: 16px;
@@ -156,6 +171,7 @@
 }
 .SKS_frmOrderRequest .Frame1 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 8px;
@@ -165,6 +181,7 @@
 }
 .SKS_frmOrderRequest .Label2 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 48px;
@@ -176,6 +193,7 @@
 }
 .SKS_frmOrderRequest .Label4 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 16px;
@@ -187,6 +205,7 @@
 }
 .SKS_frmOrderRequest .Label3 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 240px;
     top: 48px;
@@ -198,6 +217,7 @@
 }
 .SKS_frmOrderRequest .lvCustomers {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 80px;
@@ -207,6 +227,7 @@
 }
 .SKS_frmOrderRequest .txtCompanyName {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 88px;
     top: 16px;
@@ -216,6 +237,7 @@
 }
 .SKS_frmOrderRequest .cmdCustomers {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 456px;
     top: 16px;
@@ -229,6 +251,7 @@
 }
 .SKS_frmOrderRequest .txtContactName {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 88px;
     top: 48px;
@@ -238,6 +261,7 @@
 }
 .SKS_frmOrderRequest .txtContactLastName {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 336px;
     top: 48px;
@@ -247,6 +271,7 @@
 }
 .SKS_frmOrderRequest .cmdClose {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 416px;
     top: 648px;
@@ -260,6 +285,7 @@
 }
 .SKS_frmOrderRequest .cmdAddProducts {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 488px;
     top: 336px;
@@ -273,6 +299,7 @@
 }
 .SKS_frmOrderRequest .cmdSave {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 320px;
     top: 648px;
@@ -285,6 +312,7 @@
     display: table-cell;
 }
 .SKS_frmOrderRequest .dtRequired {
+    font-size: 8.25pt;
     left: 120px;
     top: 320px;
     width: 97px;
@@ -293,6 +321,7 @@
 }
 .SKS_frmOrderRequest .sbStatusBar {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -314,6 +343,7 @@
 }
 .SKS_frmOrderRequest .txtEntry {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 96px;
     top: 544px;
@@ -323,6 +353,7 @@
 }
 .SKS_frmOrderRequest .txtSalesTax {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 96px;
     top: 568px;
@@ -332,6 +363,7 @@
 }
 .SKS_frmOrderRequest .txtFreightCharge {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 96px;
     top: 592px;
@@ -341,6 +373,7 @@
 }
 .SKS_frmOrderRequest .txtTotalTax {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 352px;
     top: 592px;
@@ -350,6 +383,7 @@
 }
 .SKS_frmOrderRequest .txtTotal {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 96px;
     top: 616px;
@@ -359,6 +393,7 @@
 }
 .SKS_frmOrderRequest .txtSubTotal {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 352px;
     top: 616px;

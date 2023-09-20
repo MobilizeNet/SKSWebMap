@@ -3,8 +3,9 @@ using Mobilize.Web.Extensions;
 
 namespace SKS
 {
-	partial class frmMain
-	{
+
+   partial class frmMain
+   {
 
 #region "Upgrade Support "
       [Intercepted]
@@ -15,34 +16,33 @@ namespace SKS
 
       public static frmMain DefInstance
       {
-      	get
-      	{
-      		if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
-      		{
-      			m_InitializingDefInstance = true;
-      			m_vb6FormDefInstance = CreateInstance();
-      			m_InitializingDefInstance = false;
-      		}
-      		return m_vb6FormDefInstance;
-      	}
-      	set
-      	{
-      		m_vb6FormDefInstance = value;
-      	}
+         get
+         {
+            if ( m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed )
+            {
+               m_InitializingDefInstance = true;
+               m_vb6FormDefInstance = CreateInstance();
+               m_InitializingDefInstance = false;
+            }
+            return m_vb6FormDefInstance;
+         }
+         set
+         {
+            m_vb6FormDefInstance = value;
+         }
       }
+#endregion
 
-      #endregion
-      #region "Windows Form Designer generated code "
-
+#region "Windows Form Designer generated code "
       public static frmMain CreateInstance()
       {
-      	frmMain theInstance = new frmMain();
-      	theInstance.MDIForm_Load();
-      	return theInstance;
+         frmMain theInstance = new frmMain();
+         theInstance.MDIForm_Load();
+         return theInstance;
       }
 
       [Intercepted]
-      private string[] visualControls { get; set; } = new string[]{"components", "ToolTipMain", "mnuCustomer", "mnuProviders", "mnuExit", "mnuFile", "mnuCreateOrderRequest", "mnuOrderRequestsApproval", "lExit2", "mnuCreateOrderReception", "mnuOrderReceptionsApproval", "mnuOrders", "mnuAddStockManually", "mnuAdjustStockManually", "mnuMainInventory", "mnuProducts", "mnuSecurity", "mnuAccounts", "mnuAbout", "mnuHelp", "MainMenu1", "sbStatusBar_Panels_Panel1", "sbStatusBar_Panels_Panel2", "sbStatusBar_Panels_Panel3", "sbStatusBar"};
+      private string[] visualControls { get; set; } = new string[] { "components", "ToolTipMain", "mnuCustomer", "mnuProviders", "mnuExit", "mnuFile", "mnuCreateOrderRequest", "mnuOrderRequestsApproval", "lExit2", "mnuCreateOrderReception", "mnuOrderReceptionsApproval", "mnuOrders", "mnuAddStockManually", "mnuAdjustStockManually", "mnuMainInventory", "mnuProducts", "mnuSecurity", "mnuAccounts", "mnuAbout", "mnuHelp", "MainMenu1", "sbStatusBar_Panels_Panel1", "sbStatusBar_Panels_Panel2", "sbStatusBar_Panels_Panel3", "sbStatusBar" };
 
       //Required by the Windows Form Designer
       [Intercepted]
@@ -119,46 +119,46 @@ namespace SKS
 
       [Intercepted]
       public Mobilize.Web.StatusStrip sbStatusBar { get; set; }
+
       //NOTE: The following procedure is required by the Windows Form Designer
       //It can be modified using the Windows Form Designer.
       //Do not modify it using the code editor.
-
       [System.Diagnostics.DebuggerStepThrough()]
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new Mobilize.Web.ControlCollection();
-      	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-      	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
-      	this.MainMenu1 = new Mobilize.Web.ToolStrip();
-      	this.mnuFile = new Mobilize.Web.ToolStripMenuItem();
-      	this.mnuCustomer = new Mobilize.Web.ToolStripMenuItem();
-      	this.mnuProviders = new Mobilize.Web.ToolStripMenuItem();
-      	this.mnuExit = new Mobilize.Web.ToolStripMenuItem();
-      	this.mnuOrders = new Mobilize.Web.ToolStripMenuItem();
-      	this.mnuCreateOrderRequest = new Mobilize.Web.ToolStripMenuItem();
-      	this.mnuOrderRequestsApproval = new Mobilize.Web.ToolStripMenuItem();
-      	this.lExit2 = new Mobilize.Web.ToolStripSeparator();
-      	this.mnuCreateOrderReception = new Mobilize.Web.ToolStripMenuItem();
-      	this.mnuOrderReceptionsApproval = new Mobilize.Web.ToolStripMenuItem();
-      	this.mnuMainInventory = new Mobilize.Web.ToolStripMenuItem();
-      	this.mnuAddStockManually = new Mobilize.Web.ToolStripMenuItem();
-      	this.mnuAdjustStockManually = new Mobilize.Web.ToolStripMenuItem();
-      	this.mnuAccounts = new Mobilize.Web.ToolStripMenuItem();
-      	this.mnuProducts = new Mobilize.Web.ToolStripMenuItem();
-      	this.mnuSecurity = new Mobilize.Web.ToolStripMenuItem();
-      	this.mnuHelp = new Mobilize.Web.ToolStripMenuItem();
-      	this.mnuAbout = new Mobilize.Web.ToolStripMenuItem();
-      	this.sbStatusBar = new Mobilize.Web.StatusStrip();
-      	this.sbStatusBar_Panels_Panel1 = new Mobilize.Web.ToolStripStatusLabel();
-      	this.sbStatusBar_Panels_Panel2 = new Mobilize.Web.ToolStripStatusLabel();
-      	this.sbStatusBar_Panels_Panel3 = new Mobilize.Web.ToolStripStatusLabel();
-      	this.sbStatusBar.SuspendLayout();
-      	this.SuspendLayout();
-      	// 
-      	// MainMenu1
-      	// 
-      	this.MainMenu1.Items.AddRange(new Mobilize.Web.ToolStripItem[]{this.mnuFile, this.mnuOrders, this.mnuMainInventory, this.mnuAccounts, this.mnuHelp});
+         this.components = new Mobilize.Web.ControlCollection();
+         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+         this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
+         this.MainMenu1 = new Mobilize.Web.ToolStrip();
+         this.mnuFile = new Mobilize.Web.ToolStripMenuItem();
+         this.mnuCustomer = new Mobilize.Web.ToolStripMenuItem();
+         this.mnuProviders = new Mobilize.Web.ToolStripMenuItem();
+         this.mnuExit = new Mobilize.Web.ToolStripMenuItem();
+         this.mnuOrders = new Mobilize.Web.ToolStripMenuItem();
+         this.mnuCreateOrderRequest = new Mobilize.Web.ToolStripMenuItem();
+         this.mnuOrderRequestsApproval = new Mobilize.Web.ToolStripMenuItem();
+         this.lExit2 = new Mobilize.Web.ToolStripSeparator();
+         this.mnuCreateOrderReception = new Mobilize.Web.ToolStripMenuItem();
+         this.mnuOrderReceptionsApproval = new Mobilize.Web.ToolStripMenuItem();
+         this.mnuMainInventory = new Mobilize.Web.ToolStripMenuItem();
+         this.mnuAddStockManually = new Mobilize.Web.ToolStripMenuItem();
+         this.mnuAdjustStockManually = new Mobilize.Web.ToolStripMenuItem();
+         this.mnuAccounts = new Mobilize.Web.ToolStripMenuItem();
+         this.mnuProducts = new Mobilize.Web.ToolStripMenuItem();
+         this.mnuSecurity = new Mobilize.Web.ToolStripMenuItem();
+         this.mnuHelp = new Mobilize.Web.ToolStripMenuItem();
+         this.mnuAbout = new Mobilize.Web.ToolStripMenuItem();
+         this.sbStatusBar = new Mobilize.Web.StatusStrip();
+         this.sbStatusBar_Panels_Panel1 = new Mobilize.Web.ToolStripStatusLabel();
+         this.sbStatusBar_Panels_Panel2 = new Mobilize.Web.ToolStripStatusLabel();
+         this.sbStatusBar_Panels_Panel3 = new Mobilize.Web.ToolStripStatusLabel();
+         this.sbStatusBar.SuspendLayout();
+         this.SuspendLayout();
+         // 
+         // MainMenu1
+         // 
+         this.MainMenu1.Items.AddRange(new Mobilize.Web.ToolStripItem[] { this.mnuFile, this.mnuOrders, this.mnuMainInventory, this.mnuAccounts, this.mnuHelp });
          // 
          // mnuFile
          // 
@@ -168,7 +168,7 @@ namespace SKS
          this.mnuFile.Properties().MergeAction = Mobilize.Web.MergeAction.Remove;
          this.mnuFile.Name = "mnuFile";
          this.mnuFile.Text = "&File";
-         this.mnuFile.DropDownItems.AddRange(new Mobilize.Web.ToolStripItem[]{this.mnuCustomer, this.mnuProviders, this.mnuExit});
+         this.mnuFile.DropDownItems.AddRange(new Mobilize.Web.ToolStripItem[] { this.mnuCustomer, this.mnuProviders, this.mnuExit });
          // 
          // mnuCustomer
          // 
@@ -205,7 +205,7 @@ namespace SKS
          this.mnuOrders.Properties().MergeAction = Mobilize.Web.MergeAction.Remove;
          this.mnuOrders.Name = "mnuOrders";
          this.mnuOrders.Text = "&Orders";
-         this.mnuOrders.DropDownItems.AddRange(new Mobilize.Web.ToolStripItem[]{this.mnuCreateOrderRequest, this.mnuOrderRequestsApproval, this.lExit2, this.mnuCreateOrderReception, this.mnuOrderReceptionsApproval});
+         this.mnuOrders.DropDownItems.AddRange(new Mobilize.Web.ToolStripItem[] { this.mnuCreateOrderRequest, this.mnuOrderRequestsApproval, this.lExit2, this.mnuCreateOrderReception, this.mnuOrderReceptionsApproval });
          // 
          // mnuCreateOrderRequest
          // 
@@ -258,7 +258,7 @@ namespace SKS
          this.mnuMainInventory.Properties().MergeAction = Mobilize.Web.MergeAction.Remove;
          this.mnuMainInventory.Name = "mnuMainInventory";
          this.mnuMainInventory.Text = "&Inventory";
-         this.mnuMainInventory.DropDownItems.AddRange(new Mobilize.Web.ToolStripItem[]{this.mnuAddStockManually, this.mnuAdjustStockManually});
+         this.mnuMainInventory.DropDownItems.AddRange(new Mobilize.Web.ToolStripItem[] { this.mnuAddStockManually, this.mnuAdjustStockManually });
          // 
          // mnuAddStockManually
          // 
@@ -286,7 +286,7 @@ namespace SKS
          this.mnuAccounts.Properties().MergeAction = Mobilize.Web.MergeAction.Remove;
          this.mnuAccounts.Name = "mnuAccounts";
          this.mnuAccounts.Text = "&Maintenance";
-         this.mnuAccounts.DropDownItems.AddRange(new Mobilize.Web.ToolStripItem[]{this.mnuProducts, this.mnuSecurity});
+         this.mnuAccounts.DropDownItems.AddRange(new Mobilize.Web.ToolStripItem[] { this.mnuProducts, this.mnuSecurity });
          // 
          // mnuProducts
          // 
@@ -314,7 +314,7 @@ namespace SKS
          this.mnuHelp.Properties().MergeAction = Mobilize.Web.MergeAction.Remove;
          this.mnuHelp.Name = "mnuHelp";
          this.mnuHelp.Text = "&Help";
-         this.mnuHelp.DropDownItems.AddRange(new Mobilize.Web.ToolStripItem[]{this.mnuAbout});
+         this.mnuHelp.DropDownItems.AddRange(new Mobilize.Web.ToolStripItem[] { this.mnuAbout });
          // 
          // mnuAbout
          // 
@@ -330,18 +330,19 @@ namespace SKS
          this.sbStatusBar.AllowDrop = true;
          this.sbStatusBar.Properties().BackColor = Mobilize.Web.SystemColors.Control;
          this.sbStatusBar.Dock = Mobilize.Web.DockStyle.Bottom;
+         this.sbStatusBar.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.sbStatusBar.Location = new System.Drawing.Point(0, 683);
          this.sbStatusBar.Name = "sbStatusBar";
          this.sbStatusBar.Properties().ShowItemToolTips = true;
          this.sbStatusBar.Size = new System.Drawing.Size(1113, 25);
          this.sbStatusBar.TabIndex = 0;
-         this.sbStatusBar.Items.AddRange(new Mobilize.Web.ToolStripItem[]{this.sbStatusBar_Panels_Panel1});
-         this.sbStatusBar.Items.AddRange(new Mobilize.Web.ToolStripItem[]{this.sbStatusBar_Panels_Panel2});
-         this.sbStatusBar.Items.AddRange(new Mobilize.Web.ToolStripItem[]{this.sbStatusBar_Panels_Panel3});
+         this.sbStatusBar.Items.AddRange(new Mobilize.Web.ToolStripItem[] { this.sbStatusBar_Panels_Panel1 });
+         this.sbStatusBar.Items.AddRange(new Mobilize.Web.ToolStripItem[] { this.sbStatusBar_Panels_Panel2 });
+         this.sbStatusBar.Items.AddRange(new Mobilize.Web.ToolStripItem[] { this.sbStatusBar_Panels_Panel3 });
          // 
          // sbStatusBar_Panels_Panel1
          // 
-         this.sbStatusBar_Panels_Panel1.BorderSides = (Mobilize.Web.ToolStripStatusLabelBorderSides) (Mobilize.Web.ToolStripStatusLabelBorderSides.Left | Mobilize.Web.ToolStripStatusLabelBorderSides.Top | Mobilize.Web.ToolStripStatusLabelBorderSides.Right | Mobilize.Web.ToolStripStatusLabelBorderSides.Bottom);
+         this.sbStatusBar_Panels_Panel1.BorderSides = (Mobilize.Web.ToolStripStatusLabelBorderSides)(Mobilize.Web.ToolStripStatusLabelBorderSides.Left | Mobilize.Web.ToolStripStatusLabelBorderSides.Top | Mobilize.Web.ToolStripStatusLabelBorderSides.Right | Mobilize.Web.ToolStripStatusLabelBorderSides.Bottom);
          this.sbStatusBar_Panels_Panel1.Properties().BorderStyle = Mobilize.Web.Border3DStyle.SunkenOuter;
          this.sbStatusBar_Panels_Panel1.DoubleClickEnabled = true;
          this.sbStatusBar_Panels_Panel1.Margin = new Mobilize.Web.Padding(0);
@@ -353,7 +354,7 @@ namespace SKS
          // sbStatusBar_Panels_Panel2
          // 
          this.sbStatusBar_Panels_Panel2.AutoSize = false;
-         this.sbStatusBar_Panels_Panel2.BorderSides = (Mobilize.Web.ToolStripStatusLabelBorderSides) (Mobilize.Web.ToolStripStatusLabelBorderSides.Left | Mobilize.Web.ToolStripStatusLabelBorderSides.Top | Mobilize.Web.ToolStripStatusLabelBorderSides.Right | Mobilize.Web.ToolStripStatusLabelBorderSides.Bottom);
+         this.sbStatusBar_Panels_Panel2.BorderSides = (Mobilize.Web.ToolStripStatusLabelBorderSides)(Mobilize.Web.ToolStripStatusLabelBorderSides.Left | Mobilize.Web.ToolStripStatusLabelBorderSides.Top | Mobilize.Web.ToolStripStatusLabelBorderSides.Right | Mobilize.Web.ToolStripStatusLabelBorderSides.Bottom);
          this.sbStatusBar_Panels_Panel2.Properties().BorderStyle = Mobilize.Web.Border3DStyle.SunkenOuter;
          this.sbStatusBar_Panels_Panel2.DoubleClickEnabled = true;
          this.sbStatusBar_Panels_Panel2.Margin = new Mobilize.Web.Padding(0);
@@ -365,7 +366,7 @@ namespace SKS
          // sbStatusBar_Panels_Panel3
          // 
          this.sbStatusBar_Panels_Panel3.AutoSize = false;
-         this.sbStatusBar_Panels_Panel3.BorderSides = (Mobilize.Web.ToolStripStatusLabelBorderSides) (Mobilize.Web.ToolStripStatusLabelBorderSides.Left | Mobilize.Web.ToolStripStatusLabelBorderSides.Top | Mobilize.Web.ToolStripStatusLabelBorderSides.Right | Mobilize.Web.ToolStripStatusLabelBorderSides.Bottom);
+         this.sbStatusBar_Panels_Panel3.BorderSides = (Mobilize.Web.ToolStripStatusLabelBorderSides)(Mobilize.Web.ToolStripStatusLabelBorderSides.Left | Mobilize.Web.ToolStripStatusLabelBorderSides.Top | Mobilize.Web.ToolStripStatusLabelBorderSides.Right | Mobilize.Web.ToolStripStatusLabelBorderSides.Bottom);
          this.sbStatusBar_Panels_Panel3.Properties().BorderStyle = Mobilize.Web.Border3DStyle.SunkenOuter;
          this.sbStatusBar_Panels_Panel3.DoubleClickEnabled = true;
          this.sbStatusBar_Panels_Panel3.Margin = new Mobilize.Web.Padding(0);
@@ -382,16 +383,19 @@ namespace SKS
          this.Controls.Add(this.sbStatusBar);
          this.Controls.Add(MainMenu1);
          this.Enabled = true;
+         this.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.IsMdiContainer = true;
          this.Properties().Location = new System.Drawing.Point(11, 54);
          this.Name = "frmMain";
-         this.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Text = "Sales Agent";
          this.WindowState = Mobilize.Web.FormWindowState.Maximized;
          this.Activated += new System.EventHandler(this.frmMain_Activated);
          this.sbStatusBar.ResumeLayout(false);
          this.ResumeLayout(false);
       }
-      #endregion
+#endregion
+
    }
+
 }

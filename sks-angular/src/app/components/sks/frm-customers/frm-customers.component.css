@@ -7,10 +7,12 @@
     width: 454px;
     height: 443px;
     overflow: hidden;
+    font-size: 8.25pt;
     left: 8px;
     top: 30px;
 }
 .SKS_frmCustomers .Toolbar1 {
+    font-size: 8.25pt;
     left: 0px;
     top: 0px;
     width: 454px;
@@ -49,6 +51,7 @@
 }
 .SKS_frmCustomers .Frame1 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 48px;
@@ -58,6 +61,7 @@
 }
 .SKS_frmCustomers .Label1 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 24px;
@@ -69,6 +73,7 @@
 }
 .SKS_frmCustomers .Label4 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 55px;
@@ -80,6 +85,7 @@
 }
 .SKS_frmCustomers .Label5 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 117px;
@@ -91,6 +97,7 @@
 }
 .SKS_frmCustomers .Label6 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 178px;
@@ -102,6 +109,7 @@
 }
 .SKS_frmCustomers .Label8 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 232px;
     top: 179px;
@@ -113,6 +121,7 @@
 }
 .SKS_frmCustomers .Label9 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 232px;
     top: 209px;
@@ -124,6 +133,7 @@
 }
 .SKS_frmCustomers .Label10 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 232px;
     top: 240px;
@@ -135,6 +145,7 @@
 }
 .SKS_frmCustomers .Label11 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 86px;
@@ -146,6 +157,7 @@
 }
 .SKS_frmCustomers .Label12 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 264px;
@@ -157,6 +169,7 @@
 }
 .SKS_frmCustomers .Label13 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 209px;
@@ -168,6 +181,7 @@
 }
 .SKS_frmCustomers .Label14 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 240px;
@@ -179,6 +193,7 @@
 }
 .SKS_frmCustomers .Label15 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 148px;
@@ -190,6 +205,7 @@
 }
 .SKS_frmCustomers ._txtField_9 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 312px;
     top: 209px;
@@ -199,6 +215,7 @@
 }
 .SKS_frmCustomers ._txtField_14 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 280px;
@@ -208,6 +225,7 @@
 }
 .SKS_frmCustomers ._txtField_10 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 312px;
     top: 240px;
@@ -217,6 +235,7 @@
 }
 .SKS_frmCustomers ._txtField_8 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 312px;
     top: 179px;
@@ -226,6 +245,7 @@
 }
 .SKS_frmCustomers .Frame2 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 224px;
     top: 14px;
@@ -235,6 +255,7 @@
 }
 .SKS_frmCustomers .Label2 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 43px;
@@ -246,6 +267,7 @@
 }
 .SKS_frmCustomers .Label3 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 69px;
@@ -257,6 +279,7 @@
 }
 .SKS_frmCustomers .Label7 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 16px;
@@ -268,6 +291,7 @@
 }
 .SKS_frmCustomers ._txtField_12 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 64px;
     top: 40px;
@@ -277,6 +301,7 @@
 }
 .SKS_frmCustomers ._txtField_13 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 64px;
     top: 64px;
@@ -286,6 +311,7 @@
 }
 .SKS_frmCustomers ._txtField_11 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 64px;
     top: 16px;
@@ -295,6 +321,7 @@
 }
 .SKS_frmCustomers ._txtField_5 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 104px;
     top: 178px;
@@ -304,6 +331,7 @@
 }
 .SKS_frmCustomers ._txtField_3 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 104px;
     top: 117px;
@@ -313,6 +341,7 @@
 }
 .SKS_frmCustomers ._txtField_1 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 104px;
     top: 55px;
@@ -322,6 +351,7 @@
 }
 .SKS_frmCustomers ._txtField_2 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 104px;
     top: 86px;
@@ -331,6 +361,7 @@
 }
 .SKS_frmCustomers ._txtField_7 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 104px;
     top: 240px;
@@ -340,6 +371,7 @@
 }
 .SKS_frmCustomers ._txtField_6 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 104px;
     top: 209px;
@@ -349,6 +381,7 @@
 }
 .SKS_frmCustomers ._txtField_0 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 104px;
     top: 24px;
@@ -358,6 +391,7 @@
 }
 .SKS_frmCustomers ._txtField_4 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 104px;
     top: 148px;

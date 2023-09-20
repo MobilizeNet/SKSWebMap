@@ -7,11 +7,13 @@
     width: 424px;
     height: 511px;
     overflow: hidden;
+    font-size: 8.25pt;
     left: 3px;
     top: 25px;
 }
 .SKS_frmAddProductTo .lblProductsRelated {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 248px;
@@ -23,6 +25,7 @@
 }
 .SKS_frmAddProductTo .lvProductsBy {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 272px;
@@ -32,6 +35,7 @@
 }
 .SKS_frmAddProductTo .Frame1 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 8px;
@@ -41,6 +45,7 @@
 }
 .SKS_frmAddProductTo .Label5 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 16px;
@@ -52,6 +57,7 @@
 }
 .SKS_frmAddProductTo .Label4 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 40px;
@@ -63,6 +69,7 @@
 }
 .SKS_frmAddProductTo .lvProducts {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 64px;
@@ -72,6 +79,7 @@
 }
 .SKS_frmAddProductTo .txtCode {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 112px;
     top: 16px;
@@ -81,6 +89,7 @@
 }
 .SKS_frmAddProductTo .txtName {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 112px;
     top: 40px;
@@ -90,6 +99,7 @@
 }
 .SKS_frmAddProductTo .cmdProducts {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 360px;
     top: 16px;
@@ -103,6 +113,7 @@
 }
 .SKS_frmAddProductTo .cmdSave {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 224px;
     top: 448px;
@@ -116,6 +127,7 @@
 }
 .SKS_frmAddProductTo .cmdClose {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 328px;
     top: 448px;
@@ -129,6 +141,7 @@
 }
 .SKS_frmAddProductTo .sbStatusBar {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -143,6 +156,7 @@
 }
 .SKS_frmAddProductTo .cmdRemove {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 448px;
@@ -156,6 +170,7 @@
 }
 .SKS_frmAddProductTo .chkAll {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 112px;
     top: 454px;

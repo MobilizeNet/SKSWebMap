@@ -3,8 +3,9 @@ using Mobilize.Web.Extensions;
 
 namespace SKS
 {
-	partial class frmAddProductTo
-	{
+
+   partial class frmAddProductTo
+   {
 
 #region "Upgrade Support "
       [Intercepted]
@@ -15,33 +16,32 @@ namespace SKS
 
       public static frmAddProductTo DefInstance
       {
-      	get
-      	{
-      		if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
-      		{
-      			m_InitializingDefInstance = true;
-      			m_vb6FormDefInstance = CreateInstance();
-      			m_InitializingDefInstance = false;
-      		}
-      		return m_vb6FormDefInstance;
-      	}
-      	set
-      	{
-      		m_vb6FormDefInstance = value;
-      	}
+         get
+         {
+            if ( m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed )
+            {
+               m_InitializingDefInstance = true;
+               m_vb6FormDefInstance = CreateInstance();
+               m_InitializingDefInstance = false;
+            }
+            return m_vb6FormDefInstance;
+         }
+         set
+         {
+            m_vb6FormDefInstance = value;
+         }
       }
+#endregion
 
-      #endregion
-      #region "Windows Form Designer generated code "
-
+#region "Windows Form Designer generated code "
       public static frmAddProductTo CreateInstance()
       {
-      	frmAddProductTo theInstance = new frmAddProductTo();
-      	return theInstance;
+         frmAddProductTo theInstance = new frmAddProductTo();
+         return theInstance;
       }
 
       [Intercepted]
-      private string[] visualControls { get; set; } = new string[]{"components", "ToolTipMain", "chkAll", "cmdRemove", "sbStatusBar_Panels_Panel1", "sbStatusBar", "cmdClose", "cmdSave", "cmdProducts", "txtName", "txtCode", "lvProducts_ColumnHeader_1_", "lvProducts_ColumnHeader_2_", "lvProducts_ColumnHeader_3_", "lvProducts_ColumnHeader_4_", "lvProducts_ColumnHeader_5_", "lvProducts_ColumnHeader_6_", "lvProducts_ColumnHeader_7_", "lvProducts", "Label4", "Label5", "Frame1", "lvProductsBy_ColumnHeader_1_", "lvProductsBy_ColumnHeader_2_", "lvProductsBy_ColumnHeader_3_", "lvProductsBy_ColumnHeader_4_", "lvProductsBy", "lblProductsRelated", "listViewHelper1"};
+      private string[] visualControls { get; set; } = new string[] { "components", "ToolTipMain", "chkAll", "cmdRemove", "sbStatusBar_Panels_Panel1", "sbStatusBar", "cmdClose", "cmdSave", "cmdProducts", "txtName", "txtCode", "lvProducts_ColumnHeader_1_", "lvProducts_ColumnHeader_2_", "lvProducts_ColumnHeader_3_", "lvProducts_ColumnHeader_4_", "lvProducts_ColumnHeader_5_", "lvProducts_ColumnHeader_6_", "lvProducts_ColumnHeader_7_", "lvProducts", "Label4", "Label5", "Frame1", "lvProductsBy_ColumnHeader_1_", "lvProductsBy_ColumnHeader_2_", "lvProductsBy_ColumnHeader_3_", "lvProductsBy_ColumnHeader_4_", "lvProductsBy", "lblProductsRelated", "listViewHelper1", "commandButtonHelper1" };
 
       //Required by the Windows Form Designer
       [Intercepted]
@@ -130,63 +130,68 @@ namespace SKS
 
       [Intercepted]
       public Mobilize.Web.ListView listViewHelper1 { get; set; }
+
+      [Intercepted]
+      public Stub._UpgradeHelpers.Gui.Controls.CommandButtonHelper commandButtonHelper1 { get; set; }
+
       //NOTE: The following procedure is required by the Windows Form Designer
       //It can be modified using the Windows Form Designer.
       //Do not modify it using the code editor.
-
       [System.Diagnostics.DebuggerStepThrough()]
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new Mobilize.Web.ControlCollection();
-      	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddProductTo));
-      	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
-      	this.chkAll = new Mobilize.Web.CheckBox();
-      	this.cmdRemove = new Mobilize.Web.Button();
-      	this.sbStatusBar = new Mobilize.Web.StatusStrip();
-      	this.sbStatusBar_Panels_Panel1 = new Mobilize.Web.ToolStripStatusLabel();
-      	this.cmdClose = new Mobilize.Web.Button();
-      	this.cmdSave = new Mobilize.Web.Button();
-      	this.Frame1 = new Mobilize.Web.GroupBox();
-      	this.cmdProducts = new Mobilize.Web.Button();
-      	this.txtName = new Mobilize.Web.TextBox();
-      	this.txtCode = new Mobilize.Web.TextBox();
-      	this.lvProducts = new Mobilize.Web.ListView();
-      	this.lvProducts_ColumnHeader_1_ = new Mobilize.Web.ListViewColumnHeader();
-      	this.lvProducts_ColumnHeader_2_ = new Mobilize.Web.ListViewColumnHeader();
-      	this.lvProducts_ColumnHeader_3_ = new Mobilize.Web.ListViewColumnHeader();
-      	this.lvProducts_ColumnHeader_4_ = new Mobilize.Web.ListViewColumnHeader();
-      	this.lvProducts_ColumnHeader_5_ = new Mobilize.Web.ListViewColumnHeader();
-      	this.lvProducts_ColumnHeader_6_ = new Mobilize.Web.ListViewColumnHeader();
-      	this.lvProducts_ColumnHeader_7_ = new Mobilize.Web.ListViewColumnHeader();
-      	this.Label4 = new Mobilize.Web.Label();
-      	this.Label5 = new Mobilize.Web.Label();
-      	this.lvProductsBy = new Mobilize.Web.ListView();
-      	this.lvProductsBy_ColumnHeader_1_ = new Mobilize.Web.ListViewColumnHeader();
-      	this.lvProductsBy_ColumnHeader_2_ = new Mobilize.Web.ListViewColumnHeader();
-      	this.lvProductsBy_ColumnHeader_3_ = new Mobilize.Web.ListViewColumnHeader();
-      	this.lvProductsBy_ColumnHeader_4_ = new Mobilize.Web.ListViewColumnHeader();
-      	this.lblProductsRelated = new Mobilize.Web.Label();
-      	this.sbStatusBar.SuspendLayout();
-      	this.Frame1.SuspendLayout();
-      	this.lvProducts.SuspendLayout();
-      	this.lvProductsBy.SuspendLayout();
-      	this.SuspendLayout();
-      	this.listViewHelper1 = new Mobilize.Web.ListView(this.components);
-      	// 
-      	// chkAll
-      	// 
-      	this.chkAll.AllowDrop = true;
-      	this.chkAll.Appearance = Mobilize.Web.Appearance.Normal;
+         this.components = new Mobilize.Web.ControlCollection();
+         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddProductTo));
+         this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
+         this.chkAll = new Mobilize.Web.CheckBox();
+         this.cmdRemove = new Mobilize.Web.Button();
+         this.sbStatusBar = new Mobilize.Web.StatusStrip();
+         this.sbStatusBar_Panels_Panel1 = new Mobilize.Web.ToolStripStatusLabel();
+         this.cmdClose = new Mobilize.Web.Button();
+         this.cmdSave = new Mobilize.Web.Button();
+         this.Frame1 = new Mobilize.Web.GroupBox();
+         this.cmdProducts = new Mobilize.Web.Button();
+         this.txtName = new Mobilize.Web.TextBox();
+         this.txtCode = new Mobilize.Web.TextBox();
+         this.lvProducts = new Mobilize.Web.ListView();
+         this.lvProducts_ColumnHeader_1_ = new Mobilize.Web.ListViewColumnHeader();
+         this.lvProducts_ColumnHeader_2_ = new Mobilize.Web.ListViewColumnHeader();
+         this.lvProducts_ColumnHeader_3_ = new Mobilize.Web.ListViewColumnHeader();
+         this.lvProducts_ColumnHeader_4_ = new Mobilize.Web.ListViewColumnHeader();
+         this.lvProducts_ColumnHeader_5_ = new Mobilize.Web.ListViewColumnHeader();
+         this.lvProducts_ColumnHeader_6_ = new Mobilize.Web.ListViewColumnHeader();
+         this.lvProducts_ColumnHeader_7_ = new Mobilize.Web.ListViewColumnHeader();
+         this.Label4 = new Mobilize.Web.Label();
+         this.Label5 = new Mobilize.Web.Label();
+         this.lvProductsBy = new Mobilize.Web.ListView();
+         this.lvProductsBy_ColumnHeader_1_ = new Mobilize.Web.ListViewColumnHeader();
+         this.lvProductsBy_ColumnHeader_2_ = new Mobilize.Web.ListViewColumnHeader();
+         this.lvProductsBy_ColumnHeader_3_ = new Mobilize.Web.ListViewColumnHeader();
+         this.lvProductsBy_ColumnHeader_4_ = new Mobilize.Web.ListViewColumnHeader();
+         this.lblProductsRelated = new Mobilize.Web.Label();
+         this.sbStatusBar.SuspendLayout();
+         this.Frame1.SuspendLayout();
+         this.lvProducts.SuspendLayout();
+         this.lvProductsBy.SuspendLayout();
+         this.SuspendLayout();
+         this.listViewHelper1 = new Mobilize.Web.ListView(this.components);
+         this.commandButtonHelper1 = new Stub._UpgradeHelpers.Gui.Controls.CommandButtonHelper(this.components);
+         // 
+         // chkAll
+         // 
+         this.chkAll.AllowDrop = true;
+         this.chkAll.Appearance = Mobilize.Web.Appearance.Normal;
          this.chkAll.BackColor = Mobilize.Web.SystemColors.Control;
          this.chkAll.CausesValidation = true;
          this.chkAll.CheckAlign = Mobilize.Web.ContentAlignment.MiddleLeft;
          this.chkAll.CheckState = Mobilize.Web.CheckState.Unchecked;
          this.chkAll.Enabled = true;
+         this.chkAll.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.chkAll.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.chkAll.Location = new System.Drawing.Point(112, 454);
          this.chkAll.Name = "chkAll";
-         this.chkAll.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.chkAll.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.chkAll.Size = new System.Drawing.Size(81, 17);
          this.chkAll.TabIndex = 13;
          this.chkAll.TabStop = false;
@@ -199,10 +204,11 @@ namespace SKS
          // 
          this.cmdRemove.AllowDrop = true;
          this.cmdRemove.BackColor = Mobilize.Web.SystemColors.Control;
+         this.cmdRemove.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.cmdRemove.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cmdRemove.Location = new System.Drawing.Point(8, 448);
          this.cmdRemove.Name = "cmdRemove";
-         this.cmdRemove.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cmdRemove.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cmdRemove.Size = new System.Drawing.Size(97, 25);
          this.cmdRemove.TabIndex = 12;
          this.cmdRemove.TabStop = false;
@@ -216,16 +222,17 @@ namespace SKS
          this.sbStatusBar.AllowDrop = true;
          this.sbStatusBar.Properties().BackColor = Mobilize.Web.SystemColors.Control;
          this.sbStatusBar.Dock = Mobilize.Web.DockStyle.Bottom;
+         this.sbStatusBar.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.sbStatusBar.Location = new System.Drawing.Point(0, 488);
          this.sbStatusBar.Name = "sbStatusBar";
          this.sbStatusBar.Properties().ShowItemToolTips = true;
          this.sbStatusBar.Size = new System.Drawing.Size(424, 23);
          this.sbStatusBar.TabIndex = 11;
-         this.sbStatusBar.Items.AddRange(new Mobilize.Web.ToolStripItem[]{this.sbStatusBar_Panels_Panel1});
+         this.sbStatusBar.Items.AddRange(new Mobilize.Web.ToolStripItem[] { this.sbStatusBar_Panels_Panel1 });
          // 
          // sbStatusBar_Panels_Panel1
          // 
-         this.sbStatusBar_Panels_Panel1.BorderSides = (Mobilize.Web.ToolStripStatusLabelBorderSides) (Mobilize.Web.ToolStripStatusLabelBorderSides.Left | Mobilize.Web.ToolStripStatusLabelBorderSides.Top | Mobilize.Web.ToolStripStatusLabelBorderSides.Right | Mobilize.Web.ToolStripStatusLabelBorderSides.Bottom);
+         this.sbStatusBar_Panels_Panel1.BorderSides = (Mobilize.Web.ToolStripStatusLabelBorderSides)(Mobilize.Web.ToolStripStatusLabelBorderSides.Left | Mobilize.Web.ToolStripStatusLabelBorderSides.Top | Mobilize.Web.ToolStripStatusLabelBorderSides.Right | Mobilize.Web.ToolStripStatusLabelBorderSides.Bottom);
          this.sbStatusBar_Panels_Panel1.Properties().BorderStyle = Mobilize.Web.Border3DStyle.SunkenOuter;
          this.sbStatusBar_Panels_Panel1.DoubleClickEnabled = true;
          this.sbStatusBar_Panels_Panel1.Margin = new Mobilize.Web.Padding(0);
@@ -238,10 +245,11 @@ namespace SKS
          // 
          this.cmdClose.AllowDrop = true;
          this.cmdClose.BackColor = Mobilize.Web.SystemColors.Control;
+         this.cmdClose.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.cmdClose.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cmdClose.Location = new System.Drawing.Point(328, 448);
          this.cmdClose.Name = "cmdClose";
-         this.cmdClose.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cmdClose.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cmdClose.Size = new System.Drawing.Size(89, 25);
          this.cmdClose.TabIndex = 7;
          this.cmdClose.Text = "&Close";
@@ -253,10 +261,11 @@ namespace SKS
          // 
          this.cmdSave.AllowDrop = true;
          this.cmdSave.BackColor = Mobilize.Web.SystemColors.Control;
+         this.cmdSave.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.cmdSave.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cmdSave.Location = new System.Drawing.Point(224, 448);
          this.cmdSave.Name = "cmdSave";
-         this.cmdSave.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cmdSave.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cmdSave.Size = new System.Drawing.Size(89, 25);
          this.cmdSave.TabIndex = 6;
          this.cmdSave.Text = "&Save";
@@ -274,11 +283,13 @@ namespace SKS
          this.Frame1.Controls.Add(this.lvProducts);
          this.Frame1.Controls.Add(this.Label4);
          this.Frame1.Controls.Add(this.Label5);
+         this.Frame1.Properties().Cursor = Stub._UpgradeHelpers.Helpers.CursorHelper.CursorDefault;
          this.Frame1.Enabled = true;
+         this.Frame1.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Frame1.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.Frame1.Location = new System.Drawing.Point(8, 8);
          this.Frame1.Name = "Frame1";
-         this.Frame1.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Frame1.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Frame1.Size = new System.Drawing.Size(409, 233);
          this.Frame1.TabIndex = 4;
          this.Frame1.Text = "Search product ";
@@ -288,10 +299,11 @@ namespace SKS
          // 
          this.cmdProducts.AllowDrop = true;
          this.cmdProducts.BackColor = Mobilize.Web.SystemColors.Control;
+         this.cmdProducts.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.cmdProducts.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cmdProducts.Location = new System.Drawing.Point(360, 16);
          this.cmdProducts.Name = "cmdProducts";
-         this.cmdProducts.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cmdProducts.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cmdProducts.Size = new System.Drawing.Size(25, 21);
          this.cmdProducts.TabIndex = 5;
          this.cmdProducts.TabStop = false;
@@ -307,11 +319,12 @@ namespace SKS
          this.txtName.BackColor = Mobilize.Web.SystemColors.Window;
          this.txtName.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtName.Properties().Cursor = null;
+         this.txtName.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtName.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtName.Location = new System.Drawing.Point(112, 40);
          this.txtName.MaxLength = 0;
          this.txtName.Name = "txtName";
-         this.txtName.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtName.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtName.Size = new System.Drawing.Size(145, 20);
          this.txtName.TabIndex = 1;
          this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
@@ -323,11 +336,12 @@ namespace SKS
          this.txtCode.BackColor = Mobilize.Web.SystemColors.Window;
          this.txtCode.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.txtCode.Properties().Cursor = null;
+         this.txtCode.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.txtCode.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.txtCode.Location = new System.Drawing.Point(112, 16);
          this.txtCode.MaxLength = 0;
          this.txtCode.Name = "txtCode";
-         this.txtCode.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.txtCode.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.txtCode.Size = new System.Drawing.Size(97, 20);
          this.txtCode.TabIndex = 0;
          this.txtCode.Leave += new System.EventHandler(this.txtCode_Leave);
@@ -338,11 +352,12 @@ namespace SKS
          this.lvProducts.AllowDrop = true;
          this.lvProducts.BackColor = Mobilize.Web.SystemColors.Window;
          this.lvProducts.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
+         this.lvProducts.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.lvProducts.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.lvProducts.FullRowSelect = true;
          this.lvProducts.GridLines = true;
          this.lvProducts.HideSelection = false;
-         this.lvProducts.Properties().HotTracking = true;
+         this.lvProducts.HotTracking = true;
          this.lvProducts.LabelEdit = false;
          this.lvProducts.Location = new System.Drawing.Point(8, 64);
          this.lvProducts.MultiSelect = false;
@@ -402,10 +417,11 @@ namespace SKS
          this.Label4.AllowDrop = true;
          this.Label4.BackColor = Mobilize.Web.SystemColors.Control;
          this.Label4.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.Label4.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Label4.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.Label4.Location = new System.Drawing.Point(16, 40);
          this.Label4.Name = "Label4";
-         this.Label4.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Label4.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Label4.Size = new System.Drawing.Size(89, 17);
          this.Label4.TabIndex = 9;
          this.Label4.Text = "Name";
@@ -415,10 +431,11 @@ namespace SKS
          this.Label5.AllowDrop = true;
          this.Label5.BackColor = Mobilize.Web.SystemColors.Control;
          this.Label5.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.Label5.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.Label5.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.Label5.Location = new System.Drawing.Point(16, 16);
          this.Label5.Name = "Label5";
-         this.Label5.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.Label5.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Label5.Size = new System.Drawing.Size(89, 17);
          this.Label5.TabIndex = 8;
          this.Label5.Text = "Code";
@@ -429,11 +446,12 @@ namespace SKS
          this.lvProductsBy.BackColor = Mobilize.Web.SystemColors.Window;
          this.lvProductsBy.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.lvProductsBy.CheckBoxes = true;
+         this.lvProductsBy.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.lvProductsBy.ForeColor = Mobilize.Web.SystemColors.WindowText;
          this.lvProductsBy.FullRowSelect = true;
          this.lvProductsBy.GridLines = true;
          this.lvProductsBy.HideSelection = false;
-         this.lvProductsBy.Properties().HotTracking = true;
+         this.lvProductsBy.HotTracking = true;
          this.lvProductsBy.LabelEdit = false;
          this.lvProductsBy.Location = new System.Drawing.Point(8, 272);
          this.lvProductsBy.MultiSelect = false;
@@ -473,10 +491,11 @@ namespace SKS
          this.lblProductsRelated.AllowDrop = true;
          this.lblProductsRelated.BackColor = Mobilize.Web.SystemColors.Control;
          this.lblProductsRelated.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.lblProductsRelated.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.lblProductsRelated.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.lblProductsRelated.Location = new System.Drawing.Point(8, 248);
          this.lblProductsRelated.Name = "lblProductsRelated";
-         this.lblProductsRelated.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblProductsRelated.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblProductsRelated.Size = new System.Drawing.Size(409, 17);
          this.lblProductsRelated.TabIndex = 10;
          this.lblProductsRelated.Text = "Products";
@@ -496,16 +515,22 @@ namespace SKS
          this.Controls.Add(this.Frame1);
          this.Controls.Add(this.lvProductsBy);
          this.Controls.Add(this.lblProductsRelated);
+         this.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.FormBorderStyle = Mobilize.Web.FormBorderStyle.FixedSingle;
          this.Properties().Location = new System.Drawing.Point(3, 25);
          this.MaximizeBox = false;
          this.MinimizeBox = false;
          this.Name = "frmAddProductTo";
-         this.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Text = "Create New Product Item";
+         this.commandButtonHelper1.SetStyle(this.cmdRemove, 0);
+         this.commandButtonHelper1.SetStyle(this.cmdClose, 0);
+         this.commandButtonHelper1.SetStyle(this.cmdSave, 0);
+         this.commandButtonHelper1.SetStyle(this.cmdProducts, 0);
          this.Activated += new System.EventHandler(this.frmAddProductTo_Activated);
          this.Closed += new System.EventHandler(this.Form_Closed);
-         this.FormClosing += new Mobilize.Web.FormClosingEventHandler(this.Form_FormClosing);this.lvProducts.ItemClick += new Mobilize.Web.ListViewItemClickEventHandler(this.lvProducts_ItemClick);
+         this.FormClosing += new Mobilize.Web.FormClosingEventHandler(this.Form_FormClosing);
+         this.lvProducts.ItemClick += new Mobilize.Web.ListViewItemClickEventHandler(this.lvProducts_ItemClick);
          this.listViewHelper1.SetCorrectEventsBehavior(this.lvProducts, true);
          this.sbStatusBar.ResumeLayout(false);
          this.Frame1.ResumeLayout(false);
@@ -513,6 +538,8 @@ namespace SKS
          this.lvProductsBy.ResumeLayout(false);
          this.ResumeLayout(false);
       }
-      #endregion
+#endregion
+
    }
+
 }

@@ -3,8 +3,9 @@ using Mobilize.Web.Extensions;
 
 namespace SKS
 {
-	partial class frmAbout
-	{
+
+   partial class frmAbout
+   {
 
 #region "Upgrade Support "
       [Intercepted]
@@ -15,34 +16,33 @@ namespace SKS
 
       public static frmAbout DefInstance
       {
-      	get
-      	{
-      		if (m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed)
-      		{
-      			m_InitializingDefInstance = true;
-      			m_vb6FormDefInstance = CreateInstance();
-      			m_InitializingDefInstance = false;
-      		}
-      		return m_vb6FormDefInstance;
-      	}
-      	set
-      	{
-      		m_vb6FormDefInstance = value;
-      	}
+         get
+         {
+            if ( m_vb6FormDefInstance is null || m_vb6FormDefInstance.IsDisposed )
+            {
+               m_InitializingDefInstance = true;
+               m_vb6FormDefInstance = CreateInstance();
+               m_InitializingDefInstance = false;
+            }
+            return m_vb6FormDefInstance;
+         }
+         set
+         {
+            m_vb6FormDefInstance = value;
+         }
       }
+#endregion
 
-      #endregion
-      #region "Windows Form Designer generated code "
-
+#region "Windows Form Designer generated code "
       public static frmAbout CreateInstance()
       {
-      	frmAbout theInstance = new frmAbout();
-      	theInstance.Form_Load();
-      	return theInstance;
+         frmAbout theInstance = new frmAbout();
+         theInstance.Form_Load();
+         return theInstance;
       }
 
       [Intercepted]
-      private string[] visualControls { get; set; } = new string[]{"components", "ToolTipMain", "picIcon", "cmdOK", "_Line1_1", "lblDescription", "lblTitle", "_Line1_0", "lblVersion", "lblDisclaimer", "Line1"};
+      private string[] visualControls { get; set; } = new string[] { "components", "ToolTipMain", "picIcon", "cmdOK", "_Line1_1", "lblDescription", "lblTitle", "_Line1_0", "lblVersion", "lblDisclaimer", "Line1", "commandButtonHelper1" };
 
       //Required by the Windows Form Designer
       [Intercepted]
@@ -77,35 +77,40 @@ namespace SKS
 
       [Intercepted]
       public Mobilize.Web.Label[] Line1 { get; set; } = new Mobilize.Web.Label[2];
+
+      [Intercepted]
+      public Stub._UpgradeHelpers.Gui.Controls.CommandButtonHelper commandButtonHelper1 { get; set; }
+
       //NOTE: The following procedure is required by the Windows Form Designer
       //It can be modified using the Windows Form Designer.
       //Do not modify it using the code editor.
-
       [System.Diagnostics.DebuggerStepThrough()]
       [Mobilize.WebMap.Common.Attributes.Designer]
       private void InitializeComponent()
       {
-      	this.components = new Mobilize.Web.ControlCollection();
-      	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbout));
-      	this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
-      	this.picIcon = new Mobilize.Web.PictureBox();
-      	this.cmdOK = new Mobilize.Web.Button();
-      	this._Line1_1 = new Mobilize.Web.Label();
-      	this.lblDescription = new Mobilize.Web.Label();
-      	this.lblTitle = new Mobilize.Web.Label();
-      	this._Line1_0 = new Mobilize.Web.Label();
-      	this.lblVersion = new Mobilize.Web.Label();
-      	this.lblDisclaimer = new Mobilize.Web.Label();
-      	this.SuspendLayout();
-      	// 
-      	// picIcon
-      	// 
-      	this.picIcon.AllowDrop = true;
-      	this.picIcon.BackColor = Mobilize.Web.SystemColors.Control;
+         this.components = new Mobilize.Web.ControlCollection();
+         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbout));
+         this.ToolTipMain = new Mobilize.Web.ToolTip(this.components);
+         this.picIcon = new Mobilize.Web.PictureBox();
+         this.cmdOK = new Mobilize.Web.Button();
+         this._Line1_1 = new Mobilize.Web.Label();
+         this.lblDescription = new Mobilize.Web.Label();
+         this.lblTitle = new Mobilize.Web.Label();
+         this._Line1_0 = new Mobilize.Web.Label();
+         this.lblVersion = new Mobilize.Web.Label();
+         this.lblDisclaimer = new Mobilize.Web.Label();
+         this.SuspendLayout();
+         this.commandButtonHelper1 = new Stub._UpgradeHelpers.Gui.Controls.CommandButtonHelper(this.components);
+         // 
+         // picIcon
+         // 
+         this.picIcon.AllowDrop = true;
+         this.picIcon.BackColor = Mobilize.Web.SystemColors.Control;
          this.picIcon.BorderStyle = Mobilize.Web.BorderStyle.Fixed3D;
          this.picIcon.Properties().CausesValidation = true;
          this.picIcon.Dock = Mobilize.Web.DockStyle.None;
          this.picIcon.Enabled = true;
+         this.picIcon.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.picIcon.Image = "assets/images/SKS.frmAbout.picIcon.Image.png";
          this.picIcon.Location = new System.Drawing.Point(16, 16);
          this.picIcon.Name = "picIcon";
@@ -119,10 +124,11 @@ namespace SKS
          // 
          this.cmdOK.AllowDrop = true;
          this.cmdOK.BackColor = Mobilize.Web.SystemColors.Control;
+         this.cmdOK.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.cmdOK.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.cmdOK.Location = new System.Drawing.Point(272, 208);
          this.cmdOK.Name = "cmdOK";
-         this.cmdOK.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.cmdOK.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.cmdOK.Size = new System.Drawing.Size(108, 23);
          this.cmdOK.TabIndex = 0;
          this.cmdOK.Text = "OK";
@@ -136,6 +142,7 @@ namespace SKS
          this._Line1_1.BackColor = System.Drawing.Color.Gray;
          this._Line1_1.BorderStyle = Mobilize.Web.BorderStyle.FixedSingle;
          this._Line1_1.Enabled = false;
+         this._Line1_1.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this._Line1_1.Location = new System.Drawing.Point(5, 147);
          this._Line1_1.Name = "_Line1_1";
          this._Line1_1.Size = new System.Drawing.Size(294, 1);
@@ -147,10 +154,11 @@ namespace SKS
          this.lblDescription.AutoSize = true;
          this.lblDescription.BackColor = Mobilize.Web.SystemColors.Control;
          this.lblDescription.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.lblDescription.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.lblDescription.ForeColor = System.Drawing.Color.Black;
          this.lblDescription.Location = new System.Drawing.Point(164, 80);
          this.lblDescription.Name = "lblDescription";
-         this.lblDescription.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblDescription.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblDescription.Size = new System.Drawing.Size(199, 13);
          this.lblDescription.TabIndex = 2;
          this.lblDescription.Text = "Order Processing Software by Mobilize.net";
@@ -165,7 +173,7 @@ namespace SKS
          this.lblTitle.ForeColor = System.Drawing.Color.Black;
          this.lblTitle.Location = new System.Drawing.Point(163, 24);
          this.lblTitle.Name = "lblTitle";
-         this.lblTitle.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblTitle.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblTitle.Size = new System.Drawing.Size(122, 13);
          this.lblTitle.TabIndex = 4;
          this.lblTitle.Text = "Salmon King Seafood";
@@ -175,6 +183,7 @@ namespace SKS
          this._Line1_0.AllowDrop = true;
          this._Line1_0.BackColor = System.Drawing.Color.White;
          this._Line1_0.Enabled = false;
+         this._Line1_0.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this._Line1_0.Location = new System.Drawing.Point(6, 148);
          this._Line1_0.Name = "_Line1_0";
          this._Line1_0.Size = new System.Drawing.Size(293, 1);
@@ -186,10 +195,11 @@ namespace SKS
          this.lblVersion.AutoSize = true;
          this.lblVersion.BackColor = Mobilize.Web.SystemColors.Control;
          this.lblVersion.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.lblVersion.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.lblVersion.ForeColor = Mobilize.Web.SystemColors.ControlText;
          this.lblVersion.Location = new System.Drawing.Point(163, 56);
          this.lblVersion.Name = "lblVersion";
-         this.lblVersion.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblVersion.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblVersion.Size = new System.Drawing.Size(137, 13);
          this.lblVersion.TabIndex = 5;
          this.lblVersion.Text = "Version: Mobilize - WebMAP ";
@@ -200,10 +210,11 @@ namespace SKS
          this.lblDisclaimer.AutoSize = true;
          this.lblDisclaimer.BackColor = Mobilize.Web.SystemColors.Control;
          this.lblDisclaimer.BorderStyle = Mobilize.Web.BorderStyle.None;
+         this.lblDisclaimer.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.lblDisclaimer.ForeColor = System.Drawing.Color.Black;
          this.lblDisclaimer.Location = new System.Drawing.Point(17, 175);
          this.lblDisclaimer.Name = "lblDisclaimer";
-         this.lblDisclaimer.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.lblDisclaimer.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.lblDisclaimer.Size = new System.Drawing.Size(132, 13);
          this.lblDisclaimer.TabIndex = 3;
          this.lblDisclaimer.Text = "Copyright 2018 Mobilize.Net";
@@ -225,14 +236,16 @@ namespace SKS
          this.Controls.Add(this._Line1_0);
          this.Controls.Add(this.lblVersion);
          this.Controls.Add(this.lblDisclaimer);
+         this.Font = new Mobilize.Web.Font("Microsoft Sans Serif", 8.25f, Mobilize.Web.FontStyle.Regular, Mobilize.Web.GraphicsUnit.Point, 0);
          this.FormBorderStyle = Mobilize.Web.FormBorderStyle.FixedDialog;
          this.Properties().Location = new System.Drawing.Point(156, 129);
          this.MaximizeBox = false;
          this.MinimizeBox = false;
          this.Name = "frmAbout";
-         this.Properties().RightToLeft = Stub._System.Windows.Forms.RightToLeft.No;
+         this.RightToLeft = Mobilize.Web.RightToLeft.No;
          this.Properties().ShowInTaskbar = false;
          this.Text = "About Salmon King Seafood";
+         this.commandButtonHelper1.SetStyle(this.cmdOK, 0);
          this.Activated += new System.EventHandler(this.frmAbout_Activated);
          this.Closed += new System.EventHandler(this.Form_Closed);
          this.ResumeLayout(false);
@@ -240,15 +253,17 @@ namespace SKS
 
       void ReLoadForm(bool addEvents)
       {
-      	InitializeLine1();
+         InitializeLine1();
       }
 
       void InitializeLine1()
       {
-      	this.Line1 = new Mobilize.Web.Label[2];
-      	this.Line1[1] = _Line1_1;
-      	this.Line1[0] = _Line1_0;
+         this.Line1 = new Mobilize.Web.Label[2];
+         this.Line1[1] = _Line1_1;
+         this.Line1[0] = _Line1_0;
       }
-      #endregion
+#endregion
+
    }
+
 }

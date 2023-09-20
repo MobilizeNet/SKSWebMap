@@ -10,8 +10,6 @@ namespace SKS
    {
 
       [Intercepted]
-
-
       public static bool CurrentUserAdmin { get; set; } = false;
 
       [Intercepted]
@@ -24,11 +22,9 @@ namespace SKS
       public static string UserId { get; set; } = "";
 
       [Intercepted]
-
       public static string ConnectionString { get; set; } = "";
 
       [Intercepted]
-
       public static int DetectionType { get; set; } = 0;
 
       [Intercepted]
@@ -52,76 +48,75 @@ namespace SKS
       [Intercepted]
       public static string ImgSrc { get; set; } = "";
 
-      //UPGRADE_WARNING: (1047) Application will terminate when Sub Main() finishes. More Information: https://www.mobilize.net/vbtonet/ewis/ewi1047
-
+      //UPGRADE_WARNING: (1047) Application will terminate when Sub Main() finishes. More Information: https://docs.mobilize.net/vbuc/ewis#1047
       [STAThread]
       public static void Main()
       {
          Stub._System.Windows.Forms.Application.EnableVisualStyles();
          Stub._System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
          ConnectionString = "DRIVER=SQLite3 ODBC Driver; Database=Orders.db; LongNames=0; Timeout=1000; NoTXN=0; SyncPragma=NORMAL; StepAPI=0;";
-
          modConnection.OpenConnection();
          CurrentUserAdmin = true;
          UserFullname = "Allan Cantillo";
          UserLevel = "Administrator";
          UserId = "acantillo";
          frmMain.DefInstance.Show();
-         		}
+      }
 
       internal static void LogStatus(string message, Mobilize.Web.Form frm = null)
       {
          Mobilize.Web.StatusStrip sb = null;
          sb = null;
-         ((Mobilize.Web.ToolStripStatusLabel) frmMain.DefInstance.sbStatusBar.Items[0]).Text = message;
-         if (!(frm is null))
+         ((Mobilize.Web.ToolStripStatusLabel)frmMain.DefInstance.sbStatusBar.Items[0]).Text = message;
+         if ( frm != null )
          {
-         	if (frm == frmAdjustStockManual.DefInstance)
+            if ( frm == frmAdjustStockManual.DefInstance )
             {
-            	sb = frmAdjustStockManual.DefInstance.sbStatusBar;
+               sb = frmAdjustStockManual.DefInstance.sbStatusBar;
             }
-            else if (frm == frmActionOrderReception.DefInstance)
+            else if ( frm == frmActionOrderReception.DefInstance )
             {
-            	sb = frmActionOrderReception.DefInstance.sbStatusBar;
+               sb = frmActionOrderReception.DefInstance.sbStatusBar;
             }
-            else if (frm == frmActionOrderRequest.DefInstance)
+            else if ( frm == frmActionOrderRequest.DefInstance )
             {
-            	sb = frmActionOrderRequest.DefInstance.sbStatusBar;
+               sb = frmActionOrderRequest.DefInstance.sbStatusBar;
             }
-            else if (frm == frmAddStockManual.DefInstance)
+            else if ( frm == frmAddStockManual.DefInstance )
             {
-            	sb = frmAddStockManual.DefInstance.sbStatusBar;
+               sb = frmAddStockManual.DefInstance.sbStatusBar;
             }
-            else if (frm == frmReceptionApproval.DefInstance)
+            else if ( frm == frmReceptionApproval.DefInstance )
             {
-            	sb = frmReceptionApproval.DefInstance.sbStatusBar;
+               sb = frmReceptionApproval.DefInstance.sbStatusBar;
             }
-            else if (frm == frmOrderReception.DefInstance)
+            else if ( frm == frmOrderReception.DefInstance )
             {
-            	sb = frmOrderReception.DefInstance.sbStatusBar;
+               sb = frmOrderReception.DefInstance.sbStatusBar;
             }
-            else if (frm == frmOrderRequest.DefInstance)
+            else if ( frm == frmOrderRequest.DefInstance )
             {
-            	sb = frmOrderRequest.DefInstance.sbStatusBar;
+               sb = frmOrderRequest.DefInstance.sbStatusBar;
             }
-            else if (frm == frmRequestApproval.DefInstance)
+            else if ( frm == frmRequestApproval.DefInstance )
             {
-            	sb = frmRequestApproval.DefInstance.sbStatusBar;
+               sb = frmRequestApproval.DefInstance.sbStatusBar;
             }
-            if (!(sb is null))
+            if ( sb != null )
             {
-            	if (!(((Mobilize.Web.ToolStripStatusLabel) sb.Items[0]) is null))
-            	{
-            		((Mobilize.Web.ToolStripStatusLabel) sb.Items[0]).Text = message;
-            	}
+               if ( ((Mobilize.Web.ToolStripStatusLabel)sb.Items[0]) != null )
+               {
+                  ((Mobilize.Web.ToolStripStatusLabel)sb.Items[0]).Text = message;
+               }
             }
          }
       }
 
       internal static void ClearLogStatus(Mobilize.Web.Form frm = null)
       {
-      	LogStatus("", frm);
+         LogStatus("", frm);
       }
 
    }
+
 }

@@ -7,10 +7,12 @@
     width: 454px;
     height: 447px;
     overflow: hidden;
+    font-size: 8.25pt;
     left: 3px;
     top: 25px;
 }
 .SKS_frmProviders .Toolbar1 {
+    font-size: 8.25pt;
     left: 0px;
     top: 0px;
     width: 454px;
@@ -49,6 +51,7 @@
 }
 .SKS_frmProviders .Frame1 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 48px;
@@ -58,6 +61,7 @@
 }
 .SKS_frmProviders .Label1 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 24px;
@@ -69,6 +73,7 @@
 }
 .SKS_frmProviders .Label6 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 114px;
@@ -80,6 +85,7 @@
 }
 .SKS_frmProviders .Label8 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 232px;
     top: 115px;
@@ -91,6 +97,7 @@
 }
 .SKS_frmProviders .Label9 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 232px;
     top: 145px;
@@ -102,6 +109,7 @@
 }
 .SKS_frmProviders .Label10 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 232px;
     top: 176px;
@@ -113,6 +121,7 @@
 }
 .SKS_frmProviders .Label11 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 54px;
@@ -124,6 +133,7 @@
 }
 .SKS_frmProviders .Label12 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 200px;
@@ -135,6 +145,7 @@
 }
 .SKS_frmProviders .Label13 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 145px;
@@ -146,6 +157,7 @@
 }
 .SKS_frmProviders .Label14 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 176px;
@@ -157,6 +169,7 @@
 }
 .SKS_frmProviders .Label15 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 83px;
@@ -168,6 +181,7 @@
 }
 .SKS_frmProviders .Label4 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 272px;
@@ -179,6 +193,7 @@
 }
 .SKS_frmProviders ._txtField_9 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 312px;
     top: 145px;
@@ -188,6 +203,7 @@
 }
 .SKS_frmProviders ._txtField_14 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 216px;
@@ -197,6 +213,7 @@
 }
 .SKS_frmProviders ._txtField_10 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 312px;
     top: 176px;
@@ -206,6 +223,7 @@
 }
 .SKS_frmProviders ._txtField_8 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 312px;
     top: 115px;
@@ -215,6 +233,7 @@
 }
 .SKS_frmProviders .Frame2 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 224px;
     top: 14px;
@@ -224,6 +243,7 @@
 }
 .SKS_frmProviders .Label2 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 43px;
@@ -235,6 +255,7 @@
 }
 .SKS_frmProviders .Label3 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 69px;
@@ -246,6 +267,7 @@
 }
 .SKS_frmProviders .Label7 {
     background-color: rgba(240, 240, 240, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 8px;
     top: 16px;
@@ -257,6 +279,7 @@
 }
 .SKS_frmProviders ._txtField_12 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 64px;
     top: 40px;
@@ -266,6 +289,7 @@
 }
 .SKS_frmProviders ._txtField_13 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 64px;
     top: 64px;
@@ -275,6 +299,7 @@
 }
 .SKS_frmProviders ._txtField_11 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 64px;
     top: 16px;
@@ -284,6 +309,7 @@
 }
 .SKS_frmProviders ._txtField_5 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 104px;
     top: 114px;
@@ -293,6 +319,7 @@
 }
 .SKS_frmProviders ._txtField_2 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 104px;
     top: 54px;
@@ -302,6 +329,7 @@
 }
 .SKS_frmProviders ._txtField_7 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 104px;
     top: 176px;
@@ -311,6 +339,7 @@
 }
 .SKS_frmProviders ._txtField_6 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 104px;
     top: 145px;
@@ -320,6 +349,7 @@
 }
 .SKS_frmProviders ._txtField_0 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 104px;
     top: 24px;
@@ -329,6 +359,7 @@
 }
 .SKS_frmProviders ._txtField_4 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 104px;
     top: 83px;
@@ -338,6 +369,7 @@
 }
 .SKS_frmProviders ._txtField_1 {
     background-color: rgba(255, 255, 255, 1);
+    font-size: 8.25pt;
     color: rgba(0, 0, 0, 1);
     left: 16px;
     top: 288px;
