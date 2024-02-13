@@ -12,30 +12,30 @@
   },
   "private": true,
  "dependencies": {
-    "@mobilize/winforms-components": "9.1.31",
-        "@angular/core": "14.3.0",
-    "@angular/compiler": "14.3.0",
-    "@angular/common": "14.3.0",
-    "@angular/forms": "14.3.0",
-    "@angular/animations": "14.3.0",
-    "@angular/platform-browser": "14.3.0",
-    "@angular/platform-browser-dynamic": "14.3.0",
-    "@angular/router": "14.3.0",
-    "@angular/localize": "14.3.0",
+    "@mobilize/winforms-components": "10.1.3",
+        "@angular/core": "15.2.10",
+    "@angular/compiler": "15.2.10",
+    "@angular/common": "15.2.10",
+    "@angular/forms": "15.2.10",
+    "@angular/animations": "15.2.10",
+    "@angular/platform-browser": "15.2.10",
+    "@angular/platform-browser-dynamic": "15.2.10",
+    "@angular/router": "15.2.10",
+    "@angular/localize": "15.2.10",
     "core-js": "3.32.2",
     "rxjs": "7.5.2",
     "tslib": "2.4.0",
     "zone.js": "0.11.5"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "14.2.12",
-    "@angular/cli": "14.2.12",
-    "@angular/compiler-cli": "14.3.0",
-    "@angular/language-service": "14.3.0",
+    "@angular-devkit/build-angular": "15.2.10",
+    "@angular/cli": "15.2.10",
+    "@angular/compiler-cli": "15.2.10",
+    "@angular/language-service": "15.2.10",
     "@types/core-js": "2.5.5",
     "@types/node": "14.14.21",
     "ts-node": "10.8.1",
-    "typescript": "4.7.2"
+    "typescript": "4.9.5"
   }
 }
 

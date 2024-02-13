@@ -1,0 +1,5 @@
+Code,Message,Severity,File,Project,Line,Column
+AWFW27,Loading file C:\Users\devops\AppData\Local\Temp\WFNetMAP\0213084152854\libs\Collectors\Mobilize.Collectors.UICollector.WFPProcessor.5.5.0\Build\Mobilize.Collectors.UICollector.WFPProcessor.dll,Error,,,,
+AWFW27,Loading file C:\Users\devops\AppData\Local\Temp\WFNetMAP\0213084152854\libs\Services\Mobilize.Services.HtmlGeneratorC1.0.2.0\Build\Mobilize.Services.HtmlGeneratorC1.dll,Error,,,,
+AWFW27,Loading file C:\Users\devops\AppData\Local\Temp\WFNetMAP\0213084152854\libs\Services\Mobilize.Services.HtmlGeneratorsJns.3.8.20\Build\net461\Mobilize.Services.HtmlGeneratorsJns.dll,Error,,,,
+AWFW27,Loading file C:\Users\devops\AppData\Local\Temp\WFNetMAP\0213084152854\libs\Services\Mobilize.Services.WFHtmlGenerators.5.5.0\Build\Mobilize.Services.WFHtmlGenerators.dll,Error,,,,
